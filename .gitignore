@@ -1,0 +1,8 @@
+# Node related stuff
+node_modules
+
+# Next js hidden files
+.next
+
+# Mac OS 
+.DS_Store
