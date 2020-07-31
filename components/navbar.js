@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import base from './styles/base.js'
 const Navbar = () => {
   return (
     <div className='navigation-wrapper'>
@@ -20,7 +21,7 @@ const Navbar = () => {
         </ul>
       </nav>
       {/* Missing fonts, logo */}
-      {/* delete VARS only while figuring out how to get global*/}
+      {/* delete VARIABLES HERE only while figuring out how to get globals from style base*/}
       <style jsx>{`
         .navigation-wrapper {
           --primary-dark: #346278;
