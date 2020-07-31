@@ -9,6 +9,7 @@ export default css.global`
     --primary-light: #7fbba1;
     --white: #fff
     --black: #000
+    --transparent: #ffffff00;
 
     --gradient: linear-gradient(
       to right,
