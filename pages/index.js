@@ -1,10 +1,16 @@
 import Head from 'next/head';
+import React, { useState, useRef } from 'react';
+import { useOnClickOutside } from '../hooks/useOnClickOutside';
 import Navbar from '../components/navbar';
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
+
   return (
     <div className='container'>
-      <Navbar></Navbar>
+      <Navbar open={open} setOpen={setOpen} ref={node}></Navbar>
       <Head>
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
