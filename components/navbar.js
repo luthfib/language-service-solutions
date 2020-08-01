@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import Logo from './Icons/logo'
+
 const Navbar = ({ open, setOpen }) => {
   return (
     <div className='navigation-wrapper'>
-      <a className='logo-wrapper'>Logo</a>
+      <Logo className='logo-wrapper'>Logo</Logo>
       <button
         className='hamburger'
         open={open}
