@@ -1,17 +1,15 @@
 import Link from 'next/link';
+import { useRef } from 'react';
+import { useOnClickOutside } from '../hooks/useOnClickOutside';
+
 const Navbar = ({ open, setOpen }) => {
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
   return (
-    <div className='navigation-wrapper'>
+    <div className='navigation' ref={node}>
       <a className='logo-wrapper'>Logo</a>
-      <button
-        className='hamburger'
-        open={open}
-        onClick={() => {
-          setOpen(!open);
-          console.log(open);
-        }}
-      ></button>
-      <nav className='navigation'>
+      <button className='hamburger' open={open} onClick={() => setOpen(!open)}></button>
+      <nav className='nav'>
         <ul>
           <li>
             <a href='/'>home</a>
@@ -31,7 +29,7 @@ const Navbar = ({ open, setOpen }) => {
       {/* delete the first chunck of VARIABLES HERE. only while figuring out how to get globals from style base*/}
       <style jsx>
         {`
-          .navigation-wrapper {
+          .navigation {
             --primary-dark: #346278;
             --primary-medium: #539b92;
             --primary-light: #7fbba1;
@@ -49,13 +47,14 @@ const Navbar = ({ open, setOpen }) => {
             --nav-height: 100px;
             --hamburger-size: 30px;
             --logo-size: 50px;
+            --content-width: 1200px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: var(--nav-height);
             width: 100%;
             max-width: var(--content-width);
-            background-image: var(--gradient);
+            margin: 0 auto;
           }
 
           .logo-wrapper {
@@ -83,12 +82,12 @@ const Navbar = ({ open, setOpen }) => {
             outline: 0;
           }
 
-          .navigation {
+          .nav {
             width: 100%;
             order: 2;
           }
 
-          .navigation ul {
+          .nav ul {
             display: flex;
             style-type: none;
             justify-content: flex-end;
@@ -96,17 +95,17 @@ const Navbar = ({ open, setOpen }) => {
             margin: 0;
           }
 
-          .navigation li {
+          .nav li {
             padding: 0px calc(var(--space) * 2.5);
             border-right: 1px solid var(--white);
             border-right: 1px solid var(--white);
           }
 
-          .navigation li:last-of-type {
+          .nav li:last-of-type {
             border-right: none;
           }
 
-          .navigation li a {
+          .nav li a {
             text-transform: uppercase;
             cursor: pointer;
             display: inline-block;
@@ -116,7 +115,7 @@ const Navbar = ({ open, setOpen }) => {
             color: var(--black);
           }
 
-          .navigation li a::after {
+          .nav li a::after {
             content: '';
             position: absolute;
             top: calc(100% + 10px);
@@ -129,12 +128,12 @@ const Navbar = ({ open, setOpen }) => {
             opacity: 0;
           }
           @media (hover: hover) {
-            .navigation li a:hover {
+            .nav li a:hover {
               color: var(--white);
             }
           }
 
-          .navigation li a:hover::after {
+          .nav li a:hover::after {
             opacity: 1;
           }
 
@@ -149,7 +148,7 @@ const Navbar = ({ open, setOpen }) => {
               z-index: 2;
             }
 
-            .navigation {
+            .nav {
               top: 0;
               left: -50%;
               height: 100%;
@@ -162,7 +161,7 @@ const Navbar = ({ open, setOpen }) => {
               transform: ${open ? 'translateX(100%)' : 'translateX(-50%)'};
             }
 
-            .navigation ul {
+            .nav ul {
               flex-direction: column;
               justify-content: flex-start;
               position: absolute;
@@ -170,16 +169,16 @@ const Navbar = ({ open, setOpen }) => {
               padding-left: calc(var(--space) * 2.5);
             }
 
-            .navigation li {
+            .nav li {
               padding: 0px 0px calc(var(--space) * 3) calc(var(--space) * 3);
               border: 0;
             }
 
-            .navigation li a {
+            .nav li a {
               color: var(--white);
             }
 
-            .navigation li a::after {
+            .nav li a::after {
               top: calc(50%);
               left: calc(var(--space) * -1.5);
               transform: translateY(-50%);
