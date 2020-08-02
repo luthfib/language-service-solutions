@@ -1,20 +1,19 @@
 import Head from 'next/head';
-import React, { useState, useRef } from 'react';
-import { useOnClickOutside } from '../hooks/useOnClickOutside';
+import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
-  const node = useRef();
-  useOnClickOutside(node, () => setOpen(false));
 
   return (
     <div className='container'>
-      <Navbar open={open} setOpen={setOpen} ref={node}></Navbar>
       <Head>
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <header>
+        <Navbar open={open} setOpen={setOpen}></Navbar>
+      </header>
 
       <main>
         <h1 className='title'>
@@ -64,11 +63,28 @@ export default function Home() {
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        header {
+          --primary-dark: #346278;
+          --primary-medium: #539b92;
+          --primary-light: #7fbba1;
+          --white: #fff;
+          --black: #000;
+          --transparent: #ffffff00;
+          --gradient: linear-gradient(
+            to right,
+            var(--primary-dark),
+            var(--primary-medium),
+            var(--primary-light)
+          );
+
+          background-image: var(--gradient);
+          width: 100%;
         }
 
         main {
@@ -78,6 +94,8 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          max-width: 1200px;
+          margin: 0 auto;
         }
 
         footer {
