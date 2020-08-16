@@ -67,7 +67,7 @@ export default function Home() {
           text-decoration: none;
         }
 
-\
+
 
         .description {
           line-height: 1.5;
@@ -136,9 +136,16 @@ export default function Home() {
       `}</style>
 
       <style jsx global>{`
+       
         html,
         body {
-          padding: 0;
+          --primary-dark: #346278;
+          --primary-medium: #539b92;
+          --primary-light: #7fbba1;
+          --white: #fff;
+          --black: #000;
+          --transparent: #ffffff00;
+          padding: 0px;
           margin: 0px;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
             Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
