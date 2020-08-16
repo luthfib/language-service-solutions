@@ -1,6 +1,6 @@
 const Logo = () => {
   return (
-      <img width='119px' height='124px' src='/icons/logo.svg' />
+      <img width='50px' height='50px' src='/icons/logo.svg' />
   );
 };
 
