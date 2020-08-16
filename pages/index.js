@@ -30,6 +30,10 @@ export default function Home() {
           align-items: center;
         }
 
+        body {
+          margin: 0px;
+        }
+
         main {
           padding: 5rem 0;
           flex: 1;
@@ -63,27 +67,7 @@ export default function Home() {
           text-decoration: none;
         }
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
+\
 
         .description {
           line-height: 1.5;
