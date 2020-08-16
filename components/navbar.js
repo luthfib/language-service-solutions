@@ -34,12 +34,6 @@ const Navbar = ({ open, setOpen }) => {
       <style jsx>
         {`
           .navigation-wrapper {
-            --primary-dark: #346278;
-            --primary-medium: #539b92;
-            --primary-light: #7fbba1;
-            --white: #fff;
-            --black: #000;
-            --transparent: #ffffff00;
             --gradient: linear-gradient(
               to right,
               var(--primary-dark),
