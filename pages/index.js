@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 
+import AboutUs from '../components/AboutUsSection'
+import Gallery from '../components/Gallery'
 import Head from 'next/head';
 import Navbar from '../components/navbar';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
@@ -16,14 +18,13 @@ export default function Home() {
         <title>Language Service Solutions</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
+      <Gallery />
+      <AboutUs />
       <main>
-       
       </main>
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
