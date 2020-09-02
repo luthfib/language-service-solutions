@@ -18,9 +18,10 @@ export default function Home() {
         <Navbar open={open} setOpen={setOpen}></Navbar>
       </header>
 
-      <Gallery />
-      <AboutUs />
-      <main></main>
+      <main>
+        <Gallery />
+        <AboutUs />
+      </main>
       <style jsx>{`
         .container {
           min-height: 100vh;
@@ -28,6 +29,13 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          max-width: var(--content-width);
+          margin: 0 auto;
+        }
+
+        header {
+          width: 100%;
+          background-image: var(--gradient);
         }
 
         body {
@@ -35,7 +43,6 @@ export default function Home() {
         }
 
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -98,6 +105,13 @@ export default function Home() {
           --white: #fff;
           --black: #000;
           --transparent: #ffffff00;
+          --gradient: linear-gradient(
+            to right,
+            var(--primary-dark),
+            var(--primary-medium),
+            var(--primary-light)
+          );
+          --content-width: 1400px;
           padding: 0px;
           margin: 0px;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,

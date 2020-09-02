@@ -7,7 +7,9 @@ const Navbar = ({ open, setOpen }) => {
   useOnClickOutside(node, () => setOpen(false));
   return (
     <div className='navigation' ref={node}>
-      <Logo className='logo-wrapper'>Logo</Logo>
+      <div className='logo-wrapper'>
+        <Logo>Logo</Logo>
+      </div>
       <button className='hamburger' open={open} onClick={() => setOpen(!open)}></button>
       <nav className='nav'>
         <ul>
@@ -41,20 +43,18 @@ const Navbar = ({ open, setOpen }) => {
             --nav-height: 100px;
             --hamburger-size: 30px;
             --logo-size: 50px;
-            --content-width: 1200px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: var(--nav-height);
             width: 100%;
-            max-width: var(--content-width);
             margin: 0 auto;
           }
 
           .logo-wrapper {
             height: var(--logo-size);
             width: var(--logo-size);
-            margin-left: calc(var(--space) * 2.5);
+            margin-left: calc(var(--space) * 3.5);
             border: 1px solid #fff;
             display: inline-block;
             order: 1;
@@ -87,6 +87,7 @@ const Navbar = ({ open, setOpen }) => {
             justify-content: flex-end;
             list-style: none;
             margin: 0;
+            margin-right: 10px;
           }
 
           .nav li {
