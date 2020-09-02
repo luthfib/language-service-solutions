@@ -1,13 +1,13 @@
-import Link from 'next/link';
 import { useRef } from 'react';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
+import Logo from './Icons/logo';
 
 const Navbar = ({ open, setOpen }) => {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
   return (
     <div className='navigation' ref={node}>
-      <a className='logo-wrapper'>Logo</a>
+      <Logo className='logo-wrapper'>Logo</Logo>
       <button className='hamburger' open={open} onClick={() => setOpen(!open)}></button>
       <nav className='nav'>
         <ul>
@@ -30,12 +30,6 @@ const Navbar = ({ open, setOpen }) => {
       <style jsx>
         {`
           .navigation {
-            --primary-dark: #346278;
-            --primary-medium: #539b92;
-            --primary-light: #7fbba1;
-            --white: #fff;
-            --black: #000;
-            --transparent: #ffffff00;
             --gradient: linear-gradient(
               to right,
               var(--primary-dark),
