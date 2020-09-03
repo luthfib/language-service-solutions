@@ -36,6 +36,7 @@ export default function Home() {
         header {
           width: 100%;
           background-image: var(--gradient);
+          position: sticky;
         }
 
         body {
@@ -96,25 +97,60 @@ export default function Home() {
       `}</style>
 
       <style jsx global>{`
-        html,
-        body {
+        @font-face {
+          font-family: 'matiasregular';
+          src: url('../styles/matias-webfont.woff2') format('woff2'),
+            url('../styles/matias-webfont.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+        :root {
+          /* colors */
+
           --primary-dark: #346278;
           --primary-medium: #539b92;
           --primary-light: #7fbba1;
           --white: #fff;
           --black: #000;
           --transparent: #ffffff00;
+
           --gradient: linear-gradient(
             to right,
             var(--primary-dark),
             var(--primary-medium),
             var(--primary-light)
           );
+
+          /* Shadows Vercel */
+
+          --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
+          --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
+          --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+          --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
+          --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
+
+          /* Shadows level up tuts */
+
+          --elevation-0: inset 0 7px 9px -7px rgba(0, 0, 0, 0.7);
+          --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          --elevation-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          --elevation-3: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+          --elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          --elevation-5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+          /* max-width content */
           --content-width: 1400px;
+        }
+        html,
+        body {
           padding: 0px;
           margin: 0px;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
             Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+          font-family: 'Open Sans', sans-serif;
+          font-family: 'matiasregular';
         }
 
         * {
