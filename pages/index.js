@@ -1,7 +1,8 @@
+import React, { useState } from 'react';
+
 import AboutUs from '../components/AboutUsSection';
 import Gallery from '../components/Gallery';
 import Head from 'next/head';
-import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
 
@@ -99,8 +100,8 @@ export default function Home() {
       <style jsx global>{`
         @font-face {
           font-family: 'matiasregular';
-          src: url('../styles/matias-webfont.woff2') format('woff2'),
-            url('../styles/matias-webfont.woff') format('woff');
+          src: url('/fonts/matias-webfont.woff2') format('woff2'),
+            url('/fonts/matias-webfont.woff') format('woff');
           font-weight: normal;
           font-style: normal;
         }
