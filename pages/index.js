@@ -4,6 +4,7 @@ import AboutUs from '../components/AboutUsSection';
 import Gallery from '../components/Gallery';
 import Head from 'next/head';
 import Navbar from '../components/navbar';
+import Dots from '../components/Icons/dots';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
 
 export default function Home() {
@@ -20,6 +21,9 @@ export default function Home() {
       </header>
 
       <main>
+        <div className='margin-1'>
+          <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
+        </div>
         <Gallery />
         <AboutUs />
       </main>
@@ -56,6 +60,10 @@ export default function Home() {
         a {
           color: inherit;
           text-decoration: none;
+        }
+
+        .margin-1 {
+          margin: 35px 0;
         }
 
         .description {
