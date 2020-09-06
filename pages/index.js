@@ -5,6 +5,7 @@ import Gallery from '../components/Gallery';
 import Head from 'next/head';
 import Navbar from '../components/navbar';
 import Dots from '../components/Icons/dots';
+import Banner from '../components/banner';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
 
 export default function Home() {
@@ -21,11 +22,19 @@ export default function Home() {
       </header>
 
       <main>
-        <div className='margin-1'>
+        <section className='margin-1'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
-        </div>
+        </section>
         <Gallery />
         <AboutUs />
+        <Banner
+          bgColor={'#626262'}
+          height={'70px'}
+          color={'#fff'}
+          margin={'margin-1 margin-bottom-1'}
+          text={'CONTACT US NOW!'}
+          dots={true}
+        />
       </main>
       <style jsx>{`
         .container {
@@ -41,29 +50,11 @@ export default function Home() {
         header {
           width: 100%;
           background-image: var(--gradient);
-          position: sticky;
-        }
-
-        body {
-          margin: 0px;
-        }
-
-        main {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin: 0 auto;
         }
 
         a {
           color: inherit;
           text-decoration: none;
-        }
-
-        .margin-1 {
-          margin: 35px 0;
         }
 
         .description {
@@ -151,6 +142,9 @@ export default function Home() {
 
           /* max-width content */
           --content-width: 1400px;
+
+          /* border-radius */
+          --border-radius: 20px;
         }
         html,
         body {
@@ -158,12 +152,27 @@ export default function Home() {
           margin: 0px;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
             Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-          font-family: 'Open Sans', sans-serif;
-          font-family: 'matiasregular';
+          font-family: 'matiasregular', 'Open Sans', sans-serif;
+        }
+        main {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
         }
 
         * {
           box-sizing: border-box;
+        }
+
+        .margin-1 {
+          margin: 35px 0;
+        }
+
+        .margin-bottom-1 {
+          margin-bottom: 60px;
         }
       `}</style>
     </div>
