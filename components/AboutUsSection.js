@@ -1,6 +1,6 @@
 const AboutUs = (props) => (
   <>
-    <section>
+    <div>
       <h2>about us</h2>
       <p>
         LANGUAGE SERVICE SOLUTIONS, LLC has been in the field of Spanish/English language services
@@ -18,13 +18,14 @@ const AboutUs = (props) => (
         best service. We are bi-cultural/bilingual group of professionals who understand the subtle
         cultural differences that play a role in communication
       </p>
-    </section>
+    </div>
     <style jsx>{`
-      section {
+      div {
         background: var(--primary-light);
         border-radius: var(--border-radius);
         width: 90%;
         padding: 0px 80px 30px 80px;
+        text-align: center;
       }
 
       h2 {

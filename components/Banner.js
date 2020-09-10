@@ -1,6 +1,7 @@
 import Dots from './Icons/dots';
 const hasDots = (props) => {
   if (props.dots) {
+    const HeadingLevel = `${props.headingLevel}`;
     return (
       <>
         <style jsx>
@@ -9,12 +10,13 @@ const hasDots = (props) => {
               background-color: ${props.bgColor};
               border-radius: var(--border-radius);
               height: ${props.height};
-              width: 90%;
+              width: ${props.width};
               display: flex;
               justify-content: space-around;
+              align-items: center;
             }
 
-            h2 {
+            ${props.headingLevel} {
               color: ${props.color};
               text-transform: uppercase;
             }
@@ -23,12 +25,13 @@ const hasDots = (props) => {
 
         <div className={`banner ${props.margin}`}>
           <Dots direction={'right'} color={props.color} size={'10'} />
-          <h2>{props.text}</h2>
+          <HeadingLevel>{props.text}</HeadingLevel>
           <Dots direction={'left'} color={props.color} size={'10'} />
         </div>
       </>
     );
   } else {
+    const HeadingLevel = `${props.headingLevel}`;
     return (
       <>
         <style jsx>
@@ -37,20 +40,21 @@ const hasDots = (props) => {
               background-color: ${props.bgColor};
               border-radius: var(--border-radius);
               height: ${props.height};
-              width: 90%;
+              width: ${props.width};
               display: flex;
               justify-content: space-around;
+              align-items: center;
             }
 
-            h2 {
+            ${props.headingLevel} {
               color: ${props.color};
+              text-transform: uppercase;
             }
           `}
         </style>
         <div className={`banner ${props.margin}`}>
-          <h2>{props.text}!</h2>
+          <HeadingLevel>{props.text}</HeadingLevel>
         </div>
-        ;
       </>
     );
   }

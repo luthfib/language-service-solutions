@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import AboutUs from '../components/AboutUsSection';
+import Services from '../components/Services';
 import Banner from '../components/Banner';
 import Dots from '../components/Icons/dots';
 import Gallery from '../components/Gallery';
@@ -22,19 +23,28 @@ export default function Home() {
       </header>
 
       <main>
+        <Gallery />
         <section className='margin-1'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
-        <Gallery />
-        <AboutUs />
-        <Banner
-          bgColor={'#626262'}
-          height={'70px'}
-          color={'#fff'}
-          margin={'margin-1 margin-bottom-1'}
-          text={'CONTACT US NOW!'}
-          dots={true}
-        />
+        <section className=''>
+          <AboutUs />
+        </section>
+        <section className='margin-top-1'>
+          <Services />
+        </section>
+        <section className='margin-1'>
+          <Banner
+            bgColor={'#626262'}
+            height={'90px'}
+            width={'90%'}
+            headingLevel={'h3'}
+            color={'var(--white)'}
+            margin={''}
+            text={'CONTACT US NOW!'}
+            dots={true}
+          />
+        </section>
       </main>
       <style jsx>{`
         .container {
@@ -50,6 +60,12 @@ export default function Home() {
         header {
           width: 100%;
           background-image: var(--gradient);
+        }
+
+        section {
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
 
         a {
@@ -154,6 +170,7 @@ export default function Home() {
             Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           font-family: 'matiasregular', 'Open Sans', sans-serif;
         }
+
         main {
           flex: 1;
           display: flex;
@@ -167,12 +184,33 @@ export default function Home() {
           box-sizing: border-box;
         }
 
+        h2, h3 {
+          letter-spacing: 6px;
+        }
+        h2 {
+          letter-spacing: 6px;
+          font-size: 32px;
+        }
+
+        h3 {
+          letter-spacing: 6px;
+          font-size: 24px;
+        }
+        
+        a{
+          text-decoration: none;
+        }
+
         .margin-1 {
           margin: 35px 0;
         }
 
+        .margin-top-1 {
+          margin-top: 35px;
+        }
+
         .margin-bottom-1 {
-          margin-bottom: 60px;
+          margin-bottom: 35px;
         }
       `}</style>
     </div>
