@@ -7,6 +7,7 @@ import Dots from '../components/Icons/dots';
 import Gallery from '../components/Gallery';
 import Head from 'next/head';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
 
 export default function Home() {
@@ -46,6 +47,7 @@ export default function Home() {
           />
         </section>
       </main>
+      <Footer />
       <style jsx>{`
         .container {
           min-height: 100vh;
@@ -138,6 +140,12 @@ export default function Home() {
             var(--primary-medium),
             var(--primary-light)
           );
+          --gradient2: linear-gradient(
+            to left,
+            var(--primary-dark),
+            var(--primary-medium),
+            var(--primary-light)
+          );
 
           /* Shadows Vercel */
 
@@ -184,7 +192,8 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        h2, h3 {
+        h2,
+        h3 {
           letter-spacing: 6px;
         }
         h2 {
@@ -196,8 +205,8 @@ export default function Home() {
           letter-spacing: 6px;
           font-size: 24px;
         }
-        
-        a{
+
+        a {
           text-decoration: none;
         }
 
