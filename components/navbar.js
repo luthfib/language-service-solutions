@@ -108,6 +108,8 @@ const Navbar = ({ open, setOpen }) => {
             position: relative;
             text-decoration: none;
             color: var(--black);
+            letter-spacing: 3.5px;
+            font-size: 18px;
           }
 
           .nav li a::after {
