@@ -53,7 +53,7 @@ const Services = (props) => (
           <p>subtitling</p>
         </div>
       </div>
-      <a href='#'>
+      <a className='banner-wrapper' href='#'>
         <Banner
           bgColor={'#fff8f83b'}
           height={'35px'}
@@ -76,6 +76,7 @@ const Services = (props) => (
         align-items: center;
         height: 660px;
         padding-bottom: 20px;
+        box-shadow: var(--elevation-3);
       }
 
       .services-container {
@@ -146,6 +147,18 @@ const Services = (props) => (
         width: 100px;
         height: 100px;
         filter: invert(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .icon:hover {
+        transform: scale(1.08);
+      }
+      .banner-wrapper {
+        transition: background-color 0.3s ease;
+        border-radius: var(--border-radius);
+      }
+      .banner-wrapper:hover {
+        background-color: var(--white);
       }
 
       h2 {
@@ -214,6 +227,11 @@ const Services = (props) => (
       {`
         :root {
           --banner-services: 350px;
+        }
+
+        .banner-wrapper:hover h4 {
+          color: var(--primary-medium);
+          transition: color 0.3s ease;
         }
 
         @media (max-width: 768px) {

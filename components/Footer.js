@@ -21,16 +21,24 @@ const Footer = () => {
             <small>Email: murtado@languageservicesolutions</small>
             <ul>
               <li className='icon'>
-                <a className='facebook'></a>
+                <a href='#'>
+                  <img src='./icons/facebook.svg' />
+                </a>
               </li>
               <li className='icon'>
-                <a className='youtube'></a>
+                <a href='#'>
+                  <img src='./icons/youtube.svg' />
+                </a>
               </li>
               <li className='icon'>
-                <a className='twitter'></a>
+                <a href='#'>
+                  <img src='./icons/twitter.svg' />
+                </a>
               </li>
               <li className='icon'>
-                <a className='linkdin'></a>
+                <a href='#'>
+                  <img src='./icons/linkedin.svg' />
+                </a>
               </li>
             </ul>
           </div>
@@ -96,6 +104,25 @@ const Footer = () => {
             width: 40px;
             border-radius: 50%;
             margin-right: 5px;
+            transition: transform 0.3s ease-in, filter 0.3s ease-in;
+          }
+
+          li a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+          }
+
+          li:hover {
+            transform: scale(1.1);
+            filter: invert(100%);
+          }
+
+          li a img {
+            width: 100%;
+            height: 55%;
           }
 
           p {
