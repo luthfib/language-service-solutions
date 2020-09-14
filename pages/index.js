@@ -62,12 +62,17 @@ export default function Home() {
         header {
           width: 100%;
           background-image: var(--gradient);
+          position: fixed;
+          top: 0;
+          z-index: 9999999;
+          box-shadow: var(--shadow-small)
         }
 
         section {
           width: 100%;
           display: flex;
           justify-content: center;
+          border-radius: var(--border-radius);
         }
 
         a {
@@ -147,6 +152,7 @@ export default function Home() {
             var(--primary-light)
           );
 
+          --nav-height: 100px;
           /* Shadows Vercel */
 
           --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
@@ -186,6 +192,7 @@ export default function Home() {
           justify-content: center;
           align-items: center;
           margin: 0 auto;
+          padding-top: var(--nav-height);
         }
 
         * {
@@ -220,6 +227,10 @@ export default function Home() {
 
         .margin-bottom-1 {
           margin-bottom: 35px;
+        }
+
+        .shadow-3 {
+          box-shadow: var(--elevation-3);
         }
       `}</style>
     </div>

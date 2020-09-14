@@ -40,7 +40,6 @@ const Navbar = ({ open, setOpen }) => {
             );
 
             --space: 10px;
-            --nav-height: 100px;
             --hamburger-size: 30px;
             --logo-size: 50px;
             display: flex;
@@ -71,9 +70,14 @@ const Navbar = ({ open, setOpen }) => {
             background-repeat: no-repeat;
             margin-left: calc(var(--space) * 2.5);
             cursor: pointer;
+            transition: transform 0.3s ease;
           }
           .hamburger:focus {
             outline: 0;
+          }
+
+          .hamburger:hover {
+            transform: scale(1.05);
           }
 
           .nav {
@@ -148,7 +152,7 @@ const Navbar = ({ open, setOpen }) => {
             .nav {
               top: 0;
               left: -50%;
-              height: 100%;
+              height: 100vh;
               width: 50%;
               order: 1;
               position: absolute;
