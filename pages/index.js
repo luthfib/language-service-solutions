@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import AboutUs from '../components/AboutUsSection';
-import Services from '../components/Services';
 import Banner from '../components/Banner';
 import Dots from '../components/Icons/dots';
+import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Head from 'next/head';
 import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import Services from '../components/Services';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
 
 export default function Home() {
