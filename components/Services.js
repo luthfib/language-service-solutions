@@ -2,7 +2,7 @@ import Banner from './Banner';
 const Services = (props) => (
   <>
     <div className='services'>
-      <h2>Services We Offer...</h2>
+      <h2>Services We Offer</h2>
       <div className='services-container'>
         <div className='service telephone'>
           <a href='#' className='icon '>
@@ -74,8 +74,8 @@ const Services = (props) => (
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        padding: 0 5px 20px;
         height: 660px;
-        padding-bottom: 20px;
         box-shadow: var(--elevation-3);
       }
 
@@ -175,6 +175,7 @@ const Services = (props) => (
       @media (max-width: 768px) {
         .services {
           height: 850px;
+          width: 100%;
         }
 
         .service {

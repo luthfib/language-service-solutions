@@ -35,16 +35,18 @@ export default function Home() {
           <Services />
         </section>
         <section className='margin-1'>
-          <Banner
-            bgColor={'#626262'}
-            height={'90px'}
-            width={'90%'}
-            headingLevel={'h3'}
-            color={'var(--white)'}
-            margin={''}
-            text={'CONTACT US NOW!'}
-            dots={true}
-          />
+          <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
+            <Banner
+              bgColor={'#626262'}
+              height={'90px'}
+              width={'90%'}
+              headingLevel={'h3'}
+              color={'var(--white)'}
+              margin={''}
+              text={'CONTACT US NOW!'}
+              dots={true}
+            />
+          </a>
         </section>
       </main>
       <Footer />
@@ -65,7 +67,7 @@ export default function Home() {
           position: fixed;
           top: 0;
           z-index: 9999999;
-          box-shadow: var(--shadow-small)
+          box-shadow: var(--shadow-small);
         }
 
         section {
@@ -109,6 +111,17 @@ export default function Home() {
 
         .logo {
           height: 1em;
+        }
+
+        .banner-wrapper {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          transition: transform 0.3s ease;
+        }
+
+        .banner-wrapper:hover {
+          transform: scale(1.05);
         }
 
         @media (max-width: 600px) {
@@ -174,12 +187,14 @@ export default function Home() {
           --content-width: 1400px;
 
           /* border-radius */
+          --border-radius-mobile: 20px;
           --border-radius: 20px;
         }
         html,
         body {
           padding: 0px;
           margin: 0px;
+          overflow-x: hidden;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
             Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           font-family: 'matiasregular', 'Open Sans', sans-serif;
@@ -231,6 +246,23 @@ export default function Home() {
 
         .shadow-3 {
           box-shadow: var(--elevation-3);
+        }
+
+        @media (max-width: 768px) {
+          :root {
+            --border-radius: 0;
+          }
+          .margin-1 {
+            margin: 25px 0;
+          }
+
+          .margin-top-1 {
+            margin-top: 25px;
+          }
+
+          .margin-bottom-1 {
+            margin-bottom: 25px;
+          }
         }
       `}</style>
     </div>
