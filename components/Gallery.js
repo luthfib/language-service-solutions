@@ -1,7 +1,7 @@
 const Gallery = () => (
   <>
     <div className='img-container'>
-      <img src='/imgs/TeamGroup.jpg' />
+      <img src='/imgs/TeamGroup.JPG' />
     </div>
     <style jsx>
       {`
