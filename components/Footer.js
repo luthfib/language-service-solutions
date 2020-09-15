@@ -127,6 +127,7 @@ const Footer = () => {
 
           p {
             font-size: 18px;
+            margin: 16px 0;
           }
 
           small {

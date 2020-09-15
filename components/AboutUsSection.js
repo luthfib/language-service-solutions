@@ -24,9 +24,8 @@ const AboutUs = (props) => (
         background: var(--primary-light);
         border-radius: var(--border-radius);
         width: 90%;
-        padding: 0px 80px 30px 80px;
+        padding: 0px 80px 30px;
         text-align: center;
-
         box-shadow: var(--elevation-3);
       }
 
@@ -35,6 +34,13 @@ const AboutUs = (props) => (
         color: var(--white);
         text-transform: uppercase;
       }
+
+      @media (max-width: 768px) {
+        div {
+          padding: 0px 40px 30px;
+          width: 100%;
+        }
+
     `}</style>
   </>
 );

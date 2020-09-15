@@ -8,7 +8,7 @@ const hasDots = (props) => {
           {`
             .banner {
               background-color: ${props.bgColor};
-              border-radius: var(--border-radius);
+              border-radius: var(--border-radius-mobile);
               height: ${props.height};
               width: ${props.width};
               display: flex;
@@ -39,7 +39,7 @@ const hasDots = (props) => {
           {`
             .banner {
               background-color: ${props.bgColor};
-              border-radius: var(--border-radius);
+              border-radius: var(--border-radius-mobile);
               height: ${props.height};
               width: ${props.width};
               display: flex;
