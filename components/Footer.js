@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='inner-footer'>
           <div className='logo-container'>
             <a href='#' className='logo'>
-              <Logo>Logo</Logo>
+              <Logo width={'var(--logo-size)'} height={'var(--logo-size)'} />
             </a>
             <h4 className='lss'>
               LANGUAGE <br /> SERVICE <br /> SOLUTIONS
@@ -47,6 +47,7 @@ const Footer = () => {
       <style jsx>
         {`
           .footer {
+            --logo-size: 90px;
             background-image: var(--gradient2);
             width: 100%;
             display: flex;
@@ -68,7 +69,7 @@ const Footer = () => {
             align-items: center;
           }
           .logo {
-            border: 1px solid var(--white);
+            border: 2px solid var(--white);
             border-radius: 50%;
             width: 100px;
             height: 100px;

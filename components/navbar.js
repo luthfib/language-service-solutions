@@ -8,7 +8,7 @@ const Navbar = ({ open, setOpen }) => {
   return (
     <div className='navigation' ref={node}>
       <div className='logo-wrapper'>
-        <Logo>Logo</Logo>
+        <Logo width={'var(--logo-size)'} height={'var(--logo-size)'} />
       </div>
       <button className='hamburger' open={open} onClick={() => setOpen(!open)}></button>
       <nav className='nav'>
@@ -27,8 +27,6 @@ const Navbar = ({ open, setOpen }) => {
           </li>
         </ul>
       </nav>
-      {/* Missing fonts, logo, get icon hamburger */}
-      {/* delete the first chunck of VARIABLES HERE. only while figuring out how to get globals from style base*/}
       <style jsx>
         {`
           .navigation {
@@ -41,22 +39,29 @@ const Navbar = ({ open, setOpen }) => {
 
             --space: 10px;
             --hamburger-size: 30px;
-            --logo-size: 50px;
+            --logo-size: 70px;
+            --logo-circle: 90px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: var(--nav-height);
             width: 100%;
             margin: 0 auto;
+
+            transition: height 0.3s ease;
           }
 
           .logo-wrapper {
-            height: var(--logo-size);
-            width: var(--logo-size);
+            height: var(--logo-circle);
+            width: var(--logo-circle);
             margin-left: calc(var(--space) * 3.5);
-            border: 1px solid #fff;
-            display: inline-block;
+            border: 2px solid var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
             order: 1;
+            transition: height 0.3s ease, width 0.3s ease;
           }
 
           .hamburger {
@@ -70,7 +75,7 @@ const Navbar = ({ open, setOpen }) => {
             background-repeat: no-repeat;
             margin-left: calc(var(--space) * 2.5);
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, height 0.3s ease, width 0.3s ease;
           }
           .hamburger:focus {
             outline: 0;
@@ -81,7 +86,6 @@ const Navbar = ({ open, setOpen }) => {
           }
 
           .nav {
-            width: 100%;
             order: 2;
           }
 
@@ -139,6 +143,10 @@ const Navbar = ({ open, setOpen }) => {
           }
 
           @media (max-width: 768px) {
+            .navigation {
+              --logo-size: 50px;
+              --logo-circle: 70px;
+            }
             .logo-wrapper {
               order: 2;
               margin-right: calc(var(--space) * 2.5);

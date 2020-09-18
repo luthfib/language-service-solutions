@@ -1,6 +1,17 @@
-const Logo = () => {
+const Logo = ({ width, height }) => {
   return (
-      <img width='50px' height='50px' src='/icons/logo.svg' />
+    <>
+      <img src='/icons/logo2.svg' />
+      <style jsx>
+        {`
+          img {
+            width: ${width};
+            height: ${height};
+            transition: height 0.3s ease, width 0.3s ease
+          }
+        `}
+      </style>
+    </>
   );
 };
 

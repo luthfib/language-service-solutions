@@ -1,5 +1,5 @@
 import Banner from './Banner';
-const Services = (props) => (
+const ServicesElement = (props) => (
   <>
     <div className='services'>
       <h2>Services We Offer</h2>
@@ -245,4 +245,4 @@ const Services = (props) => (
   </>
 );
 
-export default Services;
+export default ServicesElement;
