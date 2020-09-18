@@ -7,7 +7,7 @@ const hasDots = (props) => {
         <style jsx>
           {`
             .banner {
-              background-color: ${props.bgColor};
+              background: ${props.bgColor};
               border-radius: var(--border-radius-mobile);
               height: ${props.height};
               width: ${props.width};
@@ -38,7 +38,7 @@ const hasDots = (props) => {
         <style jsx>
           {`
             .banner {
-              background-color: ${props.bgColor};
+              background: ${props.bgColor};
               border-radius: var(--border-radius-mobile);
               height: ${props.height};
               width: ${props.width};

@@ -1,13 +1,11 @@
 import React, { useState, useRef } from 'react';
 
-import AboutUs from '../components/AboutUsSection';
 import Banner from '../components/Banner';
 import Dots from '../components/Icons/dots';
 import Footer from '../components/Footer';
-import Gallery from '../components/Gallery';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import Services from '../components/ServicesElement';
+import ServiceCard from '../components/ServiceCard';
 import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
 
 export default function Home() {
@@ -26,17 +24,76 @@ export default function Home() {
       </header>
 
       <main>
-        <Gallery />
-        <section className='margin-1'>
-          <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
+        <section className='margin-top-1'>
+          <Banner
+            bgColor={'var(--white)'}
+            height={'90px'}
+            width={'90%'}
+            headingLevel={'h3'}
+            color={'#000'}
+            margin={''}
+            text={'CONTACT US NOW!'}
+            dots={false}
+          />
         </section>
         <section className=''>
-          <AboutUs />
+          <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
         <section className='margin-top-1'>
-          <Services />
+          <div className='card-container'>
+            <ServiceCard
+              logo={'medicalInterpretation'}
+              title={'Medical Interpretation'}
+              text={
+                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+              }
+            />
+            <ServiceCard
+              logo={'telephonicInterpretation'}
+              title={'Telephonic Interpretation'}
+              text={
+                'Reach your spanish-speaking clients with our telephonic interprepatation servise'
+              }
+            />
+            <ServiceCard
+              logo={'medicalInterpretation'}
+              title={'Medical Interpretation'}
+              text={
+                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+              }
+            />
+            <ServiceCard
+              logo={'medicalInterpretation'}
+              title={'Medical Interpretation'}
+              text={
+                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+              }
+            />
+            <ServiceCard
+              logo={'medicalInterpretation'}
+              title={'Medical Interpretation'}
+              text={
+                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+              }
+            />
+            <ServiceCard
+              logo={'medicalInterpretation'}
+              title={'Medical Interpretation'}
+              text={
+                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+              }
+            />
+            <ServiceCard
+              logo={'medicalInterpretation'}
+              title={'Medical Interpretation'}
+              text={
+                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+              }
+            />
+          </div>
         </section>
-        <section className='margin-1'>
+
+        <section className='margin-top-1'>
           <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
             <Banner
               bgColor={'#626262'}
@@ -50,21 +107,30 @@ export default function Home() {
             />
           </a>
         </section>
+        <section className='margin-1'>
+          <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
+            <Banner
+              bgColor={'var(--gradient3)'}
+              height={'90px'}
+              width={'90%'}
+              headingLevel={'h3'}
+              color={'var(--white)'}
+              margin={''}
+              text={'CONTACT US NOW!'}
+              dots={true}
+            />
+          </a>
+        </section>
       </main>
       <Footer />
       <style jsx>{`
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
+        .card-container {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          width: 95%;
         }
-
         .logo {
           height: 1em;
         }
@@ -74,6 +140,7 @@ export default function Home() {
           display: flex;
           justify-content: center;
           transition: transform 0.3s ease;
+          background-image: var(--gradient1);
         }
 
         .banner-wrapper:hover {
@@ -212,7 +279,7 @@ export default function Home() {
           align-items: center;
           margin: 0 auto;
           padding-top: var(--nav-height);
-          transition: padding-top 0.5s ease;
+          width: 100%;
         }
 
         * {
@@ -224,14 +291,12 @@ export default function Home() {
           letter-spacing: 6px;
         }
         h2 {
+          letter-spacing: 6px;
           font-size: 32px;
         }
 
         h3 {
-          font-size: 24px;
-        }
-
-        h4 {
+          letter-spacing: 6px;
           font-size: 24px;
         }
 
@@ -252,6 +317,18 @@ export default function Home() {
           margin-bottom: 35px;
         }
 
+        .margin-2 {
+          margin: 25px 0;
+        }
+
+        .margin-top-2 {
+          margin-top: 25px;
+        }
+
+        .margin-bottom-2 {
+          margin-bottom: 25px;
+        }
+
         .shadow-3 {
           box-shadow: var(--elevation-3);
         }
@@ -268,6 +345,22 @@ export default function Home() {
         }
 
         @media (max-width: 768px) {
+          :root {
+            --border-radius: 0;
+          }
+          .margin-1 {
+            margin: 25px 0;
+          }
+
+          .margin-top-1 {
+            margin-top: 25px;
+          }
+
+          .margin-bottom-1 {
+            margin-bottom: 25px;
+          }
+
+          @media (max-width: 768px) {
           :root {
             --border-radius: 0;
           }
