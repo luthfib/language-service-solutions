@@ -1,17 +1,26 @@
 import Banner from './Banner';
 const ServiceCard = ({ logo, title, text }) => (
   <>
-    <a href='#' className='card-wrapper'>
+    <a href={`services/${logo}`} id={`${logo}`} className='card-wrapper'>
       <div className='card'>
-        <a href='#' className='icon '>
+        <div className='icon '>
           <img width='80px' height='80px' src={`/icons/${logo}.svg`} />
-        </a>
+        </div>
         <h4>{title}</h4>
         <p>{text}</p>
       </div>
     </a>
     <style jsx>{`
       .card-wrapper {
+        transition: transform 0.3s ease-in;
+      }
+      @media (hover: hover) {
+        .card-wrapper:hover {
+          transform: scale(1.03);
+        }
+        .card-wrapper:hover .card {
+          box-shadow: var(--elevation-2);
+        }
       }
       .card {
         background: var(--primary-medium);
@@ -23,9 +32,11 @@ const ServiceCard = ({ logo, title, text }) => (
         box-shadow: var(--elevation-3);
         width: 100%;
         max-width: 300px;
-        padding: 30px 55px;
+        min-height: 328px;
+        padding: 30px;
         text-align: center;
         margin: 0px 22.5px 45px 22.5px;
+        transition: box-shadow 0.3s ease-in-out;
       }
 
       .icon {
@@ -37,11 +48,6 @@ const ServiceCard = ({ logo, title, text }) => (
         border-radius: 50%;
         width: 150px;
         height: 150px;
-        transition: transform 0.3s ease;
-      }
-
-      .icon:hover {
-        transform: scale(1.08);
       }
 
       h4 {
@@ -55,7 +61,7 @@ const ServiceCard = ({ logo, title, text }) => (
       p {
         margin: 0;
         font-size: 14px;
-        color: #3f3f3f;
+        color: #3b4547;
         font-weight: 700;
       }
 

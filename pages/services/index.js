@@ -1,12 +1,12 @@
 import React, { useState, useRef } from 'react';
 
-import Banner from '../components/Banner';
-import Dots from '../components/Icons/dots';
-import Footer from '../components/Footer';
+import Banner from '../../components/Banner';
+import Dots from '../../components/Icons/dots';
+import Footer from '../../components/Footer';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import ServiceCard from '../components/ServiceCard';
-import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
+import Navbar from '../../components/Navbar';
+import ServiceCard from '../../components/ServiceCard';
+import { useOnWindowScroll } from '../../hooks/useOnWindowScroll';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -32,22 +32,15 @@ export default function Home() {
             headingLevel={'h3'}
             color={'#000'}
             margin={''}
-            text={'CONTACT US NOW!'}
+            text={'Our Services'}
             dots={false}
           />
         </section>
-        <section className=''>
+        <section className='margin-bottom-2'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
         <section className='margin-top-1'>
           <div className='card-container'>
-            <ServiceCard
-              logo={'medicalInterpretation'}
-              title={'Medical Interpretation'}
-              text={
-                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
-              }
-            />
             <ServiceCard
               logo={'telephonicInterpretation'}
               title={'Telephonic Interpretation'}
@@ -56,29 +49,36 @@ export default function Home() {
               }
             />
             <ServiceCard
-              logo={'medicalInterpretation'}
-              title={'Medical Interpretation'}
+              logo={'translation'}
+              title={'Translation'}
               text={
                 'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
               }
             />
             <ServiceCard
-              logo={'medicalInterpretation'}
-              title={'Medical Interpretation'}
+              logo={'simultaneousInterpretation'}
+              title={'simultaneous Interpretation'}
               text={
                 'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
               }
             />
             <ServiceCard
-              logo={'medicalInterpretation'}
-              title={'Medical Interpretation'}
+              logo={'videoInterpretation'}
+              title={'video Interpretation'}
               text={
                 'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
               }
             />
             <ServiceCard
-              logo={'medicalInterpretation'}
-              title={'Medical Interpretation'}
+              logo={'transcriptions'}
+              title={'transcriptions'}
+              text={
+                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+              }
+            />
+            <ServiceCard
+              logo={'subtitling'}
+              title={'subtitling'}
               text={
                 'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
               }
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='margin-top-1'>
+        {/* <section className='margin-1'>
           <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
             <Banner
               bgColor={'#626262'}
@@ -102,11 +102,11 @@ export default function Home() {
               headingLevel={'h3'}
               color={'var(--white)'}
               margin={''}
-              text={'CONTACT US NOW!'}
+              text={'Book a service'}
               dots={true}
             />
           </a>
-        </section>
+        </section> */}
         <section className='margin-1'>
           <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
             <Banner
@@ -116,7 +116,7 @@ export default function Home() {
               headingLevel={'h3'}
               color={'var(--white)'}
               margin={''}
-              text={'CONTACT US NOW!'}
+              text={'Book a service'}
               dots={true}
             />
           </a>
@@ -143,8 +143,10 @@ export default function Home() {
           background-image: var(--gradient1);
         }
 
-        .banner-wrapper:hover {
-          transform: scale(1.05);
+        @media (hover: hover) {
+          .banner-wrapper:hover {
+            transform: scale(1.03);
+          }
         }
 
         @media (max-width: 600px) {
