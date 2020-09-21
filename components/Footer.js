@@ -22,22 +22,22 @@ const Footer = () => {
             <ul>
               <li className='icon'>
                 <a href='#'>
-                  <img src='./icons/facebook.svg' />
+                  <img src='/icons/facebook.svg' />
                 </a>
               </li>
               <li className='icon'>
                 <a href='#'>
-                  <img src='./icons/youtube.svg' />
+                  <img src='/icons/youtube.svg' />
                 </a>
               </li>
               <li className='icon'>
                 <a href='#'>
-                  <img src='./icons/twitter.svg' />
+                  <img src='/icons/twitter.svg' />
                 </a>
               </li>
               <li className='icon'>
                 <a href='#'>
-                  <img src='./icons/linkedin.svg' />
+                  <img src='/icons/linkedin.svg' />
                 </a>
               </li>
             </ul>

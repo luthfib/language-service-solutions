@@ -1,14 +1,12 @@
 import React, { useState, useRef } from 'react';
 
-import AboutUs from '../components/AboutUsSection';
-import Banner from '../components/Banner';
-import Dots from '../components/Icons/dots';
-import Footer from '../components/Footer';
-import Gallery from '../components/Gallery';
+import Banner from '../../components/Banner';
+import Dots from '../../components/Icons/dots';
+import Footer from '../../components/Footer';
+import ServiceSingle from '../../components/ServiceSingle';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Services from '../components/ServicesElement';
-import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
+import Navbar from '../../components/Navbar';
+import { useOnWindowScroll } from '../../hooks/useOnWindowScroll';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -26,45 +24,39 @@ export default function Home() {
       </header>
 
       <main>
-        <Gallery />
-        <section className='margin-1'>
+        <section className='margin-top-1'>
+          <Banner
+            bgColor={'var(--white)'}
+            height={'90px'}
+            width={'90%'}
+            headingLevel={'h3'}
+            color={'#000'}
+            margin={''}
+            text={'Our Services'}
+            dots={false}
+          />
+        </section>
+        <section className='margin-bottom-2'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
-        <section className=''>
-          <AboutUs />
-        </section>
-        <section className='margin-top-1'>
-          <Services />
-        </section>
+
         <section className='margin-1'>
-          <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
-            <Banner
-              bgColor={'#626262'}
-              height={'90px'}
-              width={'90%'}
-              headingLevel={'h3'}
-              color={'var(--white)'}
-              margin={''}
-              text={'CONTACT US'}
-              dots={true}
-            />
-          </a>
+          <ServiceSingle
+            innerText={
+              <>
+                <h3>golla</h3>
+                <p>hola moacho hermoso digame como esta </p>
+                <h3>golla</h3>
+                <p>hola moacho hermoso digame como esta </p>
+                <h3>golla</h3>
+                <p>hola moacho hermoso digame como esta </p>
+              </>
+            }
+          />
         </section>
       </main>
       <Footer />
       <style jsx>{`
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
         .logo {
           height: 1em;
         }
@@ -74,8 +66,23 @@ export default function Home() {
           display: flex;
           justify-content: center;
           transition: transform 0.3s ease;
+          background-image: var(--gradient1);
+        }
+
+        @media (hover: hover) {
+          .banner-wrapper:hover {
+            transform: scale(1.03);
+          }
+        }
+
+        @media (max-width: 600px) {
+          .grid {
+            width: 100%;
+            flex-direction: column;
+          }
         }
       `}</style>
+
       <style jsx global>{`
         @font-face {
           font-family: 'matiasregular';
@@ -200,7 +207,7 @@ export default function Home() {
           align-items: center;
           margin: 0 auto;
           padding-top: var(--nav-height);
-          transition: padding-top 0.5s ease;
+          width: 100%;
         }
 
         * {
@@ -212,15 +219,13 @@ export default function Home() {
           letter-spacing: 6px;
         }
         h2 {
+          letter-spacing: 6px;
           font-size: 32px;
         }
 
         h3 {
+          letter-spacing: 6px;
           font-size: 24px;
-        }
-
-        h4 {
-          font-size: 18px;
         }
 
         a {
@@ -240,6 +245,18 @@ export default function Home() {
           margin-bottom: 35px;
         }
 
+        .margin-2 {
+          margin: 25px 0;
+        }
+
+        .margin-top-2 {
+          margin-top: 25px;
+        }
+
+        .margin-bottom-2 {
+          margin-bottom: 25px;
+        }
+
         .shadow-3 {
           box-shadow: var(--elevation-3);
         }
@@ -256,6 +273,22 @@ export default function Home() {
         }
 
         @media (max-width: 768px) {
+          :root {
+            --border-radius: 0;
+          }
+          .margin-1 {
+            margin: 25px 0;
+          }
+
+          .margin-top-1 {
+            margin-top: 25px;
+          }
+
+          .margin-bottom-1 {
+            margin-bottom: 25px;
+          }
+
+          @media (max-width: 768px) {
           :root {
             --border-radius: 0;
           }

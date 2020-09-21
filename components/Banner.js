@@ -15,11 +15,14 @@ const hasDots = (props) => {
               justify-content: space-around;
               align-items: center;
               box-shadow: var(--elevation-3);
+              padding: 0 10px;
             }
 
             ${props.headingLevel} {
               color: ${props.color};
               text-transform: uppercase;
+              text-align: center;
+              padding: 0 5px;
             }
           `}
         </style>
@@ -50,6 +53,7 @@ const hasDots = (props) => {
             ${props.headingLevel} {
               color: ${props.color};
               text-transform: uppercase;
+              text-align: center;
             }
           `}
         </style>

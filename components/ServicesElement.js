@@ -5,55 +5,55 @@ const ServicesElement = (props) => (
       <h2>Services We Offer</h2>
       <div className='services-container'>
         <div className='service telephone'>
-          <a href='#' className='icon '>
+          <a href='/services/telephonicInterpretation' className='icon '>
             <img width='50px' height='50px' src='/icons/telephonicInterpretation.svg' />
           </a>
           <p>Telephonic Interpretations</p>
         </div>
 
         <div className='service medical'>
-          <a href='#' className='icon '>
+          <a href='/services/medicalInterpretation' className='icon '>
             <img width='50px' height='50px' src='/icons/medicalInterpretation.svg' />
           </a>
           <p>Medical Interpretation</p>
         </div>
 
         <div className='service translation'>
-          <a href='#' className='icon '>
+          <a href='/services/translation' className='icon '>
             <img width='50px' height='50px' src='/icons/translation.svg' />
           </a>
           <p>translation</p>
         </div>
 
         <div className='service video'>
-          <a href='#' className='icon '>
+          <a href='/services/videoInterpretation' className='icon '>
             <img width='50px' height='50px' src='/icons/videoInterpretation.svg' />
           </a>
           <p>video Interpretation</p>
         </div>
 
         <div className='service simultaneus'>
-          <a href='#' className='icon '>
+          <a href='/services/simultaneousInterpretation' className='icon '>
             <img width='50px' height='50px' src='/icons/simultaneousInterpretation.svg' />
           </a>
           <p>simultaneus Interpretation</p>
         </div>
 
         <div className='service transcriptions'>
-          <a href='#' className='icon '>
+          <a href='/services/transcriptions' className='icon '>
             <img width='50px' height='50px' src='/icons/transcriptions.svg' />
           </a>
           <p>transcriptions</p>
         </div>
 
         <div className='service subs'>
-          <a href='#' className='icon '>
-            <img width='50px' height='50px' src='/icons/subtitling.svg' />
+          <a href='/services/subtitling' className='icon '>
+            <img width='50px' height='50px' src='public/icons/subtitling.svg' />
           </a>
           <p>subtitling</p>
         </div>
       </div>
-      <a className='banner-wrapper' href='#'>
+      <a className='banner-wrapper' href='/services'>
         <Banner
           bgColor={'#fff8f83b'}
           height={'35px'}
@@ -155,7 +155,7 @@ const ServicesElement = (props) => (
       }
       .banner-wrapper {
         transition: background-color 0.3s ease;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius-mobile);
       }
       .banner-wrapper:hover {
         background-color: var(--white);
