@@ -228,6 +228,10 @@ export default function Home() {
           text-decoration: none;
         }
 
+        .no-margin {
+          margin: 0;
+        }
+
         .margin-1 {
           margin: 35px 0;
         }
