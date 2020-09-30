@@ -361,22 +361,6 @@ export default function Home() {
           .margin-bottom-1 {
             margin-bottom: 25px;
           }
-
-          @media (max-width: 768px) {
-          :root {
-            --border-radius: 0;
-          }
-          .margin-1 {
-            margin: 25px 0;
-          }
-
-          .margin-top-1 {
-            margin-top: 25px;
-          }
-
-          .margin-bottom-1 {
-            margin-bottom: 25px;
-          }
           .scrolled {
             --nav-height: 90px;
           }

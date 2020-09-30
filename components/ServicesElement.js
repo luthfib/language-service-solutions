@@ -48,7 +48,7 @@ const ServicesElement = (props) => (
 
         <div className='service subs'>
           <a href='/services/subtitling' className='icon '>
-            <img width='50px' height='50px' src='public/icons/subtitling.svg' />
+            <img width='50px' height='50px' src='/icons/subtitling.svg' />
           </a>
           <p>subtitling</p>
         </div>

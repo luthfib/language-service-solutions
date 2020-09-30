@@ -42,14 +42,45 @@ export default function Home() {
 
         <section className='margin-1'>
           <ServiceSingle
+            logo={'subtitling'}
             innerText={
               <>
-                <h3>golla</h3>
-                <p>hola moacho hermoso digame como esta </p>
-                <h3>golla</h3>
-                <p>hola moacho hermoso digame como esta </p>
-                <h3>golla</h3>
-                <p>hola moacho hermoso digame como esta </p>
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
+                <br />
+                <h4 className='headline white no-margin-top small-margin-bottom upperCase'>
+                  Subtitling has never been easier
+                </h4>
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
+                <br />
+                <h4 className='headline white no-margin-top small-margin-bottom upperCase'>
+                  Subtitling has never been easier
+                </h4>
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
+                <br />
+                <h4 className='headline white no-margin-top small-margin-bottom upperCase'>
+                  Subtitling has never been easier
+                </h4>
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
               </>
             }
           />
