@@ -1,25 +1,25 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from "react";
 
-import AboutUs from '../components/AboutUsSection';
-import Banner from '../components/Banner';
-import Dots from '../components/Icons/dots';
-import Footer from '../components/Footer';
-import Gallery from '../components/Gallery';
-import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Services from '../components/ServicesElement';
-import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
+import AboutUs from "../components/AboutUsSection";
+import Banner from "../components/Banner";
+import Dots from "../components/Icons/dots";
+import Footer from "../components/Footer";
+import Gallery from "../components/Gallery";
+import Head from "next/head";
+import Navbar from "../components/Navbar";
+import Services from "../components/ServicesElement";
+import { useOnWindowScroll } from "../hooks/useOnWindowScroll";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
   const header = useRef();
-  useOnWindowScroll(header, 'scrolled', 20);
+  useOnWindowScroll(header, "scrolled", 20);
 
   return (
-    <div className='container'>
+    <div className="container">
       <Head>
         <title>Language Service Solutions</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <header ref={header}>
         <Navbar open={open} setOpen={setOpen}></Navbar>
@@ -27,25 +27,28 @@ export default function Home() {
 
       <main>
         <Gallery />
-        <section className='margin-1'>
-          <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
+        <section className="margin-1">
+          <Dots direction={"up"} color={"#bcbcbc"} size={"10"} />
         </section>
-        <section className=''>
+        <section className="">
           <AboutUs />
         </section>
-        <section className='margin-top-1'>
+        <section className="margin-top-1">
           <Services />
         </section>
-        <section className='margin-1'>
-          <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
+        <section className="margin-1">
+          <a
+            href="mailto:murtado@languageservicesolutions"
+            className="banner-wrapper"
+          >
             <Banner
-              bgColor={'#626262'}
-              height={'90px'}
-              width={'90%'}
-              headingLevel={'h3'}
-              color={'var(--white)'}
-              margin={''}
-              text={'CONTACT US'}
+              bgColor={"#626262"}
+              height={"90px"}
+              width={"90%"}
+              headingLevel={"h3"}
+              color={"var(--white)"}
+              margin={""}
+              text={"CONTACT US"}
               dots={true}
             />
           </a>
@@ -78,14 +81,14 @@ export default function Home() {
       `}</style>
       <style jsx global>{`
         @font-face {
-          font-family: 'matiasregular';
-          src: url('/fonts/matias-webfont.woff2') format('woff2'),
-            url('/fonts/matias-webfont.woff') format('woff');
+          font-family: "matiasregular";
+          src: url("/fonts/matias-webfont.woff2") format("woff2"),
+            url("/fonts/matias-webfont.woff") format("woff");
           font-weight: normal;
           font-style: normal;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap");
         :root {
           /* colors */
 
@@ -128,11 +131,16 @@ export default function Home() {
           /* Shadows level up tuts */
 
           --elevation-0: inset 0 7px 9px -7px rgba(0, 0, 0, 0.7);
-          --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          --elevation-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          --elevation-3: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-          --elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          --elevation-5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+          --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12),
+            0 1px 2px rgba(0, 0, 0, 0.24);
+          --elevation-2: 0 3px 6px rgba(0, 0, 0, 0.16),
+            0 3px 6px rgba(0, 0, 0, 0.23);
+          --elevation-3: 0 10px 20px rgba(0, 0, 0, 0.1),
+            0 6px 6px rgba(0, 0, 0, 0.1);
+          --elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+          --elevation-5: 0 19px 38px rgba(0, 0, 0, 0.3),
+            0 15px 12px rgba(0, 0, 0, 0.22);
 
           /* max-width content */
           --content-width: 1400px;
@@ -146,9 +154,10 @@ export default function Home() {
           padding: 0px;
           margin: 0px;
           overflow-x: hidden;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-            Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-          font-family: 'matiasregular', 'Open Sans', sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
+          font-family: "matiasregular", "Open Sans", sans-serif;
         }
 
         .container {
