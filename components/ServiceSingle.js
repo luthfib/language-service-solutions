@@ -1,13 +1,26 @@
-const ServiceSingle = ({ innerText, logo }) => (
+const ServiceSingle = ({ innerText, logo, img }) => (
   <>
     <div className='serviceSingle'>
-      <div className='icon '>
-        <img width='80px' height='80px' src={`/icons/${logo}.svg`} />
+      <div className='serviceDescription margin-bottom-1'>
+        <div className='icon '>
+          <img width='80px' height='80px' src={`/icons/${logo}.svg`} />
+        </div>
+        {innerText}
       </div>
-      {innerText}
+      <div className='img-wrapper margin-bottom-1'>
+        <img src={`/imgs/${img}`} />
+      </div>
     </div>
     <style jsx>{`
-        .serviceSingle {
+
+      .serviceSingle {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content:center;
+        align-items: center;
+      }
+        .serviceDescription {
           background: var(--primary-light);
           border-radius: var(--border-radius);
           width: 90%;
@@ -30,9 +43,18 @@ const ServiceSingle = ({ innerText, logo }) => (
         height: 140px;
         margin-bottom: 30px;
       }
+
+      .img-wrapper {
+        height: 300px;
+      }
+      .img-wrapper img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
       
         @media (max-width: 768px) {
-          .serviceSingle {
+          .serviceDescription {
             padding: 40px 30px;
             width: 100%;
           }

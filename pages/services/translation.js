@@ -32,7 +32,7 @@ export default function Home() {
             headingLevel={'h3'}
             color={'#000'}
             margin={''}
-            text={'Subtititling'}
+            text={'Translation'}
             dots={false}
           />
         </section>
@@ -42,7 +42,7 @@ export default function Home() {
 
         <section className='margin-1'>
           <ServiceSingle
-            logo={'subtitling'}
+            logo={'translation'}
             img={'TeamOutside.JPG'}
             innerText={
               <>
@@ -54,7 +54,7 @@ export default function Home() {
                 </p>
                 <br />
                 <h4 className='headline white no-margin-top small-margin-bottom upperCase'>
-                  Subtitling has never been easier
+                  Translating has never been easier
                 </h4>
                 <p className='no-margin-top'>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -64,7 +64,7 @@ export default function Home() {
                 </p>
                 <br />
                 <h4 className='headline white no-margin-top small-margin-bottom upperCase'>
-                  Subtitling has never been easier
+                  Translating has never been easier
                 </h4>
                 <p className='no-margin-top'>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -74,7 +74,7 @@ export default function Home() {
                 </p>
                 <br />
                 <h4 className='headline white no-margin-top small-margin-bottom upperCase'>
-                  Subtitling has never been easier
+                  Translating has never been easier
                 </h4>
                 <p className='no-margin-top'>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
