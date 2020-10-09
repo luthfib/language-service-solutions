@@ -1,13 +1,11 @@
 import React, { useState, useRef } from 'react';
 
-import AboutUs from '../components/AboutUsSection';
-import Banner from '../components/Banner';
+import AboutUsGallery from '../components/AboutUsGallery';
 import Dots from '../components/Icons/dots';
 import Footer from '../components/Footer';
-import Gallery from '../components/Gallery';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import Services from '../components/ServicesElement';
+import Banner from '../components/Banner';
 import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
 
 export default function Home() {
@@ -26,29 +24,37 @@ export default function Home() {
       </header>
 
       <main>
-        <Gallery />
-        <section className='margin-1'>
+        <section className='margin-top-1'>
+          <Banner
+            bgColor={'var(--white)'}
+            height={'90px'}
+            width={'90%'}
+            headingLevel={'h2'}
+            color={'#000'}
+            margin={''}
+            text={'Our Services'}
+            dots={false}
+          />
+        </section>
+        <section className='margin-bottom-2'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
-        <section className=''>
-          <AboutUs />
+
+        <section className='margin-bottom-2'>
+          <AboutUsGallery />
         </section>
-        <section className='margin-top-1'>
-          <Services />
-        </section>
-        <section className='margin-1'>
-          <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
-            <Banner
-              bgColor={'#626262'}
-              height={'90px'}
-              width={'90%'}
-              headingLevel={'h3'}
-              color={'var(--white)'}
-              margin={''}
-              text={'CONTACT US'}
-              dots={true}
-            />
-          </a>
+
+        <section className='margin-bottom-2'>
+          <Banner
+            bgColor={'var(--white)'}
+            height={'90px'}
+            width={'90%'}
+            headingLevel={'h3'}
+            color={'#000'}
+            margin={''}
+            text={'Our team is ready to help you'}
+            dots={false}
+          />
         </section>
       </main>
       <Footer />
@@ -245,6 +251,18 @@ export default function Home() {
 
         .margin-bottom-1 {
           margin-bottom: 35px;
+        }
+
+        .margin-2 {
+          margin: 25px 0;
+        }
+
+        .margin-top-2 {
+          margin-top: 25px;
+        }
+
+        .margin-bottom-2 {
+          margin-bottom: 25px;
         }
 
         .shadow-3 {

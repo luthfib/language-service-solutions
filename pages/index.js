@@ -246,6 +246,18 @@ export default function Home() {
         .margin-bottom-1 {
           margin-bottom: 35px;
         }
+        
+        .margin-2 {
+          margin: 25px 0;
+        }
+
+        .margin-top-2 {
+          margin-top: 25px;
+        }
+
+        .margin-bottom-2 {
+          margin-bottom: 25px;
+        }
 
         .shadow-3 {
           box-shadow: var(--elevation-3);
