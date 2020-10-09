@@ -23,6 +23,7 @@ const hasDots = (props) => {
               text-transform: uppercase;
               text-align: center;
               padding: 0 5px;
+              margin: 0;
             }
           `}
         </style>
@@ -54,6 +55,7 @@ const hasDots = (props) => {
               color: ${props.color};
               text-transform: uppercase;
               text-align: center;
+              margin: 0;
             }
           `}
         </style>

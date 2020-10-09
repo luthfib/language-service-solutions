@@ -58,6 +58,10 @@ const ServiceSingle = ({ innerText, logo, img }) => (
             padding: 40px 30px;
             width: 100%;
           }
+
+          .img-wrapper {
+          height: 150px;
+        }
   
       `}</style>
 
@@ -66,7 +70,7 @@ const ServiceSingle = ({ innerText, logo, img }) => (
         letter-spacing: 2px;
       }
 
-      .white {
+      .text-white {
         color: var(--white);
       }
 

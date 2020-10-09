@@ -24,7 +24,7 @@ const AboutUs = (props) => (
         background: var(--primary-light);
         border-radius: var(--border-radius);
         width: 90%;
-        padding: 0px 80px 30px;
+        padding: 30px 80px ;
         text-align: center;
         box-shadow: var(--elevation-3);
       }
@@ -37,7 +37,7 @@ const AboutUs = (props) => (
 
       @media (max-width: 768px) {
         div {
-          padding: 0px 40px 30px;
+          padding: 30px 40px;
           width: 100%;
         }
 
