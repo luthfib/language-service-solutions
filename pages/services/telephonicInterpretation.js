@@ -53,7 +53,7 @@ export default function Home() {
                   book.
                 </p>
                 <br />
-                <h4 className='headline white no-margin-top small-margin-bottom upperCase'>
+                <h4 className='headline text-white no-margin-top small-margin-bottom upperCase'>
                   Telephonic interpretation has never been easier
                 </h4>
                 <p className='no-margin-top'>
@@ -63,7 +63,7 @@ export default function Home() {
                   book.
                 </p>
                 <br />
-                <h4 className='headline white no-margin-top small-margin-bottom upperCase'>
+                <h4 className='headline text-white no-margin-top small-margin-bottom upperCase'>
                   Telephonic interpretation has never been easier
                 </h4>
                 <p className='no-margin-top'>
@@ -73,7 +73,7 @@ export default function Home() {
                   book.
                 </p>
                 <br />
-                <h4 className='headline white no-margin-top small-margin-bottom upperCase'>
+                <h4 className='headline text-white no-margin-top small-margin-bottom upperCase'>
                   Telephonic interpretation has never been easier
                 </h4>
                 <p className='no-margin-top'>
@@ -155,7 +155,7 @@ export default function Home() {
             var(--primary-dark)
           );
 
-          --nav-height: 120px;
+          --nav-height: 100px;
           /* Shadows Vercel */
 
           --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
@@ -294,10 +294,10 @@ export default function Home() {
         }
 
         .scrolled {
-          --nav-height: 95px;
+          --nav-height: 85px;
         }
         .scrolled + main {
-          --nav-height: 95px;
+          --nav-height: 85px;
         }
         .scrolled .navigation {
           --logo-size: 60px;
@@ -336,7 +336,7 @@ export default function Home() {
             margin-bottom: 25px;
           }
           .scrolled {
-            --nav-height: 90px;
+            --nav-height: 80px;
           }
 
           .scrolled .navigation {

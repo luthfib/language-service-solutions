@@ -39,8 +39,8 @@ const Navbar = ({ open, setOpen }) => {
 
             --space: 10px;
             --hamburger-size: 30px;
-            --logo-size: 70px;
-            --logo-circle: 90px;
+            --logo-size: 65px;
+            --logo-circle: 80px;
             display: flex;
             justify-content: space-between;
             align-items: center;
