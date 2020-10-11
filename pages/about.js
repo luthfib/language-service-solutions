@@ -89,7 +89,7 @@ export default function Home() {
             }
           />
         </section>
-        <section className=''>
+        <section className='margin-top-1'>
           <Banner
             bgColor={'var(--white)'}
             height={'90px'}
@@ -102,11 +102,11 @@ export default function Home() {
           />
         </section>
 
-        <section className='margin-bottom-2'>
+        <section className='margin-bottom-1'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
 
-        <section className=''>
+        <section className='margin-bottom-1 margin-top-2'>
           <Textbox
             logo={''}
             img={''}

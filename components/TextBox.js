@@ -56,7 +56,7 @@ const renderImg = (img) => {
 const ServiceSingle = ({ innerText, logo, img, textAlign }) => (
   <>
     <div className='serviceSingle'>
-      <div className='serviceDescription margin-bottom-1'>
+      <div className='serviceDescription '>
        {renderLogo(logo)}
         {innerText}
       </div>
