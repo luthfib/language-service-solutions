@@ -35,7 +35,8 @@ const renderImg = (img) => {
       <style jsx>{`
         
       .img-wrapper {
-        height: 300px;
+        height: 350px;
+        margin-top: 35px;
       }
       .img-wrapper img {
         height: 100%;
@@ -45,7 +46,7 @@ const renderImg = (img) => {
 
       @media (max-width: 768px) {
           .img-wrapper {
-          height: 150px;
+          height: 200px;
         }
         `}
       </style>
