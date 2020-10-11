@@ -8,8 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "mdbreact": "^4.27.0",
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1"
