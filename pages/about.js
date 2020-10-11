@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
+import Textbox from '../components/TextBox';
 import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
 
 export default function Home() {
@@ -32,7 +33,7 @@ export default function Home() {
             headingLevel={'h2'}
             color={'#000'}
             margin={''}
-            text={'Our Services'}
+            text={'About us'}
             dots={false}
           />
         </section>
@@ -44,7 +45,7 @@ export default function Home() {
           <AboutUsGallery />
         </section>
 
-        <section className='margin-bottom-2'>
+        <section className=''>
           <Banner
             bgColor={'var(--white)'}
             height={'90px'}
@@ -56,6 +57,103 @@ export default function Home() {
             dots={false}
           />
         </section>
+        <section className='margin-top-1'>
+          <Textbox
+            logo={''}
+            img={''}
+            textAlign={'center'}
+            innerText={
+              <>
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
+                <br />
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
+                <br />
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
+                <br />
+              </>
+            }
+          />
+        </section>
+        <section className=''>
+          <Banner
+            bgColor={'var(--white)'}
+            height={'90px'}
+            width={'90%'}
+            headingLevel={'h2'}
+            color={'#000'}
+            margin={''}
+            text={'why us?'}
+            dots={false}
+          />
+        </section>
+
+        <section className='margin-bottom-2'>
+          <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
+        </section>
+
+        <section className=''>
+          <Textbox
+            logo={''}
+            img={''}
+            textAlign={'center'}
+            innerText={
+              <>
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
+                <br />
+                <h4 className='headline text-white no-margin-top small-margin-bottom upperCase'>
+                  MedicalInterpretation has never been easier
+                </h4>
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
+                <br />
+                <h4 className='headline text-white no-margin-top small-margin-bottom upperCase'>
+                  MedicalInterpretation has never been easier
+                </h4>
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
+                <br />
+                <h4 className='headline text-white no-margin-top small-margin-bottom upperCase'>
+                  MedicalInterpretation has never been easier
+                </h4>
+                <p className='no-margin-top'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                </p>
+              </>
+            }
+          />
+        </section>
+        
       </main>
       <Footer />
       <style jsx>{`
