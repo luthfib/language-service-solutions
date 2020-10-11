@@ -75,7 +75,7 @@ const ServicesElement = (props) => (
         justify-content: space-between;
         align-items: center;
         padding: 30px 5px;
-        height: 690px;
+        height: 740px;
         box-shadow: var(--elevation-3);
       }
 
@@ -175,7 +175,7 @@ const ServicesElement = (props) => (
 
       @media (max-width: 768px) {
         .services {
-          height: 820px;
+          height: 870px;
           width: 100%;
         }
 
