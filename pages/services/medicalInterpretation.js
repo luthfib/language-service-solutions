@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react';
 import Banner from '../../components/Banner';
 import Dots from '../../components/Icons/dots';
 import Footer from '../../components/Footer';
-import ServiceSingle from '../../components/ServiceSingle';
+import ServiceSingle from '../../components/TextBox';
 import Head from 'next/head';
 import Navbar from '../../components/Navbar';
 import { useOnWindowScroll } from '../../hooks/useOnWindowScroll';
