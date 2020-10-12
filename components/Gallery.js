@@ -6,14 +6,10 @@ const Gallery = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("CURRENT IMG", currentImg);
-      console.log("IMG LENGTH", imgs.length - 1);
       if (currentImg >= imgs.length - 1) {
-        console.log("IN IFF");
         setCurrentImg(0);
       } else {
         setCurrentImg((currentImg) => currentImg + 1);
-        console.log("IN ELSE", currentImg);
       }
     }, 5000);
 
