@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 const Gallery = () => {
   const imgs = ["/imgs/TeamOutside.JPG", "/imgs/TeamGroup.JPG"];
   const [currentImg, setCurrentImg] = useState(0);
+  //TODO: Fix bug where if you click on dots then that messes up the interval
 
   useEffect(() => {
     const interval = setInterval(() => {
