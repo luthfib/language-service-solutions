@@ -1,19 +1,19 @@
-import { useEffect } from 'react'; //If so, we don’t do anything, otherwise, call a function, handler (for example setting the Navbar open state to false).
+import { useEffect } from "react"; //If so, we don’t do anything, otherwise, call a function, handler (for example setting the Navbar open state to false).
 export const useOnWindowScroll = (ref, css, scroll) => {
   useEffect(() => {
-    console.log(ref);
+    // console.log(ref);
     const scrolled = () => {
       if (window.scrollY > scroll) {
-        console.log(ref);
+        // console.log(ref);
         ref.current.classList.add(`${css}`);
       } else {
-        console.log(ref);
+        // console.log(ref);
         ref.current.classList.remove(`${css}`);
       }
     };
-    window.addEventListener('scroll', scrolled);
+    window.addEventListener("scroll", scrolled);
     return () => {
-      window.removeEventListener('scroll', scrolled);
+      window.removeEventListener("scroll", scrolled);
     };
   }, [ref]);
 };
