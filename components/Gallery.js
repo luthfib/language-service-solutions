@@ -1,6 +1,24 @@
 const Gallery = () => (
   <>
     <div className="img-container">
+      <a className="carousel-control-prev">
+        <div>
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="sr-only"></span>
+        </div>
+      </a>
+      <a className="carousel-control-next">
+        <div>
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="sr-only"></span>
+        </div>
+      </a>
       <ol className="carousel-indicators">
         <li className="active"></li>
         <li></li>
@@ -11,17 +29,108 @@ const Gallery = () => (
     </div>
     <style jsx>
       {`
+        div {
+          width: 100%;
+           {
+            /* height: 50%; */
+          }
+        }
         .img-container {
           display: inline-block;
           position: relative;
+        }
+        a:not([href]):not([tabindex]),
+        a:not([href]):not([tabindex]):focus,
+        a:not([href]):not([tabindex]):hover {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        a:not([href]),
+        a:not([href]):hover {
+          color: inherit;
+          text-decoration: none;
+        }
+        .carousel-control-prev,
+        .carousel-control-next,
+        .carousel-item-prev,
+        .carousel-item-next {
+          z-index: 2;
+        }
+
+        .carousel-control-prev {
+          left: 0;
+        }
+
+        .carousel-control-next {
+          right: 0;
+        }
+
+        .carousel-control-next,
+        .carousel-control-prev {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 7.5%;
+          color: #fff;
+          text-align: center;
+          opacity: 0.8;
+          transition: opacity 0.15s ease;
+        }
+        a,
+        a:hover,
+        a:active,
+        a:visited {
+          color: inherit;
+          -webkit-text-decoration: none;
+          text-decoration: none;
+        }
+
+        a {
+          color: #007bff;
+          text-decoration: none;
+          background-color: transparent;
+        }
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
         }
         .carousel-indicators .active {
           opacity: 0.9;
           transform: scale(1.1);
         }
-        div {
-          width: 100%;
-          height: 50%;
+
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+          display: inline-block;
+          width: 80px;
+          height: 80px;
+          background: no-repeat 50%/100% 100%;
+        }
+
+        .carousel-control-prev-icon {
+          background-image: url(/icons/arrow_left.svg);
+        }
+
+        .carousel-control-next-icon {
+          background-image: url(/icons/arrow_right.svg);
+        }
+
+        .carousel .carousel-control-next-icon,
+        .carousel .carousel-control-prev-icon {
+          width: 30px;
+          height: 30px;
         }
         .carousel-indicators {
           position: absolute;
