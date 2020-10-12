@@ -4,21 +4,23 @@ const Gallery = () => {
   const imgs = ["/imgs/TeamOutside.JPG", "/imgs/TeamGroup.JPG"];
   const [currentImg, setCurrentImg] = useState(0);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (currentImg >= imgs.length - 1) {
-  //       console.log("IN IFF");
-  //       setCurrentImg(0);
-  //     } else {
-  //       setCurrentImg((counter) => counter + 1);
-  //       console.log("IN ELSE", currentImg);
-  //     }
-  //   }, 5000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log("CURRENT IMG", currentImg);
+      console.log("IMG LENGTH", imgs.length - 1);
+      if (currentImg >= imgs.length - 1) {
+        console.log("IN IFF");
+        setCurrentImg(0);
+      } else {
+        setCurrentImg((currentImg) => currentImg + 1);
+        console.log("IN ELSE", currentImg);
+      }
+    }, 5000);
 
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [currentImg]);
 
   const setCurrentImgIdx = (e) => {
     const imgIdx = e.target.dataset.imgIdx;
