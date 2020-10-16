@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
+import { useSwipeable, Swipeable } from "react-swipeable";
 
 const Gallery = () => {
   const imgs = ["/imgs/TeamOutside.JPG", "/imgs/TeamGroup.JPG"];
   const [currentImg, setCurrentImg] = useState(0);
-  //TODO: Fix bug where if you click on dots then that messes up the interval
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("CURRENT IMAGE", currentImg);
       if (currentImg >= imgs.length - 1) {
         setCurrentImg(0);
       } else {
@@ -25,7 +24,7 @@ const Gallery = () => {
     setCurrentImg(imgIdx);
   };
 
-  const setRotateImage = (e, addOrSubtractAmount) => {
+  const rotateImage = (addOrSubtractAmount) => {
     let amount = addOrSubtractAmount;
     if (currentImg + amount > imgs.length - 1) {
       setCurrentImg(0);
@@ -38,43 +37,50 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="img-container">
-        <a className="carousel-control-prev">
-          <div>
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-              onClick={(e) => setRotateImage(e, -1)}
-            ></span>
-            <span className="sr-only"></span>
-          </div>
-        </a>
-        <a className="carousel-control-next">
-          <div>
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-              onClick={(e) => setRotateImage(e, 1)}
-            ></span>
-            <span className="sr-only"></span>
-          </div>
-        </a>
-        <ol className="carousel-indicators">
-          <li
-            className={currentImg == 0 ? "active" : ""}
-            data-img-idx="0"
-            onClick={(e) => setCurrentImgIdx(e)}
-          ></li>
-          <li
-            className={currentImg == 1 ? "active" : ""}
-            data-img-idx="1"
-            onClick={(e) => setCurrentImgIdx(e)}
-          ></li>
-          {/* <li></li> */}
-        </ol>
+      <Swipeable
+        onSwiped={(eventData) => {
+          rotateImage(eventData.dir == "Left" ? -1 : 1);
+        }}
+      >
+        <div className="img-container">
+          <a className="carousel-control-prev">
+            <div>
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+                onClick={(e) => rotateImage(e, -1)}
+              ></span>
 
-        <img src={imgs[currentImg]} />
-      </div>
+              <span className="sr-only"></span>
+            </div>
+          </a>
+          <a className="carousel-control-next">
+            <div>
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+                onClick={(e) => rotateImage(e, 1)}
+              ></span>
+              <span className="sr-only"></span>
+            </div>
+          </a>
+          <ol className="carousel-indicators">
+            <li
+              className={currentImg == 0 ? "active" : ""}
+              data-img-idx="0"
+              onClick={(e) => setCurrentImgIdx(e)}
+            ></li>
+            <li
+              className={currentImg == 1 ? "active" : ""}
+              data-img-idx="1"
+              onClick={(e) => setCurrentImgIdx(e)}
+            ></li>
+            {/* <li></li> */}
+          </ol>
+
+          <img src={imgs[currentImg]} />
+        </div>
+      </Swipeable>
       <style jsx>
         {`
           div {
