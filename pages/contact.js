@@ -1,13 +1,12 @@
 import React, { useState, useRef } from 'react';
 
-import AboutUs from '../components/AboutUsSection';
-import Banner from '../components/Banner';
+import AboutUsGallery from '../components/AboutUsGallery';
 import Dots from '../components/Icons/dots';
 import Footer from '../components/Footer';
-import Gallery from '../components/Gallery';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import Services from '../components/ServicesElement';
+import Banner from '../components/Banner';
+import ContactDetails from '../components/ContactDetails';
 import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
 
 export default function Home() {
@@ -26,29 +25,38 @@ export default function Home() {
       </header>
 
       <main>
-        <Gallery />
-        <section className='margin-1'>
+        <section className='margin-top-1'>
+          <Banner
+            bgColor={'var(--white)'}
+            height={'90px'}
+            width={'90%'}
+            headingLevel={'h2'}
+            color={'#000'}
+            margin={''}
+            text={'Contact us'}
+            dots={false}
+          />
+        </section>
+        <section className='margin-bottom-2'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
-        <section className=''>
-          <AboutUs />
-        </section>
-        <section className='margin-top-1'>
-          <Services />
-        </section>
+
         <section className='margin-1'>
           <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
             <Banner
-              bgColor={'#626262'}
+              bgColor={'var(--gradient3)'}
               height={'90px'}
               width={'90%'}
               headingLevel={'h3'}
               color={'var(--white)'}
               margin={''}
-              text={'Book a service'}
+              text={'Contact us'}
               dots={true}
             />
           </a>
+        </section>
+        <section className='margin-bottom-2'>
+            <ContactDetails/>
         </section>
       </main>
       <Footer />
@@ -187,14 +195,15 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
+
           max-width: 800px;
           margin-top: 3rem;
         }
 
         main {
           flex: 1;
-          width:100%;
           display: flex;
+          width:100%;
           flex-direction: column;
           justify-content: center;
           align-items: center;
@@ -246,7 +255,7 @@ export default function Home() {
         .margin-bottom-1 {
           margin-bottom: 35px;
         }
-        
+
         .margin-2 {
           margin: 25px 0;
         }
