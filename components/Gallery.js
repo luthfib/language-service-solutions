@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSwipeable, Swipeable } from "react-swipeable";
+import { Swipeable } from "react-swipeable";
 
 const Gallery = () => {
   const imgs = ["/imgs/TeamOutside.JPG", "/imgs/TeamGroup.JPG"];
@@ -21,6 +21,7 @@ const Gallery = () => {
 
   const setCurrentImgIdx = (e) => {
     const imgIdx = parseInt(e.target.dataset.imgIdx);
+    console.log("Current Image", imgIdx);
     setCurrentImg(imgIdx);
   };
 
@@ -48,7 +49,7 @@ const Gallery = () => {
               <span
                 className="carousel-control-prev-icon"
                 aria-hidden="true"
-                onClick={(e) => rotateImage(e, -1)}
+                onClick={(e) => rotateImage(-1)}
               ></span>
 
               <span className="sr-only"></span>
@@ -59,7 +60,7 @@ const Gallery = () => {
               <span
                 className="carousel-control-next-icon"
                 aria-hidden="true"
-                onClick={(e) => rotateImage(e, 1)}
+                onClick={(e) => rotateImage(1)}
               ></span>
               <span className="sr-only"></span>
             </div>
