@@ -24,6 +24,17 @@ const Gallery = () => {
     setCurrentImg(imgIdx);
   };
 
+  const setRotateImage = (e, addOrSubtractAmount) => {
+    let amount = addOrSubtractAmount;
+    if (currentImg + amount > imgs.length - 1) {
+      setCurrentImg(0);
+    } else if (currentImg + amount < 0) {
+      setCurrentImg(imgs.length - 1);
+    } else {
+      setCurrentImg(currentImg + addOrSubtractAmount);
+    }
+  };
+
   return (
     <>
       <div className="img-container">
@@ -32,6 +43,7 @@ const Gallery = () => {
             <span
               className="carousel-control-prev-icon"
               aria-hidden="true"
+              onClick={(e) => setRotateImage(e, -1)}
             ></span>
             <span className="sr-only"></span>
           </div>
@@ -41,6 +53,7 @@ const Gallery = () => {
             <span
               className="carousel-control-next-icon"
               aria-hidden="true"
+              onClick={(e) => setRotateImage(e, 1)}
             ></span>
             <span className="sr-only"></span>
           </div>
