@@ -7,6 +7,7 @@ const Gallery = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      console.log("CURRENT IMAGE", currentImg);
       if (currentImg >= imgs.length - 1) {
         setCurrentImg(0);
       } else {
@@ -20,7 +21,7 @@ const Gallery = () => {
   }, [currentImg]);
 
   const setCurrentImgIdx = (e) => {
-    const imgIdx = e.target.dataset.imgIdx;
+    const imgIdx = parseInt(e.target.dataset.imgIdx);
     setCurrentImg(imgIdx);
   };
 
