@@ -9,12 +9,14 @@ const ContactDetails = () => {
           <div className='contact-container'>
             <h4>CONTACT DETAILS</h4>
             <div>
-            <img src='/icons/phone.svg' />
-            <small>Phone: (919) 949-9272</small>
+              <img src='/icons/phone.svg' />
+              <span className="circle"></span>
+              <small>Phone: (919) 949-9272</small>
             </div>
             <div>
-            <img src='/icons/email.svg' />
-            <small>Email: murtado@languageservicesolutions</small>
+              <img src='/icons/email.svg' />
+              <span className="circle"></span>
+              <small>Email: murtado@languageservicesolutions</small>
             </div>
             <ul>
               <li className='icon'>
@@ -46,10 +48,13 @@ const ContactDetails = () => {
           .details {
             --logo-size: 90px;
             background-color: var(--primary-medium);
-            width: 100%;
+            width: 90%;
             display: flex;
             justify-content: center;
+            border-radius: var(--border-radius);
+            box-shadow: var(--elevation-3);
           }
+
           .inner-details {
             display: flex;
             width: 100%;
@@ -71,7 +76,36 @@ const ContactDetails = () => {
           .contact-container {
             display: flex;
             flex-direction: column;
-            text-align:left;
+            text-align:center;
+            justify-content: center;            
+          }
+
+          .contact-container div {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 20px;
+          }
+          .contact-container div:first-of-type {
+            margin-top:15px;
+          }
+
+          .contact-container div img {
+            height: 15px;
+            width: 15px;
+            margin-right:20px;
+            position: relative;
+            filter: invert(100%);
+          }
+          .contact-container div .circle {
+            height: 27px;
+            width: 27px;
+            border: 1px solid var(--white);
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 0%;
+            transform: translate(-6px, -50%);
           }
 
           ul {
@@ -80,7 +114,8 @@ const ContactDetails = () => {
             margin-left: 0;
             padding-left: 0;
             list-style: none;
-            margin-top: 40px;
+            margin-top: 20px;
+            justify-content:center;
           }
 
           li {
@@ -88,7 +123,7 @@ const ContactDetails = () => {
             height: 40px;
             width: 40px;
             border-radius: 50%;
-            margin-right: 5px;
+            margin-right: 8px;
             transition: transform 0.3s ease-in, filter 0.3s ease-in;
           }
 
@@ -126,6 +161,9 @@ const ContactDetails = () => {
           }
 
           @media (max-width: 550px) {
+            .details {
+              width: 100%;
+            }
             .inner-details {
               flex-direction: column;
               align-items: center;

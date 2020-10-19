@@ -25,6 +25,7 @@ export default function Home() {
       </header>
 
       <main>
+      
         <section className='margin-top-1'>
           <Banner
             bgColor={'var(--white)'}
@@ -37,14 +38,24 @@ export default function Home() {
             dots={false}
           />
         </section>
-        <section className='margin-bottom-2'>
+  
+        <section className='margin-bottom-1'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
 
-        <section className='margin-1'>
+        <section className='margin-bottom-1'>
+          <div className='img-wrapper '>
+            <img src={`/imgs/TeamGroup.JPG`} />
+          </div>
+      </section>
+
+        <section className='margin-bottom-1'>
+            <ContactDetails/>
+        </section>
+        <section className='margin-bottom-1'>
           <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
             <Banner
-              bgColor={'var(--gradient3)'}
+              bgColor={'#626262'}
               height={'90px'}
               width={'90%'}
               headingLevel={'h3'}
@@ -55,11 +66,10 @@ export default function Home() {
             />
           </a>
         </section>
-        <section className='margin-bottom-2'>
-            <ContactDetails/>
-        </section>
+        
       </main>
       <Footer />
+ 
       <style jsx>{`
         .card {
           margin: 1rem;
@@ -72,16 +82,37 @@ export default function Home() {
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
         }
-
+        .img-wrapper {
+          height: 350px;
+        }
+        .img-wrapper img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
         .logo {
           height: 1em;
         }
-
+        
         .banner-wrapper {
           width: 100%;
           display: flex;
           justify-content: center;
           transition: transform 0.3s ease;
+        }
+
+           
+
+      @media (max-width: 768px) {
+          .img-wrapper {
+            height: 200px;
+          }
+        }
+
+        @media (hover: hover) {
+          .banner-wrapper:hover {
+            transform: scale(1.03);
+          }
         }
       `}</style>
       <style jsx global>{`

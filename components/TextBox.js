@@ -29,14 +29,13 @@ const renderImg = (img) => {
   if(img) {
     return (
     <>
-      <div className='img-wrapper margin-bottom-1'>
+      <div className='img-wrapper margin-top-1'>
         <img src={`/imgs/${img}`} />
       </div>
       <style jsx>{`
         
       .img-wrapper {
         height: 350px;
-        margin-top: 35px;
       }
       .img-wrapper img {
         height: 100%;

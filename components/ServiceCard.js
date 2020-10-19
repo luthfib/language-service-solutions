@@ -72,9 +72,11 @@ const ServiceCard = ({ logo, title, text }) => (
       .banner-wrapper:hover {
         background-color: var(--white);
       }
-
-      @media (max-width: 768px) {
+      {/* FOR LAST CARD */}
+      #medicalInterpretation div{
+        margin-bottom: 0;
       }
+
     `}</style>
 
     <style jsx global>
@@ -87,6 +89,8 @@ const ServiceCard = ({ logo, title, text }) => (
           color: var(--primary-medium);
           transition: color 0.3s ease;
         }
+
+       
 
         @media (max-width: 768px) {
           :root {
