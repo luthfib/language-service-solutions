@@ -36,10 +36,10 @@ export default function Home() {
             dots={false}
           />
         </section>
-        <section className='margin-bottom-2'>
+        <section className='margin-bottom-1'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
-        <section className='margin-top-1'>
+        <section className='margin-bottom-1'>
           <div className='card-container'>
             <ServiceCard
               logo={'telephonicInterpretation'}
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section className='margin-1'>
+        {/* <section className='margin-bottom-1'>
           <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
             <Banner
               bgColor={'#626262'}
@@ -107,7 +107,7 @@ export default function Home() {
             />
           </a>
         </section> */}
-        <section className='margin-1'>
+        <section className='margin-bottom-1'>
           <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
             <Banner
               bgColor={'var(--gradient3)'}

@@ -36,11 +36,11 @@ export default function Home() {
             dots={false}
           />
         </section>
-        <section className='margin-bottom-2'>
+        <section className='margin-bottom-1'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
 
-        <section className='margin-1'>
+        <section className='margin-bottom-1'>
           <ServiceSingle
             logo={'medicalInterpretation'}
             img={'TeamOutside.JPG'}

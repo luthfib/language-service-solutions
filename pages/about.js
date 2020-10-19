@@ -37,15 +37,15 @@ export default function Home() {
             dots={false}
           />
         </section>
-        <section className='margin-bottom-2'>
+        <section className='margin-bottom-1'>
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
 
-        <section className='margin-bottom-2'>
+        <section className='margin-bottom-1'>
           <AboutUsGallery />
         </section>
 
-        <section className=''>
+        <section className=' margin-bottom-1'>
           <Banner
             bgColor={'var(--white)'}
             height={'90px'}
@@ -57,7 +57,7 @@ export default function Home() {
             dots={false}
           />
         </section>
-        <section className='margin-top-1'>
+        <section className='margin-bottom-1'>
           <Textbox
             logo={''}
             img={''}
@@ -89,7 +89,7 @@ export default function Home() {
             }
           />
         </section>
-        <section className='margin-top-1'>
+        <section className=''>
           <Banner
             bgColor={'var(--white)'}
             height={'90px'}
@@ -106,7 +106,7 @@ export default function Home() {
           <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
         </section>
 
-        <section className='margin-bottom-1 margin-top-2'>
+        <section className='margin-bottom-1'>
           <Textbox
             logo={''}
             img={''}
