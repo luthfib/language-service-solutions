@@ -24,6 +24,7 @@ const hasDots = (props) => {
               text-align: center;
               padding: 0 5px;
               margin: 0;
+              font-weight: 400;
             }
           `}
         </style>
@@ -56,6 +57,7 @@ const hasDots = (props) => {
               text-transform: uppercase;
               text-align: center;
               margin: 0;
+              font-weight: 400;
             }
           `}
         </style>

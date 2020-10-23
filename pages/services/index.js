@@ -24,12 +24,12 @@ export default function Home() {
       </header>
 
       <main>
-        <section className='margin-1'>
+        <section className='margin-top-1 margin-bottom-2'>
           <Banner
             bgColor={''}
             height={'90px'}
             width={'90%'}
-            headingLevel={'h3'}
+            headingLevel={'h1'}
             color={'#000'}
             margin={''}
             text={'Our Services'}
@@ -92,28 +92,13 @@ export default function Home() {
             />
           </div>
         </section>
-
-        {/* <section className='margin-bottom-1'>
-          <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
-            <Banner
-              bgColor={'#626262'}
-              height={'90px'}
-              width={'90%'}
-              headingLevel={'h3'}
-              color={'var(--white)'}
-              margin={''}
-              text={'Book a service'}
-              dots={true}
-            />
-          </a>
-        </section> */}
         <section className='margin-bottom-1'>
           <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
             <Banner
               bgColor={'var(--gradient3)'}
               height={'90px'}
               width={'90%'}
-              headingLevel={'h3'}
+              headingLevel={'h2'}
               color={'var(--white)'}
               margin={''}
               text={'Book a service'}
@@ -288,19 +273,27 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        h2,
+        h1,h2,
         h3 {
           letter-spacing: 6px;
-        }
-        h2 {
-          letter-spacing: 6px;
-          font-size: 32px;
         }
 
-        h3 {
-          letter-spacing: 6px;
-          font-size: 24px;
+        h1, .like-1 {
+          font-size: 2em;
+        }     
+
+        h2, .like-2 {
+          font-size: 1.5em;
+        }   
+
+         h3, .like-3 {
+          font-size: 1.17em;
         }
+
+        h4 {
+          font-size: 1em;
+        }
+    
 
         a,
         a:hover,

@@ -24,12 +24,12 @@ export default function Home() {
       </header>
 
       <main>
-        <section className='margin-1'>
+        <section className='margin-top-1 margin-bottom-2'>
           <Banner
             bgColor={''}
             height={'90px'}
             width={'90%'}
-            headingLevel={'h3'}
+                headingLevel={'h1'}
             color={'#000'}
             margin={''}
             text={'Medical Interpretation'}
@@ -246,7 +246,7 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        h2,
+        h1,h2,
         h3 {
           letter-spacing: 6px;
         }
