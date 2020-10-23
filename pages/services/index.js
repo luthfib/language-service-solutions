@@ -24,7 +24,7 @@ export default function Home() {
       </header>
 
       <main>
-        <section className='margin-top-1'>
+        <section className='margin-1'>
           <Banner
             bgColor={''}
             height={'90px'}
