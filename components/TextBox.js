@@ -72,14 +72,15 @@ const ServiceSingle = ({ innerText, logo, img, textAlign }) => (
         align-items: center;
       }
         .serviceDescription {
-          background: var(--primary-light);
+          background: var(--primary-medium);
           border-radius: var(--border-radius);
           width: 90%;
           padding: 40px 40px;
           box-shadow: var(--elevation-3);
           display: flex;
           flex-flow: column;
-          text-align: ${textAlign}
+          text-align: ${textAlign};
+          font-weight: bold;
         }
 
 
@@ -99,6 +100,8 @@ const ServiceSingle = ({ innerText, logo, img, textAlign }) => (
     <style jsx global>{`
       .headline {
         letter-spacing: 2px;
+        font-family:'Open Sans',sans-serif;
+        font-weight: 400;
       }
 
       .text-white {
@@ -121,7 +124,7 @@ const ServiceSingle = ({ innerText, logo, img, textAlign }) => (
       }
 
       .small-margin-bottom {
-        margin-bottom: 2px;
+        margin-bottom: 5px;
       }
 
       .upperCase {

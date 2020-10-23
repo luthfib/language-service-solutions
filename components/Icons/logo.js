@@ -6,6 +6,7 @@ const Logo = ({ width, height }) => {
         {`
           img {
             width: ${width};
+            cursor: pointer;
             height: ${height};
             transition: height 0.3s ease, width 0.3s ease
           }
