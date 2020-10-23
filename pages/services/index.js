@@ -311,15 +311,15 @@ export default function Home() {
         }
 
         .margin-1 {
-          margin: 35px 0;
+          margin: 60px 0;
         }
 
         .margin-top-1 {
-          margin-top: 35px;
+          margin-top: 60px;
         }
 
         .margin-bottom-1 {
-          margin-bottom: 35px;
+          margin-bottom: 60px;
         }
 
         .margin-2 {
@@ -354,15 +354,15 @@ export default function Home() {
             --border-radius: 0;
           }
           .margin-1 {
-            margin: 25px 0;
+            margin: 40px 0;
           }
 
           .margin-top-1 {
-            margin-top: 25px;
+            margin-top: 40px;
           }
 
           .margin-bottom-1 {
-            margin-bottom: 25px;
+            margin-bottom: 40px;
           }
           .scrolled {
             --nav-height: 80px;
