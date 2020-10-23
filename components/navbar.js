@@ -1,10 +1,14 @@
 import { useRef } from 'react';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
+import { useRouter } from 'next/router'
 import Logo from './Icons/logo';
 
 const Navbar = ({ open, setOpen }) => {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
+  
+  const router = useRouter();
+
   return (
     <div className='navigation' ref={node}>
       <div className='logo-wrapper'>
@@ -13,16 +17,16 @@ const Navbar = ({ open, setOpen }) => {
       <button className='hamburger' open={open} onClick={() => setOpen(!open)}></button>
       <nav className='nav'>
         <ul>
-          <li>
+          <li className={router.pathname == "/" ? "active" : ""}>
             <a href='/'>home</a>
           </li>
-          <li>
+          <li  className={router.pathname == "/about" ? "active" : ""}>
             <a href='/about'>about</a>
           </li>
-          <li>
+          <li  className={router.pathname == "/services" ? "active" : ""}>
             <a href='/services'>services</a>
           </li>
-          <li>
+          <li  className={router.pathname == "/contact" ? "active" : ""}>
             <a href='/contact'>contact</a>
           </li>
         </ul>
@@ -132,6 +136,14 @@ const Navbar = ({ open, setOpen }) => {
             transform: translateX(-50%);
             opacity: 0;
           }
+
+          .nav li.active a {
+            color: var(--white);
+          }
+          .nav li.active a::after {
+            opacity: 1;
+          }
+
           @media (hover: hover) {
             .nav li a:hover {
               color: var(--white);

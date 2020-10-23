@@ -27,7 +27,7 @@ export default function Home() {
       <main>
         <section className='margin-top-1'>
           <Banner
-            bgColor={'var(--white)'}
+            bgColor={''}
             height={'90px'}
             width={'90%'}
             headingLevel={'h2'}
@@ -47,7 +47,7 @@ export default function Home() {
 
         <section className=' margin-bottom-1'>
           <Banner
-            bgColor={'var(--white)'}
+            bgColor={''}
             height={'90px'}
             width={'90%'}
             headingLevel={'h3'}
@@ -91,7 +91,7 @@ export default function Home() {
         </section>
         <section className=''>
           <Banner
-            bgColor={'var(--white)'}
+            bgColor={''}
             height={'90px'}
             width={'90%'}
             headingLevel={'h2'}
