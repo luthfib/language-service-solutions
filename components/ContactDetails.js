@@ -7,7 +7,7 @@ const ContactDetails = () => {
         <div className='inner-details'>
           
           <div className='contact-container'>
-            <h4>CONTACT DETAILS</h4>
+            <h2>CONTACT DETAILS</h2>
             <div>
               <img src='/icons/phone.svg' />
               <span className="circle"></span>
@@ -140,7 +140,7 @@ const ContactDetails = () => {
             height: 55%;
           }
 
-          h4 {
+          h2 {
             font-size: 26px;
             margin: 16px 0;
             text-align:center;

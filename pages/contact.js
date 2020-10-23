@@ -26,12 +26,12 @@ export default function Home() {
 
       <main>
       
-        <section className='margin-1'>
+        <section className='margin-top-1 margin-bottom-2'>
           <Banner
             bgColor={''}
             height={'90px'}
             width={'90%'}
-            headingLevel={'h2'}
+            headingLevel={'h1'}
             color={'#000'}
             margin={''}
             text={'Contact us'}
@@ -58,7 +58,7 @@ export default function Home() {
               bgColor={'#626262'}
               height={'90px'}
               width={'90%'}
-              headingLevel={'h3'}
+              headingLevel={'h2'}
               color={'var(--white)'}
               margin={''}
               text={'Contact us'}
@@ -247,21 +247,27 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        h2,
+        h1,h2,
         h3 {
           letter-spacing: 6px;
         }
-        h2 {
-          font-size: 32px;
-        }
 
-        h3 {
-          font-size: 24px;
+        h1, .like-1 {
+          font-size: 2em;
+        }     
+
+        h2, .like-2 {
+          font-size: 1.5em;
+        }   
+
+         h3, .like-3 {
+          font-size: 1.17em;
         }
 
         h4 {
-          font-size: 18px;
+          font-size: 1em;
         }
+    
 
         a,
         a:hover,

@@ -25,12 +25,12 @@ export default function Home() {
       </header>
 
       <main>
-        <section className='margin-1'>
+        <section className='margin-top-1 margin-bottom-2'>
           <Banner
             bgColor={''}
             height={'90px'}
             width={'90%'}
-            headingLevel={'h2'}
+            headingLevel={'h1'}
             color={'#000'}
             margin={''}
             text={'About us'}
@@ -50,7 +50,7 @@ export default function Home() {
             bgColor={''}
             height={'90px'}
             width={'90%'}
-            headingLevel={'h3'}
+            headingLevel={'h2'}
             color={'#000'}
             margin={''}
             text={'Our team is ready to help you'}
@@ -89,7 +89,7 @@ export default function Home() {
             }
           />
         </section>
-        <section className=''>
+        <section className='margin-bottom-2'>
           <Banner
             bgColor={''}
             height={'90px'}
@@ -97,6 +97,7 @@ export default function Home() {
             headingLevel={'h2'}
             color={'#000'}
             margin={''}
+            fontSize={'like-2'}
             text={'why us?'}
             dots={false}
           />
@@ -311,21 +312,27 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        h2,
+        h1,h2,
         h3 {
           letter-spacing: 6px;
         }
-        h2 {
-          font-size: 32px;
-        }
 
-        h3 {
-          font-size: 24px;
+        h1, .like-1 {
+          font-size: 2em;
+        }     
+
+        h2, .like-2 {
+          font-size: 1.5em;
+        }   
+
+         h3, .like-3 {
+          font-size: 1.17em;
         }
 
         h4 {
-          font-size: 18px;
+          font-size: 1em;
         }
+    
 
         a,
         a:hover,
