@@ -84,9 +84,6 @@ const Gallery = () => {
       </Swipeable>
       <style jsx>
         {`
-          div {
-            width: 100%;
-          }
           .img-container {
             display: inline-block;
             position: relative;
@@ -168,7 +165,16 @@ const Gallery = () => {
             display: inline-block;
             width: 80px;
             height: 80px;
+            cursor: pointer;
             background: no-repeat 50%/100% 100%;
+          }
+
+          @media (max-width: 768px) {
+            .carousel-control-next-icon,
+            .carousel-control-prev-icon {
+              width: 40px;
+              height: 40px;
+            }
           }
 
           .carousel-control-prev-icon {
