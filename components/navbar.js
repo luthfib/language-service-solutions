@@ -12,9 +12,13 @@ const Navbar = ({ open, setOpen }) => {
 
   return (
     <div className="navigation" ref={node}>
+      <Link href="/">
       <div className="logo-wrapper">
-        <Logo width={"var(--logo-size)"} height={"var(--logo-size)"} />
+        
+          <Logo width={"var(--logo-size)"} height={"var(--logo-size)"} />
+       
       </div>
+      </Link>
       <button
         className="hamburger"
         open={open}
