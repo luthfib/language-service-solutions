@@ -87,10 +87,9 @@ export default function Home() {
                   Have questions or need an estimate?
                 </h4>
                 <p className="no-margin-top">
-                Please contact us by phone, e-mail, or through this website. We’ll be happy to answer any questions you may have and give you a free estimate. 
-
-
-
+                  Please contact us by phone, e-mail, or through this website.
+                  We’ll be happy to answer any questions you may have and give
+                  you a free estimate.
                 </p>
               </>
             }
