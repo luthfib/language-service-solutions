@@ -1,33 +1,46 @@
-import { useRef } from 'react';
-import { useOnClickOutside } from '../hooks/useOnClickOutside';
-import { useRouter } from 'next/router'
-import Logo from './Icons/logo';
+import Link from "next/link";
+import Logo from "./Icons/logo";
+import { useOnClickOutside } from "../hooks/useOnClickOutside";
+import { useRef } from "react";
+import { useRouter } from "next/router";
 
 const Navbar = ({ open, setOpen }) => {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
-  
+
   const router = useRouter();
 
   return (
-    <div className='navigation' ref={node}>
-      <div className='logo-wrapper'>
-        <Logo width={'var(--logo-size)'} height={'var(--logo-size)'} />
+    <div className="navigation" ref={node}>
+      <div className="logo-wrapper">
+        <Logo width={"var(--logo-size)"} height={"var(--logo-size)"} />
       </div>
-      <button className='hamburger' open={open} onClick={() => setOpen(!open)}></button>
-      <nav className='nav'>
+      <button
+        className="hamburger"
+        open={open}
+        onClick={() => setOpen(!open)}
+      ></button>
+      <nav className="nav">
         <ul>
           <li className={router.pathname == "/" ? "active" : ""}>
-            <a href='/'>home</a>
+            <Link href="/">
+              <a>home</a>
+            </Link>
           </li>
-          <li  className={router.pathname == "/about" ? "active" : ""}>
-            <a href='/about'>about</a>
+          <li className={router.pathname == "/about" ? "active" : ""}>
+            <Link href="/about">
+              <a href="/about">about</a>
+            </Link>
           </li>
-          <li  className={router.pathname == "/services" ? "active" : ""}>
-            <a href='/services'>services</a>
+          <li className={router.pathname == "/services" ? "active" : ""}>
+            <Link href="/services">
+              <a>services</a>
+            </Link>
           </li>
-          <li  className={router.pathname == "/contact" ? "active" : ""}>
-            <a href='/contact'>contact</a>
+          <li className={router.pathname == "/contact" ? "active" : ""}>
+            <Link href="/contact">
+              <a href="/contact">contact</a>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -69,7 +82,7 @@ const Navbar = ({ open, setOpen }) => {
           }
 
           .hamburger {
-            background-image: url('https://cdn4.iconfinder.com/data/icons/lightly-2-essential/24/menu-512.png');
+            background-image: url("https://cdn4.iconfinder.com/data/icons/lightly-2-essential/24/menu-512.png");
             background-color: var(--transparent);
             display: none;
             border: 0;
@@ -125,7 +138,7 @@ const Navbar = ({ open, setOpen }) => {
           }
 
           .nav li a::after {
-            content: '';
+            content: "";
             position: absolute;
             top: calc(100% + 10px);
             left: 50%;
@@ -179,7 +192,7 @@ const Navbar = ({ open, setOpen }) => {
               background-color: var(--primary-light);
               opacity: 0.95;
               transition: transform 0.7s ease-in-out;
-              transform: ${open ? 'translateX(100%)' : 'translateX(-50%)'};
+              transform: ${open ? "translateX(100%)" : "translateX(-50%)"};
             }
 
             .nav ul {
