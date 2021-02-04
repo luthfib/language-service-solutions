@@ -1,107 +1,110 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from "react";
 
-import Banner from '../../components/Banner';
-import Dots from '../../components/Icons/dots';
-import Footer from '../../components/Footer';
-import Head from 'next/head';
-import Navbar from '../../components/Navbar';
-import ServiceCard from '../../components/ServiceCard';
-import { useOnWindowScroll } from '../../hooks/useOnWindowScroll';
+import Banner from "../../components/Banner";
+import Dots from "../../components/Icons/dots";
+import Footer from "../../components/Footer";
+import Head from "next/head";
+import Navbar from "../../components/Navbar";
+import ServiceCard from "../../components/ServiceCard";
+import { useOnWindowScroll } from "../../hooks/useOnWindowScroll";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
   const header = useRef();
-  useOnWindowScroll(header, 'scrolled', 20);
+  useOnWindowScroll(header, "scrolled", 20);
 
   return (
-    <div className='container'>
+    <div className="container">
       <Head>
         <title>Language Service Solutions</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <header ref={header}>
         <Navbar open={open} setOpen={setOpen}></Navbar>
       </header>
 
       <main>
-        <section className='margin-top-1 margin-bottom-2'>
+        <section className="margin-top-1 margin-bottom-2">
           <Banner
-            bgColor={''}
-            height={'90px'}
-            width={'90%'}
-            headingLevel={'h1'}
-            color={'#000'}
-            margin={''}
-            text={'Our Services'}
+            bgColor={""}
+            height={"90px"}
+            width={"90%"}
+            headingLevel={"h1"}
+            color={"#000"}
+            margin={""}
+            text={"Our Services"}
             dots={false}
           />
         </section>
-        <section className='margin-bottom-1'>
-          <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
+        <section className="margin-bottom-1">
+          <Dots direction={"up"} color={"#bcbcbc"} size={"10"} />
         </section>
-        <section className='margin-bottom-1'>
-          <div className='card-container'>
+        <section className="margin-bottom-1">
+          <div className="card-container">
             <ServiceCard
-              logo={'telephonicInterpretation'}
-              title={'Telephonic Interpretation'}
+              logo={"telephonicInterpretation"}
+              title={"Telephonic Interpretation"}
               text={
-                'Reach your spanish-speaking clients with our telephonic interprepatation servise'
+                "Language Service Solutions is proud to provide your organization with the capacity to reach your Spanish-speaking clients seamlessly and without delay by offering our telephonic interpretation service"
               }
             />
             <ServiceCard
-              logo={'translation'}
-              title={'Translation'}
+              logo={"translation"}
+              title={"Translation"}
               text={
-                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+                "We provide the highest level of accuracy in translation. Our specialization in English - Spanish uses the latest software and a professional team to deliver the best work possible."
               }
             />
             <ServiceCard
-              logo={'simultaneousInterpretation'}
-              title={'simultaneous Interpretation'}
+              logo={"simultaneousInterpretation"}
+              title={"simultaneous Interpretation"}
               text={
-                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+                "Our sophisticated wireless equipment and experienced simultaneous interpreters create a fully bilingual space."
               }
             />
             <ServiceCard
-              logo={'videoInterpretation'}
-              title={'video Interpretation'}
+              logo={"videoInterpretation"}
+              title={"video Interpretation"}
               text={
-                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+                "Facilitating communication between patients with limited English proficiency and theirhealthcare providers"
               }
             />
             <ServiceCard
-              logo={'transcriptions'}
-              title={'transcriptions'}
+              logo={"transcriptions"}
+              title={"transcriptions"}
               text={
-                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+                "Our team works at a professional level to provide affordable audio or video transcriptions with the the highest degree of word-for-word accuracy."
               }
             />
             <ServiceCard
-              logo={'subtitling'}
-              title={'subtitling'}
+              logo={"subtitling"}
+              title={"subtitling"}
               text={
-                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+                "Our experienced team offers the highest quality subtitling for all types of videos. We not only translate accurately but also localize the dialects, maintaining a smooth, relevant read."
               }
             />
             <ServiceCard
-              logo={'medicalInterpretation'}
-              title={'Medical Interpretation'}
+              logo={"medicalInterpretation"}
+              title={"Medical Interpretation"}
               text={
-                'Facilitating communication between patients with limited English proficiency and theirhealthcare providers'
+                "We have more than 15 years of experience facilitating communication between patients with limited English proficiency, and physicians, nurses, lab technicians, and other healthcare providers"
               }
             />
           </div>
         </section>
-        <section className='margin-bottom-1'>
-          <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
+        <section className="margin-bottom-1">
+          <a
+            href="mailto:murtado@languageservicesolutions"
+            className="banner-wrapper"
+          >
             <Banner
-              bgColor={'var(--gradient3)'}
-              height={'90px'}
-              width={'90%'}
-              headingLevel={'h2'}
-              color={'var(--white)'}
-              margin={''}
-              text={'Book a service'}
+              bgColor={"var(--gradient3)"}
+              height={"90px"}
+              width={"90%"}
+              headingLevel={"h2"}
+              color={"var(--white)"}
+              margin={""}
+              text={"Book a service"}
               dots={true}
             />
           </a>
@@ -144,14 +147,14 @@ export default function Home() {
 
       <style jsx global>{`
         @font-face {
-          font-family: 'matiasregular';
-          src: url('/fonts/matias-webfont.woff2') format('woff2'),
-            url('/fonts/matias-webfont.woff') format('woff');
+          font-family: "matiasregular";
+          src: url("/fonts/matias-webfont.woff2") format("woff2"),
+            url("/fonts/matias-webfont.woff") format("woff");
           font-weight: normal;
           font-style: normal;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap");
         :root {
           /* colors */
 
@@ -194,11 +197,16 @@ export default function Home() {
           /* Shadows level up tuts */
 
           --elevation-0: inset 0 7px 9px -7px rgba(0, 0, 0, 0.7);
-          --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          --elevation-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          --elevation-3: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-          --elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          --elevation-5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+          --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12),
+            0 1px 2px rgba(0, 0, 0, 0.24);
+          --elevation-2: 0 3px 6px rgba(0, 0, 0, 0.16),
+            0 3px 6px rgba(0, 0, 0, 0.23);
+          --elevation-3: 0 10px 20px rgba(0, 0, 0, 0.1),
+            0 6px 6px rgba(0, 0, 0, 0.1);
+          --elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+          --elevation-5: 0 19px 38px rgba(0, 0, 0, 0.3),
+            0 15px 12px rgba(0, 0, 0, 0.22);
 
           /* max-width content */
           --content-width: 1400px;
@@ -212,9 +220,10 @@ export default function Home() {
           padding: 0px;
           margin: 0px;
           overflow-x: hidden;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-            Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-          font-family: 'matiasregular', 'Open Sans', sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
+          font-family: "matiasregular", "Open Sans", sans-serif;
         }
 
         .container {
@@ -273,27 +282,30 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        h1,h2,
+        h1,
+        h2,
         h3 {
           letter-spacing: 6px;
         }
 
-        h1, .like-1 {
+        h1,
+        .like-1 {
           font-size: 2em;
-        }     
+        }
 
-        h2, .like-2 {
+        h2,
+        .like-2 {
           font-size: 1.5em;
-        }   
+        }
 
-         h3, .like-3 {
+        h3,
+        .like-3 {
           font-size: 1.17em;
         }
 
         h4 {
           font-size: 1em;
         }
-    
 
         a,
         a:hover,
