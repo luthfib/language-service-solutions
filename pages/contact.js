@@ -1,12 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 import AboutUsGallery from '../components/AboutUsGallery';
+import Banner from '../components/Banner';
+import ContactDetails from '../components/ContactDetails';
 import Dots from '../components/Icons/dots';
 import Footer from '../components/Footer';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Banner from '../components/Banner';
-import ContactDetails from '../components/ContactDetails';
+import Navbar from '../components/navbar';
 import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
 
 export default function Home() {
