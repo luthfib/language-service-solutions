@@ -4,7 +4,7 @@ import Banner from "../../components/Banner";
 import Dots from "../../components/Icons/dots";
 import Footer from "../../components/Footer";
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/navbar";
 import ServiceCard from "../../components/ServiceCard";
 import { useOnWindowScroll } from "../../hooks/useOnWindowScroll";
 
