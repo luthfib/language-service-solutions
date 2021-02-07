@@ -16,7 +16,7 @@ const ContactDetails = () => {
             <div>
               <img src='/icons/email.svg' />
               <span className="circle"></span>
-              <small>Email: murtado@languageservicesolutions</small>
+              <small>Email: murtado@languageservicesolutions.com</small>
             </div>
             <ul>
               <li className='icon'>

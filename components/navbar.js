@@ -23,6 +23,9 @@ const Navbar = ({ open, setOpen }) => {
           <li  className={router.pathname == "/about" ? "active" : ""}>
             <a href='/about'>about</a>
           </li>
+          <li  className={router.pathname == "/testimonials" ? "active" : ""}>
+            <a href='/testimonials'>testimonials</a>
+          </li>
           <li  className={router.pathname == "/services" ? "active" : ""}>
             <a href='/services'>services</a>
           </li>
@@ -100,6 +103,7 @@ const Navbar = ({ open, setOpen }) => {
             list-style: none;
             margin: 0;
             margin-right: 10px;
+            
           }
 
           .nav li {
@@ -188,6 +192,7 @@ const Navbar = ({ open, setOpen }) => {
               position: absolute;
               top: calc(var(--nav-height));
               padding-left: calc(var(--space) * 2.5);
+              padding-left: 0;
             }
 
             .nav li {
@@ -203,6 +208,7 @@ const Navbar = ({ open, setOpen }) => {
               top: calc(50%);
               left: calc(var(--space) * -1.5);
               transform: translateY(-50%);
+              background:#323131;
             }
           }
         `}

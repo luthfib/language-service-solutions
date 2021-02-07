@@ -1,4 +1,4 @@
-const renderLogo = (logo) => {
+const renderLogo = (logo, logoImg) => {
   if(logo) {
     return (
       <>
@@ -24,6 +24,35 @@ const renderLogo = (logo) => {
       </>
     )
   } 
+
+  else if (logoImg) {
+    return (
+      <>
+       <div className='icon '>
+          <img width='100%' height='100%' src={`/icons/${logoImg}`} />
+        </div>
+        <style jsx>{`
+          .icon {
+            align-self: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 250px;
+            max-height: 200px;
+            margin-bottom: 30px;
+            background: var(--white);
+          }
+
+          .icon img {
+            object-fit: contain;
+          }
+
+          `}
+        </style>
+      </>
+    )
+  }
 }
 const renderImg = (img) => {
   if(img) {
@@ -53,11 +82,11 @@ const renderImg = (img) => {
     )
   } 
 }
-const ServiceSingle = ({ innerText, logo, img, textAlign }) => (
+const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign }) => (
   <>
     <div className='serviceSingle'>
       <div className='serviceDescription '>
-       {renderLogo(logo)}
+       {renderLogo(logo,logoImg)}
         {innerText}
       </div>
       {renderImg(img)}

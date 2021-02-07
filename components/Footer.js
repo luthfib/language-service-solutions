@@ -49,7 +49,7 @@ const Footer = () => {
           .footer {
             --logo-size: 90px;
             background-image: var(--gradient2);
-            width: 100%;
+            width: 100vw;
             display: flex;
             justify-content: center;
           }
