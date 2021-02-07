@@ -41,6 +41,11 @@ const Navbar = ({ open, setOpen }) => {
               <a>services</a>
             </Link>
           </li>
+          <li className={router.pathname == "/testimonials" ? "active" : ""}>
+            <Link href="/testimonials">
+              <a>Testimonials</a>
+            </Link>
+          </li>
           <li className={router.pathname == "/contact" ? "active" : ""}>
             <Link href="/contact">
               <a href="/contact">contact</a>

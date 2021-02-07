@@ -52,8 +52,8 @@ export default function Home() {
               <blockquote>
               Murtado Bustillo put together a great interpreting team at the SDIA Annual General Meeting and Networking Conference which was invaluable in our many meetings and workshops. Without Murtado’s team of simultaneous interpreters in English, Spanish and French, communication between the members of our international network would have been very difficult during this two-week event. As it was, things went really smoothly throughout. A wonderful, professional service!                
               </blockquote>
-                <h4 className='headline text-white no-margin-top small-margin-bottom'>
-                Soleen Lees, Commincation Coordinator <br/>  Susila Dharma International Association(SDIA) </h4>
+                <h3 className='headline text-white no-margin-top small-margin-bottom'>
+                Soleen Lees, Commincation Coordinator <br/>  Susila Dharma International Association(SDIA) </h3>
                 <img src={`/icons/logo_sdia.png`} />
 
                 </>
@@ -70,8 +70,8 @@ export default function Home() {
               <blockquote>
               I have been working with great interpreters at Language Service Solutions for the last 10 years. They are skilled, reliable, professional, and a pleasure to work with. They really care about language justie and that all the community members are able to participate in meetings, conferences, and events.
               </blockquote>
-                <h4 className='headline text-white no-margin-top small-margin-bottom'>
-                Nadeen Bir  <br/> Advocacy and Organizing Director </h4>
+                <h3 className='headline text-white no-margin-top small-margin-bottom'>
+                Nadeen Bir  <br/> Advocacy and Organizing Director </h3>
                 <img src={`/icons/SAFLogo.png`} />
 
                 </>
@@ -89,9 +89,9 @@ export default function Home() {
                 Thank you Language Service Solutions for always providing interpretation and translation services. Your staff is always top notch and we absolutely love that your leadership team works so closely with us to ensure our satisfaction. Your team really does help us live out our mission to provide dynamic care to our Spanish speaking populations. Your services are invaluable to our organization and we do appreciate your prompt and courteous responses to all our requests. We are happy to recommend you to anyone in the Triangle area looking for certified medical interpreters and or quick affordable translation services!
                 
               </blockquote>
-                <h4 className='headline text-white no-margin-top small-margin-bottom'>
+                <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Amber Robinson, Patient Advocate,  <br/> Manager of Interpreter Services
-                </h4>
+                </h3>
                 <img src={`/icons/Duke_logo.png`} />
 
                 </>
@@ -108,9 +108,9 @@ export default function Home() {
               <blockquote>
               As a non-profit serving a diverse population of students and families, we take very seriously our mission to ensure that all information we share is equitably received by both our English-speaking and or Spanish-speaking families. Murtado and the staff of Language Service Solutions have helped us better meet our goal by providing professional and reliable interpretation and translation services. In addition to being knowledgable, they have a genuine, warm style that instantly puts our families at ease. The work that we do is certainly enhanced by our partnership with Language Service Solutions.               
               </blockquote>
-                <h4 className='headline text-white no-margin-top small-margin-bottom'>
+                <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Katherine Wicke LaPlante, Elon Academy,  <br/> Assistant Director of Counseling and Family Programs
-                </h4>
+                </h3>
                 <img src={`/icons/Elon_logo.png`} />
 
                 </>
@@ -141,7 +141,7 @@ export default function Home() {
          background: var(--white);
          object-fit: contain;
          margin-top:5px;
-        }
+        }}
        
 
         .logo {
@@ -306,6 +306,7 @@ export default function Home() {
 
          h3, .like-3 {
           font-size: 1.17em;
+          line-height:1.4em;
         }
 
         h4 {
@@ -316,7 +317,9 @@ export default function Home() {
             quotes: "“" "”" "‘" "’";
            margin: 0; 
            position: relative;
-           margin-bottom: 10px;
+           margin-bottom: 20px;
+           line-height: 1.6em;
+           letter-spacing:.7px;
         }
 
         blockquote:before {
