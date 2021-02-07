@@ -118,6 +118,7 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           width: 95%;
+          height: 100%;
         }
         .logo {
           height: 1em;
