@@ -1,7 +1,8 @@
-import Banner from './Banner';
+import Link from "next/link";
 const ServiceCard = ({ logo, title, text }) => (
   <>
-    <a href={`services/${logo}`} id={`${logo}`} className='card-wrapper'>
+  <Link href={`services/${logo}`}>
+    <a  id={`${logo}`} className='card-wrapper'>
       <div className='card'>
         <div className='icon '>
           <img width='80px' height='80px' src={`/icons/${logo}.svg`} />
@@ -10,6 +11,7 @@ const ServiceCard = ({ logo, title, text }) => (
         <p>{text}</p>
       </div>
     </a>
+    </Link>
     <style jsx>{`
       .card-wrapper {
         transition: transform 0.3s ease-in;

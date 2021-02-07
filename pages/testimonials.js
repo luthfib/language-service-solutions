@@ -140,6 +140,7 @@ export default function Home() {
          width: 200px;
          background: var(--white);
          object-fit: contain;
+         margin-top:5px;
         }
        
 

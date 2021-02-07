@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 import AboutUs from '../components/AboutUsSection';
 import Banner from '../components/Banner';
@@ -6,7 +6,7 @@ import Dots from '../components/Icons/dots';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/navbar';
 import Services from '../components/ServicesElement';
 import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
 

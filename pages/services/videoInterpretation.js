@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Banner from '../../components/Banner';
 import Dots from '../../components/Icons/dots';
 import Footer from '../../components/Footer';
-import ServiceSingle from '../../components/TextBox';
 import Head from 'next/head';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/navbar';
+import ServiceSingle from '../../components/TextBox';
 import { useOnWindowScroll } from '../../hooks/useOnWindowScroll';
 
 export default function Home() {
