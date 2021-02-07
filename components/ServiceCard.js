@@ -34,7 +34,7 @@ const ServiceCard = ({ logo, title, text }) => (
         box-shadow: var(--elevation-3);
         width: 100%;
         max-width: 300px;
-        min-height: 328px;
+        min-height: 390px;
         padding: 30px;
         text-align: center;
         margin: 0px 22.5px 45px 22.5px;
