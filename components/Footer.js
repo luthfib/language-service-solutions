@@ -1,6 +1,6 @@
-import { useRef } from 'react';
-import { useOnClickOutside } from '../hooks/useOnClickOutside';
 import Logo from './Icons/logo';
+import { useOnClickOutside } from '../hooks/useOnClickOutside';
+import { useRef } from 'react';
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
               <Logo width={'var(--logo-size)'} height={'var(--logo-size)'} />
             </a>
             <h4 className='lss'>
-              LANGUAGE <br /> SERVICE <br /> SOLUTIONS
+              LANGUAGE <br /> SERVICE <br /> SOLUTIONS, LLC
             </h4>
           </div>
           <div className='contact-container'>
