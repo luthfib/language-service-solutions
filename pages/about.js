@@ -31,7 +31,7 @@ export default function Home() {
             height={"90px"}
             width={"90%"}
             headingLevel={"h1"}
-            color={"#000"}
+            color={"var(--dark-blue)"}
             margin={""}
             text={"About us"}
             dots={false}
@@ -51,7 +51,7 @@ export default function Home() {
             height={"90px"}
             width={"90%"}
             headingLevel={"h2"}
-            color={"#000"}
+            color={"var(--dark-blue)"}
             margin={""}
             text={"Our team is ready to help you"}
             dots={false}
@@ -94,7 +94,7 @@ export default function Home() {
             height={"90px"}
             width={"90%"}
             headingLevel={"h2"}
-            color={"#000"}
+            color={"var(--dark-blue)"}
             margin={""}
             fontSize={"like-2"}
             text={"why us?"}
