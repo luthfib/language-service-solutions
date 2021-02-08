@@ -6,7 +6,7 @@ import ContactDetails from '../components/ContactDetails';
 import Dots from '../components/Icons/dots';
 import Footer from '../components/Footer';
 import Head from 'next/head';
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
 
 export default function Home() {
