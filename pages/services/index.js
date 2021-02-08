@@ -98,7 +98,7 @@ export default function Home() {
             className="banner-wrapper"
           >
             <Banner
-              bgColor={"var(--gradient3)"}
+              bgColor={"#0f2832"}
               height={"90px"}
               width={"90%"}
               headingLevel={"h2"}
