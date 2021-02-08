@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Banner from '../components/Banner';
 import Dots from '../components/Icons/dots';
@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Textbox from '../components/TextBox';
-
 import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
 
 export default function Home() {
@@ -54,7 +53,7 @@ export default function Home() {
               </blockquote>
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Soleen Lees, Commincation Coordinator <br/>  Susila Dharma International Association(SDIA) </h3>
-                <img src={`/icons/logo_sdia.png`} />
+                <img src={`/imgs/SDI.png`} />
 
                 </>
             }
@@ -72,7 +71,7 @@ export default function Home() {
               </blockquote>
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Nadeen Bir  <br/> Advocacy and Organizing Director </h3>
-                <img src={`/icons/SAFLogo.png`} />
+                <img src={`/imgs/SAFLogo.png`} />
 
                 </>
             }
@@ -92,7 +91,7 @@ export default function Home() {
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Amber Robinson, Patient Advocate,  <br/> Manager of Interpreter Services
                 </h3>
-                <img src={`/icons/Duke_logo.png`} />
+                <img src={`/imgs/DukeLogo.png`} />
 
                 </>
             }
@@ -111,7 +110,7 @@ export default function Home() {
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Katherine Wicke LaPlante, Elon Academy,  <br/> Assistant Director of Counseling and Family Programs
                 </h3>
-                <img src={`/icons/Elon_logo.png`} />
+                <img src={`/imgs/ElonLogo.png`} />
 
                 </>
             }
