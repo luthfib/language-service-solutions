@@ -9,7 +9,7 @@ const Navbar = ({ open, setOpen }) => {
   useOnClickOutside(node, () => setOpen(false));
 
   const router = useRouter();
-
+  console.log(router.pathname)
   return (
     <div className="navigation" ref={node}>
       <Link href="/">
@@ -36,7 +36,7 @@ const Navbar = ({ open, setOpen }) => {
               <a href="/about">about</a>
             </Link>
           </li>
-          <li className={router.pathname == "/services" ? "active" : ""}>
+          <li className={router.pathname == "/services" || router.pathname.split("/")[1] == "services" ? "active" : ""}>
             <Link href="/services">
               <a>services</a>
             </Link>
