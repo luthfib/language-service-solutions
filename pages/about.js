@@ -173,6 +173,10 @@ export default function Home() {
           transition: color 0.15s ease, border-color 0.15s ease;
         }
 
+        .headline {
+          text-align: center;
+        }
+
         .logo {
           height: 1em;
         }

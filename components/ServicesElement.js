@@ -99,7 +99,10 @@ const ServicesElement = (props) => (
         align-items: center;
         width: 150px;
         text-transform: uppercase;
+       
       }
+
+   
 
       .service.telephone {
         top: 0%;
@@ -149,6 +152,7 @@ const ServicesElement = (props) => (
         height: 100px;
         filter: invert(100%);
         transition: transform 0.3s ease;
+     
       }
 
       .icon:hover {
