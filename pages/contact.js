@@ -55,7 +55,7 @@ export default function Home() {
         <section className='margin-bottom-1'>
           <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
             <Banner
-              bgColor={'#626262'}
+              bgColor={'#0f2832'}
               height={'90px'}
               width={'90%'}
               headingLevel={'h2'}
