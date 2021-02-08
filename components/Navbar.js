@@ -142,7 +142,7 @@ const Navbar = ({ open, setOpen }) => {
             transition: color 0.1s ease;
             position: relative;
             text-decoration: none;
-            color: var(--black);
+            color: var(--white);
             letter-spacing: 3.5px;
             font-size: 18px;
           }
@@ -161,7 +161,7 @@ const Navbar = ({ open, setOpen }) => {
           }
 
           .nav li.active a {
-            color: var(--white);
+            color: var(--black);
           }
           .nav li.active a::after {
             opacity: 1;
@@ -169,7 +169,7 @@ const Navbar = ({ open, setOpen }) => {
 
           @media (hover: hover) {
             .nav li a:hover {
-              color: var(--white);
+              color: var(--black);
             }
           }
 
@@ -220,7 +220,7 @@ const Navbar = ({ open, setOpen }) => {
             }
 
             .nav li a {
-              color: var(--white);
+              color: var(--black);
             }
 
             .nav li a::after {
