@@ -9,7 +9,7 @@ const Navbar = ({ open, setOpen }) => {
   useOnClickOutside(node, () => setOpen(false));
 
   const router = useRouter();
-  console.log(router.pathname)
+
   return (
     <div className="navigation" ref={node}>
       <Link href="/">
