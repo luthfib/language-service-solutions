@@ -16,7 +16,7 @@ const Home = (props) => {
   const header = useRef();
   useOnWindowScroll(header, "scrolled", 20);
   console.log(process.env.NEXT_PUBLIC_MAINTENANCE)
-  const underMaintenance = (process.env.NEXT_PUBLIC_MAINTENANCEue == 'true');
+  const underMaintenance = (process.env.NEXT_PUBLIC_MAINTENANCE == 'true');
   console.log(underMaintenance)
 
   return (
