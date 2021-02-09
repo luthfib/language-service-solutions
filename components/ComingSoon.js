@@ -7,7 +7,7 @@ const ComingSoon = () => {
             <img src="imgs/logo.svg" alt="LOGO" />
           </div>
 
-          <p class="className">
+          <p className="text">
             Our website is under maintenance
             <br />
             coming back soon

@@ -11,11 +11,13 @@ import Navbar from "../components/Navbar";
 import Services from "../components/ServicesElement";
 import { useOnWindowScroll } from "../hooks/useOnWindowScroll";
 
-export default function Home() {
+const Home = (props) => {
   const [open, setOpen] = useState(false);
   const header = useRef();
   useOnWindowScroll(header, "scrolled", 20);
-  const underMaintenance = true;
+  console.log(process.env.NEXT_PUBLIC_MAINTENANCE)
+  const underMaintenance = (process.env.NEXT_PUBLIC_MAINTENANCEue == 'true');
+  console.log(underMaintenance)
 
   return (
     <>
@@ -281,3 +283,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home
