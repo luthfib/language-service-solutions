@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '[TUA-177857813-1');
+            gtag('config', 'UA-177857813-1');
         `,
             }}
           />
