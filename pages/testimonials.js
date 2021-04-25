@@ -2,9 +2,13 @@ import React, { useRef, useState } from 'react';
 
 import Banner from '../components/Banner';
 import Dots from '../components/Icons/dots';
+import Duke from '../components/Icons/Duke'
+import Elon from '../components/Icons/Elon'
 import Footer from '../components/Footer';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
+import SAF from '../components/Icons/SAF'
+import SDI from '../components/Icons/SDI'
 import Textbox from '../components/TextBox';
 import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
 
@@ -53,8 +57,7 @@ export default function Home() {
               </blockquote>
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Soleen Lees, Commincation Coordinator <br/>  Susila Dharma International Association(SDIA) </h3>
-                <img src={`/imgs/SDI.png`} />
-
+                <SDI  />
                 </>
             }
           />
@@ -71,7 +74,7 @@ export default function Home() {
               </blockquote>
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Nadeen Bir  <br/> Advocacy and Organizing Director </h3>
-                <img src={`/imgs/SAFLogo.png`} />
+                <SAF />
 
                 </>
             }
@@ -91,7 +94,7 @@ export default function Home() {
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Amber Robinson, Patient Advocate,  <br/> Manager of Interpreter Services
                 </h3>
-                <img src={`/imgs/DukeLogo.png`} />
+               <Duke />
 
                 </>
             }
@@ -110,7 +113,7 @@ export default function Home() {
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Katherine Wicke LaPlante, Elon Academy,  <br/> Assistant Director of Counseling and Family Programs
                 </h3>
-                <img src={`/imgs/ElonLogo.png`} />
+               <Elon />
 
                 </>
             }
@@ -133,16 +136,12 @@ export default function Home() {
       </main>
       <Footer />
       <style jsx>{`
-
        img {
          height: 63px;
          width: 200px;
-         background: var(--white);
-         object-fit: contain;
          margin-top:5px;
-        }}
+        }
        
-
         .logo {
           height: 1em;
         }

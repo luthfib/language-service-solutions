@@ -63,27 +63,30 @@ const renderImg = (img) => {
         </div>
         <style jsx>
           {`
-        
-      .img-wrapper {
-        height: 350px;
-      }
-      
-      .img-wrapper img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
+            .img-wrapper {
+              height: 350px;
+              text-align: center;
+            }
 
-      @media (max-width: 768px) {
-          .img-wrapper {
-          height: 200px;
-        }
-        `}
+            .img-wrapper img {
+              height: 100%;
+              width: 90%;
+              object-fit: cover;
+              border-radius: 5px;
+            }
+
+            @media (max-width: 768px) {
+              .img-wrapper {
+                height: 200px;
+              }
+            }
+          `}
         </style>
       </>
     );
   }
 };
+
 const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign }) => (
   <>
     <div className="serviceSingle">
@@ -115,7 +118,7 @@ const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign }) => (
           text-align: center;
       }
 
-        .serviceDescription {
+      .serviceDescription {
           background: var(--primary-medium);
           border-radius: var(--border-radius);
           width: 90%;
@@ -125,7 +128,9 @@ const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign }) => (
           flex-flow: column;
           text-align: ${textAlign};
           font-weight: bold;
-        }
+      }
+
+ 
 
 
       
