@@ -1,60 +1,73 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 
-import AboutUs from '../components/AboutUsSection';
-import Banner from '../components/Banner';
-import Dots from '../components/Icons/dots';
-import Footer from '../components/Footer';
-import Gallery from '../components/Gallery';
-import Head from 'next/head';
-import Navbar from '../components/navbar';
-import Services from '../components/ServicesElement';
-import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
+import AboutUs from "../components/AboutUsSection";
+import Banner from "../components/Banner";
+import ComingSoon from "../components/ComingSoon";
+import Dots from "../components/Icons/dots";
+import Footer from "../components/Footer";
+import Gallery from "../components/Gallery";
+import Head from "next/head";
+import Navbar from "../components/Navbar";
+import Services from "../components/ServicesElement";
+import { useOnWindowScroll } from "../hooks/useOnWindowScroll";
 
-export default function Home() {
+const Home = (props) => {
   const [open, setOpen] = useState(false);
   const header = useRef();
-  useOnWindowScroll(header, 'scrolled', 20);
+  useOnWindowScroll(header, "scrolled", 20);
+  console.log(process.env.NEXT_PUBLIC_MAINTENANCE)
+  const underMaintenance = (process.env.NEXT_PUBLIC_MAINTENANCE == 'true');
 
   return (
-    <div className='container'>
+    <>
       <Head>
         <title>Language Service Solutions</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header ref={header}>
-        <Navbar open={open} setOpen={setOpen}></Navbar>
-      </header>
+     
+      {!underMaintenance ? (
+        <div className="container">
+          <header ref={header}>
+            <Navbar open={open} setOpen={setOpen}></Navbar>
+          </header>
+          <main>
+            <section className="margin-bottom-1">
+              <Gallery />
+            </section>
 
-      <main>
-      <section className='margin-bottom-1'>
-      <Gallery />      
-       </section>
-       
-        <section className='margin-bottom-1'>
-          <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
-        </section>
-        <section className='margin-bottom-1'>
-          <AboutUs />
-        </section>
-        <section className='margin-bottom-1'>
-          <Services />
-        </section>
-        <section className='margin-bottom-1'>
-          <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
-            <Banner
-              bgColor={'#626262'}
-              height={'90px'}
-              width={'90%'}
-              headingLevel={'h2'}
-              color={'var(--white)'}
-              margin={''}
-              text={'Book a service'}
-              dots={true}
-            />
-          </a>
-        </section>
-      </main>
-      <Footer />
+            <section className="margin-bottom-1">
+              <Dots direction={"up"} color={"#bcbcbc"} size={"10"} />
+            </section>
+            <section className="margin-bottom-1">
+              <AboutUs />
+            </section>
+            <section className="margin-bottom-1">
+              <Services />
+            </section>
+            <section className="margin-bottom-1">
+              <a
+                href="mailto:murtado@languageservicesolutions"
+                className="banner-wrapper"
+              >
+                <Banner
+                  bgColor={"var(--dark-blue)"}
+                  height={"90px"}
+                  width={"90%"}
+                  headingLevel={"h2"}
+                  color={"var(--white)"}
+                  margin={""}
+                  text={"Book a service"}
+                  dots={true}
+                />
+              </a>
+            </section>
+          </main>
+          <Footer />
+          </div>
+      ) : (
+        <ComingSoon />
+      )}
+
       <style jsx>{`
         .card {
           margin: 1rem;
@@ -86,77 +99,25 @@ export default function Home() {
       `}</style>
       <style jsx global>{`
         @font-face {
-          font-family: 'matiasregular';
-          src: url('/fonts/matias-webfont.woff2') format('woff2'),
-            url('/fonts/matias-webfont.woff') format('woff');
+          font-family: "matiasregular";
+          src: url("/fonts/matias-webfont.woff2") format("woff2"),
+            url("/fonts/matias-webfont.woff") format("woff");
           font-weight: normal;
           font-style: normal;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap");
         :root {
-          /* colors */
-
-          --primary-dark: #346278;
-          --primary-medium: #539b92;
-          --primary-light: #7fbba1;
-          --white: #fff;
-          --black: #000;
-          --transparent: #ffffff00;
-
-          --gradient: linear-gradient(
-            to right,
-            var(--primary-dark),
-            var(--primary-medium),
-            var(--primary-light)
-          );
-          --gradient2: linear-gradient(
-            to left,
-            var(--primary-dark),
-            var(--primary-medium),
-            var(--primary-light)
-          );
-
-          --gradient3: linear-gradient(
-            10deg,
-            var(--primary-light),
-            var(--primary-medium),
-            var(--primary-dark)
-          );
-
-          --nav-height: 100px;
-          /* Shadows Vercel */
-
-          --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
-          --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
-          --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
-          --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
-          --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
-
-          /* Shadows level up tuts */
-
-          --elevation-0: inset 0 7px 9px -7px rgba(0, 0, 0, 0.7);
-          --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          --elevation-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          --elevation-3: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-          --elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          --elevation-5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-
-          /* max-width content */
-          --content-width: 1400px;
-
-          /* border-radius */
-          --border-radius-mobile: 20px;
-          --border-radius: 20px;
         }
         html,
         body {
           padding: 0px;
           margin: 0px;
           overflow-x: hidden;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-            Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-          font-family: 'matiasregular', 'Open Sans', sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
+          font-family: "matiasregular", "Open Sans", sans-serif;
         }
 
         .container {
@@ -201,7 +162,7 @@ export default function Home() {
 
         main {
           flex: 1;
-          width:100%;
+          width: 100%;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -215,27 +176,30 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        h1,h2,
+        h1,
+        h2,
         h3 {
           letter-spacing: 6px;
         }
 
-        h1, .like-1 {
+        h1,
+        .like-1 {
           font-size: 2em;
-        }     
+        }
 
-        h2, .like-2 {
+        h2,
+        .like-2 {
           font-size: 1.5em;
-        }   
+        }
 
-         h3, .like-3 {
+        h3,
+        .like-3 {
           font-size: 1.17em;
         }
 
         h4 {
           font-size: 1em;
         }
-    
 
         a,
         a:hover,
@@ -260,7 +224,7 @@ export default function Home() {
         .margin-bottom-1 {
           margin-bottom: 60px;
         }
-        
+
         .margin-2 {
           margin: 25px 0;
         }
@@ -315,6 +279,8 @@ export default function Home() {
           }
         }
       `}</style>
-    </div>
+    </>
   );
 }
+
+export default Home

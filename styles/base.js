@@ -7,9 +7,10 @@ export default css.global`
     --primary-dark: #346278;
     --primary-medium: #539b92;
     --primary-light: #7fbba1;
-    --white: #fff
-    --black: #000
+    --white: #fff;
+    --black: #000;
     --transparent: #ffffff00;
+    --dark-blue: #0f2832;
 
     --gradient: linear-gradient(
       to right,
@@ -17,6 +18,22 @@ export default css.global`
       var(--primary-medium),
       var(--primary-light)
     );
+
+    --gradient2: linear-gradient(
+      to left,
+      var(--primary-dark),
+      var(--primary-medium),
+      var(--primary-light)
+    );
+
+    --gradient3: linear-gradient(
+      10deg,
+      var(--primary-light),
+      var(--primary-medium),
+      var(--primary-dark)
+    );
+
+    --nav-height: 100px;
 
     /* Shadows Vercel */
 
@@ -36,6 +53,10 @@ export default css.global`
     --elevation-5: 0 19px 38px rgba(0,0,0,0.3),0 15px 12px rgba(0,0,0,0.22);
 
     /* max-width content */
-    --content-width: 1200px;
+    --content-width: 1400px;
+
+    /* border-radius */
+    --border-radius-mobile: 20px;
+    --border-radius: 20px;
   }
 `;

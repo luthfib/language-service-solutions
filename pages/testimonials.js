@@ -1,12 +1,15 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Banner from '../components/Banner';
 import Dots from '../components/Icons/dots';
+import Duke from '../components/Icons/Duke'
+import Elon from '../components/Icons/Elon'
 import Footer from '../components/Footer';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
+import SAF from '../components/Icons/SAF'
+import SDI from '../components/Icons/SDI'
 import Textbox from '../components/TextBox';
-
 import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
 
 export default function Home() {
@@ -31,7 +34,7 @@ export default function Home() {
             height={'90px'}
             width={'90%'}
             headingLevel={'h1'}
-            color={'#000'}
+            color={'var(--dark-blue)'}
             margin={''}
             text={'Testimonials'}
             dots={false}
@@ -54,8 +57,7 @@ export default function Home() {
               </blockquote>
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Soleen Lees, Commincation Coordinator <br/>  Susila Dharma International Association(SDIA) </h3>
-                <img src={`/icons/logo_sdia.png`} />
-
+                <SDI  />
                 </>
             }
           />
@@ -72,7 +74,7 @@ export default function Home() {
               </blockquote>
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Nadeen Bir  <br/> Advocacy and Organizing Director </h3>
-                <img src={`/icons/SAFLogo.png`} />
+                <SAF />
 
                 </>
             }
@@ -92,7 +94,7 @@ export default function Home() {
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Amber Robinson, Patient Advocate,  <br/> Manager of Interpreter Services
                 </h3>
-                <img src={`/icons/Duke_logo.png`} />
+               <Duke />
 
                 </>
             }
@@ -111,7 +113,7 @@ export default function Home() {
                 <h3 className='headline text-white no-margin-top small-margin-bottom'>
                 Katherine Wicke LaPlante, Elon Academy,  <br/> Assistant Director of Counseling and Family Programs
                 </h3>
-                <img src={`/icons/Elon_logo.png`} />
+               <Elon />
 
                 </>
             }
@@ -120,7 +122,7 @@ export default function Home() {
         <section className='margin-bottom-1'>
           <a href='mailto:murtado@languageservicesolutions' className='banner-wrapper'>
             <Banner
-              bgColor={'#626262'}
+              bgColor={'#0f2832'}
               height={'90px'}
               width={'90%'}
               headingLevel={'h2'}
@@ -134,16 +136,12 @@ export default function Home() {
       </main>
       <Footer />
       <style jsx>{`
-
        img {
          height: 63px;
          width: 200px;
-         background: var(--white);
-         object-fit: contain;
          margin-top:5px;
-        }}
+        }
        
-
         .logo {
           height: 1em;
         }
@@ -171,59 +169,7 @@ export default function Home() {
 
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
         :root {
-          /* colors */
-
-          --primary-dark: #346278;
-          --primary-medium: #539b92;
-          --primary-light: #7fbba1;
-          --white: #fff;
-          --black: #000;
-          --transparent: #ffffff00;
-
-          --gradient: linear-gradient(
-            to right,
-            var(--primary-dark),
-            var(--primary-medium),
-            var(--primary-light)
-          );
-          --gradient2: linear-gradient(
-            to left,
-            var(--primary-dark),
-            var(--primary-medium),
-            var(--primary-light)
-          );
-
-          --gradient3: linear-gradient(
-            10deg,
-            var(--primary-light),
-            var(--primary-medium),
-            var(--primary-dark)
-          );
-
-          --nav-height: 100px;
-          /* Shadows Vercel */
-
-          --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
-          --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
-          --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
-          --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
-          --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
-
-          /* Shadows level up tuts */
-
-          --elevation-0: inset 0 7px 9px -7px rgba(0, 0, 0, 0.7);
-          --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          --elevation-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          --elevation-3: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-          --elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          --elevation-5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-
-          /* max-width content */
-          --content-width: 1400px;
-
-          /* border-radius */
-          --border-radius-mobile: 20px;
-          --border-radius: 20px;
+        
         }
         html,
         body {
