@@ -31,7 +31,7 @@ const ServiceCard = ({ logo, title, text }) => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        box-shadow: var(--elevation-3);
+        box-shadow: var(--shadow-primary-medium);
         width: 100%;
         max-width: 300px;
         min-height: 390px;

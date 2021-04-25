@@ -123,7 +123,7 @@ const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign }) => (
           border-radius: var(--border-radius);
           width: 90%;
           padding: 40px 40px;
-          box-shadow: var(--elevation-3);
+          box-shadow: var(--shadow-primary-medium);
           display: flex;
           flex-flow: column;
           text-align: ${textAlign};

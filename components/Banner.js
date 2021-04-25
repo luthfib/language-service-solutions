@@ -14,7 +14,7 @@ const hasDots = (props) => {
               display: flex;
               justify-content: space-around;
               align-items: center;
-              box-shadow: var(--elevation-3);
+              box-shadow: var(--shadow-dark-blue);
               padding: 0 10px;
             }
 

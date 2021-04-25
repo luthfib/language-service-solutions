@@ -1,13 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Swipeable } from "react-swipeable";
-import { useParallax } from "../hooks/useParallax";
 
 const Gallery = () => {
   const imgs = ["/imgs/TeamOutside.JPG", "/imgs/TeamGroup.JPG"];
   const [currentImg, setCurrentImg] = useState(0);
-  const [onMobile, setOnMobile] = useState(false);
-  const refGallery = useRef(null)
-  useParallax(refGallery)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,17 +36,8 @@ const Gallery = () => {
     }
   };
 
-  function getWindowWidth() {
-    return window.matchMedia("min-width: 1000px").matches
-  }
-  useEffect(() => {
-    setOnMobile(getWindowWidth())
-    return () => {
-      
-    }
-  }, [])
+  
 
- //ref={refGallery}
   return (
     <>
       <Swipeable

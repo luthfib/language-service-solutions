@@ -52,7 +52,7 @@ const ContactDetails = () => {
             display: flex;
             justify-content: center;
             border-radius: var(--border-radius);
-            box-shadow: var(--elevation-3);
+            box-shadow: var(--shadow-primary-medium);
           }
 
           .inner-details {
