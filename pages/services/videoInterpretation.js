@@ -43,7 +43,7 @@ export default function Home() {
         <section className='margin-bottom-1'>
           <ServiceSingle
             logo={'videoInterpretation'}
-            img={'TeamOutside.JPG'}
+            img={'VideoInterpretation.jpg'}
             innerText={
               <>
                 <p className='no-margin-top'>

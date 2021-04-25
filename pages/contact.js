@@ -45,7 +45,7 @@ export default function Home() {
 
         <section className='margin-bottom-1'>
           <div className='img-wrapper '>
-            <img src={`/imgs/TeamGroup.JPG`} />
+            <img src={`/imgs/Contact.jpg`} />
           </div>
       </section>
 
@@ -84,11 +84,13 @@ export default function Home() {
         }
         .img-wrapper {
           height: 350px;
+          text-align: center;
         }
         .img-wrapper img {
           height: 100%;
-          width: 100%;
+          width: 90%;
           object-fit: cover;
+          border-radius: 5px;
         }
         .logo {
           height: 1em;
