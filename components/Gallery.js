@@ -1,9 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Swipeable } from "react-swipeable";
+import { useParallax } from "../hooks/useParallax";
 
 const Gallery = () => {
   const imgs = ["/imgs/TeamOutside.JPG", "/imgs/TeamGroup.JPG"];
   const [currentImg, setCurrentImg] = useState(0);
+  const [onMobile, setOnMobile] = useState(false);
+  const refGallery = useRef(null)
+  useParallax(refGallery)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,6 +40,17 @@ const Gallery = () => {
     }
   };
 
+  function getWindowWidth() {
+    return window.matchMedia("min-width: 1000px").matches
+  }
+  useEffect(() => {
+    setOnMobile(getWindowWidth())
+    return () => {
+      
+    }
+  }, [])
+
+ //ref={refGallery}
   return (
     <>
       <Swipeable
@@ -78,12 +93,24 @@ const Gallery = () => {
             ></li>
             {/* <li></li> */}
           </ol>
-
-          <img src={imgs[currentImg]} />
+          {/* parallax effect  use this instead of the image below <div className="slide"></div>   */}
+            <img src={imgs[currentImg]} />
         </div>
       </Swipeable>
       <style jsx>
         {`
+         .slide {
+          padding-top: 56.2%;
+            height: 100%;
+            width: 1400px;
+            max-width: 1400px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-image: url(${imgs[currentImg]});
+            background-attachment: fixed;
+            background-position: center center;
+          }
+
           .img-container {
             display: inline-block;
             position: relative;
