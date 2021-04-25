@@ -3,7 +3,8 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    const env = process.env.NEXT_PUBLIC_MAINTENANCE;
+    return { ...initialProps, env };
   }
 
   render() {
@@ -21,7 +22,7 @@ export default class MyDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '[TUA-177857813-1');
+            gtag('config', 'UA-177857813-1');
         `,
             }}
           />

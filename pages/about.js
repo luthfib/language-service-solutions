@@ -1,160 +1,163 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 
-import AboutUsGallery from '../components/AboutUsGallery';
-import Banner from '../components/Banner';
-import Dots from '../components/Icons/dots';
-import Footer from '../components/Footer';
-import Head from 'next/head';
-import Navbar from '../components/navbar';
-import Textbox from '../components/TextBox';
-import { useOnWindowScroll } from '../hooks/useOnWindowScroll';
+import AboutUsGallery from "../components/AboutUsGallery";
+import Banner from "../components/Banner";
+import Dots from "../components/Icons/dots";
+import Footer from "../components/Footer";
+import Head from "next/head";
+import Navbar from "../components/Navbar";
+import Textbox from "../components/TextBox";
+import { useOnWindowScroll } from "../hooks/useOnWindowScroll";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
   const header = useRef();
-  useOnWindowScroll(header, 'scrolled', 20);
+  useOnWindowScroll(header, "scrolled", 20);
 
   return (
-    <div className='container'>
+    <div className="container">
       <Head>
         <title>Language Service Solutions</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <header ref={header}>
         <Navbar open={open} setOpen={setOpen}></Navbar>
       </header>
 
       <main>
-        <section className='margin-top-1 margin-bottom-2'>
+        <section className="margin-top-1 margin-bottom-2">
           <Banner
-            bgColor={''}
-            height={'90px'}
-            width={'90%'}
-            headingLevel={'h1'}
-            color={'#000'}
-            margin={''}
-            text={'About us'}
+            bgColor={""}
+            height={"90px"}
+            width={"90%"}
+            headingLevel={"h1"}
+            color={"var(--dark-blue)"}
+            margin={""}
+            text={"About us"}
             dots={false}
           />
         </section>
-        <section className='margin-bottom-1'>
-          <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
+        <section className="margin-bottom-1">
+          <Dots direction={"up"} color={"#bcbcbc"} size={"10"} />
         </section>
 
-        <section className='margin-bottom-1'>
+        <section className="margin-bottom-1">
           <AboutUsGallery />
         </section>
 
-        <section className=' margin-bottom-1'>
+        <section className=" margin-bottom-1">
           <Banner
-            bgColor={''}
-            height={'90px'}
-            width={'90%'}
-            headingLevel={'h2'}
-            color={'#000'}
-            margin={''}
-            text={'Our team is ready to help you'}
+            bgColor={""}
+            height={"90px"}
+            width={"90%"}
+            headingLevel={"h2"}
+            color={"var(--dark-blue)"}
+            margin={""}
+            text={"Our team is ready to help you"}
             dots={false}
           />
         </section>
-        <section className='margin-bottom-1'>
+        <section className="margin-bottom-1">
           <Textbox
-            logo={''}
-            img={''}
-            textAlign={'center'}
+            logo={""}
+            img={""}
+            textAlign={"center"}
             innerText={
               <>
-                <p className='no-margin-top'>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                  unknown printer took a galley of type and scrambled it to make a type specimen
-                  book.
+                <p className="no-margin-top">
+                  Language Service Solutions, LLC has been in the field of
+                  Spanish/English language services since 2000. As a result of
+                  15 years of solid experience, we have become one of the most
+                  trusted full-service language providers in the Triangle.
+                  Headquartered in Durham, Language Service Solutions, LLC is a
+                  consortium of certified, professional interpreters and
+                  translators with extensive experience eliminating language
+                  barriers between businesses, nonprofits, and healthcare
+                  facilites—small and large—and the clients they serve.
                 </p>
                 <br />
-                <p className='no-margin-top'>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                  unknown printer took a galley of type and scrambled it to make a type specimen
-                  book.
-                </p>
-                <br />
-                <p className='no-margin-top'>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                  unknown printer took a galley of type and scrambled it to make a type specimen
-                  book.
+                <p className="no-margin-top">
+                  Our professional, friendly and experienced team works hard to
+                  provide our clients with the best service. We are
+                  bi-cultural/bilingual group of professionals who understand
+                  the subtle cultural difference that play a role in
+                  communication.
                 </p>
                 <br />
               </>
             }
           />
         </section>
-        <section className='margin-bottom-2'>
+        <section className="margin-bottom-2">
           <Banner
-            bgColor={''}
-            height={'90px'}
-            width={'90%'}
-            headingLevel={'h2'}
-            color={'#000'}
-            margin={''}
-            fontSize={'like-2'}
-            text={'why us?'}
+            bgColor={""}
+            height={"90px"}
+            width={"90%"}
+            headingLevel={"h2"}
+            color={"var(--dark-blue)"}
+            margin={""}
+            fontSize={"like-2"}
+            text={"why us?"}
             dots={false}
           />
         </section>
 
-        <section className='margin-bottom-1'>
-          <Dots direction={'up'} color={'#bcbcbc'} size={'10'} />
+        <section className="margin-bottom-1">
+          <Dots direction={"up"} color={"#bcbcbc"} size={"10"} />
         </section>
 
-        <section className='margin-bottom-1'>
+        <section className="margin-bottom-1">
           <Textbox
-            logo={''}
-            img={''}
-            textAlign={'center'}
+            logo={""}
+            img={""}
+            textAlign={"center"}
             innerText={
               <>
-                <p className='no-margin-top'>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                  unknown printer took a galley of type and scrambled it to make a type specimen
-                  book.
+                <p className="no-margin-top">
+                  Language Service Solutions LLC, is proud to offer one of the
+                  most complete and affordable English Spanish services to
+                  bridge today's language gaps. Whatever your need is we can
+                  help. We offer simultaneous interpreting, video subtitling,
+                  written translation, interpretation, transcriptions and more.
+                  We have years of solid experience in the field ensuring our
+                  clients a high level of accuracy and efficiency.
                 </p>
                 <br />
-                <h4 className='headline text-white no-margin-top small-margin-bottom upperCase'>
-                  MedicalInterpretation has never been easier
+                <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+                  Quality guaranteed. Every time.
                 </h4>
-                <p className='no-margin-top'>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                  unknown printer took a galley of type and scrambled it to make a type specimen
-                  book.
+                <p className="no-margin-top">
+                  Our friendly and expert staff is equipped to meet the full
+                  range of communication needs. We abide by strict ethical
+                  standards while providing one of the most affordable services
+                  in the area. With more than 15 years of experience in this
+                  field, we work ardently to bring a professional standard of
+                  language services to our costumers.
                 </p>
                 <br />
-                <h4 className='headline text-white no-margin-top small-margin-bottom upperCase'>
-                  MedicalInterpretation has never been easier
+                <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+                  Services tailored to fit.
                 </h4>
-                <p className='no-margin-top'>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                  unknown printer took a galley of type and scrambled it to make a type specimen
-                  book.
+                <p className="no-margin-top">
+                  We work closely with you to create a custom plan that gives
+                  you superb service at an affordable price. Contact us at any
+                  time for rapid follow-up, beginning with a free, personalized
+                  quote.
                 </p>
                 <br />
-                <h4 className='headline text-white no-margin-top small-margin-bottom upperCase'>
-                  MedicalInterpretation has never been easier
+                <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+                  Privacy
                 </h4>
-                <p className='no-margin-top'>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                  unknown printer took a galley of type and scrambled it to make a type specimen
-                  book.
+                <p className="no-margin-top">
+                  We believe that trust is essential in all of our business
+                  relationships. Therefore, we will never share information with
+                  anyone. Your files will be restricted and password-protected.
+                  We maintain a high standard of confidentiality.
                 </p>
               </>
             }
           />
         </section>
-        
       </main>
       <Footer />
       <style jsx>{`
@@ -170,6 +173,10 @@ export default function Home() {
           transition: color 0.15s ease, border-color 0.15s ease;
         }
 
+        .headline {
+          text-align: center;
+        }
+
         .logo {
           height: 1em;
         }
@@ -183,77 +190,25 @@ export default function Home() {
       `}</style>
       <style jsx global>{`
         @font-face {
-          font-family: 'matiasregular';
-          src: url('/fonts/matias-webfont.woff2') format('woff2'),
-            url('/fonts/matias-webfont.woff') format('woff');
+          font-family: "matiasregular";
+          src: url("/fonts/matias-webfont.woff2") format("woff2"),
+            url("/fonts/matias-webfont.woff") format("woff");
           font-weight: normal;
           font-style: normal;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap");
         :root {
-          /* colors */
-
-          --primary-dark: #346278;
-          --primary-medium: #539b92;
-          --primary-light: #7fbba1;
-          --white: #fff;
-          --black: #000;
-          --transparent: #ffffff00;
-
-          --gradient: linear-gradient(
-            to right,
-            var(--primary-dark),
-            var(--primary-medium),
-            var(--primary-light)
-          );
-          --gradient2: linear-gradient(
-            to left,
-            var(--primary-dark),
-            var(--primary-medium),
-            var(--primary-light)
-          );
-
-          --gradient3: linear-gradient(
-            10deg,
-            var(--primary-light),
-            var(--primary-medium),
-            var(--primary-dark)
-          );
-
-          --nav-height: 100px;
-          /* Shadows Vercel */
-
-          --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
-          --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
-          --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
-          --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
-          --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
-
-          /* Shadows level up tuts */
-
-          --elevation-0: inset 0 7px 9px -7px rgba(0, 0, 0, 0.7);
-          --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          --elevation-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          --elevation-3: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-          --elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          --elevation-5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-
-          /* max-width content */
-          --content-width: 1400px;
-
-          /* border-radius */
-          --border-radius-mobile: 20px;
-          --border-radius: 20px;
         }
         html,
         body {
           padding: 0px;
           margin: 0px;
           overflow-x: hidden;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-            Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-          font-family: 'matiasregular', 'Open Sans', sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
+          font-family: "matiasregular", "Open Sans", sans-serif;
         }
 
         .container {
@@ -312,27 +267,30 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        h1,h2,
+        h1,
+        h2,
         h3 {
           letter-spacing: 6px;
         }
 
-        h1, .like-1 {
+        h1,
+        .like-1 {
           font-size: 2em;
-        }     
+        }
 
-        h2, .like-2 {
+        h2,
+        .like-2 {
           font-size: 1.5em;
-        }   
+        }
 
-         h3, .like-3 {
+        h3,
+        .like-3 {
           font-size: 1.17em;
         }
 
         h4 {
           font-size: 1em;
         }
-    
 
         a,
         a:hover,
