@@ -4,7 +4,6 @@ export const useOnWindowScroll = (ref, css, scroll) => {
     // console.log(ref);
     const scrolled = () => {
       if (window.scrollY > scroll) {
-        // console.log(ref);
         ref.current.classList.add(`${css}`);
       } else {
         // console.log(ref);
