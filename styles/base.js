@@ -51,7 +51,11 @@ export default css.global`
     --elevation-3: 0 10px 20px rgba(0,0,0,0.1),0 6px 6px rgba(0,0,0,0.1);
     --elevation-4: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
     --elevation-5: 0 19px 38px rgba(0,0,0,0.3),0 15px 12px rgba(0,0,0,0.22);
-
+    
+    --shadow-primary-dark: 0 10px 20px rgba(52, 98, 120,0.17) ,0 6px 6px rgba(52, 98, 120,0.17);
+    --shadow-primary-medium: 0 10px 20px rgba(83, 155, 146,0.17) ,0 6px 6px rgba(83, 155, 146,0.17);
+    --shadow-primary-light: 0 10px 20px rgba(127, 187, 161,0.17) ,0 6px 6px rgba(127, 187, 161,0.17);
+    --shadow-dark-blue: 0 10px 20px  rgba(15, 40, 50, 0.17) ,0 6px 6px  rgba(15, 40, 50, 0.17);
     /* max-width content */
     --content-width: 1400px;
 

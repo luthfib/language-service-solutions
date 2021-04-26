@@ -30,7 +30,7 @@ const AboutUs = (props) => (
         border-radius: var(--border-radius);
         width: 90%;
         padding: 30px 80px ;
-        box-shadow: var(--elevation-3);
+        box-shadow: var(--shadow-primary-light);
       }
 
       .about-us {

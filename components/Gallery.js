@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Swipeable } from "react-swipeable";
 
 const Gallery = () => {
@@ -35,6 +35,8 @@ const Gallery = () => {
       setCurrentImg(currentImg + addOrSubtractAmount);
     }
   };
+
+  
 
   return (
     <>
@@ -78,12 +80,24 @@ const Gallery = () => {
             ></li>
             {/* <li></li> */}
           </ol>
-
-          <img src={imgs[currentImg]} />
+          {/* parallax effect  use this instead of the image below <div className="slide"></div>   */}
+            <img src={imgs[currentImg]} />
         </div>
       </Swipeable>
       <style jsx>
         {`
+         .slide {
+          padding-top: 56.2%;
+            height: 100%;
+            width: 1400px;
+            max-width: 1400px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-image: url(${imgs[currentImg]});
+            background-attachment: fixed;
+            background-position: center center;
+          }
+
           .img-container {
             display: inline-block;
             position: relative;
