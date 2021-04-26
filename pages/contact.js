@@ -44,9 +44,7 @@ export default function Home() {
         </section>
 
         <section className="margin-bottom-1 img-wrapper">
-          {/* <div className='img-wrapper '> */}
-          <Image src={`/imgs/Contact.jpg`} layout="fill" className="next-img" />
-          {/* </div> */}
+          <Image src={`/imgs/Contact.jpg`} layout="fill" className="next-img" priority={true}/>
         </section>
 
         <section className="margin-bottom-1">
