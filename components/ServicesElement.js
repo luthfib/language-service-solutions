@@ -76,7 +76,7 @@ const ServicesElement = (props) => (
         align-items: center;
         padding: 30px 5px;
         height: 740px;
-        box-shadow: var(--elevation-3);
+        box-shadow: var(--shadow-primary-medium);
       }
 
       .services-container {
