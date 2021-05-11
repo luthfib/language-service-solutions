@@ -22,7 +22,6 @@ const Gallery = () => {
 
   const setCurrentImgIdx = (e) => {
     const imgIdx = parseInt(e.target.dataset.imgIdx);
-    console.log("Current Image", imgIdx);
     setCurrentImg(imgIdx);
   };
 
