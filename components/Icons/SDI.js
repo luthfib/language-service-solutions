@@ -15,6 +15,7 @@ const SDI = () => (
     viewBox="0 0 1843 695"
   >
     <image
+      alt="SDI"
       id="Layer_0"
       data-name="Layer 0"
       width="1843"

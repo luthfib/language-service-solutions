@@ -1,66 +1,71 @@
-import Banner from './Banner';
+import Banner from "./Banner";
 const ServicesElement = (props) => (
   <>
-    <div className='services'>
+    <div className="services">
       <h2>Services We Offer</h2>
-      <div className='services-container'>
-        <div className='service telephone'>
-          <a href='/services/telephonicInterpretation' className='icon '>
-            <img width='50px' height='50px' src='/icons/telephonicInterpretation.svg' />
+      <div className="services-container">
+        <div className="service telephone">
+          <a href="/services/telephonicInterpretation" className="icon ">
+            <img width="50px" height="50px" src="/icons/telephonicInterpretation.svg" alt="Telephone" />
           </a>
           <p>Telephonic Interpretations</p>
         </div>
 
-        <div className='service medical'>
-          <a href='/services/medicalInterpretation' className='icon '>
-            <img width='50px' height='50px' src='/icons/medicalInterpretation.svg' />
+        <div className="service medical">
+          <a href="/services/medicalInterpretation" className="icon ">
+            <img width="50px" height="50px" src="/icons/medicalInterpretation.svg" alt="medical interpretation" />
           </a>
           <p>Medical Interpretation</p>
         </div>
 
-        <div className='service translation'>
-          <a href='/services/translation' className='icon '>
-            <img width='50px' height='50px' src='/icons/translation.svg' />
+        <div className="service translation">
+          <a href="/services/translation" className="icon ">
+            <img width="50px" height="50px" src="/icons/translation.svg" alt="translation" />
           </a>
           <p>translation</p>
         </div>
 
-        <div className='service video'>
-          <a href='/services/videoInterpretation' className='icon '>
-            <img width='50px' height='50px' src='/icons/videoInterpretation.svg' />
+        <div className="service video">
+          <a href="/services/videoInterpretation" className="icon ">
+            <img width="50px" height="50px" src="/icons/videoInterpretation.svg" alt="video interpretation" />
           </a>
           <p>video Interpretation</p>
         </div>
 
-        <div className='service simultaneus'>
-          <a href='/services/simultaneousInterpretation' className='icon '>
-            <img width='50px' height='50px' src='/icons/simultaneousInterpretation.svg' />
+        <div className="service simultaneus">
+          <a href="/services/simultaneousInterpretation" className="icon ">
+            <img
+              width="50px"
+              height="50px"
+              src="/icons/simultaneousInterpretation.svg"
+              alt="simultaneous interpretation"
+            />
           </a>
           <p>simultaneus Interpretation</p>
         </div>
 
-        <div className='service transcriptions'>
-          <a href='/services/transcriptions' className='icon '>
-            <img width='50px' height='50px' src='/icons/transcriptions.svg' />
+        <div className="service transcriptions">
+          <a href="/services/transcriptions" className="icon ">
+            <img width="50px" height="50px" src="/icons/transcriptions.svg" alt="transcription" />
           </a>
           <p>transcriptions</p>
         </div>
 
-        <div className='service subs'>
-          <a href='/services/subtitling' className='icon '>
-            <img width='50px' height='50px' src='/icons/subtitling.svg' />
+        <div className="service subs">
+          <a href="/services/subtitling" className="icon ">
+            <img width="50px" height="50px" src="/icons/subtitling.svg" alt="subtitling" />
           </a>
           <p>subtitling</p>
         </div>
       </div>
-      <a className='banner-wrapper' href='/services'>
+      <a className="banner-wrapper" href="/services">
         <Banner
-          bgColor={'#fff8f83b'}
-          height={'35px'}
-          width={'var(--banner-services)'}
-          headingLevel={'h4'}
-          color={'var(--white)'}
-          text={'MORE INFORMATION'}
+          bgColor={"#fff8f83b"}
+          height={"35px"}
+          width={"var(--banner-services)"}
+          headingLevel={"h4"}
+          color={"var(--white)"}
+          text={"MORE INFORMATION"}
           dots={false}
         />
       </a>
@@ -99,10 +104,7 @@ const ServicesElement = (props) => (
         align-items: center;
         width: 150px;
         text-transform: uppercase;
-       
       }
-
-   
 
       .service.telephone {
         top: 0%;
@@ -152,7 +154,6 @@ const ServicesElement = (props) => (
         height: 100px;
         filter: invert(100%);
         transition: transform 0.3s ease;
-     
       }
 
       .icon:hover {

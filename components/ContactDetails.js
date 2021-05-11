@@ -8,19 +8,19 @@ const ContactDetails = () => {
           <div className="contact-container">
             <h2>CONTACT DETAILS</h2>
             <div>
-              <img src="/icons/phone.svg" />
+              <img src="/icons/phone.svg" alt="phone icon" />
               <span className="circle"></span>
               <small>Phone: (919) 949-9272</small>
             </div>
             <div>
-              <img src="/icons/email.svg" />
+              <img src="/icons/email.svg" alt="email icon" />
               <span className="circle"></span>
               <small>Email: murtado@languageservicesolutions.com</small>
             </div>
             <ul>
               <li className="icon">
                 <a href="https://www.facebook.com/Language-Service-Solutions-LLC-1682091685354287/">
-                  <img src="/icons/facebook.svg" />
+                  <img src="/icons/facebook.svg" alt="facebook icon" />
                 </a>
               </li>
               {/* <li className="icon">
@@ -35,7 +35,7 @@ const ContactDetails = () => {
               </li> */}
               <li className="icon">
                 <a href="https://www.linkedin.com/company/language-service-solutions">
-                  <img src="/icons/linkedin.svg" />
+                  <img src="/icons/linkedin.svg" alt="linkedin icon" />
                 </a>
               </li>
             </ul>
