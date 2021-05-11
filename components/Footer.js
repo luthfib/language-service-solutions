@@ -22,7 +22,7 @@ const Footer = () => {
             <ul>
               <li className="icon">
                 <a href="https://www.facebook.com/Language-Service-Solutions-LLC-1682091685354287/">
-                  <img src="/icons/facebook.svg" />
+                  <img src="/icons/facebook.svg" alt="facebook" />
                 </a>
               </li>
               {/* <li className="icon">
