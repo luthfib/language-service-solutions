@@ -6,15 +6,13 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
 
-    return (
-  
+    return ( 
         <Layout>
           <Component {...pageProps} />
           <style jsx global>
             {baseTheme}
           </style>
         </Layout>
-
     );
   }
 }

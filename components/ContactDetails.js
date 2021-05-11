@@ -47,7 +47,8 @@ const ContactDetails = () => {
           .details {
             --logo-size: 90px;
             background-color: var(--primary-medium);
-            width: 90%;
+            width: var(--element-width);
+            padding: var(--element-padding);
             display: flex;
             justify-content: center;
             border-radius: var(--border-radius);
@@ -61,7 +62,6 @@ const ContactDetails = () => {
             align-items: center;
             justify-content: space-around;
             flex-wrap: wrap;
-            padding: 25px 0 25px;
             max-width: 700px;
           }
 
