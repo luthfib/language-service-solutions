@@ -13,16 +13,16 @@ const Navbar = ({ open, setOpen }) => {
   return (
     <div className="navigation" ref={node}>
       <Link href="/">
-      <div className="logo-wrapper">
-        
+        <div className="logo-wrapper">
           <Logo width={"var(--logo-size)"} height={"var(--logo-size)"} />
-       
-      </div>
+        </div>
       </Link>
       <button
         className="hamburger"
         open={open}
         onClick={() => setOpen(!open)}
+        aria-pressed={open}
+        aria-label="Menu"
       ></button>
       <nav className="nav">
         <ul>
@@ -56,12 +56,7 @@ const Navbar = ({ open, setOpen }) => {
       <style jsx>
         {`
           .navigation {
-            --gradient: linear-gradient(
-              to right,
-              var(--primary-dark),
-              var(--primary-medium),
-              var(--primary-light)
-            );
+            --gradient: linear-gradient(to right, var(--primary-dark), var(--primary-medium), var(--primary-light));
 
             --space: 10px;
             --hamburger-size: 30px;
@@ -122,7 +117,6 @@ const Navbar = ({ open, setOpen }) => {
             list-style: none;
             margin: 0;
             margin-right: 10px;
-            
           }
 
           .nav li {
@@ -227,7 +221,7 @@ const Navbar = ({ open, setOpen }) => {
               top: calc(50%);
               left: calc(var(--space) * -1.5);
               transform: translateY(-50%);
-              background:#323131;
+              background: #323131;
             }
           }
         `}

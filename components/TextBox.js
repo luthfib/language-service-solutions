@@ -3,7 +3,7 @@ const renderLogo = (logo, logoImg) => {
     return (
       <>
         <div className="icon ">
-          <img width="80px" height="80px" src={`/icons/${logo}.svg`} />
+          <img width="80px" height="80px" src={`/icons/${logo}.svg`} alt={logo} />
         </div>
         <style jsx>
           {`

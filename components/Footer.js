@@ -1,43 +1,43 @@
-import Logo from './Icons/logo';
-import { useOnClickOutside } from '../hooks/useOnClickOutside';
-import { useRef } from 'react';
+import Logo from "./Icons/logo";
+import { useOnClickOutside } from "../hooks/useOnClickOutside";
+import { useRef } from "react";
 
 const Footer = () => {
   return (
     <>
-      <footer className='footer'>
-        <div className='inner-footer'>
-          <div className='logo-container'>
-            <a href='#' className='logo'>
-              <Logo width={'var(--logo-size)'} height={'var(--logo-size)'} />
+      <footer className="footer">
+        <div className="inner-footer">
+          <div className="logo-container">
+            <a href="#" className="logo">
+              <Logo width={"var(--logo-size)"} height={"var(--logo-size)"} />
             </a>
-            <h4 className='lss'>
+            <h4 className="lss">
               LANGUAGE <br /> SERVICE <br /> SOLUTIONS, LLC
             </h4>
           </div>
-          <div className='contact-container'>
+          <div className="contact-container">
             <p>CONTACT US</p>
             <small>Phone: (919) 949-9272</small>
             <small>Email: murtado@languageservicesolutions</small>
             <ul>
-              <li className='icon'>
-                <a href='#'>
-                  <img src='/icons/facebook.svg' />
+              <li className="icon">
+                <a href="https://www.facebook.com/Language-Service-Solutions-LLC-1682091685354287/">
+                  <img src="/icons/facebook.svg" />
                 </a>
               </li>
-              <li className='icon'>
-                <a href='#'>
-                  <img src='/icons/youtube.svg' />
+              {/* <li className="icon">
+                <a href="#">
+                  <img src="/icons/youtube.svg" />
                 </a>
               </li>
-              <li className='icon'>
-                <a href='#'>
-                  <img src='/icons/twitter.svg' />
+              <li className="icon">
+                <a href="#">
+                  <img src="/icons/twitter.svg" />
                 </a>
-              </li>
-              <li className='icon'>
-                <a href='#'>
-                  <img src='/icons/linkedin.svg' />
+              </li> */}
+              <li className="icon">
+                <a href="ttps://www.linkedin.com/company/language-service-solutions">
+                  <img src="/icons/linkedin.svg" alt="Linkedin Hyperlink" />
                 </a>
               </li>
             </ul>
