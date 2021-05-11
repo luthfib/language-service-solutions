@@ -1,8 +1,9 @@
 const styles = {
-    height: '63px',
-    width: '200px',
-    marginTop: '5px'
-}
+  height: "63px",
+  width: "200px",
+  marginTop: "5px",
+  marginLeft: "-15px",
+};
 
 const SDI = () => (
   <svg
