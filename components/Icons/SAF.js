@@ -2,6 +2,7 @@ const styles = {
   height: "63px",
   width: "200px",
   marginTop: "5px",
+  marginLeft: "-35px",
 };
 
 const SAF = () => (

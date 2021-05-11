@@ -54,6 +54,7 @@ const renderLogo = (logo, logoImg) => {
     );
   }
 };
+
 const renderImg = (img) => {
   if (img) {
     return (
@@ -99,52 +100,47 @@ const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign }) => (
       {renderImg(img)}
     </div>
     <style jsx>{`
-
       .serviceSingle {
         display: flex;
         flex-direction: column;
         width: 100%;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
       }
 
       .serviceContainer {
         max-width: 500px;
         margin: auto;
-        text-align: left;       
+        text-align: left;
       }
 
       .serviceContainer h4 {
-          text-align: center;
+        text-align: center;
       }
 
       .serviceDescription {
-          background: var(--primary-medium);
-          border-radius: var(--border-radius);
-          width: 90%;
-          padding: 40px 40px;
-          box-shadow: var(--shadow-primary-medium);
-          display: flex;
-          flex-flow: column;
-          text-align: ${textAlign};
-          font-weight: bold;
+        background: var(--primary-medium);
+        border-radius: var(--border-radius);
+        width: 90%;
+        padding: 40px 40px;
+        box-shadow: var(--shadow-primary-medium);
+        display: flex;
+        flex-flow: column;
+        text-align: ${textAlign};
+        font-weight: bold;
       }
 
- 
+      @media (max-width: 768px) {
+        .serviceDescription {
+          padding: 40px 30px;
+          width: 100%;
+        }
 
-
-      
-        @media (max-width: 768px) {
-          .serviceDescription {
-            padding: 40px 30px;
-            width: 100%;
-          }
-
-          .img-wrapper {
+        .img-wrapper {
           height: 150px;
         }
-  
-      `}</style>
+      }
+    `}</style>
 
     <style jsx global>{`
       .headline {

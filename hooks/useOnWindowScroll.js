@@ -3,11 +3,13 @@ export const useOnWindowScroll = (ref, css, scroll) => {
   useEffect(() => {
     // console.log(ref);
     const scrolled = () => {
-      if (window.scrollY > scroll) {
-        ref.current.classList.add(`${css}`);
-      } else {
-        // console.log(ref);
-        ref.current.classList.remove(`${css}`);
+      if (ref.current) {
+        if (window.scrollY > scroll) {
+          ref.current.classList.add(`${css}`);
+        } else {
+          // console.log(ref);
+          ref.current.classList.remove(`${css}`);
+        }
       }
     };
     window.addEventListener("scroll", scrolled);
