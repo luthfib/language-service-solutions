@@ -1,42 +1,41 @@
-import Logo from './Icons/logo';
+import Logo from "./Icons/logo";
 
 const ContactDetails = () => {
   return (
     <>
-      <div className='details'>
-        <div className='inner-details'>
-          
-          <div className='contact-container'>
+      <div className="details">
+        <div className="inner-details">
+          <div className="contact-container">
             <h2>CONTACT DETAILS</h2>
             <div>
-              <img src='/icons/phone.svg' />
+              <img src="/icons/phone.svg" />
               <span className="circle"></span>
               <small>Phone: (919) 949-9272</small>
             </div>
             <div>
-              <img src='/icons/email.svg' />
+              <img src="/icons/email.svg" />
               <span className="circle"></span>
               <small>Email: murtado@languageservicesolutions.com</small>
             </div>
             <ul>
-              <li className='icon'>
-                <a href='#'>
-                  <img src='/icons/facebook.svg' />
+              <li className="icon">
+                <a href="https://www.facebook.com/Language-Service-Solutions-LLC-1682091685354287/">
+                  <img src="/icons/facebook.svg" />
                 </a>
               </li>
-              <li className='icon'>
-                <a href='#'>
-                  <img src='/icons/youtube.svg' />
+              {/* <li className="icon">
+                <a href="#">
+                  <img src="/icons/youtube.svg" />
                 </a>
-              </li>
-              <li className='icon'>
+              </li> */}
+              {/* <li className='icon'>
                 <a href='#'>
                   <img src='/icons/twitter.svg' />
                 </a>
-              </li>
-              <li className='icon'>
-                <a href='#'>
-                  <img src='/icons/linkedin.svg' />
+              </li> */}
+              <li className="icon">
+                <a href="https://www.linkedin.com/company/language-service-solutions">
+                  <img src="/icons/linkedin.svg" />
                 </a>
               </li>
             </ul>
@@ -65,7 +64,7 @@ const ContactDetails = () => {
             padding: 25px 0 25px;
             max-width: 700px;
           }
-          
+
           .lss {
             font-size: 26px;
             line-height: 26px;
@@ -76,8 +75,8 @@ const ContactDetails = () => {
           .contact-container {
             display: flex;
             flex-direction: column;
-            text-align:center;
-            justify-content: center;            
+            text-align: center;
+            justify-content: center;
           }
 
           .contact-container div {
@@ -87,13 +86,13 @@ const ContactDetails = () => {
             margin-bottom: 20px;
           }
           .contact-container div:first-of-type {
-            margin-top:15px;
+            margin-top: 15px;
           }
 
           .contact-container div img {
             height: 15px;
             width: 15px;
-            margin-right:20px;
+            margin-right: 20px;
             position: relative;
             filter: invert(100%);
           }
@@ -115,7 +114,7 @@ const ContactDetails = () => {
             padding-left: 0;
             list-style: none;
             margin-top: 20px;
-            justify-content:center;
+            justify-content: center;
           }
 
           li {
@@ -143,7 +142,7 @@ const ContactDetails = () => {
           h2 {
             font-size: 26px;
             margin: 16px 0;
-            text-align:center;
+            text-align: center;
             color: var(--white);
             letter-spacing: 2px;
           }
@@ -155,8 +154,8 @@ const ContactDetails = () => {
           }
           @media (hover: hover) {
             li:hover {
-            transform: scale(1.1);
-            filter: invert(100%);
+              transform: scale(1.1);
+              filter: invert(100%);
             }
           }
 
