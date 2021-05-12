@@ -160,9 +160,6 @@ const ContactDetails = () => {
           }
 
           @media (max-width: 550px) {
-            .details {
-              width: 100%;
-            }
             .inner-details {
               flex-direction: column;
               align-items: center;
