@@ -71,7 +71,7 @@ const hasDots = ({
 				<style jsx>
 					{`
 						.banner-wrapper {
-							--element-padding: 40px 0px
+							--element-padding: 40px 0px;
 							width: var(--element-width, ${width});
 							display: flex;
 							justify-content: center;

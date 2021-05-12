@@ -109,7 +109,7 @@ const ServicesElement = (props) => (
 
 			.service {
 				--distance: 90px;
-				--left:5%;
+				--left: 5%;
 				--right: 5%;
 
 				position: absolute;
@@ -123,7 +123,7 @@ const ServicesElement = (props) => (
 
 			.service.telephone {
 				top: 0%;
-				left:calc(var(--left) * 10);
+				left: calc(var(--left) * 10);
 				transform: translateX(-50%);
 			}
 			.service.medical {
@@ -148,7 +148,7 @@ const ServicesElement = (props) => (
 
 			.service.transcriptions {
 				top: calc(var(--distance) * 3);
-				right:var(--right);
+				right: var(--right);
 			}
 
 			.service.subs {
@@ -233,19 +233,19 @@ const ServicesElement = (props) => (
 					top: calc(var(--distance) * 5.5);
 				}
 			}
-
-			
 		`}</style>
 
 		<style jsx global>
 			{`
 				.services .banner-wrapper {
 					--element-width: 350px;
+				
 				}
 
-				.banner {
+				.services .banner {
 					transition: background-color 0.3s ease;
-					border-radius: var(--border-radius-mobile);
+					border-radius: var(--border-radius);
+					padding: 1.25em;
 				}
 
 				.banner:hover {
