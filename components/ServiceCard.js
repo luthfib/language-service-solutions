@@ -63,7 +63,6 @@ const ServiceCard = ({ logo, title, text }) => (
 			p {
 				margin: 0;
 				font-size: 14px;
-				color: #3b4547;
 				font-weight: 700;
 			}
 

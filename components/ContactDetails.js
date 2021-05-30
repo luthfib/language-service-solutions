@@ -69,7 +69,6 @@ const ContactDetails = () => {
             font-size: 26px;
             line-height: 26px;
             font-weight: 100;
-            color: #353535;
           }
 
           .contact-container {
@@ -148,7 +147,6 @@ const ContactDetails = () => {
           }
 
           small {
-            color: #3b3b3b;
             font-size: 16px;
             font-weight: bold;
           }

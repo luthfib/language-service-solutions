@@ -155,7 +155,7 @@ const Navbar = ({ open, setOpen }) => {
           }
 
           .nav li.active a {
-            color: var(--black);
+            color:var(--color-text);
           }
           .nav li.active a::after {
             opacity: 1;
@@ -163,7 +163,7 @@ const Navbar = ({ open, setOpen }) => {
 
           @media (hover: hover) {
             .nav li a:hover {
-              color: var(--black);
+              color:var(--color-text);
             }
           }
 
@@ -214,7 +214,7 @@ const Navbar = ({ open, setOpen }) => {
             }
 
             .nav li a {
-              color: var(--black);
+              color: var(--color-text);
             }
 
             .nav li a::after {

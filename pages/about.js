@@ -48,27 +48,27 @@ export default function Home() {
 						<div className='staff-member-container'>
 							<div className='staff-member'>
 								<StaffIcon path='/staff/Farlan.svg' />
-								<h3 className='staff-member-name'>Farlan Hermosa</h3>
+								<h3 className='staff-member-name letter-spacing--small all-caps'>Farlan Hermosa</h3>
 								<p className='staff-member-description'>Un experto en esconderse en matas</p>
 							</div>
 							<div className='staff-member'>
 								<StaffIcon path='/staff/Lucas.svg' />
-								<h3 className='staff-member-name'>Lucas Franco</h3>
+								<h3 className='staff-member-name letter-spacing--small all-caps'>Lucas Franco</h3>
 								<p className='staff-member-description'>Un duro con todo tecnologia</p>
 							</div>
 							<div className='staff-member'>
 								<StaffIcon path='/staff/Chairin.svg' />
-								<h3 className='staff-member-name'>Chairin Hermosa</h3>
+								<h3 className='staff-member-name letter-spacing--small all-caps'>Chairin Hermosa</h3>
 								<p className='staff-member-description'>La profesora</p>
 							</div>
 							<div className='staff-member'>
 								<StaffIcon path='/staff/Laura.svg' />
-								<h3 className='staff-member-name'>Laura Bautista</h3>
+								<h3 className='staff-member-name letter-spacing--small all-caps'>Laura Bautista</h3>
 								<p className='staff-member-description'>Experta en todo</p>
 							</div>
 							<div className='staff-member'>
 								<StaffIcon path='/staff/Murtado.svg' />
-								<h3 className='staff-member-name'>Murtado Bustillo</h3>
+								<h3 className='staff-member-name letter-spacing--small all-caps'>Murtado Bustillo</h3>
 								<p className='staff-member-description'>
 									Alias Funtado, traerá el mismo esfuerzo que ha traido del Fortnite a la
 									traducción.{' '}
@@ -76,7 +76,7 @@ export default function Home() {
 							</div>
 							<div className='staff-member'>
 								<StaffIcon path='/staff/Latimah.svg' />
-								<h3 className='staff-member-name'>Latimah B. Arrechea</h3>
+								<h3 className='staff-member-name letter-spacing--small all-caps'>Latimah B. Arrechea</h3>
 								<p className='staff-member-description'>La quimica es una sabia</p>
 							</div>
 						</div>
@@ -217,7 +217,6 @@ export default function Home() {
 
 				.headline {
 					text-align: center;
-					font-family: 'matiasregular', 'Open Sans', sans-serif;
 				}
 			`}</style>
 		</div>
