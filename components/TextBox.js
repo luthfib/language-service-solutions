@@ -171,9 +171,9 @@ const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign }) => (
 				color: var(--white);
 				opacity: 0.9;
 			}
+
 			.headline {
-				letter-spacing: 2px;
-				font-family: 'Open Sans', sans-serif;
+				letter-spacing: 3px;
 				font-weight: 400;
 			}
 
