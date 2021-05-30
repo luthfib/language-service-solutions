@@ -83,7 +83,6 @@ const Footer = () => {
             font-size: 26px;
             line-height: 26px;
             font-weight: 100;
-            color: #353535;
           }
 
           .contact-container {
@@ -131,9 +130,6 @@ const Footer = () => {
             margin: 16px 0;
           }
 
-          small {
-            color: #3b3b3b;
-          }
           @media (hover: hover) {
           }
 

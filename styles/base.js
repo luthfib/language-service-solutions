@@ -2,6 +2,27 @@ import css from 'styled-jsx/css';
 
 export default css.global`
 	:root {
+		/*  New colors */
+		--wheat: #ece9e4;
+		--yellow: #ffc425 ;
+		--yellow-light: #fce181;
+		--blue: #02a5d9 ;
+		--blue-light: #b3e5ff;
+		--green: #01b1b0 ;
+		--green-darker: #012b2d; 
+		--green-light: #9fedd7;
+
+		--pure-wheat: 236, 233, 228;
+		--pure-yellow: 255, 196, 37;
+		--pure-yellow-light: 252, 225, 12;
+		--pure-blue: 2, 165, 217;
+		--pure-blue-light: 179, 229, 25;
+		--pure-green: 1, 177, 176;
+		--pure-green-darker: 1, 43, 4 ;
+		--pure-green-light: 159, 237, 21;
+
+
+
 		/* colors */
 
 		--primary-dark: #346278;
@@ -10,7 +31,7 @@ export default css.global`
 		--white: #fff;
 		--black: #000;
 		--transparent: #ffffff00;
-		--dark-blue: #0f2832;
+		--dark-blue: #012b2d;
 
 		--gradient: linear-gradient(
 			to right,
@@ -33,7 +54,7 @@ export default css.global`
 			var(--primary-dark)
 		);
 
-		--nav-height: 100px;
+		
 
 		/* Shadows Vercel */
 
@@ -58,16 +79,17 @@ export default css.global`
 		--shadow-primary-light: 0 10px 20px rgba(127, 187, 161, 0.17),
 			0 6px 6px rgba(127, 187, 161, 0.17);
 		--shadow-dark-blue: 0 10px 20px rgba(15, 40, 50, 0.17), 0 6px 6px rgba(15, 40, 50, 0.17);
-		/* max-width content */
+
+		--elevation-3-wheat: 0 10px 20px rgba(var(--pure-wheat), .17), 0 6px 6px rgb(var(--pure-wheat), .17);
+
+		/* sizes */
 		--content-width: 1400px;
-
-		/* border-radius */
+		--nav-height: 100px;
 		--border-radius: 20px;
-
-		/* Elements-size */
 		--element-width: 90%;
 		--element-padding: 40px 40px;
 	}
+
 	@font-face {
 		font-family: 'matiasregular';
 		src: url('/fonts/matias-webfont.woff2') format('woff2'),
@@ -87,7 +109,10 @@ export default css.global`
 			Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 		font-family: 'matiasregular', 'Open Sans', sans-serif;
 	}
-
+	body {
+		--color-text: var(--green-darker);
+		color: var(--color-text); 
+	}
 	.container {
 		min-height: 100vh;
 		display: flex;
@@ -147,7 +172,9 @@ export default css.global`
 	h1,
 	h2,
 	h3 {
-		letter-spacing: 6px;
+		--letter-spacing: 6px;
+		letter-spacing: var(--letter-spacing);
+		
 	}
 
 	h1,
@@ -221,6 +248,13 @@ export default css.global`
 		--logo-circle: 70px;
 	}
 
+	.letter-spacing--small {
+		--letter-spacing: 3px;
+	}
+	.all-caps {
+		text-transform: uppercase;
+	}
+
 	@media (max-width: 768px) {
 		:root {
 			--border-radius: 10px;
@@ -260,4 +294,4 @@ export default css.global`
 			transition: color 0.15s ease, border-color 0.15s ease;
 		}
 	}
-`;
+}`;

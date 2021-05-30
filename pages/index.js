@@ -62,8 +62,6 @@ const Home = (props) => {
 			) : (
 				<ComingSoon />
 			)}
-
-			<style jsx>{``}</style>
 		</>
 	);
 };
