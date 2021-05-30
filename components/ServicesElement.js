@@ -181,7 +181,7 @@ const ServicesElement = (props) => (
 			}
 
 			p {
-				width: 90%;
+				width: 100%;
 				margin-top: 8px;
 			}
 
