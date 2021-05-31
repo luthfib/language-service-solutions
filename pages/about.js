@@ -133,7 +133,7 @@ export default function Home() {
         </section>
 
         <section className="margin-bottom-1">
-          <Dots direction={"up"} color={"var(--wheat)"} size={"10"} />
+          <Dots direction={"up"} color={"var(--yellow)"} size={"10"} />
         </section>
 
         <section className="margin-bottom-1">
