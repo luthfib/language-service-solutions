@@ -69,7 +69,6 @@ const ContactDetails = () => {
             font-size: 26px;
             line-height: 26px;
             font-weight: 100;
-            color: #353535;
           }
 
           .contact-container {
@@ -123,7 +122,7 @@ const ContactDetails = () => {
             width: 40px;
             border-radius: 50%;
             margin-right: 8px;
-            transition: transform 0.3s ease-in, filter 0.3s ease-in;
+            transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
           }
 
           li a {
@@ -148,21 +147,18 @@ const ContactDetails = () => {
           }
 
           small {
-            color: #3b3b3b;
             font-size: 16px;
             font-weight: bold;
           }
-          @media (hover: hover) {
-            li:hover {
-              transform: scale(1.1);
-              filter: invert(100%);
-            }
+
+          li:hover,li:focus  {
+            transform: scale(1.1);
+            filter: invert(100%);
+            box-shadow:  0 3px 6px rgba(255, 255, 255, 0.16), 0 3px 6px rgba(255, 255, 255, 0.16);
           }
+          
 
           @media (max-width: 550px) {
-            .details {
-              width: 100%;
-            }
             .inner-details {
               flex-direction: column;
               align-items: center;

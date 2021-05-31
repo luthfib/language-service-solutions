@@ -36,7 +36,7 @@ const Home = (props) => {
             </section>
 
             <section className="margin-bottom-1">
-              <Dots direction={"up"} color={"var(--primary-yellow)"} size={"10"} />
+              <Dots direction={"up"} color={"#bcbcbc"} size={"10"} />
             </section>
             <section className="margin-bottom-1">
               <AboutUs />
@@ -46,7 +46,7 @@ const Home = (props) => {
             </section>
             <section className="margin-bottom-1">
               <Banner
-                bgColor={"var(--dark-blue)"}
+                bgColor={"var(--green-darker)"}
                 height={"90px"}
                 width={"90%"}
                 headingLevel={"h2"}
@@ -62,8 +62,6 @@ const Home = (props) => {
       ) : (
         <ComingSoon />
       )}
-
-      <style jsx>{``}</style>
     </>
   );
 };

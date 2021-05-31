@@ -83,7 +83,6 @@ const Footer = () => {
             font-size: 26px;
             line-height: 26px;
             font-weight: 100;
-            color: #353535;
           }
 
           .contact-container {
@@ -105,7 +104,7 @@ const Footer = () => {
             width: 40px;
             border-radius: 50%;
             margin-right: 5px;
-            transition: transform 0.3s ease-in, filter 0.3s ease-in;
+            transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
           }
 
           li a {
@@ -116,9 +115,10 @@ const Footer = () => {
             height: 100%;
           }
 
-          li:hover {
+          li:hover,  li:focus {
             transform: scale(1.1);
             filter: invert(100%);
+            box-shadow:  0 3px 6px rgba(255, 255, 255, 0.16), 0 3px 6px rgba(255, 255, 255, 0.16);
           }
 
           li a img {
@@ -131,9 +131,6 @@ const Footer = () => {
             margin: 16px 0;
           }
 
-          small {
-            color: #3b3b3b;
-          }
           @media (hover: hover) {
           }
 
