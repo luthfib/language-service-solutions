@@ -30,7 +30,7 @@ export default function Home() {
 						height={'90px'}
 						width={'90%'}
 						headingLevel={'h1'}
-						color={'var(--dark-blue)'}
+						color={'var(--green-darker)'}
 						margin={''}
 						text={'Our Services'}
 						dots={false}
@@ -94,7 +94,7 @@ export default function Home() {
 				</section>
 				<section className='margin-bottom-1'>
 					<Banner
-						bgColor={'#0f2832'}
+						bgColor={'var(--green-darker)'}
 						height={'90px'}
 						width={'90%'}
 						headingLevel={'h2'}

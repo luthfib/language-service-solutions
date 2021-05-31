@@ -30,7 +30,7 @@ export default function Home() {
 						height={'90px'}
 						width={'90%'}
 						headingLevel={'h1'}
-						color={'var(--dark-blue)'}
+						color={'var(--green-darker)'}
 						margin={''}
 						text={'Translation'}
 						dots={false}

@@ -31,7 +31,6 @@ export default css.global`
 		--white: #fff;
 		--black: #000;
 		--transparent: #ffffff00;
-		--dark-blue: #012b2d;
 
 		--gradient: linear-gradient(
 			to right,
@@ -79,14 +78,14 @@ export default css.global`
 		--shadow-primary-light: 0 10px 20px rgba(127, 187, 161, 0.17),
 			0 6px 6px rgba(127, 187, 161, 0.17);
 
-		--elevation-3-wheat: 0 10px 20px rgba(var(--pure-wheat), .17), 0 6px 6px rgb(var(--pure-wheat), .17);
-		--elevation-3-yellow: 0 10px 20px rgba(var(--pure-yellow), .17), 0 6px 6px rgb(var(--pure-yellow), .17);
-		--elevation-3-yellow-light: 0 10px 20px rgba(var(--pure-yellow-light), .17), 0 6px 6px rgb(var(--pure-yellow-light), .17);
-		--elevation-3-blue: 0 10px 20px rgba(var(--pure-blue), .17), 0 6px 6px rgb(var(--pure-blue), .17);
-		--elevation-3-blue-light: 0 10px 20px rgba(var(--pure-blue-light), .17), 0 6px 6px rgb(var(--pure-blue-light), .17);
-		--elevation-3-green: 0 10px 20px rgba(var(--pure-green), .17), 0 6px 6px rgb(var(--pure-green), .17);
-		--elevation-3-green-light: 0 10px 20px rgba(var(--pure-green-light), .17), 0 6px 6px rgb(var(--pure-green-light), .17);
-		--elevation-3-green-darker: 0 10px 20px rgba(var(--pure-green-darker), .17), 0 6px 6px rgb(var(--pure-green-darker), .17);
+		--elevation-3-wheat: 0 10px 20px rgba(var(--pure-wheat), .17), 0 6px 6px rgba(var(--pure-wheat), .17);
+		--elevation-3-yellow: 0 10px 20px rgba(var(--pure-yellow), .17), 0 6px 6px rgba(var(--pure-yellow), .17);
+		--elevation-3-yellow-light: 0 10px 20px rgba(var(--pure-yellow-light), .17), 0 6px 6px rgba(var(--pure-yellow-light), .17);
+		--elevation-3-blue: 0 10px 20px rgba(var(--pure-blue), .17), 0 6px 6px rgba(var(--pure-blue), .17);
+		--elevation-3-blue-light: 0 10px 20px rgba(var(--pure-blue-light), .17), 0 6px 6px rgba(var(--pure-blue-light), .17);
+		--elevation-3-green: 0 10px 20px rgba(var(--pure-green), .17), 0 6px 6px rgba(var(--pure-green), .17);
+		--elevation-3-green-light: 0 10px 20px rgba(var(--pure-green-light), .17), 0 6px 6px rgba(var(--pure-green-light), .17);
+		--elevation-3-green-darker: 0 10px 20px rgba(var(--pure-green-darker), .17), 0 6px 6px rgba(var(--pure-green-darker), .17);
 
 		/* sizes */
 		--content-width: 1400px;
