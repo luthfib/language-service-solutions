@@ -1,4 +1,4 @@
-import Logo from "./Icons/Logo";
+import Logo from "./Icons/logo";
 
 const ContactDetails = () => {
   return (

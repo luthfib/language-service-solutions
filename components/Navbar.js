@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./Icons/Logo";
+import Logo from "./Icons/logo";
 import { useOnClickOutside } from "../hooks/useOnClickOutside";
 import { useRef } from "react";
 import { useRouter } from "next/router";
