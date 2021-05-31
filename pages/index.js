@@ -46,7 +46,7 @@ const Home = (props) => {
 						</section>
 						<section className='margin-bottom-1'>
 							<Banner
-								bgColor={'var(--dark-blue)'}
+								bgColor={'var(--green-darker)'}
 								height={'90px'}
 								width={'90%'}
 								headingLevel={'h2'}
