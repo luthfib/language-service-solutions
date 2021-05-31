@@ -32,6 +32,14 @@ const hasDots = ({
 								cursor: ${bgColor ? 'pointer;' : 'auto;'};
 								transform: ${bgColor ? 'scale(1.02);' : 'none;'};
 							}
+							.banner-wrapper:hover .banner {
+								background: ${bgColor};
+							}
+						}
+
+						.banner-wrapper:focus {
+								cursor: ${bgColor ? 'pointer;' : 'auto;'};
+								transform: ${bgColor ? 'scale(1.02);' : 'none;'};
 						}
 						.banner {
 							background: ${bgColor};
@@ -41,7 +49,7 @@ const hasDots = ({
 							display: flex;
 							justify-content: space-around;
 							align-items: center;
-							box-shadow: var(--shadow-dark-blue);
+							box-shadow: var(--elevation-3-green-darker);
 							padding: 0 10px;
 						}
 
@@ -71,12 +79,16 @@ const hasDots = ({
 				<style jsx>
 					{`
 						.banner-wrapper {
-							--element-padding: 40px 0px
+							--element-padding: 40px 0px;
 							width: var(--element-width, ${width});
 							display: flex;
 							justify-content: center;
 							transition: transform 0.3s ease;
 							pointer-events: ${bgColor ? 'all;' : 'none;'};
+						}
+						.banner-wrapper:focus {
+								cursor: ${bgColor ? 'pointer;' : 'auto;'};
+								transform: ${bgColor ? 'scale(1.02);' : 'none;'};
 						}
 						@media (hover: hover) {
 							.banner-wrapper:hover {
