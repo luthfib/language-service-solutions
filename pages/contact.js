@@ -1,6 +1,6 @@
 import Banner from "../components/Banner.jsx";
 import ContactDetails from "../components/ContactDetails";
-import Dots from "../components/Icons/Dots";
+import Dots from "../components/Icons/dots";
 
 export default function Home() {
 

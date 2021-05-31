@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 
 import Banner from "../components/Banner.jsx";
-import Dots from "../components/Icons/Dots";
+import Dots from "../components/Icons/dots";
 import Duke from "../components/Icons/Duke";
 import Elon from "../components/Icons/Elon";
 import SAF from "../components/Icons/SAF";
@@ -24,11 +24,9 @@ export default function Home() {
           dots={false}
         />
       </section>
-
       <section className="margin-bottom-1">
         <Dots direction={"up"} color={"var(--primary-yellow)"} size={"10"} />
       </section>
-
       <section className="margin-bottom-1">
         <Textbox
           logoImg={""}

@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import AboutUs from "../components/AboutUsSection";
 import Banner from "../components/Banner.jsx";
 import ComingSoon from "../components/ComingSoon";
-import Dots from "../components/Icons/Dots";
+import Dots from "../components/Icons/dots";
 import Gallery from "../components/Gallery";
 import Services from "../components/ServicesElement";
 

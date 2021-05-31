@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../../components/Banner.jsx";
-import Dots from "../../components/Icons/Dots";
+import Dots from "../../components/Icons/dots";
 import ServiceCard from "../../components/ServiceCard";
 
 export default function Home() {
