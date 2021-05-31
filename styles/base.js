@@ -3,7 +3,7 @@ import css from "styled-jsx/css";
 export default css.global`
 	:root {
 		/*  New colors */
-		--wheat: #ece9e4;
+		--wheat: #edeae5;
 		--yellow: #ffc425 ;
 		--yellow-light: #fce181;
 		--blue: #02a5d9 ;
@@ -26,7 +26,7 @@ export default css.global`
 		/* colors */
 
 		--primary-dark: #346278;
-		--primary-medium: #539b92;
+		--primary-medium: #02a8a3;
 		--primary-light: #7fbba1;
 		--white: #fff;
 		--black: #000;

@@ -22,7 +22,7 @@ const AboutUs = (props) => (
     </div>
     <style jsx>{`
       .about-holder {
-        background: var(--primary-brown);
+        background: var(--wheat);
         border-radius: var(--border-radius);
         width: var(--element-width);
         padding: var(--element-padding);

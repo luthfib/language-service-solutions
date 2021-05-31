@@ -37,7 +37,7 @@ export default function Home() {
           />
         </section>
         <section className="margin-bottom-1">
-          <Dots direction={"up"} color={"#bcbcbc"} size={"10"} />
+          <Dots direction={"up"} color={"var(--yellow)"} size={"10"} />
         </section>
         <section className="margin-bottom-1">
           <div className="card-container">
