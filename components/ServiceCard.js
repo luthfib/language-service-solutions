@@ -14,14 +14,24 @@ const ServiceCard = ({ logo, title, text }) => (
 		</Link>
 		<style jsx>{`
 			.card-wrapper {
-				transition: transform 0.3s ease-in;
+				transition: transform 0.3s ease ;
 			}
+			.card-wrapper:focus  {
+				transform: scale(1.02);
+			}
+
+			.card-wrapper:focus .card {
+					box-shadow: var(--shadow-primary-light);
+					background: var(--primary-light);
+			}
+			
 			@media (hover: hover) {
 				.card-wrapper:hover {
-					transform: scale(1.03);
+					transform: scale(1.02);
 				}
 				.card-wrapper:hover .card {
-					box-shadow: var(--elevation-2);
+					box-shadow: var(--shadow-primary-light);
+					background: var(--primary-light);
 				}
 			}
 			.card {
@@ -38,7 +48,7 @@ const ServiceCard = ({ logo, title, text }) => (
 				padding: 30px;
 				text-align: center;
 				margin: 0px 22.5px 45px 22.5px;
-				transition: box-shadow 0.3s ease-in-out;
+				transition: box-shadow 0.3s ease,  background-color 0.3s ease;
 			}
 
 			.icon {

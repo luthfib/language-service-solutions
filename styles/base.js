@@ -12,14 +12,14 @@ export default css.global`
 		--green-darker: #012b2d; 
 		--green-light: #9fedd7;
 
-		--pure-wheat: 236, 233, 228;
-		--pure-yellow: 255, 196, 37;
-		--pure-yellow-light: 252, 225, 12;
-		--pure-blue: 2, 165, 217;
-		--pure-blue-light: 179, 229, 25;
-		--pure-green: 1, 177, 176;
-		--pure-green-darker: 1, 43, 4 ;
-		--pure-green-light: 159, 237, 21;
+		--rgb-wheat: 236, 233, 228;
+		--rgb-yellow: 255, 196, 37;
+		--rgb-yellow-light: 252, 225, 12;
+		--rgb-blue: 2, 165, 217;
+		--rgb-blue-light: 179, 229, 25;
+		--rgb-green: 1, 177, 176;
+		--rgb-green-darker: 1, 43, 4 ;
+		--rgb-green-light: 159, 237, 21;
 
 
 
@@ -78,14 +78,14 @@ export default css.global`
 		--shadow-primary-light: 0 10px 20px rgba(127, 187, 161, 0.17),
 			0 6px 6px rgba(127, 187, 161, 0.17);
 
-		--elevation-3-wheat: 0 10px 20px rgba(var(--pure-wheat), .17), 0 6px 6px rgba(var(--pure-wheat), .17);
-		--elevation-3-yellow: 0 10px 20px rgba(var(--pure-yellow), .17), 0 6px 6px rgba(var(--pure-yellow), .17);
-		--elevation-3-yellow-light: 0 10px 20px rgba(var(--pure-yellow-light), .17), 0 6px 6px rgba(var(--pure-yellow-light), .17);
-		--elevation-3-blue: 0 10px 20px rgba(var(--pure-blue), .17), 0 6px 6px rgba(var(--pure-blue), .17);
-		--elevation-3-blue-light: 0 10px 20px rgba(var(--pure-blue-light), .17), 0 6px 6px rgba(var(--pure-blue-light), .17);
-		--elevation-3-green: 0 10px 20px rgba(var(--pure-green), .17), 0 6px 6px rgba(var(--pure-green), .17);
-		--elevation-3-green-light: 0 10px 20px rgba(var(--pure-green-light), .17), 0 6px 6px rgba(var(--pure-green-light), .17);
-		--elevation-3-green-darker: 0 10px 20px rgba(var(--pure-green-darker), .17), 0 6px 6px rgba(var(--pure-green-darker), .17);
+		--elevation-3-wheat: 0 10px 20px rgba(var(--rgb-wheat), .17), 0 6px 6px rgba(var(--rgb-wheat), .17);
+		--elevation-3-yellow: 0 10px 20px rgba(var(--rgb-yellow), .17), 0 6px 6px rgba(var(--rgb-yellow), .17);
+		--elevation-3-yellow-light: 0 10px 20px rgba(var(--rgb-yellow-light), .17), 0 6px 6px rgba(var(--rgb-yellow-light), .17);
+		--elevation-3-blue: 0 10px 20px rgba(var(--rgb-blue), .17), 0 6px 6px rgba(var(--rgb-blue), .17);
+		--elevation-3-blue-light: 0 10px 20px rgba(var(--rgb-blue-light), .17), 0 6px 6px rgba(var(--rgb-blue-light), .17);
+		--elevation-3-green: 0 10px 20px rgba(var(--rgb-green), .17), 0 6px 6px rgba(var(--rgb-green), .17);
+		--elevation-3-green-light: 0 10px 20px rgba(var(--rgb-green-light), .17), 0 6px 6px rgba(var(--rgb-green-light), .17);
+		--elevation-3-green-darker: 0 10px 20px rgba(var(--rgb-green-darker), .17), 0 6px 6px rgba(var(--rgb-green-darker), .17);
 
 		/* sizes */
 		--content-width: 1400px;
@@ -249,8 +249,8 @@ export default css.global`
 		--nav-height: 85px;
 	}
 	.scrolled .navigation {
-		--logo-size: 60px;
-		--logo-circle: 70px;
+		--logo-size: 50px;
+		--logo-circle: 60px;
 	}
 
 	.letter-spacing--small {

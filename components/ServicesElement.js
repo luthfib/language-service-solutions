@@ -1,270 +1,305 @@
+import { useOnVieport } from '../hooks/useOnVieport.js'; 
+import {useRef, useEffect} from 'react'
 import Banner from './Banner.jsx';
-const ServicesElement = (props) => (
-	<>
-		<div className='services'>
-			<h2>Services We Offer</h2>
-			<div className='services-container'>
-				<div className='service telephone'>
-					<a href='/services/telephonicInterpretation' className='icon '>
-						<img
-							width='50px'
-							height='50px'
-							src='/icons/telephonicInterpretation.svg'
-							alt='Telephone'
-						/>
-					</a>
-					<p>Telephonic Interpretations</p>
-				</div>
+const ServicesElement = (props) => {
+	const telephoneRef = useRef(null)
+	const isVisible = useOnVieport(telephoneRef)
 
-				<div className='service medical'>
-					<a href='/services/medicalInterpretation' className='icon '>
-						<img
-							width='50px'
-							height='50px'
-							src='/icons/medicalInterpretation.svg'
-							alt='medical interpretation'
-						/>
-					</a>
-					<p>Medical Interpretation</p>
-				</div>
 
-				<div className='service translation'>
-					<a href='/services/translation' className='icon '>
-						<img width='50px' height='50px' src='/icons/translation.svg' alt='translation' />
-					</a>
-					<p>translation</p>
-				</div>
+	return (
+		<>
+			<div  className='services'>
+				<h2>Services We Offer</h2>
+				<div ref={telephoneRef}  className='services-container'>
+					<div  className={`service telephone ${isVisible && 'appear'}`}>
+						<a href='/services/telephonicInterpretation' className='icon '>
+							<img 
+								
+								width='50px'
+								height='50px'
+								src='/icons/telephonicInterpretation.svg'
+								alt='Telephone'
+							/>
+						</a>
+						<p>Telephonic Interpretations</p>
+					</div>
 
-				<div className='service video'>
-					<a href='/services/videoInterpretation' className='icon '>
-						<img
-							width='50px'
-							height='50px'
-							src='/icons/videoInterpretation.svg'
-							alt='video interpretation'
-						/>
-					</a>
-					<p>video Interpretation</p>
-				</div>
+					<div className='service medical'>
+						<a href='/services/medicalInterpretation' className='icon '>
+							<img
+								width='50px'
+								height='50px'
+								src='/icons/medicalInterpretation.svg'
+								alt='medical interpretation'
+							/>
+						</a>
+						<p>Medical Interpretation</p>
+					</div>
 
-				<div className='service simultaneus'>
-					<a href='/services/simultaneousInterpretation' className='icon '>
-						<img
-							width='50px'
-							height='50px'
-							src='/icons/simultaneousInterpretation.svg'
-							alt='simultaneous interpretation'
-						/>
-					</a>
-					<p>simultaneus Interpretation</p>
-				</div>
+					<div className='service translation'>
+						<a href='/services/translation' className='icon '>
+							<img width='50px' height='50px' src='/icons/translation.svg' alt='translation' />
+						</a>
+						<p>translation</p>
+					</div>
 
-				<div className='service transcriptions'>
-					<a href='/services/transcriptions' className='icon '>
-						<img width='50px' height='50px' src='/icons/transcriptions.svg' alt='transcription' />
-					</a>
-					<p>transcriptions</p>
-				</div>
+					<div className='service video'>
+						<a href='/services/videoInterpretation' className='icon '>
+							<img
+								width='50px'
+								height='50px'
+								src='/icons/videoInterpretation.svg'
+								alt='video interpretation'
+							/>
+						</a>
+						<p>video Interpretation</p>
+					</div>
 
-				<div className='service subs'>
-					<a href='/services/subtitling' className='icon '>
-						<img width='50px' height='50px' src='/icons/subtitling.svg' alt='subtitling' />
-					</a>
-					<p>subtitling</p>
+					<div className='service simultaneus'>
+						<a href='/services/simultaneousInterpretation' className='icon '>
+							<img
+								width='50px'
+								height='50px'
+								src='/icons/simultaneousInterpretation.svg'
+								alt='simultaneous interpretation'
+							/>
+						</a>
+						<p>simultaneus Interpretation</p>
+					</div>
+
+					<div className='service transcriptions'>
+						<a href='/services/transcriptions' className='icon '>
+							<img width='50px' height='50px' src='/icons/transcriptions.svg' alt='transcription' />
+						</a>
+						<p>transcriptions</p>
+					</div>
+
+					<div className='service subs'>
+						<a href='/services/subtitling' className='icon '>
+							<img width='50px' height='50px' src='/icons/subtitling.svg' alt='subtitling' />
+						</a>
+						<p>subtitling</p>
+					</div>
 				</div>
+				<Banner
+					link={'/services/'}
+					bgColor={'#fff8f83b'}
+					height={'35px'}
+					headingLevel={'h4'}
+					color={'var(--white)'}
+					text={'MORE INFORMATION'}
+					dots={false}
+				/>
 			</div>
-			<Banner
-				link={'/services/'}
-				bgColor={'#fff8f83b'}
-				height={'35px'}
-				headingLevel={'h4'}
-				color={'var(--white)'}
-				text={'MORE INFORMATION'}
-				dots={false}
-			/>
-		</div>
-		<style jsx>{`
-			.services {
-				background: var(--primary-medium);
-				border-radius: var(--border-radius);
-				width: var(--element-width);
-				padding: var(--element-padding);
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				align-items: center;
-				height: 740px;
-				box-shadow: var(--shadow-primary-medium);
-			}
-
-			.services-container {
-				position: relative;
-				padding: 0 10%;
-				height: 100%;
-				width: 100%;
-				max-width: 500px;
-				text-align: center;
-				margin-top: 20px;
-			}
-
-			.service {
-				--distance: 90px;
-				--left: 5%;
-				--right: 5%;
-
-				position: absolute;
-				display: inline-flex;
-				flex-flow: column;
-				justify-content: center;
-				align-items: center;
-				width: min-content;
-				text-transform: uppercase;
-			}
-
-			.service.telephone {
-				top: 0%;
-				left: calc(var(--left) * 10);
-				transform: translateX(-50%);
-			}
-			.service.medical {
-				top: var(--distance);
-				left: var(--left);
-			}
-			.service.translation {
-				top: var(--distance);
-				right: var(--right);
-			}
-
-			.service.video {
-				top: calc(var(--distance) * 2);
-				left: calc(var(--left) * 10);
-				transform: translateX(-50%);
-			}
-
-			.service.simultaneus {
-				top: calc(var(--distance) * 3);
-				left: var(--left);
-			}
-
-			.service.transcriptions {
-				top: calc(var(--distance) * 3);
-				right: var(--right);
-			}
-
-			.service.subs {
-				top: calc(var(--distance) * 4);
-				left: calc(var(--left) * 10);
-				transform: translateX(-50%);
-			}
-
-			.icon {
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				border: 2px solid #000;
-				border-radius: 50%;
-				width: 100px;
-				height: 100px;
-				filter: invert(100%);
-				transition: transform 0.3s ease;
-			}
-
-			.icon:hover {
-				transform: scale(1.08);
-			}
-
-			h2 {
-				text-align: center;
-				color: var(--white);
-				text-transform: uppercase;
-			}
-
-			p {
-				width: 100%;
-				margin-top: 8px;
-			}
-
-			@media (max-width: 768px) {
+			<style jsx>{`
 				.services {
-					height: 930px;
+					background: var(--primary-medium);
+					border-radius: var(--border-radius);
+					width: var(--element-width);
+					padding: var(--element-padding);
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: center;
+					height: 740px;
+					box-shadow: var(--shadow-primary-medium);
 				}
 
+				.services-container {
+					position: relative;
+					padding: 0 10%;
+					height: 100%;
+					width: 100%;
+					max-width: 500px;
+					text-align: center;
+					margin-top: 20px;
+				}
+
+				{/* animation  */}
+				@media (min-width: 998.9px) {
+					.services-container:not(.animate) .service {
+					top: calc(var(--distance) * 2);
+    				left: 50%;
+					transform: translate3d(-50%, 0, 0);
+					opacity: 0;
+				}
+				}
+
+				
+
 				.service {
-					--distance: 100px;
-					--left: 0%;
-					--right: 0%;
+					--distance: 90px;
+					--left: 5%;
+					--right: 5%;
+					--timing: .5s;
+					--delay: .1s;
+					transition: top var(--timing) ease-in var(--delay), left var(--timing) ease-in var(--delay), right var(--timing) ease-in var(--delay), transform var(--timing) ease-in var(--delay), opacity var(--timing) ease-in var(--delay);
+					opacity:1;
+					position: absolute;
+					display: inline-flex;
+					flex-flow: column;
+					justify-content: center;
+					align-items: center;
+					width: min-content;
+					text-transform: uppercase;
 				}
 
 				.service.telephone {
+					--delay: .3s;
 					top: 0%;
-					transform: translateX(0%);
+					left: calc(var(--left) * 10);
+					transform: translate3d(-50%, 0, 0);
 				}
 				.service.medical {
-					top: 0%;
-					right: var(--right);
-					left: auto;
-					transform: translateX(0%);
+					top: var(--distance);
+					left: var(--left);
+					transform: translate3d(0%, 0, 0);
+					--delay: .8s;
 				}
-
 				.service.translation {
-					top: calc(var(--distance) * 1.8);
+					top: var(--distance);
+					right: var(--right);
+					transform: translate3d(0%, 0, 0);
+					--delay: .4s;
 				}
 
 				.service.video {
-					top: calc(var(--distance) * 3.6);
-					left: var(--left);
-					right: auto;
-					transform: translateX(0%);
+					--delay: 0s;
+					top: calc(var(--distance) * 2);
+					left: calc(var(--left) * 10);
+					transform: translate3d(-50%, 0, 0);
 				}
 
 				.service.simultaneus {
-					top: calc(var(--distance) * 1.8);
+					--delay: .7s;
+					top: calc(var(--distance) * 3);
+					left: var(--left);
+					transform: translate3d(0%, 0, 0);
 				}
 
 				.service.transcriptions {
-					top: calc(var(--distance) * 3.6);
-					left: auto;
+					--delay: .5s;
+					top: calc(var(--distance) * 3);
 					right: var(--right);
+					transform: translate3d(0%, 0, 0);
 				}
 
 				.service.subs {
-					--left: 5%;
-					top: calc(var(--distance) * 5.5);
-				}
-			}
-		`}</style>
-
-		<style jsx global>
-			{`
-				.services .banner-wrapper {
-					--element-width: 350px;
-				
+					--delay: .6s;
+					top: calc(var(--distance) * 4);
+					left: calc(var(--left) * 10);
+					transform: translate3d(-50%, 0, 0);
 				}
 
-				.services .banner {
-					transition: background-color 0.3s ease;
-					border-radius: var(--border-radius);
-					padding: 1.25em;
+				.icon {
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border: 2px solid #000;
+					border-radius: 50%;
+					width: 100px;
+					height: 100px;
+					filter: invert(100%);
+					transition: transform 0.3s ease;
 				}
 
-				.banner:hover {
-					background-color: var(--white);
+				.icon:hover {
+					transform: scale(1.08);
 				}
 
-				.banner:hover h4 {
-					color: var(--primary-medium);
-					transition: color 0.3s ease;
+				h2 {
+					text-align: center;
+					color: var(--white);
+					text-transform: uppercase;
+				}
+
+				p {
+					width: 100%;
+					margin-top: 8px;
 				}
 
 				@media (max-width: 768px) {
-					.services .banner-wrapper {
-					--element-width: 280px;
+					.services {
+						height: 930px;
+					}
+
+					.service {
+						--distance: 100px;
+						--left: 0%;
+						--right: 0%;
+					}
+
+					.service.telephone {
+						top: 0%;
+						transform: translateX(0%);
+					}
+					.service.medical {
+						top: 0%;
+						right: var(--right);
+						left: auto;
+						transform: translateX(0%);
+					}
+
+					.service.translation {
+						top: calc(var(--distance) * 1.8);
+					}
+
+					.service.video {
+						top: calc(var(--distance) * 3.6);
+						left: var(--left);
+						right: auto;
+						transform: translateX(0%);
+					}
+
+					.service.simultaneus {
+						top: calc(var(--distance) * 1.8);
+					}
+
+					.service.transcriptions {
+						top: calc(var(--distance) * 3.6);
+						left: auto;
+						right: var(--right);
+					}
+
+					.service.subs {
+						--left: 5%;
+						top: calc(var(--distance) * 5.5);
+					}
 				}
-				
-			`}
-		</style>
-	</>
-);
+			`}</style>
+
+			<style jsx global>
+				{`
+					.services .banner-wrapper {
+						--element-width: 350px;
+					
+					}
+
+					.services .banner {
+						transition: background-color 0.3s ease;
+						border-radius: var(--border-radius);
+						padding: 1.25em;
+					}
+
+					.banner:hover {
+						background-color: var(--white);
+					}
+
+					.banner:hover h4 {
+						color: var(--primary-medium);
+						transition: color 0.3s ease;
+					}
+
+					@media (max-width: 768px) {
+						.services .banner-wrapper {
+						--element-width: 280px;
+					}
+					
+				`}
+			</style>
+		</>
+	)
+};
 
 export default ServicesElement;
