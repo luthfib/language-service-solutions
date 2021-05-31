@@ -56,7 +56,6 @@ const Navbar = ({ open, setOpen }) => {
       <style jsx>
         {`
           .navigation {
-            --gradient: linear-gradient(to right, var(--primary-dark), var(--primary-medium), var(--primary-light));
 
             --space: 10px;
             --hamburger-size: 30px;
@@ -146,7 +145,7 @@ const Navbar = ({ open, setOpen }) => {
             position: absolute;
             top: calc(100% + 10px);
             left: 50%;
-            background-color: #d0d0d0ad;
+            background-color: var(--wheat);
             width: 7px;
             height: 7px;
             border-radius: 50%;
@@ -193,7 +192,7 @@ const Navbar = ({ open, setOpen }) => {
               width: 50%;
               order: 1;
               position: absolute;
-              background-color: var(--primary-light);
+              background-color: var(--primary-medium);
               opacity: 0.95;
               transition: transform 0.7s ease-out;
               transform: ${open ? "translateX(100%)" : "translateX(-50%)"};

@@ -67,10 +67,10 @@ const ServicesElement = (props) => {
         </div>
         <Banner
           link={"/services/"}
-          bgColor={"#fff8f83b"}
+          bgColor={"var(--white)"}
           height={"35px"}
           headingLevel={"h4"}
-          color={"var(--white)"}
+          color={"var(--green-dark)"}
           text={"MORE INFORMATION"}
           dots={false}
         />
