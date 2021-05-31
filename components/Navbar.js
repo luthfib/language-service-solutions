@@ -195,7 +195,7 @@ const Navbar = ({ open, setOpen }) => {
               position: absolute;
               background-color: var(--primary-light);
               opacity: 0.95;
-              transition: transform 0.7s ease-in-out;
+              transition: transform 0.7s ease-out;
               transform: ${open ? "translateX(100%)" : "translateX(-50%)"};
             }
 
