@@ -41,7 +41,7 @@ const hasDots = ({
 							display: flex;
 							justify-content: space-around;
 							align-items: center;
-							box-shadow: var(--shadow-dark-blue);
+							box-shadow: var(--elevation-3-green-darker);
 							padding: 0 10px;
 						}
 

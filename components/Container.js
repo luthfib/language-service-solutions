@@ -17,7 +17,7 @@ const Container = ({ children, background }) => (
 				border-radius: var(--border-radius);
 				width: var(--element-width);
 				padding: var(--element-padding);
-				box-shadow: var(--shadow-primary-medium);
+				box-shadow: var(--elevation-3-wheat);
 				display: flex;
 				flex-flow: column;
 				font-weight: bold;
