@@ -16,24 +16,14 @@ const ServiceCard = ({ logo, title, text }) => (
 			.card-wrapper {
 				transition: transform 0.3s ease ;
 			}
-			.card-wrapper:focus  {
+			.card-wrapper:focus, .card-wrapper:hover  {
 				transform: scale(1.02);
 			}
 
-			.card-wrapper:focus .card {
-					box-shadow: var(--shadow-primary-light);
-					background: var(--primary-light);
+			.card-wrapper:hover .card, .card-wrapper:focus .card {
+				background: #049692;
 			}
-			
-			@media (hover: hover) {
-				.card-wrapper:hover {
-					transform: scale(1.02);
-				}
-				.card-wrapper:hover .card {
-					box-shadow: var(--shadow-primary-light);
-					background: var(--primary-light);
-				}
-			}
+	
 			.card {
 				background: var(--primary-medium);
 				border-radius: var(--border-radius);

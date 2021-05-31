@@ -1,31 +1,11 @@
-import { useRef, useState } from "react";
-
-import AboutUsGallery from "../components/AboutUsGallery";
 import Banner from "../components/Banner.jsx";
 import ContactDetails from "../components/ContactDetails";
-import Dots from "../components/Icons/dots";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Image from "next/image";
-import Navbar from "../components/Navbar";
-import { useOnWindowScroll } from "../hooks/useOnWindowScroll";
+import Dots from "../components/Icons/Dots";
 
 export default function Home() {
-  const [open, setOpen] = useState(false);
-  const header = useRef();
-  useOnWindowScroll(header, "scrolled", 20);
 
   return (
-    <div className="container">
-      <Head>
-        <title>Language Service Solutions</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <header ref={header}>
-        <Navbar open={open} setOpen={setOpen}></Navbar>
-      </header>
-
-      <main>
+    <>
         <section className="margin-top-1 margin-bottom-2">
           <Banner
             bgColor={""}
@@ -62,8 +42,6 @@ export default function Home() {
             dots={true}
           />
         </section>
-      </main>
-      <Footer />
 
       <style jsx>{`
         .img-wrapper {
@@ -83,6 +61,6 @@ export default function Home() {
           }
         }
       `}</style>
-    </div>
+    </>
   );
 }

@@ -1,4 +1,4 @@
-import Logo from "./Icons/logo";
+import Logo from "./Icons/Logo";
 import { useOnClickOutside } from "../hooks/useOnClickOutside";
 import { useRef } from "react";
 

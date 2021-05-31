@@ -5,7 +5,7 @@
 	src: url('/fonts/matias-webfont.woff2') format('woff2'), url('/fonts/matias-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-	--wheat: #ece9e4;
+	--wheat: #edeae5;
 	--yellow: #ffc425;
 	--yellow-light: #fce181;
 	--blue: #02a5d9;
@@ -13,4 +13,6 @@
 	--green: #01b1b0;
 	--green-darker: rgb(1, 43, 45);
 	--green-light: #9fedd7;
+
+	--primary-medium: #017470;
 }

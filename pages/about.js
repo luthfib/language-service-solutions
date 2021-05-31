@@ -1,32 +1,14 @@
-import React, { useRef, useState } from "react";
-
-import AboutUsGallery from "../components/AboutUsGallery";
+import React from "react";
 import Banner from "../components/Banner.jsx";
 import Container from "../components/Container";
-import Dots from "../components/Icons/dots";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Navbar from "../components/Navbar";
+import Dots from "../components/Icons/Dots";
 import StaffIcon from "../components/Icons/Staff";
 import Textbox from "../components/TextBox";
-import { useOnWindowScroll } from "../hooks/useOnWindowScroll";
 
 export default function Home() {
-  const [open, setOpen] = useState(false);
-  const header = useRef();
-  useOnWindowScroll(header, "scrolled", 20);
 
   return (
-    <div className="container">
-      <Head>
-        <title>Language Service Solutions</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <header ref={header}>
-        <Navbar open={open} setOpen={setOpen}></Navbar>
-      </header>
-
-      <main>
+    <>
         <section className="margin-top-1 margin-bottom-2">
           <Banner
             height={"90px"}
@@ -43,7 +25,7 @@ export default function Home() {
         </section>
 
         <section className="margin-bottom-1">
-          <Container className="section" background="#edeae5">
+          <Container className="section" background="var(--wheat)">
             <h2 className="headline">MEET THE TEAM!</h2>
             <div className="staff-member-container">
               <div className="staff-member">
@@ -177,8 +159,6 @@ export default function Home() {
             }
           />
         </section>
-      </main>
-      <Footer />
       <style jsx>{`
         .staff-member-container {
           display: grid;
@@ -211,6 +191,6 @@ export default function Home() {
           text-align: center;
         }
       `}</style>
-    </div>
+    </>
   );
 }

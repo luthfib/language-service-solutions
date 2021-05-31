@@ -1,4 +1,4 @@
-import Dots from './Icons/dots';
+import Dots from './Icons/Dots';
 
 const hasDots = ({
 	dots,

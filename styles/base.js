@@ -8,11 +8,11 @@ export default css.global`
 		--yellow-light: #fce181;
 		--blue: #02a5d9 ;
 		--blue-light: #b3e5ff;
-		--green: #01b1b0 ;
+		--green: #01b1b0;
 		--green-darker: #012b2d; 
 		--green-light: #9fedd7;
 
-		--rgb-wheat: 236, 233, 228;
+		--rgb-wheat: 237, 234, 229;
 		--rgb-yellow: 255, 196, 37;
 		--rgb-yellow-light: 252, 225, 12;
 		--rgb-blue: 2, 165, 217;
@@ -35,34 +35,22 @@ export default css.global`
 		--gradient: linear-gradient(
 			to right,
 			var(--primary-dark),
-			var(--primary-medium),
-			var(--primary-light)
+			var(--primary-medium)
 		);
 
 		--gradient2: linear-gradient(
 			to left,
 			var(--primary-dark),
-			var(--primary-medium),
-			var(--primary-light)
+			var(--primary-medium)
 		);
 
 		--gradient3: linear-gradient(
 			10deg,
-			var(--primary-light),
 			var(--primary-medium),
 			var(--primary-dark)
 		);
 
 		
-
-		/* Shadows Vercel */
-
-		--shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
-		--shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
-		--shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
-		--shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
-		--shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
-
 		/* Shadows level up tuts */
 
 		--elevation-0: inset 0 7px 9px -7px rgba(0, 0, 0, 0.7);
@@ -294,9 +282,9 @@ export default css.global`
 			text-align: left;
 			color: inherit;
 			text-decoration: none;
-			border: 1px solid #eaeaea;
+			border: 1px solid var(--wheat);
 			border-radius: 10px;
 			transition: color 0.15s ease, border-color 0.15s ease;
 		}
-	}
+	
 }`;
