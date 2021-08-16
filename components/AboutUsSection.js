@@ -4,20 +4,12 @@ const AboutUs = (props) => (
       <div className="about-us">
         <h2>about us</h2>
         <p>
-          LANGUAGE SERVICE SOLUTIONS, LLC has been in the field of Spanish/English language services since 2000. As a
-          result of 15 years of solid experience, we have become one of the most trusted full-service language providers
-          in the Triangle
+         Murtado Bustillos founded Language Service Solutions based on the expertise he built around translation and interpretation work over the past 20 years. His experience spans a variety areas and contexts, including providing language services for the local community, non-profit and health care organizations, universities and research projects, and other community-centered projects. He is passionate about working with organizations to provide language access and create a spirit of inclusion and belonging in communities. 
         </p>
-        <p>
-          Headquartered in Durham, Language Service Solutions, LLC, is a consurtiom of certified, professional
-          interpreters and translators with extensive experience eliminating language barriers betweeen businesses,
-          nonprofits, and healthcare facilities--small and large--and the clients they serve
+        <p>Murtado is conscientious about the diversity of the communities where he works, and that no single approach works for everyone. He continues to educate himself on emerging technologies, community and client needs, and best practices, to provide the most comprehensive solutions that work for each of his clients’ individual needs. In his free time, he enjoys playing soccer and volleyball.
+
         </p>
-        <p>
-          Our professional, friendly, and experienced team works hard to provide our clients with the best service. We
-          are bi-cultural/bilingual group of professionals who understand the subtle cultural differences that play a
-          role in communication
-        </p>
+
       </div>
     </div>
     <style jsx>{`
