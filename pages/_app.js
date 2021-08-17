@@ -6,7 +6,7 @@ import baseTheme from "../styles/base";
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
-    const underMaintenance = true;
+    const underMaintenance = process.env.NEXT_PUBLIC_MAINTENANCE == "true";
     return (
       <>
         {!underMaintenance ? (
