@@ -31,14 +31,15 @@ const Navbar = ({ open, setOpen }) => {
               <a>home</a>
             </Link>
           </li>
-          <li className={router.pathname == "/about" ? "active" : ""}>
-            <Link href="/about">
-              <a href="/about">about</a>
-            </Link>
-          </li>
+         
           <li className={router.pathname == "/services" || router.pathname.split("/")[1] == "services" ? "active" : ""}>
             <Link href="/services">
               <a>services</a>
+            </Link>
+          </li>
+          <li className={router.pathname == "/about" ? "active" : ""}>
+            <Link href="/team">
+              <a href="/team">our team</a>
             </Link>
           </li>
           <li className={router.pathname == "/testimonials" ? "active" : ""}>
