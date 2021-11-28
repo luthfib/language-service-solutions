@@ -29,7 +29,7 @@ const AboutUs = (props) => (
         border-radius: var(--border-radius);
         width: var(--element-width);
         padding: var(--element-padding);
-        box-shadow: var(--shadow-primary-light);
+        box-shadow: var(--elevation-3-wheat);
       }
 
       .about-us {

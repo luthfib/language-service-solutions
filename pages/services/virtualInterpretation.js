@@ -63,6 +63,7 @@ export default function Home() {
       <section className="margin-bottom-1">
         <ServiceSingle
           background="var(--wheat)"
+          shadow="var(--elevation-3-wheat)"
           innerText={
             <>
               <p className="no-margin-top font-weight-small">
