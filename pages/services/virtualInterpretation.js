@@ -50,20 +50,21 @@ export default function Home() {
           }
         />
       </section>
-      <Banner
-        bgColor={""}
-        height={"90px"}
-        width={"90%"}
-        headingLevel={"h1"}
-        color={"var(--green-darker)"}
-        margin={"50"}
-        text={"Video Remote Interpreting"}
-        dots={false}
-      />
+      <section className="margin-bottom-1">
+        <Banner
+          bgColor={""}
+          height={"90px"}
+          width={"90%"}
+          headingLevel={"h1"}
+          color={"var(--green-darker)"}
+          margin={"50"}
+          text={"Video Remote Interpreting"}
+          dots={false}
+        />
+      </section>
       <section className="margin-bottom-1">
         <ServiceSingle
           background="var(--wheat)"
-          shadow="var(--elevation-3-wheat)"
           innerText={
             <>
               <p className="no-margin-top font-weight-small">
@@ -73,7 +74,7 @@ export default function Home() {
                 Interpreting service.
               </p>
               <br />
-              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase  font-weight-strong">
+              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
                 WHAT IS Video Remote interpreting
               </h4>
               <p className="no-margin-top font-weight-small">
@@ -104,8 +105,8 @@ export default function Home() {
                 source language is being spoken. The audience thus chooses the
                 desired language and everyone hears the message (transmitted
                 either by the speaker or the interpreter) at the same time.
-                Consecutive: Consecutive interpreting is a mode of interpreting
-                in which the speaker makes a speech (or says a few sentences) in
+                Consecutive: Consecutive interpreting is a mode of interpreting
+                in which the speaker makes a speech (or says a few sentences) in
                 the source language whilst the interpreter takes notes. The
                 interpreter then reproduces what the speaker has said for the
                 audience in the target language. The audience hears the speaker
@@ -124,16 +125,19 @@ export default function Home() {
           }
         />
       </section>
-      <Banner
-        bgColor={""}
-        height={"90px"}
-        width={"90%"}
-        headingLevel={"h1"}
-        color={"var(--green-darker)"}
-        margin={"50"}
-        text={"Telephonic Interpretation"}
-        dots={false}
-      />
+      <section className="margin-bottom-1">
+        <Banner
+          bgColor={""}
+          height={"90px"}
+          width={"90%"}
+          headingLevel={"h1"}
+          color={"var(--green-darker)"}
+          margin={"50"}
+          text={"Telephonic Interpretation"}
+          dots={false}
+        />
+      </section>
+
       <section className="margin-bottom-1">
         <ServiceSingle
           // logo={"telephonicInterpretation"}

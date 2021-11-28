@@ -24,7 +24,7 @@ export default function Home() {
       <section className="margin-bottom-1">
         <div className="card-container">
           <ServiceCard
-		  	path={"virtualInterpretation"}
+            path={"virtualInterpretation"}
             logo={"telephonicInterpretation"}
             title={"Virtual Interpretation"}
             text={
@@ -40,6 +40,7 @@ export default function Home() {
 					}
 				/> */}
           <ServiceCard
+            path={"inpersoninterpretation"}
             logo={"videoInterpretation"}
             title={"In-Person Interpretation"}
             text={
