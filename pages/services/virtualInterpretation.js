@@ -51,16 +51,16 @@ export default function Home() {
         />
       </section>
       <section className="margin-bottom-1">
-      <Banner
-        bgColor={""}
-        height={"90px"}
-        width={"90%"}
-        headingLevel={"h1"}
-        color={"var(--green-darker)"}
-        margin={"50"}
-        text={"Video Remote Interpreting"}
-        dots={false}
-      />
+        <Banner
+          bgColor={""}
+          height={"90px"}
+          width={"90%"}
+          headingLevel={"h1"}
+          color={"var(--green-darker)"}
+          margin={"50"}
+          text={"Video Remote Interpreting"}
+          dots={false}
+        />
       </section>
       <section className="margin-bottom-1">
         <ServiceSingle
@@ -126,18 +126,18 @@ export default function Home() {
         />
       </section>
       <section className="margin-bottom-1">
-      <Banner
-        bgColor={""}
-        height={"90px"}
-        width={"90%"}
-        headingLevel={"h1"}
-        color={"var(--green-darker)"}
-        margin={"50"}
-        text={"Telephonic Interpretation"}
-        dots={false}
-      />
-       </section>
- 
+        <Banner
+          bgColor={""}
+          height={"90px"}
+          width={"90%"}
+          headingLevel={"h1"}
+          color={"var(--green-darker)"}
+          margin={"50"}
+          text={"Telephonic Interpretation"}
+          dots={false}
+        />
+      </section>
+
       <section className="margin-bottom-1">
         <ServiceSingle
           // logo={"telephonicInterpretation"}
