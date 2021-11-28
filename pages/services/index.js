@@ -24,10 +24,11 @@ export default function Home() {
       <section className="margin-bottom-1">
         <div className="card-container">
           <ServiceCard
+		  	path={"virtualInterpretation"}
             logo={"telephonicInterpretation"}
-            title={"Telephonic Interpretation"}
+            title={"Virtual Interpretation"}
             text={
-              "Language Service Solutions is proud to provide your organization with the capacity to reach your Spanish-speaking clients seamlessly and without delay by offering our telephonic interpretation service"
+              "We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces virtually."
             }
           />
 

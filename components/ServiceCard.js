@@ -1,7 +1,7 @@
 import Link from 'next/link';
-const ServiceCard = ({ logo, title, text }) => (
+const ServiceCard = ({ logo, title, text, path }) => (
 	<>
-		<Link href={`services/${logo}`}>
+		<Link href={`services/${path || logo}`}>
 			<a id={`${logo}`} className='card-wrapper'>
 				<div className='card'>
 					<div className='icon '>
