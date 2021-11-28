@@ -25,7 +25,7 @@ export default function Home() {
         <div className="card-container">
           <ServiceCard
             path={"virtualInterpretation"}
-            logo={"telephonicInterpretation"}
+            logo={"videoInterpretation"}
             title={"Virtual Interpretation"}
             text={
               "We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces virtually."
@@ -41,7 +41,7 @@ export default function Home() {
 				/> */}
           <ServiceCard
             path={"inpersoninterpretation"}
-            logo={"videoInterpretation"}
+            logo={"simultaneousInterpretation"}
             title={"In-Person Interpretation"}
             text={
               "We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces in person."
