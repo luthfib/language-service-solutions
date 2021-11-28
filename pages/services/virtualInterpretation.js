@@ -114,7 +114,7 @@ export default function Home() {
                 and the interpreter in turns, or consecutively.
               </p>
               <br />
-              <h4 className="headline text-black  no-margin-top small-margin-bottom upperCase font-weight-strong">
+              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
                 HAVE QUESTIONS OR NEED AN ESTIMATE?
               </h4>
               <p className="no-margin-top font-weight-small">
