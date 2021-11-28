@@ -25,7 +25,7 @@ export default function Home() {
 
       <section className="margin-bottom-1">
         <ServiceSingle
-          logo={"videoInterpretation"}
+          logo={"simultaneousInterpretation"}
           innerText={
             <>
               <p className="no-margin-top">
