@@ -34,7 +34,7 @@ export default function Home() {
                 spaces virtually.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase ">
                 WHAT IS VIRTUAL INTERPRETATION?
               </h4>
               <p className="no-margin-top">
@@ -67,17 +67,17 @@ export default function Home() {
           // logo={"telephonicInterpretation"}
           innerText={
             <>
-              <p className="no-margin-top">
+              <p className="no-margin-top font-weight-small">
                 Language Service Solutions is proud to provide your organization
                 with the capacity to reach your Spanish-speaking clients
                 seamlessly and without delay by offering our Video Remote
                 Interpreting service.
               </p>
               <br />
-              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase  font-weight-strong">
                 WHAT IS Video Remote interpreting
               </h4>
-              <p className="no-margin-top">
+              <p className="no-margin-top font-weight-small">
                 Video Remote Interpreting is the most relevant form of
                 technology that is changing the way we communicate today.
                 Virtual interpretation connects multiple parties together
@@ -87,19 +87,19 @@ export default function Home() {
                 over-the-phone interpretation.
               </p>
               <br />
-              <h4 className="headline text-black  no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-black  no-margin-top small-margin-bottom upperCase  font-weight-strong">
                 EXAMPLES OF COMMON USES
               </h4>
-              <p className="no-margin-top">
+              <p className="no-margin-top font-weight-small">
                 Virtual conferences, presentations, workshops, trainings,
                 townhall meetings, public meetings, and parent-teacher
                 conferences.
               </p>
               <br />
-              <h4 className="headline text-black  no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-black  no-margin-top small-margin-bottom upperCase  font-weight-strong">
                 Modes
               </h4>
-              <p className="no-margin-top">
+              <p className="no-margin-top font-weight-small">
                 Simultaneous: Simultaneous interpreting is the rendition of a
                 source language into a target language at the same time the
                 source language is being spoken. The audience thus chooses the
@@ -113,10 +113,10 @@ export default function Home() {
                 and the interpreter in turns, or consecutively.
               </p>
               <br />
-              <h4 className="headline text-black  no-margin-top small-margin-bottom upperCase">
+              <h3 className="headline text-black  no-margin-top small-margin-bottom upperCase font-weight-strong">
                 HAVE QUESTIONS OR NEED AN ESTIMATE?
-              </h4>
-              <p className="no-margin-top">
+              </h3>
+              <p className="no-margin-top font-weight-small">
                 Please contact us by phone, e-mail, or through this website.
                 We’ll be happy to answer any questions you may have and give you
                 a free estimate.

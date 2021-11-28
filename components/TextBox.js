@@ -117,6 +117,7 @@ const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign, background, c
 
       .serviceContainer h4 {
         text-align: center;
+        
       }
 
       .serviceDescription {
@@ -179,6 +180,14 @@ const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign, background, c
 
       .text-white {
         color: var(--white);
+      }
+
+      .font-weight-strong {
+        font-weight: 900;
+      }
+
+      .font-weight-small { 
+        font-weight: 100;
       }
 
       .text-black {
