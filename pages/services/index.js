@@ -41,9 +41,9 @@ export default function Home() {
 				/> */}
           <ServiceCard
             logo={"videoInterpretation"}
-            title={"video Interpretation"}
+            title={"In-Person Interpretation"}
             text={
-              "Facilitating communication between patients with limited English proficiency and theirhealthcare providers"
+              "We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces in person."
             }
           />
           <ServiceCard
