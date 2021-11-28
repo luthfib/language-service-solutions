@@ -12,7 +12,7 @@ const ServicesElement = (props) => {
         <h2>Services We Offer</h2>
         <div ref={telephoneRef} className="services-container">
           <div className={`service telephone ${isVisible && "appear"}`}>
-            <a href="/services/telephonicInterpretation" className="icon ">
+            <a href="/services/virtualInterpretation" className="icon ">
               <img
                 width="50px"
                 height="50px"
