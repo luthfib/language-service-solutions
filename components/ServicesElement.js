@@ -36,7 +36,7 @@ const ServicesElement = (props) => {
           </div>
 
           <div className="service in-person">
-            <a href="/services/simultaneousInterpretation" className="icon ">
+            <a href="/services/inpersoninterpretation" className="icon ">
               <img
                 width="50px"
                 height="50px"
