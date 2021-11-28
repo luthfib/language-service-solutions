@@ -65,6 +65,7 @@ export default function Home() {
       <section className="margin-bottom-1">
         <ServiceSingle
           background="var(--wheat)"
+          shadow="var(--elevation-3-wheat)"
           innerText={
             <>
               <p className="no-margin-top font-weight-small">
@@ -113,9 +114,9 @@ export default function Home() {
                 and the interpreter in turns, or consecutively.
               </p>
               <br />
-              <h3 className="headline text-black  no-margin-top small-margin-bottom upperCase font-weight-strong">
+              <h4 className="headline text-black  no-margin-top small-margin-bottom upperCase font-weight-strong">
                 HAVE QUESTIONS OR NEED AN ESTIMATE?
-              </h3>
+              </h4>
               <p className="no-margin-top font-weight-small">
                 Please contact us by phone, e-mail, or through this website.
                 We’ll be happy to answer any questions you may have and give you
