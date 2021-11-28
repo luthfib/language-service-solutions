@@ -16,11 +16,11 @@ const ServicesElement = (props) => {
               <img
                 width="50px"
                 height="50px"
-                src="/icons/telephonicInterpretation.svg"
+                src="/icons/videoInterpretation.svg"
                 alt="Telephone"
               />
             </a>
-            <p>virtual Interpretations</p>
+            <p>virtual Interpretation</p>
           </div>
 
           <div className="service translation">
