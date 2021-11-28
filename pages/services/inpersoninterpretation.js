@@ -61,13 +61,13 @@ export default function Home() {
 
       <section className="margin-bottom-1">
         <ServiceSingle
-          img={"VideoInterpretation.jpg"}
+          background="var(--wheat)"
           innerText={
             <>
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
                 SIMULTANEOUS INTERPRETATION
               </h4>
-              <p className="no-margin-top">
+              <p className="no-margin-top font-weight-small">
                 Simultaneous interpreting is the rendition of a source language
                 into a target language at the same time the source language is
                 being spoken. This means that the entire audience will
@@ -80,18 +80,18 @@ export default function Home() {
                 fully multilingual space.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
                 EXAMPLES OF COMMON USES
               </h4>
-              <p className="no-margin-top">
+              <p className="no-margin-top font-weight-small">
                 Conferences, meetings, ceremonies, presentations, workshops, and
                 trainings.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
                 BENEFITS
               </h4>
-              <p className="no-margin-top">
+              <p className="no-margin-top font-weight-small">
                 Simultaneous interpreting is a great tool to provide access to
                 information to a large group of English- and non-English
                 speakers at the same time (or simultaneously) without having to
@@ -103,7 +103,16 @@ export default function Home() {
                 service for more than 15 years with great results.
               </p>
               <br />
+            </>
+          }
+        />
+      </section>
 
+      <section className="margin-bottom-1">
+        <ServiceSingle
+          img={"VideoInterpretation.jpg"}
+          innerText={
+            <>
               <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
                 Consecutive INTERPRETATION
               </h4>

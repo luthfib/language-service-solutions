@@ -50,6 +50,7 @@ export default function Home() {
           }
         />
       </section>
+      <section className="margin-bottom-1">
       <Banner
         bgColor={""}
         height={"90px"}
@@ -60,6 +61,7 @@ export default function Home() {
         text={"Video Remote Interpreting"}
         dots={false}
       />
+      </section>
       <section className="margin-bottom-1">
         <ServiceSingle
           background="var(--wheat)"
@@ -72,7 +74,7 @@ export default function Home() {
                 Interpreting service.
               </p>
               <br />
-              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase  font-weight-strong">
+              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
                 WHAT IS Video Remote interpreting
               </h4>
               <p className="no-margin-top font-weight-small">
@@ -123,6 +125,7 @@ export default function Home() {
           }
         />
       </section>
+      <section className="margin-bottom-1">
       <Banner
         bgColor={""}
         height={"90px"}
@@ -133,6 +136,8 @@ export default function Home() {
         text={"Telephonic Interpretation"}
         dots={false}
       />
+       </section>
+ 
       <section className="margin-bottom-1">
         <ServiceSingle
           // logo={"telephonicInterpretation"}
