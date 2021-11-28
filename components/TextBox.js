@@ -89,7 +89,7 @@ const renderImg = (img) => {
   }
 };
 
-const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign }) => (
+const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign, background, color }) => (
   <>
     <div className="serviceSingle">
       <div className="serviceDescription ">
@@ -120,7 +120,7 @@ const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign }) => (
       }
 
       .serviceDescription {
-        background: var(--primary-medium);
+        background: ${background || ' var(--primary-medium)'};
         border-radius: var(--border-radius);
         width: 100%;
         padding: var(--element-padding);
@@ -179,6 +179,10 @@ const ServiceSingle = ({ innerText, logo, logoImg, img, textAlign }) => (
 
       .text-white {
         color: var(--white);
+      }
+
+      .text-black {
+        color: var(--primary-font-color);
       }
 
       .text-align-left {
