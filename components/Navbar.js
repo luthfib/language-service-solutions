@@ -37,8 +37,8 @@ const Navbar = ({ open, setOpen }) => {
               <a>services</a>
             </Link>
           </li>
-          <li className={router.pathname == "/about" ? "active" : ""}>
-            <Link href="/team">
+          <li className={router.pathname == "/ourteam" ? "active" : ""}>
+            <Link href="/ourteam">
               <a href="/team">our team</a>
             </Link>
           </li>
