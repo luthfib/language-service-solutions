@@ -2,6 +2,7 @@ import App from "next/app";
 import ComingSoon from "../components/ComingSoon";
 import Layout from "../components/Layout";
 import baseTheme from "../styles/base";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
 class MyApp extends App {
   render() {
@@ -9,7 +10,15 @@ class MyApp extends App {
     const underMaintenance = process.env.NEXT_PUBLIC_MAINTENANCE == "true";
     return (
       <>
-        {!underMaintenance ? (
+        
+
+        <Layout>
+          <Component {...pageProps} />
+          <style jsx global>
+            {baseTheme}
+          </style>
+        </Layout>
+        {/* {!underMaintenance ? (
           <Layout>
             <Component {...pageProps} />
             <style jsx global>
@@ -23,7 +32,7 @@ class MyApp extends App {
             </style>
             <ComingSoon />
           </>
-        )}
+        )} */}
       </>
     );
   }
