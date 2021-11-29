@@ -21,6 +21,7 @@ const ServiceCard = ({ logo, title, text, path }) => (
       .card-wrapper {
         transition: transform 0.3s ease;
       }
+
       .card-wrapper:focus,
       .card-wrapper:hover {
         transform: scale(1.02);
@@ -73,9 +74,7 @@ const ServiceCard = ({ logo, title, text, path }) => (
         font-weight: 700;
       }
 
-       {
-        /* FOR LAST CARD */
-      }
+     
       #medicalInterpretation div {
         margin-bottom: 0;
       }
