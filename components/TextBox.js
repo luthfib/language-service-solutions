@@ -134,11 +134,11 @@ const ServiceSingle = ({
       }
 
       .serviceDescription {
-        background: ${background || ' var(--primary-medium)'};
+        background: ${background || 'var(--primary-medium)'};
         border-radius: var(--border-radius);
         width: 100%;
         padding: var(--element-padding);
-        box-shadow:   ${shadow || ' var(--shadow-primary-medium'});
+        box-shadow: ${shadow || 'var(--shadow-primary-medium)'};
         display: flex;
         flex-flow: column;
         text-align: ${textAlign};
