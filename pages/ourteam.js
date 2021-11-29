@@ -15,7 +15,7 @@ export default function Home() {
           headingLevel={"h1"}
           color={"var(--green-darker)"}
           margin={""}
-          text={"About us"}
+          text={"Our Team"}
           dots={false}
         />
       </section>
