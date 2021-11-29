@@ -141,6 +141,7 @@ export default function Home() {
 
       <section className="margin-bottom-1">
         <ServiceSingle
+         img={"VideoInterpretation.jpg"}
           // logo={"telephonicInterpretation"}
           innerText={
             <>

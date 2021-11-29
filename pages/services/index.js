@@ -98,6 +98,10 @@ export default function Home() {
           width: 95%;
           height: 100%;
         }
+
+
+
+		
       `}</style>
     </>
   );
