@@ -110,7 +110,7 @@ export default function Home() {
 
       <section className="margin-bottom-1">
         <ServiceSingle
-          img={"SimTranslation.jpg"}
+          img={"SimTranslation.JPG"}
           innerText={
             <>
               <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
