@@ -15,13 +15,7 @@ export default class MyDocument extends Document {
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-177857813-1"
           />
-          <meta charset="UTF-8" />
-          <meta name="keywords" content="langauge service solutions, interpretation, Murtado, Bustillos, video, translation" />
-          <meta name="author" content="Language Service Solutions" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
+         
           <script
             dangerouslySetInnerHTML={{
               __html: `
