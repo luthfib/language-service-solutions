@@ -1,16 +1,16 @@
 // The dots can go in all 4 directions and its size can also be dinamically set through props
-const Dots = ({direction, size, color = 'var(--yellow)'}) => {
+const Dots = ({ direction, size, color = "var(--yellow)" }) => {
   return (
     <>
       <div className={`dots ${direction}`}>
-        <span className='dot'></span>
-        <span className='dot medium'></span>
-        <span className='dot small'></span>
+        <span className="dot"></span>
+        <span className="dot medium"></span>
+        <span className="dot small"></span>
       </div>
       <style jsx>
         {`
           .dots {
-              --size  ${size}px;
+            --size: ${size}px;
             display: flex;
             justify-content: center;
             align-items: center;
