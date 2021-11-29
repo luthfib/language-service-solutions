@@ -24,10 +24,11 @@ export default function Home() {
       <section className="margin-bottom-1">
         <div className="card-container">
           <ServiceCard
-            logo={"telephonicInterpretation"}
-            title={"Telephonic Interpretation"}
+            path={"virtualInterpretation"}
+            logo={"videoInterpretation"}
+            title={"Virtual Interpretation"}
             text={
-              "Language Service Solutions is proud to provide your organization with the capacity to reach your Spanish-speaking clients seamlessly and without delay by offering our telephonic interpretation service"
+              "We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces virtually."
             }
           />
 
@@ -39,10 +40,11 @@ export default function Home() {
 					}
 				/> */}
           <ServiceCard
-            logo={"videoInterpretation"}
-            title={"video Interpretation"}
+            path={"inpersoninterpretation"}
+            logo={"simultaneousInterpretation"}
+            title={"In-Person Interpretation"}
             text={
-              "Facilitating communication between patients with limited English proficiency and theirhealthcare providers"
+              "We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces in person."
             }
           />
           <ServiceCard
@@ -96,6 +98,10 @@ export default function Home() {
           width: 95%;
           height: 100%;
         }
+
+
+
+		
       `}</style>
     </>
   );

@@ -12,35 +12,31 @@ const ServicesElement = (props) => {
         <h2>Services We Offer</h2>
         <div ref={telephoneRef} className="services-container">
           <div className={`service telephone ${isVisible && "appear"}`}>
-            <a href="/services/telephonicInterpretation" className="icon ">
-              <img width="50px" height="50px" src="/icons/telephonicInterpretation.svg" alt="Telephone" />
+            <a href="/services/virtualInterpretation" className="icon ">
+              <img
+                width="50px"
+                height="50px"
+                src="/icons/videoInterpretation.svg"
+                alt="Telephone"
+              />
             </a>
-            <p>Telephonic Interpretations</p>
-          </div>
-
-          <div className="service medical">
-            <a href="/services/medicalInterpretation" className="icon ">
-              <img width="50px" height="50px" src="/icons/medicalInterpretation.svg" alt="medical interpretation" />
-            </a>
-            <p>Medical Interpretation</p>
+            <p>virtual Interpretation</p>
           </div>
 
           <div className="service translation">
             <a href="/services/translation" className="icon ">
-              <img width="50px" height="50px" src="/icons/translation.svg" alt="translation" />
+              <img
+                width="50px"
+                height="50px"
+                src="/icons/translation.svg"
+                alt="translation"
+              />
             </a>
             <p>translation</p>
           </div>
 
-          <div className="service video">
-            <a href="/services/videoInterpretation" className="icon ">
-              <img width="50px" height="50px" src="/icons/videoInterpretation.svg" alt="video interpretation" />
-            </a>
-            <p>video Interpretation</p>
-          </div>
-
-          <div className="service simultaneus">
-            <a href="/services/simultaneousInterpretation" className="icon ">
+          <div className="service in-person">
+            <a href="/services/inpersoninterpretation" className="icon ">
               <img
                 width="50px"
                 height="50px"
@@ -48,19 +44,29 @@ const ServicesElement = (props) => {
                 alt="simultaneous interpretation"
               />
             </a>
-            <p>simultaneus Interpretation</p>
+            <p>in-person Interpretation</p>
           </div>
 
           <div className="service transcriptions">
             <a href="/services/transcriptions" className="icon ">
-              <img width="50px" height="50px" src="/icons/transcriptions.svg" alt="transcription" />
+              <img
+                width="50px"
+                height="50px"
+                src="/icons/transcriptions.svg"
+                alt="transcription"
+              />
             </a>
             <p>transcriptions</p>
           </div>
 
           <div className="service subs">
             <a href="/services/subtitling" className="icon ">
-              <img width="50px" height="50px" src="/icons/subtitling.svg" alt="subtitling" />
+              <img
+                width="50px"
+                height="50px"
+                src="/icons/subtitling.svg"
+                alt="subtitling"
+              />
             </a>
             <p>subtitling</p>
           </div>
@@ -88,7 +94,7 @@ const ServicesElement = (props) => {
           height: 740px;
           box-shadow: var(--shadow-primary-medium);
         }
-
+        
         .services-container {
           position: relative;
           padding: 0 10%;
@@ -98,10 +104,10 @@ const ServicesElement = (props) => {
           text-align: center;
           margin-top: 20px;
         }
-
          {
           /* animation  */
         }
+
         @media (min-width: 998.9px) {
           .services-container:not(.animate) .service {
             top: calc(var(--distance) * 2);
@@ -117,8 +123,10 @@ const ServicesElement = (props) => {
           --right: 5%;
           --timing: 0.5s;
           --delay: 0.1s;
-          transition: top var(--timing) ease-in var(--delay), left var(--timing) ease-in var(--delay),
-            right var(--timing) ease-in var(--delay), transform var(--timing) ease-in var(--delay),
+          transition: top var(--timing) ease-in var(--delay),
+            left var(--timing) ease-in var(--delay),
+            right var(--timing) ease-in var(--delay),
+            transform var(--timing) ease-in var(--delay),
             opacity var(--timing) ease-in var(--delay);
           opacity: 1;
           position: absolute;
@@ -136,36 +144,31 @@ const ServicesElement = (props) => {
           left: calc(var(--left) * 10);
           transform: translate3d(-50%, 0, 0);
         }
+
         .service.medical {
           top: var(--distance);
           left: var(--left);
           transform: translate3d(0%, 0, 0);
           --delay: 0.8s;
         }
-        .service.translation {
-          top: var(--distance);
-          right: var(--right);
-          transform: translate3d(0%, 0, 0);
-          --delay: 0.4s;
-        }
 
-        .service.video {
+        .service.translation {
           --delay: 0s;
           top: calc(var(--distance) * 2);
           left: calc(var(--left) * 10);
           transform: translate3d(-50%, 0, 0);
         }
 
-        .service.simultaneus {
+        .service.in-person {
           --delay: 0.7s;
-          top: calc(var(--distance) * 3);
+          top: calc(var(--distance) * 2);
           left: var(--left);
           transform: translate3d(0%, 0, 0);
         }
 
         .service.transcriptions {
           --delay: 0.5s;
-          top: calc(var(--distance) * 3);
+          top: calc(var(--distance) * 2);
           right: var(--right);
           transform: translate3d(0%, 0, 0);
         }
@@ -205,21 +208,34 @@ const ServicesElement = (props) => {
           margin-top: 8px;
         }
 
+        
+
         @media (max-width: 768px) {
           .services {
-            height: 930px;
+            height: unset;
+          }
+
+          .services-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-items: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
           }
 
           .service {
             --distance: 100px;
             --left: 0%;
             --right: 0%;
+            position: static;
           }
-
           .service.telephone {
             top: 0%;
             transform: translateX(0%);
           }
+
           .service.medical {
             top: 0%;
             right: var(--right);
@@ -229,6 +245,7 @@ const ServicesElement = (props) => {
 
           .service.translation {
             top: calc(var(--distance) * 1.8);
+            transform: translateX(0%);
           }
 
           .service.video {
@@ -251,6 +268,13 @@ const ServicesElement = (props) => {
           .service.subs {
             --left: 5%;
             top: calc(var(--distance) * 5.5);
+            transform: translateX(0%);
+          }
+        }
+
+        @media (max-width: 385px) {
+          .services-container {
+            gap: 1.8rem;
           }
         }
       `}</style>
@@ -261,22 +285,18 @@ const ServicesElement = (props) => {
 						--element-width: 350px;
 					
 					}
-
 					.services .banner {
 						transition: background-color 0.3s ease;
 						border-radius: var(--border-radius);
 						padding: 1.25em;
 					}
-
 					.banner:hover {
 						background-color: var(--white);
 					}
-
 					.banner:hover h4 {
 						color: var(--primary-medium);
 						transition: color 0.3s ease;
 					}
-
 					@media (max-width: 768px) {
 						.services .banner-wrapper {
 						--element-width: 280px;
