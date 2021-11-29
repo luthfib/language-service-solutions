@@ -104,9 +104,6 @@ const ServicesElement = (props) => {
           text-align: center;
           margin-top: 20px;
         }
-         {
-          /* animation  */
-        }
 
         @media (min-width: 998.9px) {
           .services-container:not(.animate) .service {
