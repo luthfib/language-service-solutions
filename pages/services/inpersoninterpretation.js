@@ -62,6 +62,7 @@ export default function Home() {
       <section className="margin-bottom-1">
         <ServiceSingle
           background="var(--wheat)"
+          shadow="var(--elevation-3-wheat)"
           innerText={
             <>
               <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
