@@ -33,7 +33,7 @@ export default function Home() {
                 Farlan Hermosa
               </h3>
               <p className="staff-member-description">
-                joined the Language Services Solutions team in 2016 as a
+                Joined the Language Services Solutions team in 2016 as a
                 translator and has since advanced to providing expertise for
                 media projects. Farlan holds a Bachelor of Arts in Visual Art
                 and Multimedia Production. He enjoys using his skills to ensure
@@ -66,7 +66,7 @@ export default function Home() {
                 Chairin Hermosa
               </h3>
               <p className="staff-member-description">
-                Chairin Hermosa joined the Language Service Solutions team in
+                Joined the Language Service Solutions team in
                 2017 as a translator and has expanded her scope of work to
                 include transcriptions, editing and interpretation in Spanish
                 and English. Chairin holds a Bachelor of Arts in Education,
@@ -98,7 +98,7 @@ export default function Home() {
                 Murtado Bustillos
               </h3>
               <p className="staff-member-description">
-                Murtado Bustillos founded Language Service Solutions based on
+                Founded Language Service Solutions based on
                 the expertise he built around translation and interpretation
                 work over the past 20 years. His experience spans a variety of
                 areas and contexts, including providing language services for
