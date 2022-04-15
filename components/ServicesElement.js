@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 import Banner from "./Banner.jsx";
 import { useOnVieport } from "../hooks/useOnVieport.js";
@@ -12,42 +13,49 @@ const ServicesElement = (props) => {
         <h2>Services We Offer</h2>
         <div ref={telephoneRef} className="services-container">
           <div className={`service telephone ${isVisible && "appear"}`}>
-            <a href="/services/virtualInterpretation" className="icon ">
-              <img
-                width="50px"
-                height="50px"
-                src="/icons/videoInterpretation.svg"
-                alt="Telephone"
-              />
-            </a>
+            <Link href="/services/virtualInterpretation">
+              <a href="/services/virtualInterpretation" className="icon ">
+                <img
+                  width="50px"
+                  height="50px"
+                  src="/icons/videoInterpretation.svg"
+                  alt="Telephone"
+                />
+              </a>
+            </Link>
             <p>virtual Interpretation</p>
           </div>
 
           <div className="service translation">
-            <a href="/services/translation" className="icon ">
-              <img
-                width="50px"
-                height="50px"
-                src="/icons/translation.svg"
-                alt="translation"
-              />
-            </a>
+            <Link href="/services/translation">
+              <a href="/services/translation" className="icon ">
+                <img
+                  width="50px"
+                  height="50px"
+                  src="/icons/translation.svg"
+                  alt="translation"
+                />
+              </a>
+            </Link>
             <p>translation</p>
           </div>
 
           <div className="service in-person">
-            <a href="/services/inpersoninterpretation" className="icon ">
-              <img
-                width="50px"
-                height="50px"
-                src="/icons/simultaneousInterpretation.svg"
-                alt="simultaneous interpretation"
-              />
-            </a>
+            <Link href="/services/inpersoninterpretation">
+              <a href="/services/inpersoninterpretation" className="icon ">
+                <img
+                  width="50px"
+                  height="50px"
+                  src="/icons/simultaneousInterpretation.svg"
+                  alt="simultaneous interpretation"
+                />
+              </a>
+            </Link>
             <p>in-person Interpretation</p>
           </div>
 
           <div className="service transcriptions">
+          <Link href="/services/transcriptions">
             <a href="/services/transcriptions" className="icon ">
               <img
                 width="50px"
@@ -56,10 +64,12 @@ const ServicesElement = (props) => {
                 alt="transcription"
               />
             </a>
+            </Link>
             <p>transcriptions</p>
           </div>
 
           <div className="service subs">
+          <Link href="/services/subtitling">
             <a href="/services/subtitling" className="icon ">
               <img
                 width="50px"
@@ -68,6 +78,7 @@ const ServicesElement = (props) => {
                 alt="subtitling"
               />
             </a>
+            </Link>
             <p>subtitling</p>
           </div>
         </div>
@@ -94,7 +105,7 @@ const ServicesElement = (props) => {
           height: 740px;
           box-shadow: var(--shadow-primary-medium);
         }
-        
+
         .services-container {
           position: relative;
           padding: 0 10%;
@@ -204,8 +215,6 @@ const ServicesElement = (props) => {
           width: 100%;
           margin-top: 8px;
         }
-
-        
 
         @media (max-width: 768px) {
           .services {

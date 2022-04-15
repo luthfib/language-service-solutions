@@ -26,28 +26,48 @@ const Navbar = ({ open, setOpen }) => {
       ></button>
       <nav className="nav">
         <ul>
-          <li className={router.pathname == "/" ? "active" : ""}>
+          <li
+            className={router.pathname == "/" ? "active" : ""}
+            onClick={() => setOpen(false)}
+          >
             <Link href="/">
               <a>home</a>
             </Link>
           </li>
-         
-          <li className={router.pathname == "/services" || router.pathname.split("/")[1] == "services" ? "active" : ""}>
+
+          <li
+            className={
+              router.pathname == "/services" ||
+              router.pathname.split("/")[1] == "services"
+                ? "active"
+                : ""
+            }
+            onClick={() => setOpen(false)}
+          >
             <Link href="/services">
               <a>services</a>
             </Link>
           </li>
-          <li className={router.pathname == "/about" ? "active" : ""}>
-            <Link href="/team">
+          <li
+            className={router.pathname == "/ourteam" ? "active" : ""}
+            onClick={() => setOpen(false)}
+          >
+            <Link href="/ourteam">
               <a href="/team">our team</a>
             </Link>
           </li>
-          <li className={router.pathname == "/testimonials" ? "active" : ""}>
+          <li
+            className={router.pathname == "/testimonials" ? "active" : ""}
+            onClick={() => setOpen(false)}
+          >
             <Link href="/testimonials">
               <a>Testimonials</a>
             </Link>
           </li>
-          <li className={router.pathname == "/contact" ? "active" : ""}>
+          <li
+            className={router.pathname == "/contact" ? "active" : ""}
+            onClick={() => setOpen(false)}
+          >
             <Link href="/contact">
               <a href="/contact">contact</a>
             </Link>
@@ -57,7 +77,6 @@ const Navbar = ({ open, setOpen }) => {
       <style jsx>
         {`
           .navigation {
-
             --space: 10px;
             --hamburger-size: 30px;
             --logo-size: 65px;
@@ -155,7 +174,7 @@ const Navbar = ({ open, setOpen }) => {
           }
 
           .nav li.active a {
-            color:var(--color-text);
+            color: var(--color-text);
           }
           .nav li.active a::after {
             opacity: 1;
@@ -163,7 +182,7 @@ const Navbar = ({ open, setOpen }) => {
 
           @media (hover: hover) {
             .nav li a:hover {
-              color:var(--color-text);
+              color: var(--color-text);
             }
           }
 
