@@ -1,12 +1,17 @@
 import Banner from "../components/Banner.jsx";
 import ContactDetails from "../components/ContactDetails";
-import Dots from "../components/Icons/dots";
 import ContactImg from "../public/imgs/Contact.jpg";
+import Dots from "../components/Icons/dots";
 import Image from "next/image";
+import { SEO } from "../lib/utils/Seo.js";
 
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Contact Us"
+        description="If you want to hire Language Service Solutions feel free to Contact US"
+      />
       <section className="margin-top-1 margin-bottom-2">
         <Banner
           bgColor={""}
@@ -57,15 +62,15 @@ export default function Home() {
       </section>
 
       <style jsx global>
-         {`
-           .next-img {
-             height: 100%;
-             width: 90%;
-             object-fit: cover;
-             border-radius: 20px;
-           }
-         `}
-       </style>
+        {`
+          .next-img {
+            height: 100%;
+            width: 90%;
+            object-fit: cover;
+            border-radius: 20px;
+          }
+        `}
+      </style>
 
       <style jsx>{`
         .img-wrapper {
@@ -78,7 +83,6 @@ export default function Home() {
           text-align: center;
           width: 90%;
           position: relative;
-         
         }
 
         @media (max-width: 768px) {

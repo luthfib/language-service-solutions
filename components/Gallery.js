@@ -46,20 +46,36 @@ const Gallery = () => {
         <div className="img-container">
           <a className="carousel-control-prev">
             <div>
-              <span className="carousel-control-prev-icon" aria-hidden="true" onClick={(e) => rotateImage(-1)}></span>
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+                onClick={(e) => rotateImage(-1)}
+              ></span>
 
               <span className="sr-only"></span>
             </div>
           </a>
           <a className="carousel-control-next">
             <div>
-              <span className="carousel-control-next-icon" aria-hidden="true" onClick={(e) => rotateImage(1)}></span>
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+                onClick={(e) => rotateImage(1)}
+              ></span>
               <span className="sr-only"></span>
             </div>
           </a>
           <ol className="carousel-indicators">
-            <li className={currentImg == 0 ? "active" : ""} data-img-idx="0" onClick={(e) => setCurrentImgIdx(e)}></li>
-            <li className={currentImg == 1 ? "active" : ""} data-img-idx="1" onClick={(e) => setCurrentImgIdx(e)}></li>
+            <li
+              className={currentImg == 0 ? "active" : ""}
+              data-img-idx="0"
+              onClick={(e) => setCurrentImgIdx(e)}
+            ></li>
+            <li
+              className={currentImg == 1 ? "active" : ""}
+              data-img-idx="1"
+              onClick={(e) => setCurrentImgIdx(e)}
+            ></li>
             {/* <li></li> */}
           </ol>
           {/* parallax effect  use this instead of the image below <div className="slide"></div>   */}

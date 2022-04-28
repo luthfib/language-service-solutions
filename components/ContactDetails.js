@@ -122,7 +122,8 @@ const ContactDetails = () => {
             width: 40px;
             border-radius: 50%;
             margin-right: 8px;
-            transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, filter 0.3s ease,
+              box-shadow 0.3s ease;
           }
 
           li a {
@@ -151,12 +152,13 @@ const ContactDetails = () => {
             font-weight: bold;
           }
 
-          li:hover,li:focus  {
+          li:hover,
+          li:focus {
             transform: scale(1.1);
             filter: invert(100%);
-            box-shadow:  0 3px 6px rgba(255, 255, 255, 0.16), 0 3px 6px rgba(255, 255, 255, 0.16);
+            box-shadow: 0 3px 6px rgba(255, 255, 255, 0.16),
+              0 3px 6px rgba(255, 255, 255, 0.16);
           }
-          
 
           @media (max-width: 550px) {
             .inner-details {

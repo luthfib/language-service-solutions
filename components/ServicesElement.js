@@ -1,11 +1,11 @@
-import { useEffect, useRef } from "react";
-import Link from "next/link";
-
 import Banner from "./Banner.jsx";
-import { useOnVieport } from "../hooks/useOnVieport.js";
+import Link from "next/link";
+import { useOnViewport } from "../lib/hooks/useOnViewport.js";
+import { useRef } from "react";
+
 const ServicesElement = (props) => {
   const telephoneRef = useRef(null);
-  const isVisible = useOnVieport(telephoneRef);
+  const isVisible = useOnViewport(telephoneRef);
 
   return (
     <>
@@ -55,29 +55,29 @@ const ServicesElement = (props) => {
           </div>
 
           <div className="service transcriptions">
-          <Link href="/services/transcriptions">
-            <a href="/services/transcriptions" className="icon ">
-              <img
-                width="50px"
-                height="50px"
-                src="/icons/transcriptions.svg"
-                alt="transcription"
-              />
-            </a>
+            <Link href="/services/transcriptions">
+              <a href="/services/transcriptions" className="icon ">
+                <img
+                  width="50px"
+                  height="50px"
+                  src="/icons/transcriptions.svg"
+                  alt="transcription"
+                />
+              </a>
             </Link>
             <p>transcriptions</p>
           </div>
 
           <div className="service subs">
-          <Link href="/services/subtitling">
-            <a href="/services/subtitling" className="icon ">
-              <img
-                width="50px"
-                height="50px"
-                src="/icons/subtitling.svg"
-                alt="subtitling"
-              />
-            </a>
+            <Link href="/services/subtitling">
+              <a href="/services/subtitling" className="icon ">
+                <img
+                  width="50px"
+                  height="50px"
+                  src="/icons/subtitling.svg"
+                  alt="subtitling"
+                />
+              </a>
             </Link>
             <p>subtitling</p>
           </div>
