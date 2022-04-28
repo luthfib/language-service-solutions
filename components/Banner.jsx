@@ -47,7 +47,7 @@ const hasDots = ({
               background: ${bgColor};
               border-radius: var(--border-radius);
               height: ${bgColor ? height : "unset"};
-              width: 100%;
+              width: var(--element-width);
               display: flex;
               justify-content: space-around;
               align-items: center;
