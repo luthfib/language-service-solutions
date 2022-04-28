@@ -3,7 +3,7 @@ import ContactDetails from "../components/ContactDetails";
 import ContactImg from "../public/imgs/Contact.jpg";
 import Dots from "../components/Icons/dots";
 import Image from "next/image";
-import { SEO } from "../lib/utils/Seo.js";
+import { SEO } from "../lib/utils/SEO.js";
 
 export default function Home() {
   return (

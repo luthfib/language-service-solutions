@@ -5,7 +5,7 @@ import Elon from "../components/Icons/Elon";
 import React from "react";
 import SAF from "../components/Icons/SAF";
 import SDI from "../components/Icons/SDI";
-import { SEO } from "../lib/utils/Seo.js";
+import { SEO } from "../lib/utils/SEO.js";
 import Textbox from "../components/TextBox";
 
 export default function Home() {
