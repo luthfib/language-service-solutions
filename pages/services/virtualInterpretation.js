@@ -1,12 +1,16 @@
-import React from "react";
-
 import Banner from "../../components/Banner.jsx";
 import Dots from "../../components/Icons/dots";
+import React from "react";
+import { SEO } from "../../lib/utils/Seo.js";
 import ServiceSingle from "../../components/TextBox";
 
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Virtual Interpretation"
+        description="We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces virtually."
+      />
       <section className="margin-top-1 margin-bottom-2">
         <Banner
           bgColor={""}
@@ -141,7 +145,7 @@ export default function Home() {
 
       <section className="margin-bottom-1">
         <ServiceSingle
-         img={"VideoInterpretation.jpg"}
+          img={"VideoInterpretation.jpg"}
           // logo={"telephonicInterpretation"}
           innerText={
             <>

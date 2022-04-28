@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="In-Person Interpretation"
-        description="We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces in person."
+        title="Video Interpretation"
+        description="Language Service Solutions is proud to provide your organization with the capacity to reach your Spanish-speaking clients seamlessly and without delay by offering our Video Remote Interpreting service."
       />
       <section className="margin-top-1 margin-bottom-2">
         <Banner
@@ -66,7 +66,6 @@ export default function Home() {
       <section className="margin-bottom-1">
         <ServiceSingle
           background="var(--wheat)"
-          shadow="var(--elevation-3-wheat)"
           innerText={
             <>
               <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">

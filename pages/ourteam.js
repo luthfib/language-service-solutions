@@ -2,12 +2,17 @@ import Banner from "../components/Banner.jsx";
 import Container from "../components/Container";
 import Dots from "../components/Icons/dots";
 import React from "react";
+import { SEO } from "../lib/utils/Seo.js";
 import StaffIcon from "../components/Icons/Staff";
 import Textbox from "../components/TextBox";
 
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Our Team"
+        description="Murtado Bustillos founded Language Service Solutions based on the expertise he built around translation and interpretation work over the past 20 years"
+      />
       <section className="margin-top-1 margin-bottom-2">
         <Banner
           height={"90px"}
@@ -66,11 +71,11 @@ export default function Home() {
                 Chairin Hermosa
               </h3>
               <p className="staff-member-description">
-                Joined the Language Service Solutions team in
-                2017 as a translator and has expanded her scope of work to
-                include transcriptions, editing and interpretation in Spanish
-                and English. Chairin holds a Bachelor of Arts in Education,
-                majoring in Languages and Childhood Education. She values human
+                Joined the Language Service Solutions team in 2017 as a
+                translator and has expanded her scope of work to include
+                transcriptions, editing and interpretation in Spanish and
+                English. Chairin holds a Bachelor of Arts in Education, majoring
+                in Languages and Childhood Education. She values human
                 interaction and fellowship—two elements that have been essential
                 in her work as a teacher and as an interpreter in diverse
                 contexts and settings, primarily around community engagement.
@@ -98,15 +103,15 @@ export default function Home() {
                 Murtado Bustillos
               </h3>
               <p className="staff-member-description">
-                Founded Language Service Solutions based on
-                the expertise he built around translation and interpretation
-                work over the past 20 years. His experience spans a variety of
-                areas and contexts, including providing language services for
-                the local community, non-profit and health care organizations,
-                universities and research projects, and other community-centered
-                projects. He is passionate about working with organizations to
-                provide language access and create a spirit of inclusion and
-                belonging in communities.
+                Founded Language Service Solutions based on the expertise he
+                built around translation and interpretation work over the past
+                20 years. His experience spans a variety of areas and contexts,
+                including providing language services for the local community,
+                non-profit and health care organizations, universities and
+                research projects, and other community-centered projects. He is
+                passionate about working with organizations to provide language
+                access and create a spirit of inclusion and belonging in
+                communities.
               </p>
               <p className="staff-member-description">
                 Murtado is conscientious about the diversity of the communities

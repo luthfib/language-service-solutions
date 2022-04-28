@@ -2,10 +2,10 @@ const renderLogo = (logo, logoImg) => {
   if (logo) {
     return (
       <>
-        <div className='icon '>
+        <div className="icon ">
           <img
-            width='80px'
-            height='80px'
+            width="80px"
+            height="80px"
             src={`/icons/${logo}.svg`}
             alt={logo}
           />
@@ -33,8 +33,8 @@ const renderLogo = (logo, logoImg) => {
   } else if (logoImg) {
     return (
       <>
-        <div className='icon '>
-          <img width='100%' height='100%' src={`/icons/${logoImg}`} />
+        <div className="icon ">
+          <img width="100%" height="100%" src={`/icons/${logoImg}`} />
         </div>
         <style jsx>
           {`
@@ -64,8 +64,8 @@ const renderImg = (img) => {
   if (img) {
     return (
       <>
-        <div className='img-wrapper margin-top-1'>
-          <img src={`/imgs/${img}`} alt='Service' height='350' width='1260' />
+        <div className="img-wrapper margin-top-1">
+          <img src={`/imgs/${img}`} alt="Service" height="350" width="1260" />
         </div>
         <style jsx>
           {`
@@ -105,9 +105,9 @@ const ServiceSingle = ({
   color,
 }) => (
   <>
-    <div className='serviceSingle'>
-      <div className='serviceDescription '>
-        <div className='serviceContainer'>
+    <div className="serviceSingle">
+      <div className="serviceDescription ">
+        <div className="serviceContainer">
           {renderLogo(logo, logoImg)}
           {innerText}
         </div>
@@ -134,11 +134,11 @@ const ServiceSingle = ({
       }
 
       .serviceDescription {
-        background: ${background || 'var(--primary-medium)'};
+        background: ${background || "var(--primary-medium)"};
         border-radius: var(--border-radius);
         width: 100%;
         padding: var(--element-padding);
-        box-shadow: ${shadow || 'var(--shadow-primary-medium)'};
+        box-shadow: ${shadow || "var(--shadow-primary-medium)"};
         display: flex;
         flex-flow: column;
         text-align: ${textAlign};
@@ -158,7 +158,7 @@ const ServiceSingle = ({
       }
 
       blockquote {
-        quotes: '“' '”' '‘' '’';
+        quotes: "“" "”" "‘" "’";
         margin: 0;
         position: relative;
         margin-bottom: 20px;

@@ -15,8 +15,8 @@ const ComingSoon = () => {
           <p className="text">
             Contact us:
             <br />
-            Phone: (919) 949-9272 
-            <br/>
+            Phone: (919) 949-9272
+            <br />
             Email: murtado@language&shy;servicesolutions
           </p>
         </div>
@@ -106,4 +106,4 @@ const ComingSoon = () => {
   );
 };
 
- export default ComingSoon
+export default ComingSoon;

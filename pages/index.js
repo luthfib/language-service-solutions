@@ -1,14 +1,15 @@
-import React, { useRef, useState } from "react";
-
 import AboutUs from "../components/AboutUsSection";
 import Banner from "../components/Banner.jsx";
 import Dots from "../components/Icons/dots";
 import Gallery from "../components/Gallery";
+import React from "react";
+import { SEO } from "../lib/utils/Seo.js";
 import Services from "../components/ServicesElement";
 
 const Home = (props) => {
   return (
     <>
+      <SEO description="LANGUAGE SERVICE SOLUTIONS, LLC has over 20 years of experience providing translation and interpretation services as well as consulting around language services for organizations and communities." />
       <>
         <section className="margin-bottom-1">
           <Gallery />

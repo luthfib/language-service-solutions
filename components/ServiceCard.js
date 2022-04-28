@@ -74,7 +74,6 @@ const ServiceCard = ({ logo, title, text, path }) => (
         font-weight: 700;
       }
 
-     
       #medicalInterpretation div {
         margin-bottom: 0;
       }
