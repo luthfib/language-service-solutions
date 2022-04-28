@@ -43,6 +43,7 @@ const hasDots = ({
               transform: ${bgColor ? "scale(1.02);" : "none;"};
             }
             .banner {
+              cursor: pointer;
               background: ${bgColor};
               border-radius: var(--border-radius);
               height: ${bgColor ? height : "unset"};

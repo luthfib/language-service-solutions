@@ -2,7 +2,7 @@ import Banner from "../components/Banner.jsx";
 import Container from "../components/Container";
 import Dots from "../components/Icons/dots";
 import React from "react";
-import { SEO } from "../lib/utils/Seo.js";
+import { SEO } from "../lib/utils/SEO.js";
 import StaffIcon from "../components/Icons/Staff";
 import Textbox from "../components/TextBox";
 

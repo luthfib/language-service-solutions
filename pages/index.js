@@ -3,7 +3,7 @@ import Banner from "../components/Banner.jsx";
 import Dots from "../components/Icons/dots";
 import Gallery from "../components/Gallery";
 import React from "react";
-import { SEO } from "../lib/utils/Seo.js";
+import { SEO } from "../lib/utils/SEO.js";
 import Services from "../components/ServicesElement";
 
 const Home = (props) => {
