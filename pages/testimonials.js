@@ -78,34 +78,7 @@ export default function Home() {
           }
         />
       </section>
-      <section className="margin-bottom-1">
-        <Textbox
-          logoImg={""}
-          img={""}
-          textAlign={"left"}
-          innerText={
-            <>
-              <blockquote>
-                Thank you Language Service Solutions for always providing
-                interpretation and translation services. Your staff is always
-                top notch and we absolutely love that your leadership team works
-                so closely with us to ensure our satisfaction. Your team really
-                does help us live out our mission to provide dynamic care to our
-                Spanish speaking populations. Your services are invaluable to
-                our organization and we do appreciate your prompt and courteous
-                responses to all our requests. We are happy to recommend you to
-                anyone in the Triangle area looking for certified medical
-                interpreters and or quick affordable translation services!
-              </blockquote>
-              <h3 className="headline text-white no-margin-top small-margin-bottom">
-                Amber Robinson, Patient Advocate, <br /> Manager of Interpreter
-                Services
-              </h3>
-              <Duke />
-            </>
-          }
-        />
-      </section>
+
       <section className="margin-bottom-1">
         <Textbox
           logoImg={""}
