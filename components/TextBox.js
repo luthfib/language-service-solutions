@@ -127,6 +127,7 @@ const ServiceSingle = ({
         max-width: 500px;
         margin: auto;
         text-align: left;
+        font-weight: 400;
       }
 
       .serviceContainer h4 {
