@@ -6,7 +6,7 @@ import React from "react";
 import { SEO } from "../lib/utils/SEO.js";
 import Services from "../components/ServicesElement";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <>
       <SEO description="LANGUAGE SERVICE SOLUTIONS, LLC has over 20 years of experience providing translation and interpretation services as well as consulting around language services for organizations and communities." />
