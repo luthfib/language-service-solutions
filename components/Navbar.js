@@ -12,7 +12,7 @@ const Navbar = ({ open, setOpen }) => {
 
   return (
     <div className="navigation" ref={node}>
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <div className="logo-wrapper">
           <Logo width={"var(--logo-size)"} height={"var(--logo-size)"} />
         </div>
@@ -30,7 +30,7 @@ const Navbar = ({ open, setOpen }) => {
             className={router.pathname == "/" ? "active" : ""}
             onClick={() => setOpen(false)}
           >
-            <Link href="/">
+            <Link href="/" legacyBehavior>
               <a>home</a>
             </Link>
           </li>
@@ -44,7 +44,7 @@ const Navbar = ({ open, setOpen }) => {
             }
             onClick={() => setOpen(false)}
           >
-            <Link href="/services">
+            <Link href="/services" legacyBehavior>
               <a>services</a>
             </Link>
           </li>
@@ -52,7 +52,7 @@ const Navbar = ({ open, setOpen }) => {
             className={router.pathname == "/ourteam" ? "active" : ""}
             onClick={() => setOpen(false)}
           >
-            <Link href="/ourteam">
+            <Link href="/ourteam" legacyBehavior>
               <a href="/team">our team</a>
             </Link>
           </li>
@@ -60,7 +60,7 @@ const Navbar = ({ open, setOpen }) => {
             className={router.pathname == "/testimonials" ? "active" : ""}
             onClick={() => setOpen(false)}
           >
-            <Link href="/testimonials">
+            <Link href="/testimonials" legacyBehavior>
               <a>Testimonials</a>
             </Link>
           </li>
@@ -68,7 +68,7 @@ const Navbar = ({ open, setOpen }) => {
             className={router.pathname == "/contact" ? "active" : ""}
             onClick={() => setOpen(false)}
           >
-            <Link href="/contact">
+            <Link href="/contact" legacyBehavior>
               <a href="/contact">contact</a>
             </Link>
           </li>

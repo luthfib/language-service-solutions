@@ -65,7 +65,7 @@ const hasDots = ({
             }
           `}
         </style>
-        <Link href={link} className="banner-wrapper">
+        <Link href={link} className="banner-wrapper" legacyBehavior>
           <div className={`banner ${margin}`}>
             <Dots direction={"right"} color={color} size={"10"} />
             <HeadingLevel>{text}</HeadingLevel>
@@ -118,7 +118,7 @@ const hasDots = ({
             }
           `}
         </style>
-        <Link href={link}>
+        <Link href={link} legacyBehavior>
           <a href={link} className="banner-wrapper">
             <div className={`banner ${margin}`}>
               <HeadingLevel>{text}</HeadingLevel>

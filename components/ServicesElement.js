@@ -13,7 +13,7 @@ const ServicesElement = (props) => {
         <h2>Services We Offer</h2>
         <div ref={telephoneRef} className="services-container">
           <div className={`service telephone ${isVisible && "appear"}`}>
-            <Link href="/services/virtualInterpretation">
+            <Link href="/services/virtualInterpretation" legacyBehavior>
               <a href="/services/virtualInterpretation" className="icon ">
                 <img
                   width="50px"
@@ -27,7 +27,7 @@ const ServicesElement = (props) => {
           </div>
 
           <div className="service translation">
-            <Link href="/services/translation">
+            <Link href="/services/translation" legacyBehavior>
               <a href="/services/translation" className="icon ">
                 <img
                   width="50px"
@@ -41,7 +41,7 @@ const ServicesElement = (props) => {
           </div>
 
           <div className="service in-person">
-            <Link href="/services/inpersoninterpretation">
+            <Link href="/services/inpersoninterpretation" legacyBehavior>
               <a href="/services/inpersoninterpretation" className="icon ">
                 <img
                   width="50px"
@@ -55,7 +55,7 @@ const ServicesElement = (props) => {
           </div>
 
           <div className="service transcriptions">
-            <Link href="/services/transcriptions">
+            <Link href="/services/transcriptions" legacyBehavior>
               <a href="/services/transcriptions" className="icon ">
                 <img
                   width="50px"
@@ -69,7 +69,7 @@ const ServicesElement = (props) => {
           </div>
 
           <div className="service subs">
-            <Link href="/services/subtitling">
+            <Link href="/services/subtitling" legacyBehavior>
               <a href="/services/subtitling" className="icon ">
                 <img
                   width="50px"

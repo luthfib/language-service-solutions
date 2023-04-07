@@ -19,11 +19,12 @@ const Home = (props) => {
           <Dots direction={"up"} color={"var(--yellow)"} size={"10"} />
         </section>
         <section className="margin-bottom-1">
-          <AboutUs />
-        </section>
-        <section className="margin-bottom-1">
           <Services />
         </section>
+        <section className="margin-bottom-1">
+          <AboutUs />
+        </section>
+
         <section className="margin-bottom-1">
           <Banner
             bgColor={"var(--green-darker)"}
