@@ -32,16 +32,16 @@ export default function Home() {
           logo={"simultaneousInterpretation"}
           innerText={
             <>
-              <p className="no-margin-top">
+              <p className="m-0">
                 We’re proud to provide your organization with the capacity to
                 reach your Spanish-speaking clients and create multilingual
                 spaces in person.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 WHAT IS In-person INTERPRETATION?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 In-person interpretation is conducted face to face making it the
                 most effective form of interpretation. It includes both
                 consecutive and simultaneous interpretation.
@@ -68,10 +68,10 @@ export default function Home() {
           background="var(--wheat)"
           innerText={
             <>
-              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
+              <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
                 SIMULTANEOUS INTERPRETATION
               </h4>
-              <p className="no-margin-top font-weight-small">
+              <p className="m-0 font-weight-small">
                 Simultaneous interpreting is the rendition of a source language
                 into a target language at the same time the source language is
                 being spoken. This means that the entire audience will
@@ -84,18 +84,18 @@ export default function Home() {
                 fully multilingual space.
               </p>
               <br />
-              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
+              <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
                 EXAMPLES OF COMMON USES
               </h4>
-              <p className="no-margin-top font-weight-small">
+              <p className="m-0 font-weight-small">
                 Conferences, meetings, ceremonies, presentations, workshops, and
                 trainings.
               </p>
               <br />
-              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
+              <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
                 BENEFITS
               </h4>
-              <p className="no-margin-top font-weight-small">
+              <p className="m-0 font-weight-small">
                 Simultaneous interpreting is a great tool to provide access to
                 information to a large group of English- and non-English
                 speakers at the same time (or simultaneously) without having to
@@ -117,10 +117,10 @@ export default function Home() {
           img={"SimTranslation.JPG"}
           innerText={
             <>
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Consecutive INTERPRETATION
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Consecutive interpreting is a mode of interpreting in which the
                 speaker makes a speech (or says a few sentences) in the source
                 language whilst the interpreter takes notes. The interpreter
@@ -133,19 +133,19 @@ export default function Home() {
               </p>
               <br />
 
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 EXAMPLES OF COMMON USES
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Interviews, house visits, one-on-one meetings, immigration
                 appointments, medical appointments, and community events.
               </p>
               <br />
 
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 BENEFITS
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 The service does not need audio, electronic, and/or technical
                 equipment, making it more affordable and personal. If used in
                 the right setting, the attention of the audience can increase as
@@ -155,10 +155,10 @@ export default function Home() {
               </p>
               <br />
 
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 HAVE QUESTIONS OR NEED AN ESTIMATE?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Please contact us by phone, e-mail, or through this website.
                 We’ll be happy to answer any questions you may have and give you
                 a free estimate.

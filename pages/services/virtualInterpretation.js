@@ -32,16 +32,16 @@ export default function Home() {
           logo={"videoInterpretation"}
           innerText={
             <>
-              <p className="no-margin-top">
+              <p className="m-0">
                 We’re proud to provide your organization with the capacity to
                 reach your Spanish-speaking clients and create multilingual
                 spaces virtually.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase ">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase ">
                 WHAT IS VIRTUAL INTERPRETATION?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Virtual interpretation is a video-telecommunication service that
                 became widely used as a response to the COVID-19 pandemic and is
                 now here to stay as it provides a solution to create
@@ -72,17 +72,17 @@ export default function Home() {
           shadow="var(--elevation-3-wheat)"
           innerText={
             <>
-              <p className="no-margin-top font-weight-small">
+              <p className="m-0 font-weight-small">
                 Language Service Solutions is proud to provide your organization
                 with the capacity to reach your Spanish-speaking clients
                 seamlessly and without delay by offering our Video Remote
                 Interpreting service.
               </p>
               <br />
-              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
+              <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
                 WHAT IS Video Remote interpreting
               </h4>
-              <p className="no-margin-top font-weight-small">
+              <p className="m-0 font-weight-small">
                 Video Remote Interpreting is the most relevant form of
                 technology that is changing the way we communicate today.
                 Virtual interpretation connects multiple parties together
@@ -92,19 +92,19 @@ export default function Home() {
                 over-the-phone interpretation.
               </p>
               <br />
-              <h4 className="headline text-black  no-margin-top small-margin-bottom upperCase  font-weight-strong">
+              <h4 className="headline text-black  m-0 small-margin-bottom upperCase  font-weight-strong">
                 EXAMPLES OF COMMON USES
               </h4>
-              <p className="no-margin-top font-weight-small">
+              <p className="m-0 font-weight-small">
                 Virtual conferences, presentations, workshops, trainings,
                 townhall meetings, public meetings, and parent-teacher
                 conferences.
               </p>
               <br />
-              <h4 className="headline text-black  no-margin-top small-margin-bottom upperCase  font-weight-strong">
+              <h4 className="headline text-black  m-0 small-margin-bottom upperCase  font-weight-strong">
                 Modes
               </h4>
-              <p className="no-margin-top font-weight-small">
+              <p className="m-0 font-weight-small">
                 Simultaneous: Simultaneous interpreting is the rendition of a
                 source language into a target language at the same time the
                 source language is being spoken. The audience thus chooses the
@@ -118,10 +118,10 @@ export default function Home() {
                 and the interpreter in turns, or consecutively.
               </p>
               <br />
-              <h4 className="headline text-black no-margin-top small-margin-bottom upperCase font-weight-strong">
+              <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
                 HAVE QUESTIONS OR NEED AN ESTIMATE?
               </h4>
-              <p className="no-margin-top font-weight-small">
+              <p className="m-0 font-weight-small">
                 Please contact us by phone, e-mail, or through this website.
                 We’ll be happy to answer any questions you may have and give you
                 a free estimate.
@@ -149,17 +149,17 @@ export default function Home() {
           // logo={"telephonicInterpretation"}
           innerText={
             <>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Language Service Solutions is proud to provide your organization
                 with the capacity to reach your Spanish-speaking clients
                 seamlessly and without delay by offering our telephonic
                 interpretation service.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase ">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase ">
                 WHAT IS TELEPHONIC INTERPRETATION?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 This type of interpretation refers to, as it sounds,
                 interpretation done over the phone. You simply call us and the
                 interpreter will walk you through the simple process. The main
@@ -170,20 +170,20 @@ export default function Home() {
               </p>
               <br />
 
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase ">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase ">
                 EXAMPLES OF COMMON USES
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Family therapies, one-on-one meetings or sessions, follow-ups,
                 interviews, house visits, conference calls with clients,
                 parent-teacher conferences.
               </p>
               <br />
 
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase ">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase ">
                 DEPENDABLE. CONFIDENTIAL. AFFORDABLE.
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Our team of professional interpreters will guarantee you have a
                 confidential and culturally appropriate experience throughout
                 the process. Based in the Triangle, we are familiar with the
@@ -195,10 +195,10 @@ export default function Home() {
                 offer.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase ">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase ">
                 QUESTIONS OR CONCERNS?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Still not sure if this service is right for you? Call us today
                 for your free consultation and we’ll address any
                 questions/concerns you have and help you find the best solution

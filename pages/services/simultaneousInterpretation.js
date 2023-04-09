@@ -33,32 +33,32 @@ export default function Home() {
           img={"SimTranslation.JPG"}
           innerText={
             <>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Our sophisticated wireless equipment and experienced
                 simultaneous interpreters create a fully bilingual space.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 What is simultaneous interpretation?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Simultaneous interpreting is the rendition of a source language
                 into a target language at the same time the source language is
                 being spoken. 
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Examples of common uses
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Conferences, meetings, ceremonies, presentations, workshops, and
                 trainings
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Benefits
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Simultaneous interpreting is a great tool to provide access to
                 information to a large group of English- and non-English
                 speakers at the same time without having to pause and wait,
@@ -70,10 +70,10 @@ export default function Home() {
                 results.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Have questions or need an estimate?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Please contact us by phone, e-mail, or through this website.
                 We’ll be happy to answer any questions you may have and give you
                 a free estimate.

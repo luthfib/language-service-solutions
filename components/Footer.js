@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <div className="inner-footer">
-          <div className="logo-container">
+        <div className="flex w-full justify-center items-center space-around flex-wrap">
+          <div className="flex items-center justify-center">
             <a href="#" className="logo">
               <Logo width={"var(--logo-size)"} height={"var(--logo-size)"} />
             </a>
@@ -30,20 +30,10 @@ const Footer = () => {
             justify-content: center;
           }
           .inner-footer {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
             padding: 25px 0 25px;
             max-width: 700px;
           }
-          .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
+
           .logo {
             border: 2px solid var(--white);
             border-radius: 50%;

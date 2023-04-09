@@ -87,7 +87,6 @@ const Navbar = ({ open, setOpen }) => {
             height: var(--nav-height);
             width: 100%;
             margin: 0 auto;
-
             transition: height 0.3s ease;
           }
 

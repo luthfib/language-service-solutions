@@ -33,42 +33,42 @@ export default function Home() {
           img={"Translation.jpg"}
           innerText={
             <>
-              <p className="no-margin-top">
+              <p className="m-0">
                 We provide the highest level of accuracy in translation. Our
                 specialization in English - Spanish uses the latest software and
                 a professional team to deliver the best work possible.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 What is translation?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Translation is the transfer of a message from one language to
                 another in any written form.  
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Examples of common uses
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Books, brochures, surveys, speeches, press releases, meeting
                 minutes, and medical information
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Accuracy and experience
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Our fast and reliable team of experienced translators works to
                 ensure an accurate translation within your requested time frame.
                 Our many satisfied customers come to us for an outstanding
                 product.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Have questions or need an estimate?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Please contact us by phone, e-mail, or through this website.
                 We’ll be happy to answer any questions you may have as well as
                 provide you with a free estimate.

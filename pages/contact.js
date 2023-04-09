@@ -29,20 +29,14 @@ export default function Home() {
         <Dots direction={"up"} color={"var(--yellow)"} size={"10"} />
       </section>
 
-      <section className="margin-bottom-1 img-wrapper">
+      <section className="margin-bottom-1 text-center h-80 w-[90%] relative">
         <Image
           src={ContactImg}
           alt="Contact us Image"
           layout="fill"
-          className="next-img"
+          className="h-full w-[90%] rounded-3xl object-cover"
           priority
         />
-        {/* <img
-          src={`/imgs/Contact.jpg`}
-          alt="Contact us"
-          height="350"
-          width="1260"
-        /> */}
       </section>
 
       <section className="margin-bottom-1">
@@ -61,30 +55,7 @@ export default function Home() {
         />
       </section>
 
-      <style jsx global>
-        {`
-          .next-img {
-            height: 100%;
-            width: 90%;
-            object-fit: cover;
-            border-radius: 20px;
-          }
-        `}
-      </style>
-
       <style jsx>{`
-        .img-wrapper {
-          height: 350px;
-          text-align: center;
-        }
-
-        .img-wrapper {
-          height: 350px;
-          text-align: center;
-          width: 90%;
-          position: relative;
-        }
-
         @media (max-width: 768px) {
           .img-wrapper {
             height: 200px;

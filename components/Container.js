@@ -1,17 +1,9 @@
 const Container = ({ children, background }) => (
   <>
-    <div className="container">
+    <div className="flex flex-col w-full justify-center items-center">
       <div className="inner-container">{children}</div>
     </div>
     <style jsx>{`
-      .container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-      }
-
       .inner-container {
         background: ${background || "var(--primary-medium)"};
         border-radius: var(--border-radius);

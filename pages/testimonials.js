@@ -47,7 +47,7 @@ export default function Home() {
                 event. As it was, things went really smoothly throughout. A
                 wonderful, professional service!
               </blockquote>
-              <h3 className="headline text-white no-margin-top small-margin-bottom">
+              <h3 className="headline text-white m-0 small-margin-bottom">
                 Soleen Lees, Commincation Coordinator <br /> Susila Dharma
                 International Association(SDIA){" "}
               </h3>
@@ -70,7 +70,7 @@ export default function Home() {
                 about language justie and that all the community members are
                 able to participate in meetings, conferences, and events.
               </blockquote>
-              <h3 className="headline text-white no-margin-top small-margin-bottom">
+              <h3 className="headline text-white m-0 small-margin-bottom">
                 Nadeen Bir <br /> Advocacy and Organizing Director{" "}
               </h3>
               <SAF />
@@ -98,7 +98,7 @@ export default function Home() {
                 puts our families at ease. The work that we do is certainly
                 enhanced by our partnership with Language Service Solutions.
               </blockquote>
-              <h3 className="headline text-white no-margin-top small-margin-bottom">
+              <h3 className="headline text-white m-0 small-margin-bottom">
                 Katherine Wicke LaPlante, Elon Academy, <br /> Assistant
                 Director of Counseling and Family Programs
               </h3>

@@ -1,6 +1,6 @@
-import React from "react";
 import Banner from "../../components/Banner.jsx";
 import Dots from "../../components/Icons/dots";
+import React from "react";
 import ServiceCard from "../../components/ServiceCard";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         <Dots direction={"up"} color={"var(--yellow)"} size={"10"} />
       </section>
       <section className="margin-bottom-1">
-        <div className="card-container">
+        <div className="flex flex-wrap items-center  justify-center h-full w-[95%]">
           <ServiceCard
             path={"virtualInterpretation"}
             logo={"videoInterpretation"}
@@ -98,10 +98,6 @@ export default function Home() {
           width: 95%;
           height: 100%;
         }
-
-
-
-		
       `}</style>
     </>
   );

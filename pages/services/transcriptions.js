@@ -33,31 +33,31 @@ export default function Home() {
           img={"Transcription.jpg"}
           innerText={
             <>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Our team works at a professional level to provide affordable
                 audio or video transcriptions with the the highest degree of
                 word-for-word accuracy.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 What is transcription?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Transcription refers to taking any audio or video file and
                 converting it into a text file.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Examples of common uses
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Focus groups, medical records, community surveys, and research
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 We can help
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Converting audio and video files to text documents is a
                 time-consuming process that can place a significant burden on
                 your business. Here at Language Service Solutions, LLC, our team
@@ -65,10 +65,10 @@ export default function Home() {
                 you time and money.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Questions or concerns?
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 We can work with a variety of file formats. Contact us today.
                 Our friendly team will respond promptly with the answers you
                 need for your specific situation.  

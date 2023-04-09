@@ -30,14 +30,14 @@ export default function Home() {
 
       <section className="margin-bottom-1">
         <Container className="section" background="var(--wheat)">
-          <h2 className="headline">MEET THE TEAM!</h2>
+          <h2 className="text-center">MEET THE TEAM!</h2>
           <div className="staff-member-container">
             <div className="staff-member">
               <StaffIcon path="/staff/Farlan.svg" />
-              <h3 className="staff-member-name letter-spacing--small all-caps">
+              <h3 className="text-center letter-spacing--small all-caps">
                 Farlan Hermosa
               </h3>
-              <p className="staff-member-description">
+              <p className="text-center font-thin">
                 Joined the Language Services Solutions team in 2016 as a
                 translator and has since advanced to providing expertise for
                 media projects. Farlan holds a Bachelor of Arts in Visual Art
@@ -49,10 +49,10 @@ export default function Home() {
             </div>
             <div className="staff-member">
               <StaffIcon path="/staff/Lucas.svg" />
-              <h3 className="staff-member-name letter-spacing--small all-caps">
+              <h3 className="text-center letter-spacing--small all-caps">
                 Oscar Franco
               </h3>
-              <p className="staff-member-description">
+              <p className="text-center font-thin">
                 Joined the Language Services solutions team in 2020 and focuses
                 on technical translations, writing and editing. Oscar is a
                 software engineer with experience in project management, digital
@@ -67,10 +67,10 @@ export default function Home() {
             </div>
             <div className="staff-member">
               <StaffIcon path="/staff/Chairin.svg" />
-              <h3 className="staff-member-name letter-spacing--small all-caps">
+              <h3 className="text-center letter-spacing--small all-caps">
                 Chairin Hermosa
               </h3>
-              <p className="staff-member-description">
+              <p className="text-center font-thin">
                 Joined the Language Service Solutions team in 2017 as a
                 translator and has expanded her scope of work to include
                 transcriptions, editing and interpretation in Spanish and
@@ -84,10 +84,10 @@ export default function Home() {
             </div>
             <div className="staff-member">
               <StaffIcon path="/staff/Laura.svg" />
-              <h3 className="staff-member-name letter-spacing--small all-caps">
+              <h3 className="text-center letter-spacing--small all-caps">
                 Laura Bautista
               </h3>
-              <p className="staff-member-description">
+              <p className="text-center font-thin">
                 Joined the Language Services Solutions team in 2020 and uses her
                 skills and experience to support project management and
                 technical writing. Laura holds a Bachelor of Arts in
@@ -99,10 +99,10 @@ export default function Home() {
             </div>
             <div className="staff-member">
               <StaffIcon path="/staff/Murtado.svg" />
-              <h3 className="staff-member-name letter-spacing--small all-caps">
+              <h3 className="text-center letter-spacing--small all-caps">
                 Murtado Bustillos
               </h3>
-              <p className="staff-member-description">
+              <p className="text-center font-thin">
                 Founded Language Service Solutions based on the expertise he
                 built around translation and interpretation work over the past
                 20 years. His experience spans a variety of areas and contexts,
@@ -113,7 +113,7 @@ export default function Home() {
                 access and create a spirit of inclusion and belonging in
                 communities.
               </p>
-              <p className="staff-member-description">
+              <p className="text-center font-thin">
                 Murtado is conscientious about the diversity of the communities
                 where he works, acknowledging that no single approach works for
                 everyone. He continues to educate himself on emerging
@@ -125,10 +125,10 @@ export default function Home() {
             </div>
             <div className="staff-member">
               <StaffIcon path="/staff/Latimah.svg" />
-              <h3 className="staff-member-name letter-spacing--small all-caps">
+              <h3 className="text-center letter-spacing--small all-caps">
                 Latimah B. Arrechea
               </h3>
-              <p className="staff-member-description">
+              <p className="text-center font-thin">
                 Joined the Language Service Solutions team in 2010. She provides
                 support in document translation and transcriptions, both in
                 English and Spanish. Latimah holds a Bachelor of Science in
@@ -163,7 +163,7 @@ export default function Home() {
           textAlign={"center"}
           innerText={
             <>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Our team is passionate about language access and justice,
                 understanding and addressing the diverse communication and
                 language needs of communities, and engaging with clients and the
@@ -195,7 +195,7 @@ export default function Home() {
           textAlign={"center"}
           innerText={
             <>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Language Service Solutions LLC, is proud to offer one of the
                 most complete and affordable English Spanish services to bridge
                 today's language gaps. Whatever your need is we can help. We
@@ -205,10 +205,10 @@ export default function Home() {
                 high level of accuracy and efficiency.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="text-center text-white m-0 small-margin-bottom upperCase">
                 Quality guaranteed. Every time.
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Our friendly and expert staff is equipped to meet the full range
                 of communication needs. We abide by strict ethical standards
                 while providing one of the most affordable services in the
@@ -217,19 +217,19 @@ export default function Home() {
                 services to our costumers.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="text-center text-white m-0 small-margin-bottom upperCase">
                 Services tailored to fit.
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 We work closely with you to create a custom plan that gives you
                 superb service at an affordable price. Contact us at any time
                 for rapid follow-up, beginning with a free, personalized quote.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="text-center text-white m-0 small-margin-bottom upperCase">
                 Privacy
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 We believe that trust is essential in all of our business
                 relationships. Therefore, we will never share information with
                 anyone. Your files will be restricted and password-protected. We
@@ -258,19 +258,6 @@ export default function Home() {
             padding-bottom: 40px;
             padding-top: 40px;
           }
-        }
-
-        .staff-member-name {
-          text-align: center;
-        }
-
-        .staff-member-description {
-          text-align: center;
-          font-weight: 100;
-        }
-
-        .headline {
-          text-align: center;
         }
       `}</style>
     </>

@@ -33,17 +33,17 @@ export default function Home() {
           img={"TeamOutside.JPG"}
           innerText={
             <>
-              <p className="no-margin-top">
+              <p className="m-0">
                 We have more than 15 years of experience facilitating
                 communication between patients with limited English proficiency,
                 and physicians, nurses, lab technicians, and other healthcare
                 providers.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Quality guaranteed. Every time.
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Our friendly staff knows the Triangle’s healthcare facilities
                 and is equipped to meet the full range of their communication
                 needs. We abide by strict ethical standards while providing one
@@ -53,10 +53,10 @@ export default function Home() {
                 community.
               </p>
               <br />
-              <h4 className="headline text-white no-margin-top small-margin-bottom upperCase">
+              <h4 className="headline text-white m-0 small-margin-bottom upperCase">
                 Experience to make a difference
               </h4>
-              <p className="no-margin-top">
+              <p className="m-0">
                 Our team of certified medical interpreters can ensure levels of
                 accuracy, awareness of confidentiality requirements, and
                 professionalism that many other companies cannot. Dedicated to
