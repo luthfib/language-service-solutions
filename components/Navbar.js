@@ -7,8 +7,8 @@ import { useRouter } from 'next/router';
 const Navbar = ({ open, setOpen }) => {
     const node = useRef();
     useOnClickOutside(node, () => setOpen(false));
-
     const router = useRouter();
+    const isHomePage = router.pathname === '/';
 
     return (
         <div className="navigation" ref={node}>
@@ -83,12 +83,53 @@ const Navbar = ({ open, setOpen }) => {
                     </li>
                 </ul>
             </nav>
-            <style jsx>
+            <button
+                className="hamburger"
+                open={open}
+                onClick={() => setOpen(!open)}
+                aria-pressed={open}
+                aria-label="Menu"
+            >
+                {!open ? (
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-10 h-10"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke={`${
+                            !isHomePage ? 'white' : 'var(--green-darker)'
+                        }`}
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="3"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
+                    </svg>
+                ) : (
+                    <svg
+                        className="w-10 h-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke={`white`}
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="3"
+                            d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                    </svg>
+                )}
+            </button>
+            <style jsx global>
                 {`
                     .navigation {
                         --space: 10px;
                         --hamburger-size: 30px;
-                        --logo-size: 65px;
+                        --logo-size: 70px;
                         --logo-circle: 80px;
                         display: flex;
                         justify-content: space-between;
@@ -97,31 +138,23 @@ const Navbar = ({ open, setOpen }) => {
                         width: 100%;
                         margin: 0 auto;
                         transition: height 0.3s ease;
+                        padding: 0 20px;
                     }
 
                     .logo-wrapper {
                         height: var(--logo-circle);
                         width: var(--logo-circle);
-                        margin-left: calc(var(--space) * 3.5);
-                        border: 2px solid var(--white);
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        border-radius: 50%;
-                        order: 1;
                         transition: height 0.3s ease, width 0.3s ease;
                     }
 
                     .hamburger {
-                        background-image: url('https://cdn4.iconfinder.com/data/icons/lightly-2-essential/24/menu-512.png');
                         background-color: var(--transparent);
                         display: none;
                         border: 0;
-                        height: var(--hamburger-size);
-                        width: var(--hamburger-size);
-                        background-size: contain;
                         background-repeat: no-repeat;
-                        margin-left: calc(var(--space) * 2.5);
                         cursor: pointer;
                         transition: transform 0.3s ease, height 0.3s ease,
                             width 0.3s ease;
@@ -134,27 +167,32 @@ const Navbar = ({ open, setOpen }) => {
                         transform: scale(1.05);
                     }
 
-                    .nav {
-                        order: 2;
-                    }
-
                     .nav ul {
                         display: flex;
                         style-type: none;
                         justify-content: flex-end;
                         list-style: none;
                         margin: 0;
-                        margin-right: 10px;
                     }
 
                     .nav li {
                         padding: 0px calc(var(--space) * 2.5);
-                        border-right: 1px solid var(--white);
-                        border-right: 1px solid var(--white);
+                        position: relative;
                     }
 
-                    .nav li:last-of-type {
-                        border-right: none;
+                    .nav li:after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        height: 15px;
+                        width: 1px;
+                        background-color: var(--green-darker);
+                    }
+
+                    .nav li:last-of-type:after {
+                        content: none;
                     }
 
                     .nav li a {
@@ -164,9 +202,10 @@ const Navbar = ({ open, setOpen }) => {
                         transition: color 0.1s ease;
                         position: relative;
                         text-decoration: none;
-                        color: var(--white);
+                        color: var(--green-darker);
                         letter-spacing: 3.5px;
                         font-size: 18px;
+                        line-height: 1;
                     }
 
                     .nav li a::after {
@@ -182,16 +221,20 @@ const Navbar = ({ open, setOpen }) => {
                         opacity: 0;
                     }
 
-                    .nav li.active a {
-                        color: var(--color-text);
-                    }
                     .nav li.active a::after {
                         opacity: 1;
                     }
 
+                    .nav li.active a {
+                        color: var(--white);
+                    }
+
                     @media (hover: hover) {
                         .nav li a:hover {
-                            color: var(--color-text);
+                            color: var(--white);
+                        }
+                        .homepage .nav li a:hover {
+                            color: var(--green);
                         }
                     }
 
@@ -199,14 +242,24 @@ const Navbar = ({ open, setOpen }) => {
                         opacity: 1;
                     }
 
+                    @media (min-width: 768px) {
+                        .homepage .nav li.active a {
+                            color: var(--green);
+                        }
+                        @media (hover: hover) {
+                            .homepage .nav li a:hover {
+                                color: var(--green);
+                            }
+                        }
+                        .homepage .nav li a::after {
+                            background-color: var(--green);
+                        }
+                    }
+
                     @media (max-width: 768px) {
                         .navigation {
                             --logo-size: 50px;
                             --logo-circle: 70px;
-                        }
-                        .logo-wrapper {
-                            order: 2;
-                            margin-right: calc(var(--space) * 2.5);
                         }
 
                         .hamburger {
