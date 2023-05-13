@@ -7,7 +7,7 @@ const ServiceCard = ({ logo, title, text, path }) => (
                 className="flex items-center justify-center h-full bg-wheat rounded-3xl max-w-sm min-h-[25rem]"
             >
                 <div className="group grid justify-center items-center w-full p-14 ">
-                    <div className="grid gap-5 md:gap-10 justify-items-center col-start-1 row-start-1 group-hover:opacity-0 transition-opacity">
+                    <div className="grid gap-5 md:gap-10 justify-items-center col-start-1 row-start-1 md:group-hover:opacity-0 transition-opacity">
                         <img
                             width="130"
                             height="130"

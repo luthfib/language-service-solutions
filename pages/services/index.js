@@ -85,7 +85,7 @@ export default function Home() {
                 <div className="flex flex-wrap items-center gap-10 justify-center h-full w-[95%]">
                     <ServiceCard
                         path={'virtualInterpretation'}
-                        logo={'Virtual_int'}
+                        logo={'virtual_int'}
                         title={'Virtual  Interpretation'}
                         text={
                             'We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces virtually.'
