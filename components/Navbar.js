@@ -269,43 +269,52 @@ const Navbar = ({ open, setOpen }) => {
 
                         .nav {
                             top: 0;
-                            left: -50%;
-                            height: 100vh;
-                            width: 50%;
-                            order: 1;
+                            right: -17rem;
+                            height: 26rem;
+                            width: 17rem;
                             position: absolute;
-                            background-color: var(--primary-medium);
+                            background-color: var(--green-darker);
+                            border-bottom-left-radius: var(--border-radius);
+                            border-top-left-radius: var(--border-radius);
+                            padding: 60px 20px;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: end;
                             opacity: 0.95;
                             transition: transform 0.7s ease-out;
                             transform: ${open
-                                ? 'translateX(100%)'
-                                : 'translateX(-50%)'};
+                                ? 'translateX(-100%)'
+                                : 'translateX(50%)'};
                         }
 
                         .nav ul {
                             flex-direction: column;
                             justify-content: flex-start;
-                            position: absolute;
                             top: calc(var(--nav-height));
-                            padding-left: calc(var(--space) * 2.5);
-                            padding-left: 0;
+                            padding: 0;
+                            gap: calc(var(--space) * 3);
                         }
 
                         .nav li {
-                            padding: 0px 0px calc(var(--space) * 3)
-                                calc(var(--space) * 3);
+                            padding-right: calc(var(--space) * 4);
+                            padding-left: 0;
                             border: 0;
+                            text-align: right;
                         }
 
                         .nav li a {
-                            color: var(--color-text);
+                            color: var(--white);
                         }
 
                         .nav li a::after {
                             top: calc(50%);
-                            left: calc(var(--space) * -1.5);
+                            right: calc(var(--space) * -2.5);
+                            left: auto;
+                            transform: translateY(-0%);
+                            background: var(--yellow-light);
                             transform: translateY(-50%);
-                            background: #323131;
+                            height: 10px;
+                            width: 10px;
                         }
                     }
                 `}
