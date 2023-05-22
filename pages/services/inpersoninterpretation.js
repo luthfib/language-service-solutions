@@ -3,6 +3,7 @@ import Dots from '../../components/Icons/dots';
 import React from 'react';
 import { SEO } from '../../lib/utils/SEO.js';
 import ServiceSingle from '../../components/TextBox';
+import Wave from '../../components/Wave.jsx';
 
 export default function Home() {
     return (
@@ -11,25 +12,22 @@ export default function Home() {
                 title="In-Person Interpretation"
                 description="We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces in person."
             />
-            <section className="margin-top-1 margin-bottom-2">
-                <Button
-                    bgColor={''}
-                    height={'90px'}
-                    width={'90%'}
-                    headingLevel={'h1'}
-                    color={'var(--green-darker)'}
-                    margin={''}
-                    text={'In-Person Interpretation'}
-                    dots={false}
-                />
+            <Wave position={'top'} marginClass={'md:mb-[-7vw]'} />
+
+            <section className=" margin-bottom-2">
+                <h1 className="text-center uppercase sm:text-6xl text-3xl mb-10">
+                    In-Person Interpretation
+                </h1>
             </section>
+
             <section className="margin-bottom-1">
-                <Dots direction={'up'} color={'var(--yellow)'} size={'10'} />
+                <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
             </section>
 
             <section className="margin-bottom-1">
                 <ServiceSingle
-                    logo={'simultaneousInterpretation'}
+                    background="var(--wheat)"
+                    logo={'inperson_int'}
                     innerText={
                         <>
                             <p className="m-0">
@@ -39,9 +37,9 @@ export default function Home() {
                                 person.
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 WHAT IS In-person INTERPRETATION?
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 In-person interpretation is conducted face to
                                 face making it the most effective form of
@@ -52,17 +50,8 @@ export default function Home() {
                     }
                 />
             </section>
-            <section className="margin-bottom-2">
-                <Button
-                    bgColor={''}
-                    height={'90px'}
-                    width={'90%'}
-                    headingLevel={'h1'}
-                    color={'var(--green-darker)'}
-                    margin={''}
-                    text={'Modes'}
-                    dots={false}
-                />
+            <section className="margin-bottom-1">
+                <h2 className="text-center sm:text-4xl text-3xl ">Modes</h2>
             </section>
 
             <section className="margin-bottom-1">
@@ -71,9 +60,9 @@ export default function Home() {
                     shadow="var(--elevation-3-wheat)"
                     innerText={
                         <>
-                            <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 SIMULTANEOUS INTERPRETATION
-                            </h4>
+                            </h3>
                             <p className="m-0 font-weight-small">
                                 Simultaneous interpreting is the rendition of a
                                 source language into a target language at the
@@ -90,17 +79,17 @@ export default function Home() {
                                 fully multilingual space.
                             </p>
                             <br />
-                            <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 EXAMPLES OF COMMON USES
-                            </h4>
+                            </h3>
                             <p className="m-0 font-weight-small">
                                 Conferences, meetings, ceremonies,
                                 presentations, workshops, and trainings.
                             </p>
                             <br />
-                            <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 BENEFITS
-                            </h4>
+                            </h3>
                             <p className="m-0 font-weight-small">
                                 Simultaneous interpreting is a great tool to
                                 provide access to information to a large group
@@ -123,12 +112,13 @@ export default function Home() {
 
             <section className="margin-bottom-1">
                 <ServiceSingle
+                    background="var(--wheat)"
                     img={'SimTranslation.JPG'}
                     innerText={
                         <>
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 Consecutive INTERPRETATION
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 Consecutive interpreting is a mode of
                                 interpreting in which the speaker makes a speech
@@ -145,9 +135,9 @@ export default function Home() {
                             </p>
                             <br />
 
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 EXAMPLES OF COMMON USES
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 Interviews, house visits, one-on-one meetings,
                                 immigration appointments, medical appointments,
@@ -155,9 +145,9 @@ export default function Home() {
                             </p>
                             <br />
 
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 BENEFITS
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 The service does not need audio, electronic,
                                 and/or technical equipment, making it more
@@ -170,9 +160,9 @@ export default function Home() {
                             </p>
                             <br />
 
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 HAVE QUESTIONS OR NEED AN ESTIMATE?
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 Please contact us by phone, e-mail, or through
                                 this website. We’ll be happy to answer any
@@ -184,6 +174,7 @@ export default function Home() {
                     }
                 />
             </section>
+            <Wave position={'bottom'} marginClass={'md:mt-[-8vw]'} />
         </>
     );
 }

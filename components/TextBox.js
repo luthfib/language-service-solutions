@@ -4,8 +4,8 @@ const renderLogo = (logo, logoImg) => {
             <>
                 <div className="icon ">
                     <img
-                        width="80px"
-                        height="80px"
+                        width="150px"
+                        height="150px"
                         src={`/icons/${logo}.svg`}
                         alt={logo}
                     />
@@ -18,10 +18,6 @@ const renderLogo = (logo, logoImg) => {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            border: 2px solid var(--white);
-                            border-radius: 50%;
-                            width: 140px;
-                            height: 140px;
                             margin-bottom: 30px;
                             margin-right: auto;
                             margin-left: auto;

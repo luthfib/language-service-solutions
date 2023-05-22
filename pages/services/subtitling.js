@@ -3,6 +3,7 @@ import Dots from '../../components/Icons/dots';
 import React from 'react';
 import { SEO } from '../../lib/utils/SEO.js';
 import ServiceSingle from '../../components/TextBox';
+import Wave from '../../components/Wave.jsx';
 
 export default function Home() {
     return (
@@ -11,24 +12,20 @@ export default function Home() {
                 title="Subtitling"
                 description="Our experienced team offers the highest quality subtitling for all types of videos. We not only translate accurately but also localize the dialects, maintaining a smooth, relevant read."
             />
-            <section className="margin-top-1 margin-bottom-2">
-                <Button
-                    bgColor={''}
-                    height={'90px'}
-                    width={'90%'}
-                    headingLevel={'h1'}
-                    color={'var(--green-darker)'}
-                    margin={''}
-                    text={'Subtititling'}
-                    dots={false}
-                />
+            <Wave position={'top'} marginClass={'md:mb-[-7vw]'} />
+
+            <section className=" margin-bottom-2">
+                <h1 className="text-center uppercase sm:text-6xl text-3xl mb-10">
+                    Subtititling
+                </h1>
             </section>
             <section className="margin-bottom-1">
-                <Dots direction={'up'} color={'var(--yellow)'} size={'10'} />
+                <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
             </section>
 
             <section className="margin-bottom-1">
                 <ServiceSingle
+                    background="var(--wheat)"
                     logo={'subtitling'}
                     img={'Subtitling.jpg'}
                     innerText={
@@ -40,9 +37,9 @@ export default function Home() {
                                 dialects, maintaining a smooth, relevant read.
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 What is subtitling?
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 Subtitling is translating recorded speech from
                                 one language to another and placing the text at
@@ -51,17 +48,17 @@ export default function Home() {
                                 what’s being said.
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 Examples of common uses
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 Video clips, speeches, commercials, movies, and
                                 media campaigns
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 Space and timing
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 We take great care to consider the length of
                                 time a subtitle will appear and the number of
@@ -76,9 +73,9 @@ export default function Home() {
                                 to detail.
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 Questions? No problem.
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 We work closely with all of our clients to
                                 provide service that’s efficient, effective, and

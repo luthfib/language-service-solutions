@@ -3,6 +3,7 @@ import Dots from '../../components/Icons/dots';
 import React from 'react';
 import { SEO } from '../../lib/utils/SEO.js';
 import ServiceSingle from '../../components/TextBox';
+import Wave from '../../components/Wave.jsx';
 
 export default function Home() {
     return (
@@ -11,25 +12,20 @@ export default function Home() {
                 title="Virtual Interpretation"
                 description="We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces virtually."
             />
-            <section className="margin-top-1 margin-bottom-2">
-                <Button
-                    bgColor={''}
-                    height={'90px'}
-                    width={'90%'}
-                    headingLevel={'h1'}
-                    color={'var(--green-darker)'}
-                    margin={''}
-                    text={'Virtual Interpretation'}
-                    dots={false}
-                />
+            <Wave position={'top'} marginClass={'md:mb-[-7vw]'} />
+            <section className=" margin-bottom-2">
+                <h1 className="text-center uppercase sm:text-6xl text-3xl mb-10">
+                    Virtual Interpretation
+                </h1>
             </section>
             <section className="margin-bottom-1">
-                <Dots direction={'up'} color={'var(--yellow)'} size={'10'} />
+                <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
             </section>
 
             <section className="margin-bottom-1">
                 <ServiceSingle
-                    logo={'videoInterpretation'}
+                    background="var(--wheat)"
+                    logo={'virtual_int'}
                     innerText={
                         <>
                             <p className="m-0">
@@ -39,9 +35,9 @@ export default function Home() {
                                 virtually.
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase ">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 WHAT IS VIRTUAL INTERPRETATION?
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 Virtual interpretation is a
                                 video-telecommunication service that became
@@ -58,16 +54,9 @@ export default function Home() {
                 />
             </section>
             <section className="margin-bottom-1">
-                <Button
-                    bgColor={''}
-                    height={'90px'}
-                    width={'90%'}
-                    headingLevel={'h1'}
-                    color={'var(--green-darker)'}
-                    margin={'50'}
-                    text={'Video Remote Interpreting'}
-                    dots={false}
-                />
+                <h2 className="text-center sm:text-4xl text-3xl ">
+                    Video Remote Interpreting
+                </h2>
             </section>
             <section className="margin-bottom-1">
                 <ServiceSingle
@@ -83,9 +72,9 @@ export default function Home() {
                                 Interpreting service.
                             </p>
                             <br />
-                            <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 WHAT IS Video Remote interpreting
-                            </h4>
+                            </h3>
                             <p className="m-0 font-weight-small">
                                 Video Remote Interpreting is the most relevant
                                 form of technology that is changing the way we
@@ -98,18 +87,18 @@ export default function Home() {
                                 over-the-phone interpretation.
                             </p>
                             <br />
-                            <h4 className="headline text-black  m-0 small-margin-bottom upperCase  font-weight-strong">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 EXAMPLES OF COMMON USES
-                            </h4>
+                            </h3>
                             <p className="m-0 font-weight-small">
                                 Virtual conferences, presentations, workshops,
                                 trainings, townhall meetings, public meetings,
                                 and parent-teacher conferences.
                             </p>
                             <br />
-                            <h4 className="headline text-black  m-0 small-margin-bottom upperCase  font-weight-strong">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 Modes
-                            </h4>
+                            </h3>
                             <p className="m-0 font-weight-small">
                                 Simultaneous: Simultaneous interpreting is the
                                 rendition of a source language into a target
@@ -128,9 +117,9 @@ export default function Home() {
                                 interpreter in turns, or consecutively.
                             </p>
                             <br />
-                            <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
+                            <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 HAVE QUESTIONS OR NEED AN ESTIMATE?
-                            </h4>
+                            </h3>
                             <p className="m-0 font-weight-small">
                                 Please contact us by phone, e-mail, or through
                                 this website. We’ll be happy to answer any
@@ -141,21 +130,15 @@ export default function Home() {
                     }
                 />
             </section>
-            <section className="margin-bottom-1">
-                <Button
-                    bgColor={''}
-                    height={'90px'}
-                    width={'90%'}
-                    headingLevel={'h1'}
-                    color={'var(--green-darker)'}
-                    margin={'50'}
-                    text={'Telephonic Interpretation'}
-                    dots={false}
-                />
-            </section>
 
             <section className="margin-bottom-1">
+                <h2 className="text-center sm:text-4xl text-3xl ">
+                    TELEPHONIC INTERPRETATION
+                </h2>
+            </section>
+            <section className="margin-bottom-1">
                 <ServiceSingle
+                    background={'var(--wheat)'}
                     img={'VideoInterpretation.jpg'}
                     // logo={"telephonicInterpretation"}
                     innerText={
@@ -168,9 +151,9 @@ export default function Home() {
                                 interpretation service.
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase ">
+                            <h3 className="letter-spacing--small uppercase text-xl mb-2">
                                 WHAT IS TELEPHONIC INTERPRETATION?
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 This type of interpretation refers to, as it
                                 sounds, interpretation done over the phone. You
@@ -184,9 +167,9 @@ export default function Home() {
                             </p>
                             <br />
 
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase ">
+                            <h3 className="  letter-spacing--small uppercase text-xl mb-2">
                                 EXAMPLES OF COMMON USES
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 Family therapies, one-on-one meetings or
                                 sessions, follow-ups, interviews, house visits,
@@ -195,9 +178,9 @@ export default function Home() {
                             </p>
                             <br />
 
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase ">
+                            <h3 className="  letter-spacing--small uppercase text-xl mb-2">
                                 DEPENDABLE. CONFIDENTIAL. AFFORDABLE.
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 Our team of professional interpreters will
                                 guarantee you have a confidential and culturally
@@ -213,9 +196,9 @@ export default function Home() {
                                 offer.
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase ">
+                            <h3 className="  letter-spacing--small uppercase text-xl mb-2">
                                 QUESTIONS OR CONCERNS?
-                            </h4>
+                            </h3>
                             <p className="m-0">
                                 Still not sure if this service is right for you?
                                 Call us today for your free consultation and
@@ -228,6 +211,7 @@ export default function Home() {
                     }
                 />
             </section>
+            <Wave position={'bottom'} marginClass={'md:mt-[-8vw]'} />
         </>
     );
 }

@@ -17,7 +17,7 @@ export default function Home() {
             <Wave position={'top'} marginClass={'md:mb-[-7vw]'} />
             <section className="mb-10 ">
                 <svg
-                    className="max-w-md mb-8 w-full p-x"
+                    className="max-w-sm mb-8 w-full p-x"
                     id="Layer_2"
                     data-name="Layer 2"
                     xmlns="http://www.w3.org/2000/svg"

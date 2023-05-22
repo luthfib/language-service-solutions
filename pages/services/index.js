@@ -116,6 +116,7 @@ export default function Home() {
                         }
                     />
                     <ServiceCard
+                        path={'transcriptions'}
                         logo={'transcription'}
                         title={'transcription'}
                         text={
