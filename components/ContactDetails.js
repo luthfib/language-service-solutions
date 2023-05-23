@@ -17,28 +17,6 @@ const ContactDetails = () => {
               <span className="circle"></span>
               <small>Email: murtado@languageservicesolutions.com</small>
             </div>
-            <ul>
-              <li className="icon">
-                <a href="https://www.facebook.com/Language-Service-Solutions-LLC-1682091685354287/">
-                  <img src="/icons/facebook.svg" alt="facebook icon" />
-                </a>
-              </li>
-              {/* <li className="icon">
-                <a href="#">
-                  <img src="/icons/youtube.svg" />
-                </a>
-              </li> */}
-              {/* <li className='icon'>
-                <a href='#'>
-                  <img src='/icons/twitter.svg' />
-                </a>
-              </li> */}
-              <li className="icon">
-                <a href="https://www.linkedin.com/company/language-service-solutions">
-                  <img src="/icons/linkedin.svg" alt="linkedin icon" />
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
