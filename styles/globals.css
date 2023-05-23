@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --wheat: #edeae5;
+    --yellow: #ffc425;
+    --yellow-light: #fce181;
+    --blue: #02a5d9;
+    --blue-light: #b3e5ff;
+    --green: #01b1b0;
+    --green-darker: rgb(1, 43, 45);
+    --green-light: #9fedd7;
+    --primary-medium: #017470;
+}
+
+.bg-wheat {
+    background-color: var(--wheat);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+.bg-yellow-light {
+    background-color: var(--yellow-light);
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bg-blue-light {
+    background-color: var(--blue-light);
+}
+
+.bg-green {
+    background-color: var(--green);
+}
+
+.bg-green-darker {
+    background-color: var(--green-darker);
+}
+
+.bg-green-light {
+    background-color: var(--green-light);
+}
+
+.bg-primary-medium {
+    background-color: var(--primary-medium);
+}
+
+.hover\:bg-primary-medium:hover {
+    background-color: var(--primary-medium);
+}
+
+.text-wheat {
+    color: var(--wheat);
+}
+
+.text-yellow {
+    color: var(--yellow);
+}
+
+.text-yellow-light {
+    color: var(--yellow-light);
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+.text-blue-light {
+    color: var(--blue-light);
+}
+
+.text-green {
+    color: var(--green);
+}
+
+.text-green-darker {
+    color: var(--green-darker);
+}
+
+.text-green-light {
+    color: var(--green-light);
+}
+
+.text-primary-medium {
+    color: var(--primary-medium);
+}
+
+.rounded-3xl {
+    border-radius: 1.25rem;
+}
+/* stylelint-disable rule */
+/* stylelint-enable rule */

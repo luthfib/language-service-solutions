@@ -1,317 +1,164 @@
-import Banner from "./Banner.jsx";
-import Link from "next/link";
-import { useOnViewport } from "../lib/hooks/useOnViewport.js";
-import { useRef } from "react";
+import Button from './Button.jsx';
+import Link from 'next/link';
+import { useOnViewport } from '../lib/hooks/useOnViewport.js';
+import { useRef } from 'react';
 
 const ServicesElement = (props) => {
-  const telephoneRef = useRef(null);
-  const isVisible = useOnViewport(telephoneRef);
+    const containerRef = useRef(null);
+    const isVisible = useOnViewport(containerRef);
+    // ${isVisible && 'appear'}
+    const imgSize = 150;
 
-  return (
-    <>
-      <div className="services">
-        <h2>Services We Offer</h2>
-        <div ref={telephoneRef} className="services-container">
-          <div className={`service telephone ${isVisible && "appear"}`}>
-            <Link href="/services/virtualInterpretation" legacyBehavior>
-              <a href="/services/virtualInterpretation" className="icon ">
-                <img
-                  width="50px"
-                  height="50px"
-                  src="/icons/videoInterpretation.svg"
-                  alt="Telephone"
-                />
-              </a>
-            </Link>
-            <p>virtual Interpretation</p>
-          </div>
+    return (
+        <>
+            <div className="services bg-wheat rounded-3xl w-full p-16 md:px-14">
+                <h2 className="uppercase sm:text-4xl text-3xl text-center">
+                    Services We Offer
+                </h2>
+                <div
+                    ref={containerRef}
+                    className="services-container grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid lg:justify-between gap-y-14 gap-x-8 mt-14 mb-16"
+                >
+                    <div className="service lg:even:pt-4 telephone ">
+                        <Link
+                            href="/services/virtualInterpretation"
+                            legacyBehavior
+                        >
+                            <a
+                                href="/services/virtualInterpretation"
+                                className="icon grid justify-center text-center justify-items-center gap-3 grid-rows-[max-content] "
+                            >
+                                <img
+                                    width={imgSize}
+                                    height={imgSize}
+                                    src="/icons/virtual_int.svg"
+                                    alt="virtual interpretation"
+                                />
+                                <p className="uppercase text-lg max-w-[10rem]">
+                                    virtual Interpretation
+                                </p>
+                            </a>
+                        </Link>
+                    </div>
 
-          <div className="service translation">
-            <Link href="/services/translation" legacyBehavior>
-              <a href="/services/translation" className="icon ">
-                <img
-                  width="50px"
-                  height="50px"
-                  src="/icons/translation.svg"
-                  alt="translation"
-                />
-              </a>
-            </Link>
-            <p>translation</p>
-          </div>
+                    <div className="service lg:even:pt-4 translatio ">
+                        <Link href="/services/translation" legacyBehavior>
+                            <a
+                                href="/services/translation"
+                                className="icon grid justify-center text-center justify-items-center gap-3 grid-rows-[max-content] "
+                            >
+                                <img
+                                    width={imgSize}
+                                    height={imgSize}
+                                    src="/icons/translation.svg"
+                                    alt="translation"
+                                />
+                                <p className="uppercase text-lg max-w-[10rem]">
+                                    translation
+                                </p>
+                            </a>
+                        </Link>
+                    </div>
 
-          <div className="service in-person">
-            <Link href="/services/inpersoninterpretation" legacyBehavior>
-              <a href="/services/inpersoninterpretation" className="icon ">
-                <img
-                  width="50px"
-                  height="50px"
-                  src="/icons/simultaneousInterpretation.svg"
-                  alt="simultaneous interpretation"
-                />
-              </a>
-            </Link>
-            <p>in-person Interpretation</p>
-          </div>
+                    <div className="service lg:even:pt-4 in-perso ">
+                        <Link
+                            href="/services/inpersoninterpretation"
+                            legacyBehavior
+                        >
+                            <a
+                                href="/services/inpersoninterpretation"
+                                className="icon grid justify-center text-center justify-items-center gap-3 grid-rows-[max-content] "
+                            >
+                                <img
+                                    width={imgSize}
+                                    height={imgSize}
+                                    src="/icons/inperson_int.svg"
+                                    alt="inperson interpretation"
+                                />
+                                <p className="uppercase text-lg max-w-[10rem]">
+                                    in-person Interpretation
+                                </p>
+                            </a>
+                        </Link>
+                    </div>
 
-          <div className="service transcriptions">
-            <Link href="/services/transcriptions" legacyBehavior>
-              <a href="/services/transcriptions" className="icon ">
-                <img
-                  width="50px"
-                  height="50px"
-                  src="/icons/transcriptions.svg"
-                  alt="transcription"
-                />
-              </a>
-            </Link>
-            <p>transcriptions</p>
-          </div>
+                    <div className="service lg:even:pt-4 transcription ">
+                        <Link href="/services/transcriptions" legacyBehavior>
+                            <a
+                                href="/services/transcriptions"
+                                className="icon grid justify-center text-center justify-items-center gap-3 grid-rows-[max-content] "
+                            >
+                                <img
+                                    width={imgSize}
+                                    height={imgSize}
+                                    src="/icons/transcription.svg"
+                                    alt="transcription"
+                                />
+                                <p className="uppercase text-lg max-w-[10rem]">
+                                    transcriptions
+                                </p>
+                            </a>
+                        </Link>
+                    </div>
 
-          <div className="service subs">
-            <Link href="/services/subtitling" legacyBehavior>
-              <a href="/services/subtitling" className="icon ">
-                <img
-                  width="50px"
-                  height="50px"
-                  src="/icons/subtitling.svg"
-                  alt="subtitling"
-                />
-              </a>
-            </Link>
-            <p>subtitling</p>
-          </div>
-        </div>
-        <Banner
-          link={"/services/"}
-          bgColor={"var(--white)"}
-          height={"35px"}
-          headingLevel={"h4"}
-          color={"var(--green-dark)"}
-          text={"MORE INFORMATION"}
-          dots={false}
-        />
-      </div>
-      <style jsx>{`
-        .services {
-          background: var(--primary-medium);
-          border-radius: var(--border-radius);
-          width: var(--element-width);
-          padding: var(--element-padding);
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
-          height: 740px;
-          box-shadow: var(--shadow-primary-medium);
-        }
+                    <div className="service lg:even:pt-4 sub ">
+                        <Link href="/services/subtitling" legacyBehavior>
+                            <a
+                                href="/services/subtitling"
+                                className="icon grid justify-center text-center justify-items-center gap-3 grid-rows-[max-content] "
+                            >
+                                <img
+                                    width={imgSize}
+                                    height={imgSize}
+                                    src="/icons/subtitling.svg"
+                                    alt="subtitling"
+                                />
+                                <p className="uppercase text-lg max-w-[10rem]">
+                                    subtitling
+                                </p>
+                            </a>
+                        </Link>
+                    </div>
+                </div>
+                <div className="flex justify-center">
+                    <Button link={'/services/'} text={'MORE INFORMATION'} />
+                </div>
+            </div>
+            <style jsx>{`
+                 {
+                    /* @media (min-width: 998.9px) {
+                    .services-container:not(.animate) .service {
+                        top: calc(var(--distance) * 2);
+                        left: 50%;
+                        transform: translate3d(-50%, 0, 0);
+                        opacity: 0;
+                    }
+                } */
+                }
 
-        .services-container {
-          position: relative;
-          padding: 0 10%;
-          height: 100%;
-          width: 100%;
-          max-width: 500px;
-          text-align: center;
-          margin-top: 20px;
-        }
+                .service {
+                    --distance: ${imgSize}px;
+                    --left: 5%;
+                    --right: 5%;
+                    --timing: 0.5s;
+                    --delay: 0.1s;
+                    transition: top var(--timing) ease-in var(--delay),
+                        left var(--timing) ease-in var(--delay),
+                        right var(--timing) ease-in var(--delay),
+                        transform var(--timing) ease-in var(--delay),
+                        opacity var(--timing) ease-in var(--delay);
+                    opacity: 1;
+                    position: relative;
+                }
 
-        @media (min-width: 998.9px) {
-          .services-container:not(.animate) .service {
-            top: calc(var(--distance) * 2);
-            left: 50%;
-            transform: translate3d(-50%, 0, 0);
-            opacity: 0;
-          }
-        }
-
-        .service {
-          --distance: 90px;
-          --left: 5%;
-          --right: 5%;
-          --timing: 0.5s;
-          --delay: 0.1s;
-          transition: top var(--timing) ease-in var(--delay),
-            left var(--timing) ease-in var(--delay),
-            right var(--timing) ease-in var(--delay),
-            transform var(--timing) ease-in var(--delay),
-            opacity var(--timing) ease-in var(--delay);
-          opacity: 1;
-          position: absolute;
-          display: inline-flex;
-          flex-flow: column;
-          justify-content: center;
-          align-items: center;
-          width: min-content;
-          text-transform: uppercase;
-        }
-
-        .service.telephone {
-          --delay: 0.3s;
-          top: 0%;
-          left: calc(var(--left) * 10);
-          transform: translate3d(-50%, 0, 0);
-        }
-
-        .service.medical {
-          top: var(--distance);
-          left: var(--left);
-          transform: translate3d(0%, 0, 0);
-          --delay: 0.8s;
-        }
-
-        .service.translation {
-          --delay: 0s;
-          top: calc(var(--distance) * 2);
-          left: calc(var(--left) * 10);
-          transform: translate3d(-50%, 0, 0);
-        }
-
-        .service.in-person {
-          --delay: 0.7s;
-          top: calc(var(--distance) * 2);
-          left: var(--left);
-          transform: translate3d(0%, 0, 0);
-        }
-
-        .service.transcriptions {
-          --delay: 0.5s;
-          top: calc(var(--distance) * 2);
-          right: var(--right);
-          transform: translate3d(0%, 0, 0);
-        }
-
-        .service.subs {
-          --delay: 0.6s;
-          top: calc(var(--distance) * 4);
-          left: calc(var(--left) * 10);
-          transform: translate3d(-50%, 0, 0);
-        }
-
-        .icon {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border: 2px solid #000;
-          border-radius: 50%;
-          width: 100px;
-          height: 100px;
-          filter: invert(100%);
-          transition: transform 0.3s ease;
-        }
-
-        .icon:hover {
-          transform: scale(1.08);
-        }
-
-        h2 {
-          text-align: center;
-          color: var(--white);
-          text-transform: uppercase;
-        }
-
-        p {
-          width: 100%;
-          margin-top: 8px;
-        }
-
-        @media (max-width: 768px) {
-          .services {
-            height: unset;
-          }
-
-          .services-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-items: center;
-            align-items: flex-start;
-            margin-bottom: 20px;
-          }
-
-          .service {
-            --distance: 100px;
-            --left: 0%;
-            --right: 0%;
-            position: static;
-          }
-          .service.telephone {
-            top: 0%;
-            transform: translateX(0%);
-          }
-
-          .service.medical {
-            top: 0%;
-            right: var(--right);
-            left: auto;
-            transform: translateX(0%);
-          }
-
-          .service.translation {
-            top: calc(var(--distance) * 1.8);
-            transform: translateX(0%);
-          }
-
-          .service.video {
-            top: calc(var(--distance) * 3.6);
-            left: var(--left);
-            right: auto;
-            transform: translateX(0%);
-          }
-
-          .service.simultaneus {
-            top: calc(var(--distance) * 1.8);
-          }
-
-          .service.transcriptions {
-            top: calc(var(--distance) * 3.6);
-            left: auto;
-            right: var(--right);
-          }
-
-          .service.subs {
-            --left: 5%;
-            top: calc(var(--distance) * 5.5);
-            transform: translateX(0%);
-          }
-        }
-
-        @media (max-width: 385px) {
-          .services-container {
-            gap: 1.8rem;
-          }
-        }
-      `}</style>
-
-      <style jsx global>
-        {`
-					.services .banner-wrapper {
-						--element-width: 350px;
-					
-					}
-					.services .banner {
-						transition: background-color 0.3s ease;
-						border-radius: var(--border-radius);
-						padding: 1.25em;
-					}
-					.banner:hover {
-						background-color: var(--white);
-					}
-					.banner:hover h4 {
-						color: var(--primary-medium);
-						transition: color 0.3s ease;
-					}
-					@media (max-width: 768px) {
-						.services .banner-wrapper {
-						--element-width: 280px;
-					}
-					
-				`}
-      </style>
-    </>
-  );
+                @media (min-width: 1024px) {
+                    .service:nth-child(even) {
+                        padding-top: calc(var(--distance) / 1.5);
+                    }
+                }
+            `}</style>
+        </>
+    );
 };
 
 export default ServicesElement;
