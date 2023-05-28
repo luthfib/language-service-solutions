@@ -13,21 +13,21 @@ const Dots = ({ direction, size, color = 'var(--yellow)' }) => {
                     <g id="Layer_1-2" data-name="Layer 1">
                         <g>
                             <circle
-                                class="cls-1"
+                                className="cls-1"
                                 cx="17.3"
                                 cy="17.3"
                                 r="17.3"
                                 fill={color}
                             />
                             <circle
-                                class="cls-1"
+                                className="cls-1"
                                 cx="17.3"
                                 cy="52.51"
                                 r="12.74"
                                 fill={color}
                             />
                             <circle
-                                class="cls-1"
+                                className="cls-1"
                                 cx="17.3"
                                 cy="78.12"
                                 r="8.26"
