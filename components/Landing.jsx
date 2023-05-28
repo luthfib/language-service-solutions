@@ -1383,14 +1383,14 @@ export default function Landing() {
                         stroke: #9fedd7;
                     }
 
-                    .logo {
-                        @media (max-width: 640px) {
+                    @media (max-width: 640px) {
+                        .logo {
                             transform: scale(1.7) translate(-21%, -12%);
                         }
                     }
 
-                    .landing {
-                        @media (min-width: 640px) {
+                    @media (min-width: 640px) {
+                        .landing {
                             margin-top: calc(var(--nav-height) * -1);
                         }
                     }
