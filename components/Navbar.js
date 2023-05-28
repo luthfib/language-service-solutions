@@ -84,45 +84,58 @@ const Navbar = ({ open, setOpen }) => {
                 </ul>
             </nav>
             <button
-                className="hamburger"
+                className="hamburger relative"
                 open={open}
                 onClick={() => setOpen(!open)}
                 aria-pressed={open}
                 aria-label="Menu"
             >
-                {!open ? (
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-10 h-10"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke={`${
-                            !isHomePage ? 'white' : 'var(--green-darker)'
-                        }`}
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="3"
-                            d="M4 6h16M4 12h16M4 18h16"
-                        />
-                    </svg>
-                ) : (
-                    <svg
-                        className="w-10 h-10"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke={`white`}
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="3"
-                            d="M6 18L18 6M6 6l12 12"
-                        ></path>
-                    </svg>
-                )}
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-10 h-10 "
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke={`${!isHomePage ? 'white' : 'var(--green-darker)'}`}
+                    style={
+                        open
+                            ? {
+                                  opacity: '0',
+                                  visibility: 'hidden',
+                              }
+                            : {}
+                    }
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="3"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+                </svg>
+
+                <svg
+                    className="w-10 h-10 absolute left-0 top-0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke={`white`}
+                    style={
+                        open
+                            ? {}
+                            : {
+                                  opacity: '0',
+                                  position: 'absolute',
+                                  visibility: 'hidden',
+                              }
+                    }
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="3"
+                        d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                </svg>
             </button>
             <style jsx global>
                 {`
@@ -158,6 +171,10 @@ const Navbar = ({ open, setOpen }) => {
                         cursor: pointer;
                         transition: transform 0.3s ease, height 0.3s ease,
                             width 0.3s ease;
+                    }
+
+                    .hamburger svg {
+                        transition: all 0.3s ease;
                     }
                     .hamburger:focus {
                         outline: 0;
