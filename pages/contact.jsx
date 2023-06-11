@@ -1,10 +1,10 @@
-import Button from '../components/Button.jsx';
+import Button from '../components/Button';
 import ContactDetails from '../components/ContactDetails';
 import ContactImg from '../public/imgs/Contact.jpg';
 import Dots from '../components/Icons/dots';
 import Image from 'next/image';
-import { SEO } from '../lib/utils/SEO.js';
-import Wave from '../components/Wave.jsx';
+import { SEO } from '../lib/utils/SEO';
+import Wave from '../components/Wave';
 
 export default function Home() {
     return (
@@ -113,45 +113,29 @@ export default function Home() {
                 <h1 className="opacity-0 absolute left-0"> Contact us</h1>
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
             </section>
 
-            <section className="margin-bottom-1 text-center h-80 w-[90%] relative">
+            <section className="mb-16 text-center h-96 relative">
                 <Image
                     src={ContactImg}
                     alt="Contact us Image"
-                    layout="fill"
-                    className="h-full w-[90%] rounded-3xl object-cover"
+                    className="h-full rounded-3xl object-cover "
                     priority
+                    height={384}
+                    width={1600}
                 />
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <ContactDetails />
             </section>
-            <section className="margin-bottom-1">
-                <Button
-                    bgColor={'var(--green-darker)'}
-                    height={'90px'}
-                    width={'90%'}
-                    headingLevel={'h2'}
-                    color={'var(--white)'}
-                    margin={''}
-                    text={'Contact us'}
-                    dots={true}
-                />
+            <section className="mb-16">
+                <Button text={'Contact us'} />
             </section>
 
             <Wave position={'bottom'} marginClass={'md:mt-[-8vw]'} />
-
-            <style jsx>{`
-                @media (max-width: 768px) {
-                    .img-wrapper {
-                        height: 200px;
-                    }
-                }
-            `}</style>
         </>
     );
 }

@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-
 import Footer from './Footer';
 import Head from 'next/head';
 import Navbar from './Navbar';

@@ -1,0 +1,98 @@
+.bg-wheat {
+    background-color: var(--wheat);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+.bg-yellow-light {
+    background-color: var(--yellow-light);
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bg-blue-light {
+    background-color: var(--blue-light);
+}
+
+.bg-green {
+    background-color: var(--green);
+}
+
+.bg-green-darker {
+    background-color: var(--green-darker);
+}
+
+.bg-green-light {
+    background-color: var(--green-light);
+}
+
+.bg-primary-medium {
+    background-color: var(--primary-medium);
+}
+
+.hover\:bg-primary-medium:hover {
+    background-color: var(--primary-medium);
+}
+
+.text-wheat {
+    color: var(--wheat);
+}
+
+.text-yellow {
+    color: var(--yellow);
+}
+
+.text-yellow-light {
+    color: var(--yellow-light);
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+.text-blue-light {
+    color: var(--blue-light);
+}
+
+.text-green {
+    color: var(--green);
+}
+
+.text-green-darker {
+    color: var(--green-darker);
+}
+
+.text-green-light {
+    color: var(--green-light);
+}
+
+.text-primary-medium {
+    color: var(--primary-medium);
+}
+
+.rounded-3xl {
+    border-radius: 1.25rem;
+}
+
+.letter-spacing--small {
+    --letter-spacing: 3px;
+}
+
+.p-default {
+    padding: var(--element-padding);
+}
+
+@media (max-width: 768px) {
+    .scrolled {
+        --nav-height: 80px;
+    }
+
+    .scrolled .navigation {
+        --hamburger-size: 25px;
+        --logo-size: 50px;
+        --logo-circle: 60px;
+    }
+}

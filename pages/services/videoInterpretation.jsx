@@ -1,8 +1,8 @@
-import Button from '../../components/Button.jsx';
+import Button from '../../components/Button';
 import Dots from '../../components/Icons/dots';
 import React from 'react';
-import { SEO } from '../../lib/utils/SEO.js';
-import ServiceSingle from '../../components/TextBox';
+import { SEO } from '../../lib/utils/SEO';
+import ServiceSingle from '../../components/serviceSingle';
 
 export default function Home() {
     return (
@@ -11,7 +11,7 @@ export default function Home() {
                 title="Video Interpretation"
                 description="Language Service Solutions is proud to provide your organization with the capacity to reach your Spanish-speaking clients seamlessly and without delay by offering our Video Remote Interpreting service."
             />
-            <section className="margin-top-1 margin-bottom-2">
+            <section className="mt-16 margin-bottom-2">
                 <Button
                     bgColor={''}
                     height={'90px'}
@@ -23,11 +23,11 @@ export default function Home() {
                     dots={false}
                 />
             </section>
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Dots direction={'up'} color={'var(--yellow)'} size={'10'} />
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <ServiceSingle
                     logo={'simultaneousInterpretation'}
                     innerText={
@@ -39,7 +39,7 @@ export default function Home() {
                                 person.
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h4 className="letter-spacing--small text-white m-0 mb-1 uppercase">
                                 WHAT IS In-person INTERPRETATION?
                             </h4>
                             <p className="m-0">
@@ -65,15 +65,15 @@ export default function Home() {
                 />
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <ServiceSingle
                     background="var(--wheat)"
                     innerText={
                         <>
-                            <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
+                            <h4 className="letter-spacing--small m-0 mb-1 uppercase font-black">
                                 SIMULTANEOUS INTERPRETATION
                             </h4>
-                            <p className="m-0 font-weight-small">
+                            <p className="m-0 font-thin">
                                 Simultaneous interpreting is the rendition of a
                                 source language into a target language at the
                                 same time the source language is being
@@ -89,18 +89,18 @@ export default function Home() {
                                 fully multilingual space.
                             </p>
                             <br />
-                            <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
+                            <h4 className="letter-spacing--small m-0 mb-1 uppercase font-black">
                                 EXAMPLES OF COMMON USES
                             </h4>
-                            <p className="m-0 font-weight-small">
+                            <p className="m-0 font-thin">
                                 Conferences, meetings, ceremonies,
                                 presentations, workshops, and trainings.
                             </p>
                             <br />
-                            <h4 className="headline text-black m-0 small-margin-bottom upperCase font-weight-strong">
+                            <h4 className="letter-spacing--small m-0 mb-1 uppercase font-black">
                                 BENEFITS
                             </h4>
-                            <p className="m-0 font-weight-small">
+                            <p className="m-0 font-thin">
                                 Simultaneous interpreting is a great tool to
                                 provide access to information to a large group
                                 of English- and non-English speakers at the same
@@ -120,12 +120,12 @@ export default function Home() {
                 />
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <ServiceSingle
                     img={'SimTranslation.JPG'}
                     innerText={
                         <>
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h4 className="letter-spacing--small text-white m-0 mb-1 uppercase">
                                 Consecutive INTERPRETATION
                             </h4>
                             <p className="m-0">
@@ -144,7 +144,7 @@ export default function Home() {
                             </p>
                             <br />
 
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h4 className="letter-spacing--small text-white m-0 mb-1 uppercase">
                                 EXAMPLES OF COMMON USES
                             </h4>
                             <p className="m-0">
@@ -154,7 +154,7 @@ export default function Home() {
                             </p>
                             <br />
 
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h4 className="letter-spacing--small text-white m-0 mb-1 uppercase">
                                 BENEFITS
                             </h4>
                             <p className="m-0">
@@ -169,7 +169,7 @@ export default function Home() {
                             </p>
                             <br />
 
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h4 className="letter-spacing--small text-white m-0 mb-1 uppercase">
                                 HAVE QUESTIONS OR NEED AN ESTIMATE?
                             </h4>
                             <p className="m-0">

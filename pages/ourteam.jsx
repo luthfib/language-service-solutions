@@ -1,11 +1,9 @@
-import Button from '../components/Button.jsx';
 import Container from '../components/Container';
 import Dots from '../components/Icons/dots';
 import React from 'react';
-import { SEO } from '../lib/utils/SEO.js';
+import { SEO } from '../lib/utils/SEO';
 import StaffIcon from '../components/Icons/Staff';
-import Textbox from '../components/TextBox';
-import Wave from '../components/Wave.jsx';
+import Wave from '../components/Wave';
 
 export default function Home() {
     return (
@@ -70,16 +68,16 @@ export default function Home() {
                 <h1 className="opacity-0 absolute left-0"> Our Team</h1>
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Container className="section" background="var(--wheat)">
                     <h2 className="text-center sm:text-4xl text-3xl mb-14">
                         MEET THE TEAM!
                     </h2>
-                    <div className="staff-member-container">
+                    <div className="grid sm:grid-cols-3 grid-col-1 gap-x-7 gap-y-20">
                         <div className="staff-member">
                             <StaffIcon path="/staff/Farlan.svg" />
                             <h3 className="text-center letter-spacing--small uppercase text-xl mt-6 mb-4">
@@ -212,7 +210,7 @@ export default function Home() {
                 </Container>
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <h2 className="text-center sm:text-4xl text-3xl  margin-bottom-2">
                     Our team is ready to help you
                 </h2>
@@ -226,7 +224,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <h2 className="sm:text-4xl text-3xl margin-bottom-2">
                     Why us?
                 </h2>
@@ -242,7 +240,7 @@ export default function Home() {
                         level of accuracy and efficiency.
                     </p>
                     <br />
-                    <h3 className="text-center text-2xl  mb-3 upperCase">
+                    <h3 className="text-center text-2xl  mb-3 uppercase">
                         Quality guaranteed. Every time.
                     </h3>
                     <p className="m-0">
@@ -255,7 +253,7 @@ export default function Home() {
                         costumers.
                     </p>
                     <br />
-                    <h3 className="text-center text-2xl mb-3 upperCase">
+                    <h3 className="text-center text-2xl mb-3 uppercase">
                         Services tailored to fit.
                     </h3>
                     <p className="m-0">
@@ -265,7 +263,7 @@ export default function Home() {
                         free, personalized quote.
                     </p>
                     <br />
-                    <h3 className="text-center text-2xl  mb-3 upperCase">
+                    <h3 className="text-center text-2xl  mb-3 uppercase">
                         Privacy
                     </h3>
                     <p className="m-0">
@@ -278,24 +276,6 @@ export default function Home() {
                 </div>
             </section>
             <Wave position={'bottom'} marginClass={''} />
-
-            <style jsx>{`
-                .staff-member-container {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    row-gap: 80px;
-                    column-gap: 30px;
-                }
-
-                @media (max-width: 868px) {
-                    .staff-member-container {
-                        display: grid;
-                        grid-template-columns: 1fr;
-                        row-gap: 80px;
-                        column-gap: 30px;
-                    }
-                }
-            `}</style>
         </>
     );
 }

@@ -1,12 +1,9 @@
 import Button from './Button.jsx';
 import Link from 'next/link';
-import { useOnViewport } from '../lib/hooks/useOnViewport.js';
 import { useRef } from 'react';
 
 const ServicesElement = (props) => {
     const containerRef = useRef(null);
-    const isVisible = useOnViewport(containerRef);
-    // ${isVisible && 'appear'}
     const imgSize = 150;
 
     return (
@@ -125,17 +122,6 @@ const ServicesElement = (props) => {
                 </div>
             </div>
             <style jsx>{`
-                 {
-                    /* @media (min-width: 998.9px) {
-                    .services-container:not(.animate) .service {
-                        top: calc(var(--distance) * 2);
-                        left: 50%;
-                        transform: translate3d(-50%, 0, 0);
-                        opacity: 0;
-                    }
-                } */
-                }
-
                 .service {
                     --distance: ${imgSize}px;
                     --left: 5%;

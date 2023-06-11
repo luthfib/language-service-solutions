@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+    --white: #ffffff;
     --wheat: #edeae5;
     --yellow: #ffc425;
     --yellow-light: #fce181;
@@ -11,86 +12,178 @@
     --green: #01b1b0;
     --green-darker: rgb(1, 43, 45);
     --green-light: #9fedd7;
-    --primary-medium: #017470;
+
+    --primary-dark: var(--green-darker);
+    --primary-medium: var(--green);
+    --primary-light: var(--green-light);
+
+    /* sizes */
+    --content-width: 1536px;
+    --nav-height: 100px;
+    --border-radius: 20px;
+    --element-width: 90%;
+    --element-padding: 40px 40px;
 }
 
-.bg-wheat {
-    background-color: var(--wheat);
+html,
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'matiasregular', 'Open Sans', sans-serif;
 }
-.bg-yellow {
-    background-color: var(--yellow);
-}
-
-.bg-yellow-light {
-    background-color: var(--yellow-light);
-}
-
-.bg-blue {
-    background-color: var(--blue);
-}
-
-.bg-blue-light {
-    background-color: var(--blue-light);
+body {
+    --color-text: var(--green-darker);
+    color: var(--color-text);
 }
 
-.bg-green {
-    background-color: var(--green);
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: unset;
 }
 
-.bg-green-darker {
-    background-color: var(--green-darker);
+header {
+    width: 100%;
+    background: var(--green);
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
 }
 
-.bg-green-light {
-    background-color: var(--green-light);
+header.homepage {
+    background: transparent;
+    transition: background-color 0.3s ease;
 }
 
-.bg-primary-medium {
-    background-color: var(--primary-medium);
+header.homepage.scrolled {
+    background: transparent;
+    width: 100%;
+    background: #ffffffab;
+    backdrop-filter: saturate(180%) blur(5px);
 }
 
-.hover\:bg-primary-medium:hover {
-    background-color: var(--primary-medium);
+.scrolled {
+    --nav-height: 85px;
 }
 
-.text-wheat {
-    color: var(--wheat);
+.scrolled + main {
+    --nav-height: 85px;
 }
 
-.text-yellow {
-    color: var(--yellow);
+.scrolled .navigation {
+    --logo-size: 70px;
 }
 
-.text-yellow-light {
-    color: var(--yellow-light);
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.text-blue {
-    color: var(--blue);
+main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: var(--nav-height);
+    transition: padding-top 0.5s ease;
 }
 
-.text-blue-light {
-    color: var(--blue-light);
+* {
+    box-sizing: border-box;
 }
 
-.text-green {
-    color: var(--green);
+h1,
+h2,
+h3 {
+    --letter-spacing: 2px;
+    letter-spacing: var(--letter-spacing);
 }
 
-.text-green-darker {
-    color: var(--green-darker);
+h1,
+.like-1 {
+    font-size: 2em;
 }
 
-.text-green-light {
-    color: var(--green-light);
+h2,
+.like-2 {
+    font-size: 1.5em;
 }
 
-.text-primary-medium {
-    color: var(--primary-medium);
+h3,
+.like-3 {
+    font-size: 1.17em;
+    line-height: 1.4em;
 }
 
-.rounded-3xl {
-    border-radius: 1.25rem;
+h4 {
+    font-size: 1em;
 }
-/* stylelint-disable rule */
-/* stylelint-enable rule */
+
+p + p {
+    margin-top: 1em;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+blockquote {
+    quotes: '“' '”' '‘' '’';
+    margin: 0;
+    position: relative;
+    margin-bottom: 20px;
+    line-height: 1.6em;
+    letter-spacing: 0.7px;
+}
+
+blockquote:before {
+    content: open-quote;
+    padding-right: 3px;
+}
+
+blockquote:after {
+    content: close-quote;
+    padding-left: 3px;
+}
+
+blockquote:before,
+blockquote:after {
+    position: relative;
+    line-height: 0;
+    top: 10px;
+    font-size: 35px;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --border-radius: 10px;
+        --element-width: 92.5%;
+        --element-padding: 40px 25px;
+    }
+}

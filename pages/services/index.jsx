@@ -1,8 +1,8 @@
-import Button from '../../components/Button.jsx';
+import Button from '../../components/Button';
 import Dots from '../../components/Icons/dots';
 import React from 'react';
 import ServiceCard from '../../components/ServiceCard';
-import Wave from '../../components/Wave.jsx';
+import Wave from '../../components/Wave';
 
 export default function Home() {
     return (
@@ -78,10 +78,10 @@ export default function Home() {
                 <h1 className="opacity-0 absolute left-0"> Our Services</h1>
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
             </section>
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <div className="flex flex-wrap items-center gap-10 justify-center h-full w-[95%]">
                     <ServiceCard
                         path={'virtualInterpretation'}
@@ -139,7 +139,7 @@ export default function Home() {
 				/> */}
                 </div>
             </section>
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Button text={'Book a service'} />
             </section>
             <Wave position={'bottom'} marginClass={'md:mt-[-8vw]'} />

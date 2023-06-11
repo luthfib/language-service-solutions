@@ -1,8 +1,8 @@
-import Button from '../../components/Button.jsx';
+import Button from '../../components/Button';
 import Dots from '../../components/Icons/dots';
 import React from 'react';
-import { SEO } from '../../lib/utils/SEO.js';
-import ServiceSingle from '../../components/TextBox';
+import { SEO } from '../../lib/utils/SEO';
+import ServiceSingle from '../../components/serviceSingle';
 
 export default function Home() {
     return (
@@ -11,7 +11,7 @@ export default function Home() {
                 title="Medical Interpretation"
                 description="We’re proud to provide your organization with the capacity to reach your Spanish-speaking clients and create multilingual spaces in person."
             />
-            <section className="margin-top-1 margin-bottom-2">
+            <section className="mt-16 margin-bottom-2">
                 <Button
                     bgColor={''}
                     height={'90px'}
@@ -23,11 +23,11 @@ export default function Home() {
                     dots={false}
                 />
             </section>
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Dots direction={'up'} color={'var(--yellow)'} size={'10'} />
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <ServiceSingle
                     logo={'medicalInterpretation'}
                     img={'TeamOutside.JPG'}
@@ -41,7 +41,7 @@ export default function Home() {
                                 providers.
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h4 className="letter-spacing--small text-white m-0 mb-1 uppercase">
                                 Quality guaranteed. Every time.
                             </h4>
                             <p className="m-0">
@@ -56,7 +56,7 @@ export default function Home() {
                                 the medical community.
                             </p>
                             <br />
-                            <h4 className="headline text-white m-0 small-margin-bottom upperCase">
+                            <h4 className="letter-spacing--small text-white m-0 mb-1 uppercase">
                                 Experience to make a difference
                             </h4>
                             <p className="m-0">
