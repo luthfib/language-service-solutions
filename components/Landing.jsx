@@ -1,4 +1,4 @@
-import React, { use, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 export default function Landing() {
     // make a function to animate the svg circles inside the landing page element  in the background to bounce

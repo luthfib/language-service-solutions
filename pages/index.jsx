@@ -1,9 +1,6 @@
-import AboutUs from '../components/AboutUsSection';
-import Button from '../components/Button.jsx';
 import Dots from '../components/Icons/dots';
-import Gallery from '../components/Gallery';
 import React from 'react';
-import { SEO } from '../lib/utils/SEO.js';
+import { SEO } from '../lib/utils/SEO';
 import Services from '../components/ServicesElement';
 import Landing from '../components/Landing';
 import Wave from '../components/Wave';
@@ -190,18 +187,42 @@ const Home = () => {
                     </h1>
                 </section>
 
-                <section className="margin-bottom-1">
+                <section className="mb-16">
                     <Dots
                         direction={'up'}
                         color={'var(--yellow)'}
                         size={'25'}
                     />
                 </section>
-                <section className="margin-bottom-1">
+                <section className="mb-16">
                     <Services />
                 </section>
-                <section className="margin-bottom-1">
-                    <AboutUs />
+                <section className="mb-16">
+                    <div className="max-w-2xl text-center">
+                        <h2 className="sm:text-4xl text-3xl mb-4 ">about us</h2>
+                        <p>
+                            LANGUAGE SERVICE SOLUTIONS, LLC has over 20 years of
+                            experience providing translation and interpretation
+                            services as well as consulting around language
+                            services for organizations and communities.
+                        </p>
+                        <p>
+                            Our focus on equity and access drives us to
+                            facilitate community connections while eliminating
+                            language barriers, making us one of the most trusted
+                            full-service language providers in the Triangle
+                            (North Carolina). 
+                        </p>
+                        <p>
+                            We work to ensure everyone’s voices are heard and
+                            included in meaningful and impactful discussions and
+                            spaces. Our company promotes best practices around
+                            inclusive multilingual spaces where all languages
+                            are valued and respected equally to allow all
+                            speakers and listeners to benefit from a diversity
+                            in perspective and experience.
+                        </p>
+                    </div>
                 </section>
                 <Wave position={'bottom'} marginClass={'md:mt-[0vw]'} />
             </>

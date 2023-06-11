@@ -1,13 +1,12 @@
-import Button from '../components/Button.jsx';
+import Button from '../components/Button';
 import Dots from '../components/Icons/dots';
-import Duke from '../components/Icons/Duke';
 import Elon from '../components/Icons/Elon';
 import React from 'react';
 import SAF from '../components/Icons/SAF';
 import SDI from '../components/Icons/SDI';
-import { SEO } from '../lib/utils/SEO.js';
-import Textbox from '../components/TextBox';
-import Wave from '../components/Wave.jsx';
+import { SEO } from '../lib/utils/SEO';
+import ServiceSingle from '../components/serviceSingle';
+import Wave from '../components/Wave';
 
 export default function Home() {
     return (
@@ -92,14 +91,13 @@ export default function Home() {
                 <h1 className="opacity-0 absolute left-0">Testimonials</h1>
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
             </section>
-            <section className="margin-bottom-1">
-                <Textbox
+            <section className="mb-16">
+                <ServiceSingle
                     logoImg={''}
                     img={''}
-                    textAlign={'left'}
                     innerText={
                         <>
                             <blockquote>
@@ -115,7 +113,7 @@ export default function Home() {
                                 things went really smoothly throughout. A
                                 wonderful, professional service!
                             </blockquote>
-                            <h3 className="headline text-white m-0 small-margin-bottom">
+                            <h3 className="letter-spacing--small text-white m-0 small-margin-bottom">
                                 Soleen Lees, Commincation Coordinator <br />{' '}
                                 Susila Dharma International Association(SDIA){' '}
                             </h3>
@@ -124,11 +122,10 @@ export default function Home() {
                     }
                 />
             </section>
-            <section className="margin-bottom-1">
-                <Textbox
+            <section className="mb-16">
+                <ServiceSingle
                     logoImg={''}
                     img={''}
-                    textAlign={'left'}
                     innerText={
                         <>
                             <blockquote>
@@ -140,7 +137,7 @@ export default function Home() {
                                 members are able to participate in meetings,
                                 conferences, and events.
                             </blockquote>
-                            <h3 className="headline text-white m-0 small-margin-bottom">
+                            <h3 className="letter-spacing--small text-white m-0 small-margin-bottom">
                                 Nadeen Bir <br /> Advocacy and Organizing
                                 Director{' '}
                             </h3>
@@ -150,11 +147,10 @@ export default function Home() {
                 />
             </section>
 
-            <section className="margin-bottom-1">
-                <Textbox
+            <section className="mb-16">
+                <ServiceSingle
                     logoImg={''}
                     img={''}
-                    textAlign={'left'}
                     innerText={
                         <>
                             <blockquote>
@@ -173,7 +169,7 @@ export default function Home() {
                                 certainly enhanced by our partnership with
                                 Language Service Solutions.
                             </blockquote>
-                            <h3 className="headline text-white m-0 small-margin-bottom">
+                            <h3 className="letter-spacing--small text-white m-0 small-margin-bottom">
                                 Katherine Wicke LaPlante, Elon Academy, <br />{' '}
                                 Assistant Director of Counseling and Family
                                 Programs
@@ -183,7 +179,7 @@ export default function Home() {
                     }
                 />
             </section>
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Button
                     bgColor={'var(--green-darker)'}
                     height={'90px'}

@@ -152,6 +152,7 @@ const Navbar = ({ open, setOpen }) => {
                         margin: 0 auto;
                         transition: height 0.3s ease;
                         padding: 0 20px;
+                        max-width: var(--content-width);
                     }
 
                     .logo-wrapper {

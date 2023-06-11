@@ -1,9 +1,8 @@
-import Button from '../../components/Button.jsx';
 import Dots from '../../components/Icons/dots';
 import React from 'react';
-import { SEO } from '../../lib/utils/SEO.js';
-import ServiceSingle from '../../components/TextBox';
-import Wave from '../../components/Wave.jsx';
+import { SEO } from '../../lib/utils/SEO';
+import ServiceSingle from '../../components/serviceSingle';
+import Wave from '../../components/Wave';
 
 export default function Home() {
     return (
@@ -19,11 +18,11 @@ export default function Home() {
                     Subtititling
                 </h1>
             </section>
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <ServiceSingle
                     background="var(--wheat)"
                     logo={'subtitling'}

@@ -1,9 +1,8 @@
-import Button from '../../components/Button.jsx';
 import Dots from '../../components/Icons/dots';
 import React from 'react';
-import { SEO } from '../../lib/utils/SEO.js';
-import ServiceSingle from '../../components/TextBox';
-import Wave from '../../components/Wave.jsx';
+import { SEO } from '../../lib/utils/SEO';
+import Wave from '../../components/Wave';
+import ServiceSingle from '../../components/serviceSingle';
 
 export default function Home() {
     return (
@@ -20,11 +19,11 @@ export default function Home() {
                 </h1>
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <ServiceSingle
                     background="var(--wheat)"
                     logo={'inperson_int'}
@@ -50,11 +49,11 @@ export default function Home() {
                     }
                 />
             </section>
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <h2 className="text-center sm:text-4xl text-3xl ">Modes</h2>
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <ServiceSingle
                     background="var(--wheat)"
                     shadow="var(--elevation-3-wheat)"
@@ -63,7 +62,7 @@ export default function Home() {
                             <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 SIMULTANEOUS INTERPRETATION
                             </h3>
-                            <p className="m-0 font-weight-small">
+                            <p className="m-0 font-thin">
                                 Simultaneous interpreting is the rendition of a
                                 source language into a target language at the
                                 same time the source language is being
@@ -82,7 +81,7 @@ export default function Home() {
                             <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 EXAMPLES OF COMMON USES
                             </h3>
-                            <p className="m-0 font-weight-small">
+                            <p className="m-0 font-thin">
                                 Conferences, meetings, ceremonies,
                                 presentations, workshops, and trainings.
                             </p>
@@ -90,7 +89,7 @@ export default function Home() {
                             <h3 className=" letter-spacing--small uppercase text-xl mb-2">
                                 BENEFITS
                             </h3>
-                            <p className="m-0 font-weight-small">
+                            <p className="m-0 font-thin">
                                 Simultaneous interpreting is a great tool to
                                 provide access to information to a large group
                                 of English- and non-English speakers at the same
@@ -110,7 +109,7 @@ export default function Home() {
                 />
             </section>
 
-            <section className="margin-bottom-1">
+            <section className="mb-16">
                 <ServiceSingle
                     background="var(--wheat)"
                     img={'SimTranslation.JPG'}
