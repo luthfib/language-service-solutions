@@ -3,8 +3,8 @@ import ContactDetails from '../components/ContactDetails';
 import ContactImg from '../public/imgs/Contact.jpg';
 import Dots from '../components/Icons/dots';
 import Image from 'next/image';
-import { SEO } from '../lib/utils/SEO';
 import Wave from '../components/Wave';
+import SEO from '../components/SEO';
 
 export default function Home() {
     return (

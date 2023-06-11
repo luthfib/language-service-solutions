@@ -3,10 +3,15 @@ import Dots from '../../components/Icons/dots';
 import React from 'react';
 import ServiceCard from '../../components/ServiceCard';
 import Wave from '../../components/Wave';
+import SEO from '../../components/SEO';
 
 export default function Home() {
     return (
         <>
+            <SEO
+                title="Services"
+                description="We provide a wide range of language services, including translation, Virtual Interpretation, In-Person Interpretation, subtitling, and transcription. Our team of experienced linguists is committed to providing high-quality, accurate, and culturally-sensitive translations. We understand the importance of language in building relationships and creating a positive customer experience. That's why we work closely with you to ensure that your message is communicated effectively in the target language"
+            />
             <Wave position={'top'} marginClass={'md:mb-[-7vw]'} />
             <section className="mb-10 ">
                 <svg

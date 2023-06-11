@@ -4,9 +4,9 @@ import Elon from '../components/Icons/Elon';
 import React from 'react';
 import SAF from '../components/Icons/SAF';
 import SDI from '../components/Icons/SDI';
-import { SEO } from '../lib/utils/SEO';
 import ServiceSingle from '../components/serviceSingle';
 import Wave from '../components/Wave';
+import SEO from '../components/SEO';
 
 export default function Home() {
     return (

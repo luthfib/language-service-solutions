@@ -1,9 +1,9 @@
 import Dots from '../components/Icons/dots';
 import React from 'react';
-import { SEO } from '../lib/utils/SEO';
 import Services from '../components/ServicesElement';
 import Landing from '../components/Landing';
 import Wave from '../components/Wave';
+import SEO from '../components/SEO';
 
 const Home = () => {
     return (

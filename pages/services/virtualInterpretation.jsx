@@ -1,7 +1,6 @@
-import Button from '../../components/Button.jsx';
 import Dots from '../../components/Icons/dots.js';
 import React from 'react';
-import { SEO } from '../../lib/utils/SEO';
+import SEO from '../../components/SEO';
 import ServiceSingle from '../../components/serviceSingle';
 import Wave from '../../components/Wave';
 

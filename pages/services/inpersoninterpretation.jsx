@@ -1,8 +1,8 @@
 import Dots from '../../components/Icons/dots';
 import React from 'react';
-import { SEO } from '../../lib/utils/SEO';
 import Wave from '../../components/Wave';
 import ServiceSingle from '../../components/serviceSingle';
+import SEO from '../../components/SEO';
 
 export default function Home() {
     return (

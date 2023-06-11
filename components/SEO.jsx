@@ -1,11 +1,12 @@
 import Head from 'next/head';
 
-export const SEO = (props) => {
+const SEO = (props) => {
     const {
         title,
         description,
         image = 'https://languageservicesolutions.com/icons/logo.svg',
     } = props;
+    console.log(props);
     return (
         <Head>
             <title>
@@ -31,3 +32,5 @@ export const SEO = (props) => {
         </Head>
     );
 };
+
+export default SEO;
