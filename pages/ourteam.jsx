@@ -1,9 +1,9 @@
 import Container from '../components/Container';
 import Dots from '../components/Icons/dots';
 import React from 'react';
-import { SEO } from '../lib/utils/SEO';
 import StaffIcon from '../components/Icons/Staff';
 import Wave from '../components/Wave';
+import SEO from '../components/SEO';
 
 export default function Home() {
     return (
