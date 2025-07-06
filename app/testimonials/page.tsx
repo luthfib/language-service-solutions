@@ -1,22 +1,34 @@
-import Button from '../components/Button';
-import Dots from '../components/Icons/dots';
-import Elon from '../components/Icons/Elon';
+import { Metadata } from 'next';
+import Button from '../../components/Button';
+import Dots from '../../components/Icons/dots';
+import Elon from '../../components/Icons/Elon';
 import React from 'react';
-import SAF from '../components/Icons/SAF';
-import SDI from '../components/Icons/SDI';
-import ServiceSingle from '../components/serviceSingle';
-import Wave from '../components/Wave';
-import SEO from '../components/SEO';
+import SAF from '../../components/Icons/SAF';
+import SDI from '../../components/Icons/SDI';
+import ServiceSingle from '../../components/serviceSingle';
+import Wave from '../../components/Wave';
+import SEO from '../../components/SEO';
 
-export default function Home() {
+export const metadata: Metadata = {
+    title: 'Client Testimonials - Language Service Solutions',
+    description:
+        'Read testimonials from our satisfied clients who have used our professional translation, interpretation, and language services.',
+    keywords:
+        'client testimonials, reviews, language services testimonials, translation reviews, interpretation feedback, customer satisfaction',
+    openGraph: {
+        title: 'Client Testimonials - Language Service Solutions',
+        description:
+            'Read testimonials from our satisfied clients who have used our professional translation, interpretation, and language services.',
+    },
+};
+
+export default function TestimonialsPage() {
     return (
         <>
-            <SEO
-                title="Testimonials"
-                description="I have been working with great interpreters at Language Service Solutions for the last 10 years. They are skilled, reliable, professional, and a pleasure to work with."
-            />
+            <SEO description="Read testimonials from our satisfied clients who have used our professional translation, interpretation, and language services." />
             <Wave position={'top'} marginClass={'md:mb-[-7vw]'} />
-            <section className="mb-10 ">
+
+            <section className="mb-10">
                 <svg
                     id="Layer_2"
                     data-name="Layer 2"
@@ -94,10 +106,13 @@ export default function Home() {
             <section className="mb-16">
                 <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
             </section>
+
             <section className="mb-16">
                 <ServiceSingle
+                    logo=""
                     logoImg={''}
                     img={''}
+                    background="var(--green)"
                     innerText={
                         <>
                             <blockquote>
@@ -105,7 +120,7 @@ export default function Home() {
                                 interpreting team at the SDIA Annual General
                                 Meeting and Networking Conference which was
                                 invaluable in our many meetings and workshops.
-                                Without Murtado’s team of simultaneous
+                                Without Murtado's team of simultaneous
                                 interpreters in English, Spanish and French,
                                 communication between the members of our
                                 international network would have been very
@@ -122,10 +137,13 @@ export default function Home() {
                     }
                 />
             </section>
+
             <section className="mb-16">
                 <ServiceSingle
+                    logo=""
                     logoImg={''}
                     img={''}
+                    background="var(--green)"
                     innerText={
                         <>
                             <blockquote>
@@ -149,8 +167,10 @@ export default function Home() {
 
             <section className="mb-16">
                 <ServiceSingle
+                    logo=""
                     logoImg={''}
                     img={''}
+                    background="var(--green)"
                     innerText={
                         <>
                             <blockquote>
@@ -179,18 +199,11 @@ export default function Home() {
                     }
                 />
             </section>
+
             <section className="mb-16">
-                <Button
-                    bgColor={'var(--green-darker)'}
-                    height={'90px'}
-                    width={'90%'}
-                    headingLevel={'h2'}
-                    color={'var(--white)'}
-                    margin={''}
-                    text={'Book a service'}
-                    dots={true}
-                />
+                <Button link="/contact" text="Book a service" />
             </section>
+
             <Wave position={'bottom'} marginClass={'md:mt-[-8vw]'} />
         </>
     );

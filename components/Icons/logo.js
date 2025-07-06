@@ -1,22 +1,34 @@
-import { useRouter } from 'next/router';
+'use client';
+
+import { usePathname } from 'next/navigation';
 
 const Logo = ({ width, height }) => {
-    const router = useRouter();
-    const isHomePage = router.pathname === '/';
+    const pathname = usePathname();
+    const isHomePage = pathname === '/';
     return (
         <>
             {isHomePage ? (
-                <img src="/icons/logo_green.svg" alt="logo" />
+                <img
+                    src="/icons/logo_green.svg"
+                    alt="logo"
+                    width={width}
+                    height={height}
+                />
             ) : (
-                <img src="/icons/logo.svg" alt="logo" />
+                <img
+                    src="/icons/logo.svg"
+                    alt="logo"
+                    width={width}
+                    height={height}
+                />
             )}
 
             <style jsx>
                 {`
                     img {
-                        width: ${width};
+                        width: var(--logo-size);
                         cursor: pointer;
-                        height: ${height};
+                        height: var(--logo-size);
                         transition: height 0.3s ease, width 0.3s ease;
                     }
                 `}

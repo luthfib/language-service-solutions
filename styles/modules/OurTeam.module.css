@@ -1,0 +1,10 @@
+.headlineSvg {
+    fill: none;
+    stroke: var(--green-darker);
+    stroke-miterlimit: 10;
+    stroke-width: 6px;
+}
+
+.staffMember {
+    /* Base staff member styling */
+}

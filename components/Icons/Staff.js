@@ -1,14 +1,17 @@
+'use client';
+
+import styles from '@/styles/modules/Staff.module.css';
+
 const StaffIcon = ({ path, staffName }) => {
-  return (
-    <>
-      <img src={path} alt={staffName} className={"staff-img"} alt={staffName} />
-      <style jsx>{`
-        .staff-img {
-          height: 225px;
-          width: 100%;
-        }
-      `}</style>
-    </>
-  );
+    return (
+        <img
+            width={225}
+            height={225}
+            src={path}
+            alt={staffName}
+            className={styles.staffImg}
+        />
+    );
 };
+
 export default StaffIcon;

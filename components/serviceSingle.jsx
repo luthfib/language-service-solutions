@@ -1,3 +1,7 @@
+'use client';
+
+import styles from './serviceSingle.module.css';
+
 const renderLogo = (logo, logoImg) => {
     if (logo) {
         return (
@@ -15,28 +19,9 @@ const renderLogo = (logo, logoImg) => {
     } else if (logoImg) {
         return (
             <>
-                <div className="icon ">
+                <div className={styles.icon}>
                     <img width="100%" height="100%" src={`/icons/${logoImg}`} />
                 </div>
-                <style jsx>
-                    {`
-                        .icon {
-                            align-self: center;
-                            position: relative;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            max-width: 250px;
-                            max-height: 200px;
-                            margin-bottom: 30px;
-                            background: var(--white);
-                        }
-
-                        .icon img {
-                            object-fit: contain;
-                        }
-                    `}
-                </style>
             </>
         );
     }
@@ -64,7 +49,7 @@ const ServiceSingle = ({ innerText, logo, logoImg, img, background }) => (
     <>
         <div className=" flex flex-col w-full items-center justify-center">
             <div
-                className="serviceDescription rounded-3xl w-full flex flex-col font-bold p-default"
+                className={`${styles.serviceDescription} rounded-3xl w-full flex flex-col font-bold p-default`}
                 style={{
                     background: background || 'var(--green)',
                 }}

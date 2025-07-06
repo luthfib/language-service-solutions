@@ -1,0 +1,20 @@
+.service {
+    --distance: 150px;
+    --left: 5%;
+    --right: 5%;
+    --timing: 0.5s;
+    --delay: 0.1s;
+    transition: top var(--timing) ease-in var(--delay),
+        left var(--timing) ease-in var(--delay),
+        right var(--timing) ease-in var(--delay),
+        transform var(--timing) ease-in var(--delay),
+        opacity var(--timing) ease-in var(--delay);
+    opacity: 1;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .service:nth-child(even) {
+        padding-top: calc(var(--distance) / 1.5);
+    }
+}

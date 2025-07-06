@@ -1,18 +1,23 @@
-import Button from '../components/Button';
-import ContactDetails from '../components/ContactDetails';
-import ContactImg from '../public/imgs/Contact.jpg';
-import Dots from '../components/Icons/dots';
-import Image from 'next/image';
-import Wave from '../components/Wave';
-import SEO from '../components/SEO';
+import Wave from '@/components/Wave';
+import ContactForm from '../../components/contactForm';
+import { Metadata } from 'next';
 
-export default function Home() {
+export const metadata: Metadata = {
+    title: 'Contact Us - Language Service Solutions',
+    description:
+        'If you want to hire Language Service Solutions feel free to contact us. We are here to help you with all your language service needs.',
+    keywords:
+        'contact us, language service solutions, language services, language translation, language interpretation, language transcription, language subtitling, language virtual interpretation',
+    openGraph: {
+        title: 'Contact Us - Language Service Solutions',
+        description:
+            'If you want to hire Language Service Solutions feel free to contact us. We are here to help you with all your language service needs.',
+    },
+};
+
+export default function ContactPage() {
     return (
         <>
-            <SEO
-                title="Contact Us"
-                description="If you want to hire Language Service Solutions feel free to Contact US"
-            />
             <Wave position={'top'} marginClass={'md:mb-[-7vw]'} />
             <section className="mb-10 ">
                 <svg
@@ -112,30 +117,9 @@ export default function Home() {
 
                 <h1 className="opacity-0 absolute left-0"> Contact us</h1>
             </section>
-
-            <section className="mb-16">
-                <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
+            <section className="mb-16  relative">
+                <ContactForm />
             </section>
-
-            <section className="mb-16 text-center h-96 relative">
-                <Image
-                    src={ContactImg}
-                    alt="Contact us Image"
-                    className="h-full rounded-3xl object-cover "
-                    priority
-                    height={384}
-                    width={1600}
-                />
-            </section>
-
-            <section className="mb-16">
-                <ContactDetails />
-            </section>
-            <section className="mb-16">
-                <Button text={'Contact us'} />
-            </section>
-
-            <Wave position={'bottom'} marginClass={'md:mt-[-8vw]'} />
         </>
     );
 }

@@ -37,6 +37,10 @@
     background-color: var(--primary-medium);
 }
 
+.text-white {
+    color: var(--white);
+}
+
 .text-wheat {
     color: var(--wheat);
 }

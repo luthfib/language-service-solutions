@@ -1,0 +1,15 @@
+.dots {
+    /* Base dots class */
+}
+
+.dots.down {
+    transform: rotate(180deg);
+}
+
+.dots.right {
+    transform: rotate(90deg);
+}
+
+.dots.left {
+    transform: rotate(-90deg);
+}
