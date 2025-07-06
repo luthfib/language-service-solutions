@@ -1,6 +1,7 @@
 import Wave from '@/components/Wave';
 import ContactForm from '../../components/contactForm';
 import { Metadata } from 'next';
+import Dots from '@/components/Icons/dots';
 
 export const metadata: Metadata = {
     title: 'Contact Us - Language Service Solutions',
@@ -117,9 +118,17 @@ export default function ContactPage() {
 
                 <h1 className="opacity-0 absolute left-0"> Contact us</h1>
             </section>
+            <section className="mb-16">
+                <Dots direction={'up'} color={'var(--yellow)'} size={'25'} />
+            </section>
             <section className="mb-16  relative">
                 <ContactForm />
             </section>
+            <section className="mb-16">
+                <Dots direction={'down'} color={'var(--yellow)'} size={'25'} />
+            </section>
+
+            <Wave position={'bottom'} marginClass={'md:mt-[-8vw]'} />
         </>
     );
 }

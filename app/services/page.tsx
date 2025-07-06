@@ -20,20 +20,20 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
     return (
         <>
-            <Container background="var(--white)">
-                <div className="py-16">
-                    <div className="text-center mb-16">
-                        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            Our Services
-                        </h1>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            With over 20 years of experience, Language Service
-                            Solutions provides comprehensive language services
-                            to meet all your communication needs.
-                        </p>
-                    </div>
+            <Wave position={'top'} marginClass={'md:mb-[-7vw]'} />
+
+            <div className="py-14">
+                <div className="text-center mb-16">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Our Services
+                    </h1>
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                        With over 20 years of experience, Language Service
+                        Solutions provides comprehensive language services to
+                        meet all your communication needs.
+                    </p>
                 </div>
-            </Container>
+            </div>
 
             <section className="mb-16">
                 <div className="flex flex-wrap items-center gap-10 justify-center h-full w-[95%]">

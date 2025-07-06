@@ -112,6 +112,10 @@ body {
     max-width: unset;
 }
 
+main.container {
+    padding-inline: 0;
+}
+
 header {
     width: 100%;
     background: var(--green);
