@@ -66,8 +66,8 @@ export default function ContactForm() {
                     We'd Love to Hear from You!
                 </CardTitle>
                 <CardDescription className="text-md text-center text-[color:var(--green-darker)] opacity-80">
-                    Fill out the form below and we'll get back to you within 24
-                    hours.
+                    Fill out the form below and we'll get back to you within 1-2
+                    business days.
                 </CardDescription>
             </CardHeader>
             <CardContent>
@@ -75,8 +75,9 @@ export default function ContactForm() {
                     <Alert className="mb-6 border-green-200 bg-green-50 rounded-[var(--border-radius)]">
                         <CheckCircle className="h-4 w-4 text-green-600" />
                         <AlertDescription className="text-green-800">
-                            Thank you for your message! We'll get back to you
-                            soon.
+                            Thank you for contacting Language Service Solutions!
+                            We've received your message and will get back to you
+                            in 1-2 business days.
                         </AlertDescription>
                     </Alert>
                 )}

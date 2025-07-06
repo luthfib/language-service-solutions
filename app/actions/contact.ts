@@ -150,17 +150,15 @@ export async function submitContactForm(formData: FormData) {
           <div style="padding: 30px 20px;">
             <div style="margin-bottom: 25px;">
               <p style="color:#012b2d; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-                Dear <strong>${name}</strong>,
-              </p>
-              
-              <p style="color:#012b2d; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-                Thank you for reaching out to Language Service Solutions. We have received your inquiry regarding <strong>${serviceTypeDisplay}</strong> services and will get back to you within 24 hours.
+                <strong>Thank you for contacting Language Service Solutions!</strong><br/>
+                  A member of our team will review your message and get back to you within 1-2 business days. If your request is urgent, feel free to call us directly on <strong>+1 919 949-9272</strong> and let us know about your situation.
               </p>
             </div>
             
             <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 25px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #01b1b0;">
               <h3 style="font-weight:bold; margin-top: 0; margin-bottom: 20px; font-size: 18px;">📋 Your Submission Summary</h3>
               <div style="display: grid; gap: 12px;">
+                <p style="margin: 0;"><strong>Name:</strong> <span style="color: #012b2d;">${name}</span></p>
                 <p style="margin: 0;"><strong>Service Type:</strong> <span style="color: #012b2d;">${serviceTypeDisplay}</span></p>
                 ${
                     organization
@@ -179,6 +177,7 @@ export async function submitContactForm(formData: FormData) {
             <div style="background-color: #ffffff; margin-bottom: 25px;">
               <p style="color: #012b2d; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                 In the meantime, feel free to explore our website to learn more about our comprehensive language services.
+                <a href="https://languageservicesolutions.com/services" style="color: #01b1b0; text-decoration: underline; margin-left: 4px;">See our services</a>
               </p>
               
               <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 20px; border-radius: 6px; border-left: 3px solid #01b1b0;">
