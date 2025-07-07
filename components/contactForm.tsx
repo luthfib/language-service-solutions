@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
     Card,
@@ -30,12 +30,63 @@ export default function ContactForm() {
     >('idle');
     const [errorMessage, setErrorMessage] = useState('');
 
+    // Load reCAPTCHA script
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`;
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+
+        // Add CSS to hide reCAPTCHA badge
+        const style = document.createElement('style');
+        style.textContent = `
+            .grecaptcha-badge {
+                visibility: hidden !important;
+                display: none !important;
+            }
+        `;
+        document.head.appendChild(style);
+
+        return () => {
+            const existingScript = document.querySelector(
+                `script[src*="recaptcha"]`
+            );
+            if (existingScript) {
+                existingScript.remove();
+            }
+            const existingStyle = document.querySelector('style');
+            if (existingStyle) {
+                existingStyle.remove();
+            }
+        };
+    }, []);
+
     async function handleSubmit(formData: FormData) {
         setIsSubmitting(true);
         setSubmitStatus('idle');
         setErrorMessage('');
 
         try {
+            // Get reCAPTCHA token
+            if (typeof window !== 'undefined' && window.grecaptcha) {
+                try {
+                    const token = await window.grecaptcha.execute(
+                        process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!,
+                        { action: 'contact' }
+                    );
+                    formData.append('recaptchaToken', token);
+                } catch (recaptchaError) {
+                    console.warn(
+                        'reCAPTCHA failed, continuing without it:',
+                        recaptchaError
+                    );
+                    formData.append('recaptchaToken', 'fallback');
+                }
+            } else {
+                formData.append('recaptchaToken', 'fallback');
+            }
+
             const result = await submitContactForm(formData);
 
             if (result.success) {
@@ -52,6 +103,7 @@ export default function ContactForm() {
                 );
             }
         } catch (error) {
+            console.error('Form submission error:', error);
             setSubmitStatus('error');
             setErrorMessage('Something went wrong. Please try again.');
         } finally {
@@ -71,6 +123,15 @@ export default function ContactForm() {
                 </CardDescription>
             </CardHeader>
             <CardContent>
+                {isSubmitting && (
+                    <Alert className="mb-6 border-blue-200 bg-blue-50 rounded-[var(--border-radius)]">
+                        <Loader2 className="h-4 w-4 text-blue-600 animate-spin" />
+                        <AlertDescription className="text-blue-800">
+                            Processing your request... Please wait.
+                        </AlertDescription>
+                    </Alert>
+                )}
+
                 {submitStatus === 'success' && (
                     <Alert className="mb-6 border-green-200 bg-green-50 rounded-[var(--border-radius)]">
                         <CheckCircle className="h-4 w-4 text-green-600" />
@@ -93,8 +154,14 @@ export default function ContactForm() {
 
                 <form
                     id="contact-form"
-                    action={handleSubmit}
-                    className="space-y-6"
+                    onSubmit={async (e) => {
+                        e.preventDefault();
+                        const formData = new FormData(e.currentTarget);
+                        await handleSubmit(formData);
+                    }}
+                    className={`space-y-6 transition-opacity duration-300 ${
+                        isSubmitting ? 'opacity-75 pointer-events-none' : ''
+                    }`}
                 >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
@@ -216,21 +283,52 @@ export default function ContactForm() {
                     <Button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-[color:var(--green-darker)] hover:bg-[color:var(--green)] text-white font-semibold py-6 px-6 rounded-[var(--border-radius)] transition-colors duration-200 shadow-md text-lg tracking-wide"
+                        className={`w-full font-semibold py-6 px-6 rounded-[var(--border-radius)] transition-all duration-300 shadow-md text-lg tracking-wide ${
+                            isSubmitting
+                                ? 'bg-gray-400 cursor-not-allowed opacity-75'
+                                : 'bg-[color:var(--green-darker)] hover:bg-[color:var(--green)] text-white hover:scale-[1.02] active:scale-[0.98]'
+                        }`}
                         style={{
-                            boxShadow: '0 2px 8px 0 rgba(1,177,176,0.08)',
+                            boxShadow: isSubmitting
+                                ? '0 2px 4px 0 rgba(0,0,0,0.1)'
+                                : '0 2px 8px 0 rgba(1,177,176,0.08)',
                         }}
                     >
                         {isSubmitting ? (
                             <>
-                                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                Sending Message...
+                                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                                Submitting...
                             </>
                         ) : (
                             'Send Message'
                         )}
                     </Button>
                 </form>
+
+                {/* reCAPTCHA Notice */}
+                <div className="mt-4 text-center">
+                    <p className="text-xs text-gray-500">
+                        This site is protected by reCAPTCHA and the Google{' '}
+                        <a
+                            href="https://policies.google.com/privacy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[color:var(--green)] hover:underline"
+                        >
+                            Privacy Policy
+                        </a>{' '}
+                        and{' '}
+                        <a
+                            href="https://policies.google.com/terms"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[color:var(--green)] hover:underline"
+                        >
+                            Terms of Service
+                        </a>{' '}
+                        apply.
+                    </p>
+                </div>
             </CardContent>
         </Card>
     );

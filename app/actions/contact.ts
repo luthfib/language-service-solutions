@@ -25,6 +25,40 @@ export async function submitContactForm(formData: FormData) {
             };
         }
 
+        // Verify reCAPTCHA
+        const recaptchaToken = formData.get('recaptchaToken') as string;
+        if (!recaptchaToken) {
+            return {
+                success: false,
+                error: 'reCAPTCHA verification failed. Please try again.',
+            };
+        }
+
+        // Verify reCAPTCHA token with Google
+        const recaptchaResponse = await fetch(
+            'https://www.google.com/recaptcha/api/siteverify',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    secret: process.env.RECAPTCHA_SECRET_KEY!,
+                    response: recaptchaToken,
+                }),
+            }
+        );
+
+        const recaptchaData = await recaptchaResponse.json();
+
+        if (!recaptchaData.success || recaptchaData.score < 0.5) {
+            console.error('❌ reCAPTCHA verification failed:', recaptchaData);
+            return {
+                success: false,
+                error: 'reCAPTCHA verification failed. Please try again.',
+            };
+        }
+
         const name = formData.get('name') as string;
         const organization = formData.get('organization') as string;
         const email = formData.get('email') as string;
