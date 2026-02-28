@@ -5,7 +5,7 @@ const styles = {
   marginLeft: "-15px",
 };
 
-const SDI = () => (
+const SDI: React.FC = () => (
   <svg
     style={styles}
     xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,6 @@ const SDI = () => (
     viewBox="0 0 1843 695"
   >
     <image
-      alt="SDI"
       id="Layer_0"
       data-name="Layer 0"
       width="1843"

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -21,6 +22,12 @@ const Footer = () => {
                         <small>
                             Email: murtado@languageservicesolutions.com
                         </small>
+                        <Link
+                            href="/contact"
+                            className="mt-4 px-6 py-2 bg-white text-[var(--green-darker)] rounded-[var(--border-radius)] font-semibold hover:bg-opacity-90 transition-all duration-300 text-center uppercase tracking-wide"
+                        >
+                            Contact Form
+                        </Link>
                     </div>
                 </div>
             </footer>

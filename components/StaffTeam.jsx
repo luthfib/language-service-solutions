@@ -2,7 +2,6 @@
 
 import React from 'react';
 import StaffIcon from './Icons/Staff';
-import styles from '@/styles/modules/OurTeam.module.css';
 
 const staffData = [
     {
@@ -55,7 +54,7 @@ const StaffTeam = () => {
     return (
         <div className="grid sm:grid-cols-3 grid-col-1 gap-x-7 gap-y-20">
             {staffData.map((staff) => (
-                <div key={staff.id} className={styles.staffMember}>
+                <div key={staff.id}>
                     <StaffIcon path={staff.image} staffName={staff.name} />
                     <h3 className="text-center letter-spacing--small uppercase text-xl mt-6 mb-4">
                         {staff.name}

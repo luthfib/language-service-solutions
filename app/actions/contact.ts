@@ -2,13 +2,6 @@
 
 import { Resend } from 'resend';
 
-// Debug: Check if the API key is loaded
-console.log(
-    'RESEND_API_KEY:',
-    process.env.RESEND_API_KEY ? '✅ Loaded' : '❌ Missing'
-);
-console.log('API Key length:', process.env.RESEND_API_KEY?.length || 0);
-
 // Initialize Resend with error handling
 const resend = process.env.RESEND_API_KEY
     ? new Resend(process.env.RESEND_API_KEY)
@@ -27,32 +20,156 @@ export async function submitContactForm(formData: FormData) {
 
         // Verify reCAPTCHA
         const recaptchaToken = formData.get('recaptchaToken') as string;
-        if (!recaptchaToken) {
+        if (!recaptchaToken || recaptchaToken === 'fallback') {
+            console.error('❌ reCAPTCHA token missing or invalid');
             return {
                 success: false,
                 error: 'reCAPTCHA verification failed. Please try again.',
             };
         }
 
+        const recaptchaSecretKey = process.env.RECAPTCHA_API_KEY_PRIVATE?.trim();
+        if (!recaptchaSecretKey) {
+            console.error('❌ RECAPTCHA_API_KEY_PRIVATE is not configured');
+            return {
+                success: false,
+                error: 'Server configuration error. Please contact us directly.',
+            };
+        }
+
         // Verify reCAPTCHA token with Google
-        const recaptchaResponse = await fetch(
-            'https://www.google.com/recaptcha/api/siteverify',
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: new URLSearchParams({
-                    secret: process.env.RECAPTCHA_SECRET_KEY!,
-                    response: recaptchaToken,
-                }),
+        try {
+            const recaptchaResponse = await fetch(
+                'https://www.google.com/recaptcha/api/siteverify',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        secret: recaptchaSecretKey,
+                        response: recaptchaToken,
+                    }),
+                }
+            );
+
+            if (!recaptchaResponse.ok) {
+                const errorText = await recaptchaResponse.text();
+                console.error('❌ reCAPTCHA API request failed:', {
+                    status: recaptchaResponse.status,
+                    statusText: recaptchaResponse.statusText,
+                    body: errorText,
+                });
+                return {
+                    success: false,
+                    error: 'reCAPTCHA verification failed. Please try again.',
+                };
             }
-        );
 
-        const recaptchaData = await recaptchaResponse.json();
+            const recaptchaData = await recaptchaResponse.json();
 
-        if (!recaptchaData.success || recaptchaData.score < 0.5) {
-            console.error('❌ reCAPTCHA verification failed:', recaptchaData);
+            if (!recaptchaData.success) {
+                console.error('❌ reCAPTCHA verification failed:', {
+                    success: recaptchaData.success,
+                    errorCodes: recaptchaData['error-codes'],
+                    fullResponse: recaptchaData,
+                });
+                
+                // Provide more specific error message based on error codes
+                const errorCodes = recaptchaData['error-codes'] || [];
+                if (errorCodes.includes('invalid-input-secret')) {
+                    return {
+                        success: false,
+                        error: 'reCAPTCHA configuration error. Please contact support.',
+                    };
+                }
+                if (errorCodes.includes('invalid-input-response')) {
+                    return {
+                        success: false,
+                        error: 'reCAPTCHA token is invalid. Please refresh the page and try again.',
+                    };
+                }
+                if (errorCodes.includes('browser-error')) {
+                    return {
+                        success: false,
+                        error: 'reCAPTCHA browser error. Please refresh the page and try again.',
+                    };
+                }
+                
+                return {
+                    success: false,
+                    error: 'reCAPTCHA verification failed. Please try again.',
+                };
+            }
+
+            // Verify the action name matches what we expect (important security check)
+            // According to Google docs: "you should verify that the action name is the name you expect"
+            if (recaptchaData.action !== 'contact') {
+                console.error('❌ reCAPTCHA action mismatch:', {
+                    expected: 'contact',
+                    received: recaptchaData.action,
+                });
+                return {
+                    success: false,
+                    error: 'reCAPTCHA verification failed. Please try again.',
+                };
+            }
+
+            // Verify hostname matches our domain (prevents token reuse from other sites)
+            // Allow both production domain and localhost for development
+            const allowedHostnames = [
+                'languageservicesolutions.com',
+                'localhost',
+                "language-service-solutions-git-branch-add-resend-subud.vercel.app"
+            ];
+            if (
+                recaptchaData.hostname &&
+                !allowedHostnames.some((host) =>
+                    recaptchaData.hostname.includes(host)
+                )
+            ) {
+                console.error('❌ reCAPTCHA hostname mismatch:', {
+                    expected: allowedHostnames,
+                    received: recaptchaData.hostname,
+                });
+                return {
+                    success: false,
+                    error: 'reCAPTCHA verification failed. Please try again.',
+                };
+            }
+
+            // Verify token is recent (tokens expire after 2 minutes)
+            // challenge_ts is in ISO format: yyyy-MM-dd'T'HH:mm:ssZZ
+            if (recaptchaData.challenge_ts) {
+                const challengeTime = new Date(recaptchaData.challenge_ts).getTime();
+                const currentTime = Date.now();
+                const timeDifference = (currentTime - challengeTime) / 1000; // difference in seconds
+                
+                // Tokens expire after 2 minutes (120 seconds), add 30 second buffer for network delays
+                if (timeDifference > 150) {
+                    console.error('❌ reCAPTCHA token expired:', {
+                        challengeTime: recaptchaData.challenge_ts,
+                        ageInSeconds: timeDifference,
+                    });
+                    return {
+                        success: false,
+                        error: 'The form session has expired. Please refresh the page and submit again.',
+                    };
+                }
+            }
+
+            // Check score (v3 reCAPTCHA returns a score between 0.0 and 1.0)
+            // 1.0 is very likely a good interaction, 0.0 is very likely a bot
+            // Default threshold is 0.5 as recommended by Google
+            if (recaptchaData.score !== undefined && recaptchaData.score < 0.5) {
+                console.warn('⚠️ reCAPTCHA score too low:', recaptchaData.score);
+                return {
+                    success: false,
+                    error: 'reCAPTCHA verification failed. Please try again.',
+                };
+            }
+        } catch (error) {
+            console.error('❌ Error verifying reCAPTCHA:', error);
             return {
                 success: false,
                 error: 'reCAPTCHA verification failed. Please try again.',
@@ -89,24 +206,22 @@ export async function submitContactForm(formData: FormData) {
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
 
-        console.log('📧 Attempting to send emails...');
-
-        // Send email to your business
+        // Send email to your business    
         await resend.emails.send({
-            from: 'Contact Form <noreply@contact.languageservicesolutions.com>', // Replace with your verified domain
-            to: ['noreply@contact.languageservicesolutions.com'], // Replace with your business email
+            from: 'Language Service Solutions<noreply@contact.languageservicesolutions.com>', // Replace with your verified domain
+            to: [''], // Replace with your business email
             subject: `New Contact Form Submission - ${serviceTypeDisplay}`,
             html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #012b2d; color: white;">
           <!-- Header with Logo -->
-          <div style="background: linear-gradient(135deg, #01b1b0 0%, #008f8e 100%); padding: 30px 20px; text-align: center; border-radius: 8px 8px 0 0;">
-            <div style="display: inline-flex; justify-content: center; align-items: center; background-color: white; padding: 15px; border-radius: 50%; margin-bottom: 15px; height: 60px; width: 60px;">
+          <div style="background-color: #012b2d; padding: 30px 20px; text-align: center;">
+            <div style="display: inline-flex; justify-content: center; align-items: center; background-color: #012b2d; padding: 15px; border-radius: 50%; margin-bottom: 15px; height: 60px; width: 60px;">
               <img 
-                src="https://languageservicesolutions.com/icons/logo_green.png" 
+                src="language-service-solutions-git-branch-add-resend-subud.vercel.app/icons/logo.png" 
                 alt="Language Service Solutions Logo" 
                 width="60" 
                 height="60" 
-                style="width: 60px; height: 60px; display: block; max-width: 100%; height: auto; border-radius: 50%; background: white;" 
+                style="width: 60px; height: 60px; display: block; max-width: 100%; height: auto; border-radius: 50%; color-scheme: light; -webkit-tap-highlight-color: transparent; filter: none !important;" 
               />
             </div>
             <h1 style="color: white; margin: 0; font-size: 24px; font-weight: 600;">New Contact Form Submission</h1>
@@ -114,43 +229,43 @@ export async function submitContactForm(formData: FormData) {
           </div>
           
           <!-- Content -->
-          <div style="padding: 30px 20px;">
-            <div style="background-color: #f8fafc; padding: 25px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #01b1b0;">
-              <h3 style="color: #374151; margin-top: 0; margin-bottom: 20px; font-size: 18px;">📋 Contact Information</h3>
+          <div style="padding: 30px 20px; background-color: #012b2d;">
+            <div style="background-color: #014347; padding: 25px; border-radius: 8px; margin-bottom: 25px;">
+              <h3 style="color: white; margin-top: 0; margin-bottom: 20px; font-size: 18px;">Contact Information</h3>
               <div style="display: grid; gap: 12px;">
-                <p style="margin: 0;"><strong>Name:</strong> <span style="color: #374151;">${name}</span></p>
+                <p style="margin: 0; color: white;"><strong>Name:</strong> ${name}</p>
                 ${
                     organization
-                        ? `<p style="margin: 0;"><strong>Organization:</strong> <span style="color: #374151;">${organization}</span></p>`
+                        ? `<p style="margin: 0; color: white;"><strong>Organization:</strong> ${organization}</p>`
                         : ''
                 }
-                <p style="margin: 0;"><strong>Email:</strong> <span style="color: #374151;">${email}</span></p>
+                <p style="margin: 0; color: white;"><strong>Email:</strong> <a href="mailto:${email}" style="color: #ffffff !important; text-decoration: underline;"></a>${email}</a></p>
                 ${
                     phone
-                        ? `<p style="margin: 0;"><strong>Phone:</strong> <span style="color: #374151;">${phone}</span></p>`
+                        ? `<p style="margin: 0; color: white;"><strong>Phone:</strong> ${phone}</p>`
                         : ''
                 }
-                <p style="margin: 0;"><strong>Service Type:</strong> <span style="color: #374151;">${serviceTypeDisplay}</span></p>
+                <p style="margin: 0; color: white;"><strong>Service Type:</strong> ${serviceTypeDisplay}</p>
               </div>
             </div>
             
-            <div style="background-color: #ffffff; padding: 25px; border: 1px solid #e5e7eb; border-radius: 8px; margin-bottom: 25px;">
-              <h3 style="color: #374151; margin-top: 0; margin-bottom: 20px; font-size: 18px;">💬 Message</h3>
-              <div style="background-color: #f9fafb; padding: 20px; border-radius: 6px; border-left: 3px solid #01b1b0;">
-                <p style="white-space: pre-wrap; line-height: 1.6; margin: 0; color: #374151;">${message}</p>
+            <div style="background-color: #014347; padding: 25px; border-radius: 8px; margin-bottom: 25px;">
+              <h3 style="color: white; margin-top: 0; margin-bottom: 20px; font-size: 18px;">Message</h3>
+              <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 6px;">
+                <p style="white-space: pre-wrap; line-height: 1.6; margin: 0; color: white;">${message}</p>
               </div>
             </div>
             
-            <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b;">
-              <p style="margin: 0; color: #92400e; font-size: 14px; font-weight: 500;">
-                ⏰ <strong>Next Steps:</strong> Please respond to this inquiry within 24 hours to maintain our excellent customer service standards.
+            <div style="background-color: #014347; padding: 20px; border-radius: 8px;">
+              <p style="margin: 0; color: white; font-size: 14px; font-weight: 500;">
+                <strong>Next Steps:</strong> Please respond to this inquiry within 24 hours to maintain our excellent customer service standards.
               </p>
             </div>
           </div>
           
           <!-- Footer -->
-          <div style="background-color: #f8fafc; padding: 20px; text-align: center; border-radius: 0 0 8px 8px; border-top: 1px solid #e5e7eb;">
-            <p style="margin: 0; color: #6b7280; font-size: 12px;">
+          <div style="background-color: #012b2d; padding: 20px; text-align: center;">
+            <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 12px;">
               This email was sent from the Language Service Solutions contact form.
             </p>
           </div>
@@ -160,20 +275,22 @@ export async function submitContactForm(formData: FormData) {
 
         // Send confirmation email to the customer
         await resend.emails.send({
-            from: 'Language Service Solutions <noreply@contact.languageservicesolutions.com>', // Replace with your verified domain
-            to: [email],
+            from: 'Language Service Solutions <noreply@contact.languageservicesolutions.com>',            to: [email],
             subject: 'Thank you for contacting Language Service Solutions',
             html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+        <style>
+          a[href^="mailto:"] { color: #ffffff !important; text-decoration: underline !important; }
+        </style>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #012b2d; color: white;">
           <!-- Header with Logo -->
-          <div style="background: linear-gradient(135deg, #01b1b0 0%, #008f8e 100%); padding: 30px 20px; text-align: center; border-radius: 8px 8px 0 0;">
-            <div style="display: inline-flex; justify-content: center; align-items: center; background-color: white; padding: 15px; border-radius: 50%; margin-bottom: 15px; height: 60px; width: 60px;">
+          <div style="background-color: #012b2d; padding: 30px 20px; text-align: center;">
+            <div style="display: inline-flex; justify-content: center; align-items: center; background-color: #012b2d; padding: 15px; border-radius: 50%; margin-bottom: 15px; height: 60px; width: 60px;">
               <img 
-                src="https://languageservicesolutions.com/icons/logo_green.png" 
+                src="https://languageservicesolutions.com/icons/logo.png" 
                 alt="Language Service Solutions Logo" 
                 width="60" 
                 height="60" 
-                style="width: 60px; height: 60px; display: block; max-width: 100%; height: auto; border-radius: 50%; background: white;" 
+                style="width: 60px; height: 60px; display: block; max-width: 100%; height: auto; border-radius: 50%; color-scheme: light; -webkit-tap-highlight-color: transparent; filter: none !important;" 
               />
             </div>
             <h1 style="color: white; margin: 0; font-size: 24px; font-weight: 600;">Thank You for Your Inquiry</h1>
@@ -181,43 +298,43 @@ export async function submitContactForm(formData: FormData) {
           </div>
           
           <!-- Content -->
-          <div style="padding: 30px 20px;">
+          <div style="padding: 30px 20px; background-color: #012b2d;">
             <div style="margin-bottom: 25px;">
-              <p style="color:#012b2d; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+              <p style="color: white; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                 <strong>Thank you for contacting Language Service Solutions!</strong><br/>
                   A member of our team will review your message and get back to you within 1-2 business days. If your request is urgent, feel free to call us directly on <strong>+1 919 949-9272</strong> and let us know about your situation.
               </p>
             </div>
             
-            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 25px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #01b1b0;">
-              <h3 style="font-weight:bold; margin-top: 0; margin-bottom: 20px; font-size: 18px;">📋 Your Submission Summary</h3>
+            <div style="background-color: #014347; padding: 25px; border-radius: 8px; margin-bottom: 25px;">
+              <h3 style="color: white; font-weight: bold; margin-top: 0; margin-bottom: 20px; font-size: 18px;">Your Submission Summary</h3>
               <div style="display: grid; gap: 12px;">
-                <p style="margin: 0;"><strong>Name:</strong> <span style="color: #012b2d;">${name}</span></p>
-                <p style="margin: 0;"><strong>Service Type:</strong> <span style="color: #012b2d;">${serviceTypeDisplay}</span></p>
+                <p style="margin: 0; color: white;"><strong>Name:</strong> ${name}</p>
+                <p style="margin: 0; color: white;"><strong>Service Type:</strong> ${serviceTypeDisplay}</p>
                 ${
                     organization
-                        ? `<p style="margin: 0;"><strong>Organization:</strong> <span style="color: #012b2d;">${organization}</span></p>`
+                        ? `<p style="margin: 0; color: white;"><strong>Organization:</strong> ${organization}</p>`
                         : ''
                 }
-                  <p style="margin: 0;"><strong>Contact Email:</strong> <span style="color: #012b2d;">${email}</span></p>
+                <p style="margin: 0; color: white;"><strong>Contact Email:</strong> <a href="mailto:${email}" style="color: #ffffff !important; text-decoration: underline;">${email}</a></p>
                 ${
                     phone
-                        ? `<p style="margin: 0;"><strong>Phone:</strong> <span style="color: #012b2d;">${phone}</span></p>`
+                        ? `<p style="margin: 0; color: white;"><strong>Phone:</strong> ${phone}</p>`
                         : ''
                 }
               </div>
             </div>
             
-            <div style="background-color: #ffffff; margin-bottom: 25px;">
-              <p style="color: #012b2d; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+            <div style="margin-bottom: 25px;">
+              <p style="color: white; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                 In the meantime, feel free to explore our website to learn more about our comprehensive language services.
-                <a href="https://languageservicesolutions.com/services" style="color: #01b1b0; text-decoration: underline; margin-left: 4px;">See our services</a>
+                <a href="https://languageservicesolutions.com/services" style="color: white; text-decoration: underline; margin-left: 4px;">See our services</a>
               </p>
               
-              <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 20px; border-radius: 6px; border-left: 3px solid #01b1b0;">
-                <p style="margin: 0; color: #012b2d; font-size: 14px;">
+              <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 6px;">
+                <p style="margin: 0; color: white; font-size: 14px;">
                   <strong>Our Services Include:</strong><br>
-                  <ul style="list-style-type: disc; padding-left: 20px;">
+                  <ul style="list-style-type: disc; padding-left: 20px; color: white;">
                     <li style="margin-bottom: 5px;">Translation Services</li>
                     <li style="margin-bottom: 5px;">Interpretation Services</li>
                     <li style="margin-bottom: 5px;">Transcription Services</li>
@@ -229,18 +346,18 @@ export async function submitContactForm(formData: FormData) {
             </div>
             
             <div style="text-align: center; margin-bottom: 25px;">
-              <p style="color: #012b2d; font-size: 16px; line-height: 1.6; margin-bottom: 10px;">
+              <p style="color: white; font-size: 16px; line-height: 1.6; margin-bottom: 10px;">
                 Best regards,
               </p>
-              <p style="color: #01b1b0; font-size: 18px; font-weight: 600; margin: 0;">
+              <p style="color: white; font-size: 18px; font-weight: 600; margin: 0;">
                 The Language Service Solutions Team
               </p>
             </div>
           </div>
           
           <!-- Footer -->
-          <div style="background-color: #f8fafc; padding: 20px; text-align: center; border-radius: 0 0 8px 8px; border-top: 1px solid #e5e7eb;">
-            <p style="margin: 0; color: #6b7280; font-size: 12px;">
+          <div style="background-color: #012b2d; padding: 20px; text-align: center;">
+            <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 12px;">
               This is an automated confirmation email. Please do not reply to this message.
             </p>
           </div>
@@ -248,7 +365,6 @@ export async function submitContactForm(formData: FormData) {
       `,
         });
 
-        console.log('✅ Emails sent successfully');
         return { success: true };
     } catch (error) {
         console.error('❌ Contact form submission error:', error);

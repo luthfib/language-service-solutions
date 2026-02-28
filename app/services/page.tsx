@@ -1,19 +1,45 @@
 import { Metadata } from 'next';
-import Container from '../../components/Container';
 import Button from '@/components/Button';
 import ServiceCard from '@/components/ServiceCard';
 import Wave from '@/components/Wave';
+import Dots from '@/components/Icons/dots';
 
 export const metadata: Metadata = {
-    title: 'Our Services - Language Service Solutions',
+    title: 'Our Services',
     description:
-        "We provide a wide range of language services, including translation, Virtual Interpretation, In-Person Interpretation, subtitling, and transcription. Our team of experienced linguists is committed to providing high-quality, accurate, and culturally-sensitive translations. We understand the importance of language in building relationships and creating a positive customer experience. That's why we work closely with you to ensure that your message is communicated effectively in the target language",
-    keywords:
-        'translation services, interpretation services, transcription, subtitling, virtual interpretation, in-person interpretation, language services',
+        "We provide a wide range of language services, including translation, Virtual Interpretation, In-Person Interpretation, subtitling, and transcription. Our team of experienced linguists is committed to providing high-quality, accurate, and culturally-sensitive translations.",
+    keywords: [
+        'translation services',
+        'interpretation services',
+        'transcription',
+        'subtitling',
+        'virtual interpretation',
+        'in-person interpretation',
+        'language services',
+        'professional translation',
+        'simultaneous interpretation',
+    ],
     openGraph: {
         title: 'Our Services - Language Service Solutions',
         description:
-            "We provide a wide range of language services, including translation, Virtual Interpretation, In-Person Interpretation, subtitling, and transcription. Our team of experienced linguists is committed to providing high-quality, accurate, and culturally-sensitive translations. We understand the importance of language in building relationships and creating a positive customer experience. That's why we work closely with you to ensure that your message is communicated effectively in the target language",
+            "We provide a wide range of language services, including translation, Virtual Interpretation, In-Person Interpretation, subtitling, and transcription. Our team of experienced linguists is committed to providing high-quality, accurate, and culturally-sensitive translations.",
+        url: 'https://languageservicesolutions.com/services',
+        type: 'website',
+        images: [
+            {
+                url: '/icons/logo.svg',
+                width: 1200,
+                height: 630,
+                alt: 'Language Service Solutions Services',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Our Services - Language Service Solutions',
+        description:
+            'Professional translation, interpretation, transcription, and subtitling services with over 20 years of experience.',
+        images: ['/icons/logo.svg'],
     },
 };
 
@@ -22,18 +48,28 @@ export default function ServicesPage() {
         <>
             <Wave position={'top'} marginClass={'md:mb-[-7vw]'} />
 
-            <div className="py-14">
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <section className="mb-16 py-14">
+                <div className="text-center max-w-3xl mx-auto">
+                    <h1 className="text-4xl md:text-8xl uppercase font-bold text-gray-900 mb-6">
                         Our Services
                     </h1>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         With over 20 years of experience, Language Service
                         Solutions provides comprehensive language services to
                         meet all your communication needs.
-                    </p>
+                </p>
                 </div>
-            </div>
+            </section>
+
+            <section className="mb-16">
+                <Dots direction="up" color="var(--yellow)" size={25} />
+            </section>
+
+            <section className="mb-16">
+                <h2 className="text-center sm:text-4xl text-3xl">
+                    What We Offer
+                </h2>
+            </section>
 
             <section className="mb-16">
                 <div className="flex flex-wrap items-center gap-10 justify-center h-full w-[95%]">
@@ -47,12 +83,12 @@ export default function ServicesPage() {
                     />
 
                     {/* <ServiceCard
-logo={'simultaneousInterpretation'}
-title={'simultaneous Interpretation'}
-text={
-    'Our sophisticated wireless equipment and experienced simultaneous interpreters create a fully bilingual space.'
-}
-/> */}
+                            logo={'simultaneousInterpretation'}
+                            title={'simultaneous Interpretation'}
+                            text={
+                                'Our sophisticated wireless equipment and experienced simultaneous interpreters create a fully bilingual space.'
+                            }
+                            /> */}
 
                     <ServiceCard
                         path={'inpersoninterpretation'}
@@ -97,7 +133,7 @@ text={
             </section>
 
             <section className="mb-16">
-                <Button link="/contact" text="Contact us today" />
+                <Button link="/contact" text="Book a service" title="Book a service" />
             </section>
 
             <Wave position={'bottom'} marginClass={'md:mt-[-8vw]'} />

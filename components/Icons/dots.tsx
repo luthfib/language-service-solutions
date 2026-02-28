@@ -1,11 +1,21 @@
 'use client';
 
-import styles from '@/styles/modules/Dots.module.css';
+interface DotsProps {
+    direction?: 'up' | 'down' | 'left' | 'right';
+    size?: number;
+    color?: string;
+}
 
 // The dots can go in all 4 directions and its size can also be dinamically set through props
-const Dots = ({ direction, size, color = 'var(--yellow)' }) => {
+const Dots = ({ direction, size = 25, color = 'var(--yellow)' }: DotsProps) => {
+    const directionClasses: Record<string, string> = {
+        down: 'rotate-180',
+        right: 'rotate-90',
+        left: '-rotate-90',
+    };
+    
     return (
-        <div className={`${styles.dots} ${styles[direction]}`}>
+        <div className={directionClasses[direction || ''] || ''}>
             <svg
                 id="Layer_2"
                 data-name="Layer 2"

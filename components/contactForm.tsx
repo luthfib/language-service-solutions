@@ -32,10 +32,30 @@ export default function ContactForm() {
 
     // Load reCAPTCHA script
     useEffect(() => {
+        const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_API_KEY;
+        if (!siteKey) {
+            console.warn('reCAPTCHA site key is not configured');
+            return;
+        }
+
+        // Check if script already exists
+        const existingScript = document.querySelector(
+            `script[src*="recaptcha"]`
+        );
+        if (existingScript) {
+            return;
+        }
+
         const script = document.createElement('script');
-        script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`;
+        script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
         script.async = true;
         script.defer = true;
+        script.onload = () => {
+            // reCAPTCHA script loaded
+        };
+        script.onerror = () => {
+            console.error('Failed to load reCAPTCHA script');
+        };
         document.head.appendChild(script);
 
         // Add CSS to hide reCAPTCHA badge
@@ -49,15 +69,15 @@ export default function ContactForm() {
         document.head.appendChild(style);
 
         return () => {
-            const existingScript = document.querySelector(
+            const scriptToRemove = document.querySelector(
                 `script[src*="recaptcha"]`
             );
-            if (existingScript) {
-                existingScript.remove();
+            if (scriptToRemove) {
+                scriptToRemove.remove();
             }
-            const existingStyle = document.querySelector('style');
-            if (existingStyle) {
-                existingStyle.remove();
+            const styleToRemove = document.querySelector('style');
+            if (styleToRemove && styleToRemove.textContent?.includes('grecaptcha-badge')) {
+                styleToRemove.remove();
             }
         };
     }, []);
@@ -69,22 +89,60 @@ export default function ContactForm() {
 
         try {
             // Get reCAPTCHA token
+            const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_API_KEY;
+            if (!siteKey) {
+                setSubmitStatus('error');
+                setErrorMessage('reCAPTCHA is not configured. Please contact us directly.');
+                setIsSubmitting(false);
+                return;
+            }
+
             if (typeof window !== 'undefined' && window.grecaptcha) {
                 try {
-                    const token = await window.grecaptcha.execute(
-                        process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!,
-                        { action: 'contact' }
-                    );
+                    // Use grecaptcha.ready() to ensure it's fully loaded
+                    const token = await new Promise<string>((resolve, reject) => {
+                        window.grecaptcha.ready(() => {
+                            window.grecaptcha
+                                .execute(siteKey, { action: 'contact' })
+                                .then(resolve)
+                                .catch(reject);
+                        });
+                    });
                     formData.append('recaptchaToken', token);
                 } catch (recaptchaError) {
-                    console.warn(
-                        'reCAPTCHA failed, continuing without it:',
-                        recaptchaError
-                    );
-                    formData.append('recaptchaToken', 'fallback');
+                    console.error('reCAPTCHA execution failed:', recaptchaError);
+                    setSubmitStatus('error');
+                    setErrorMessage('reCAPTCHA verification failed. Please refresh the page and try again.');
+                    setIsSubmitting(false);
+                    return;
                 }
             } else {
-                formData.append('recaptchaToken', 'fallback');
+                // Wait a bit for script to load, then retry
+                await new Promise((resolve) => setTimeout(resolve, 1000));
+                if (typeof window !== 'undefined' && window.grecaptcha) {
+                    try {
+                        const token = await new Promise<string>((resolve, reject) => {
+                            window.grecaptcha.ready(() => {
+                                window.grecaptcha
+                                    .execute(siteKey, { action: 'contact' })
+                                    .then(resolve)
+                                    .catch(reject);
+                            });
+                        });
+                        formData.append('recaptchaToken', token);
+                    } catch (recaptchaError) {
+                        console.error('reCAPTCHA execution failed after retry:', recaptchaError);
+                        setSubmitStatus('error');
+                        setErrorMessage('reCAPTCHA verification failed. Please refresh the page and try again.');
+                        setIsSubmitting(false);
+                        return;
+                    }
+                } else {
+                    setSubmitStatus('error');
+                    setErrorMessage('reCAPTCHA is not loaded. Please refresh the page and try again.');
+                    setIsSubmitting(false);
+                    return;
+                }
             }
 
             const result = await submitContactForm(formData);
@@ -237,10 +295,13 @@ export default function ContactForm() {
                             Service Type <span className="text-red-500">*</span>
                         </Label>
                         <Select name="serviceType" required>
-                            <SelectTrigger className="border-[color:var(--border)] focus:border-[color:var(--green)] focus:ring-[color:var(--green)] rounded-[var(--border-radius)] bg-white/95">
+                            <SelectTrigger 
+                                className="border-[color:var(--border)] focus:border-[color:var(--green)] focus:ring-[color:var(--green)] rounded-[var(--border-radius)] bg-white/95"
+                                aria-label="Select a service type"
+                            >
                                 <SelectValue placeholder="Select a service" />
                             </SelectTrigger>
-                            <SelectContent>
+                            <SelectContent className="bg-white">
                                 <SelectItem value="translation">
                                     Translation
                                 </SelectItem>

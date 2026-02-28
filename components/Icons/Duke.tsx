@@ -4,7 +4,7 @@ const styles = {
   marginTop: "5px",
 };
 
-const Duke = () => (
+const Duke: React.FC = () => (
   <svg xmlns="http://www.w3.org/2000/svg" style={styles} viewBox="0 0 284.2 67.03">
     <style jsx>{`
       .cls-1 {

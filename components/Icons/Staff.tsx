@@ -1,15 +1,18 @@
 'use client';
 
-import styles from '@/styles/modules/Staff.module.css';
+interface StaffIconProps {
+    path: string;
+    staffName: string;
+}
 
-const StaffIcon = ({ path, staffName }) => {
+const StaffIcon = ({ path, staffName }: StaffIconProps) => {
     return (
         <img
             width={225}
             height={225}
             src={path}
             alt={staffName}
-            className={styles.staffImg}
+            className="h-[225px] w-full"
         />
     );
 };
