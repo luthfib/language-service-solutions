@@ -209,7 +209,7 @@ export async function submitContactForm(formData: FormData) {
         // Send email to your business    
         await resend.emails.send({
             from: 'Language Service Solutions<noreply@contact.languageservicesolutions.com>', // Replace with your verified domain
-            to: [''], // Replace with your business email
+            to: ['murtado@languageservicesolutions.com'], // Replace with your business email
             subject: `New Contact Form Submission - ${serviceTypeDisplay}`,
             html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #012b2d; color: white;">
