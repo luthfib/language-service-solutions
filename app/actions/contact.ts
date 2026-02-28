@@ -217,7 +217,7 @@ export async function submitContactForm(formData: FormData) {
           <div style="background-color: #012b2d; padding: 30px 20px; text-align: center;">
             <div style="display: inline-flex; justify-content: center; align-items: center; background-color: #012b2d; padding: 15px; border-radius: 50%; margin-bottom: 15px; height: 60px; width: 60px;">
               <img 
-                src="language-service-solutions-git-branch-add-resend-subud.vercel.app/icons/logo.png" 
+                src="https://languageservicesolutions.com//icons/logo.png" 
                 alt="Language Service Solutions Logo" 
                 width="60" 
                 height="60" 
