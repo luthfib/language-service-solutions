@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import Button from './Button';
 
 export default function Landing() {
     // make a function to animate the svg circles inside the landing page element  in the background to bounce
@@ -25,11 +26,68 @@ export default function Landing() {
             <style>{`
                 .landing {
                     margin-top: calc(var(--nav-height) * -1);
+                    position: relative;
                 }
 
                 @media (max-width: 640px) {
                     .landing {
                         margin-top: 0;
+                    }
+                }
+
+                .landing-content {
+                    position: relative;
+                    padding: 2rem 1rem;
+                    max-width: 100vw;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .landing-content-wrapper {
+                    background: rgba(255, 255, 255, 0.95);
+                    padding: 2rem 1.5rem;
+                    border-radius: 20px;
+                    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(10px);
+                    max-width: 600px;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                @media (max-width: 767px) {
+                    .landing-content {
+                        width: 100%;
+                        max-width: 100vw;
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        padding-top: 0;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-10%);
+                    }
+                    
+                    .landing-content-wrapper {
+                        max-width: 100%;
+                        width: 100%;
+                        padding: 1.5rem 1rem;
+                    }
+                }
+
+                @media (min-width: 768px) {
+                    .landing-content {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        padding: 5%;
+                        z-index: 10;
+                    }
+                    
+                    .landing-content-wrapper {
+                        padding: 3rem 2.5rem;
                     }
                 }
 
@@ -339,7 +397,7 @@ export default function Landing() {
                     }
                 }
             `}</style>
-            <div className="landing">
+            <div className="landing relative">
             <svg
                 id="Layer_2"
                 data-name="Layer 2"
@@ -1501,6 +1559,19 @@ export default function Landing() {
                     />
                 </g>
             </svg>
+                <div className="landing-content">
+                    <div className="landing-content-wrapper text-left">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl uppercase font-bold text-gray-900 mb-6">
+                            Language Service Solutions
+                        </h1>
+                        <p className="text-base md:text-lg text-gray-600 mb-8">
+                            With over 20 years of experience, Language Service Solutions provides comprehensive language services to meet all your communication needs.
+                        </p>
+                        <div className="flex justify-start">
+                            <Button link="/contact" text="Contact Us" title="Contact Us" />
+                        </div>
+                    </div>
+                </div>
         </div>
         </>
     );
