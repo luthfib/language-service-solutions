@@ -221,6 +221,20 @@ export default function ContactForm() {
                         isSubmitting ? 'opacity-75 pointer-events-none' : ''
                     }`}
                 >
+                    <div
+                        className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden"
+                        aria-hidden="true"
+                    >
+                        <Label htmlFor="website">Website</Label>
+                        <Input
+                            id="website"
+                            name="website"
+                            type="text"
+                            tabIndex={-1}
+                            autoComplete="off"
+                        />
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
                             <Label
